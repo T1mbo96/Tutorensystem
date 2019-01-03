@@ -1,0 +1,61 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block sidebar_page_content %}
+    <h1>Bedingte Anweisungen</h1>
+    <p>
+        Eine bedingte Anweisung (oder Verzweigung) gehört in der Programmierung zu den Kontrollanweisungen. Sie stellt
+        einen Programmabschnitt dar, der nur unter bestimmten Bedingungen ausgeführt wird. Die bedingte Anweisung
+        besteht aus einer Bedingung, und einem Code-Abschnitt aus einer oder mehreren Anweisungen. In der Bedingung
+        wird überprüft, ob ein bestimmter Zustand zutreffend ist oder nicht (z.B. ob es einen Pfad nach links gibt). Der
+        Code-Abschnitt enthält anschließend die Anweisungen, die ausgeführt werden sollen, wenn der zu überprüfende
+        Zustand in der Bedingung zutreffend ist. Die Anweisungen im Codeabschnitt werden hierbei nur einmalig
+        ausgeführt. Nachfolgend ist der zugehörige Block in Blockly dargestellt.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_1/blockly_example_conditional_statement_if.PNG' %}" class="rounded"
+             alt="if block">
+    </div>
+    <p></p>
+    <p>
+        Die erste Zeile <span class="text_highlighted">wenn Pfad nach links ist</span> stellt die Bedingung und die
+        zweite
+        Zeile <span class="text_highlighted">ausführen</span> stellt den Code-Abschnitt dar. Dies bedeutet, dass die
+        Blöcke/Anweisungen, die im Code-Abschnitt <span class="text_highlighted">ausführen</span> stehen, nur dann
+        ausgeführt werden, wenn der Zustand in der Bedingung <span
+            class="text_highlighted">wenn Pfad nach links ist</span> zutreffend ist. Man kann sich dieses Konstrukt als
+        <span class="text_highlighted">wenn Bedingung, dann Codeabschnitt</span> vorstellen.
+    </p>
+    <p>
+        Es gibt noch weitere Formen der bedingten Anweisung, die es erlauben eine Verzweigung noch detaillierter zu
+        gestalten. In der folgenden Form wird zur bereits bekannten bedingten Anweisung noch ein sonst-Abschnitt
+        hinzugefügt. Dieser Abschnitt wird nur dann ausgeführt, wenn der Zustand in der Bedingung <u>nicht</u>
+        zutreffend ist. Im Folgenden der zugehörige Block in Blockly.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_1/blockly_example_conditional_statement_if_else.PNG' %}" class="rounded"
+             alt="If else block">
+    </div>
+    <p></p>
+    <p>
+        Die ersten zwei Zeilen funktionieren exakt gleich zur eben kennengelernten Verzweigung. Die dritte Zeile <span
+            class="text_highlighted">sonst</span> stellt den sonst-Abschnitt dar. Dies bedeutet, dass die
+        Blöcke/Anweisungen, die in diesem Abschnitt stehen, nur dann ausgeführt werden, wenn der Zustand in der Bedinung
+        <span class="text_highlighted">wenn Pfad nach rechts ist</span> <u>nicht</u> zutreffend ist.
+    </p>
+    <h2>Hilfreiche Links</h2>
+    <ul>
+        <li>
+            <a href="https://de.wikipedia.org/wiki/Bedingte_Anweisung_und_Verzweigung" target="_blank"><span
+                    class="link_color">Wikipedia Bedingte Anweisungen</span></a>
+        </li>
+    </ul>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_instructions' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_loop' %}
+{% endblock lesson_nav_buttons_next_page %}

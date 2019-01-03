@@ -1,0 +1,10 @@
+{% extends 'template_pages/lesson_2_base.html' %}
+{% load static %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_2_list' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_2_set' %}
+{% endblock lesson_nav_buttons_next_page %}

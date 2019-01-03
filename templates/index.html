@@ -1,0 +1,66 @@
+{% extends 'template_pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block head_css_page %}
+    <link href="{% static 'css/index.css' %}">
+{% endblock head_css_page %}
+
+{% block home_active %}
+    active
+{% endblock home_active %}
+
+{% block content_container %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Willkommen!</h1>
+            <p class="lead">Hier erlernen Sie grundlegende Konstrukte des Programmierens mithilfe des visuellen
+                Code-Editors Blockly. Anschließend und währenddessen transferieren Sie das gelernte auf die
+                Programmiersprache Python. Zum Abschluss behandeln Sie größere Aufgaben lokal in Ihrer eigenen IDE.</p>
+            <hr class="my-4">
+            <p>Wenn Sie mehr über das Projekt erfahren möchten, dann klicken Sie bitte folgenden
+                Button.</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Mehr erfahren</a>
+        </div>
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'pictures/blockly_logo.png' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Lektion 1</h5>
+                    <p class="card-text">In dieser Lektion arbeiten Sie mit dem Blockly-Editor, mit dessen Hilfe Sie
+                        verschiedene Konstrukte erlernen, die Sie für das Programmieren in Python brauchen werden.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'lesson_1_introduction' %}" class="card-link"><span
+                            class="link_color">Zur Lektion</span></a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'pictures/python_logo.png' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Lektion 2</h5>
+                    <p class="card-text">In dieser Lektion werden die aus der vorherigen Lektion erlernten Konstrukte
+                        noch einmal in Python wiederholt und gleichzeitig einige wenige neue Konstrukte eingeführt.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-link"><span class="link_color">Zur Lektion</span></a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'pictures/pycharm_logo.png' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Lektion 3</h5>
+                    <p class="card-text">In dieser Lektion werden Sie Aufgaben lokal in ihrer eigenen IDE bearbeiten und
+                        testen. Wir werden für die gezeigten Beispiele die IDE PyCharm verwenden.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-link"><span class="link_color">Zur Lektion</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content_container %}

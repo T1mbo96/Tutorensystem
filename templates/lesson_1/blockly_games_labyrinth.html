@@ -1,0 +1,30 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block sidebar_page_content %}
+    <h1>Labyrinth</h1>
+    <p>
+        Im nachfolgenden Spiel dürfen Sie sich durch 10 Level kämpfen, um das Ziel zu erreichen. Dieses Spiel ist
+        ebenfalls in den <a href="https://github.com/google/blockly-games/wiki" target="_blank"><span
+            class="link_color">blockly-games</span></a> der Google Developer enthalten.
+    </p>
+    <p>
+        Sie müssen die verschiedenen Blöcke, die Ihnen rechts zur Verfügung stehen, in der richtigen Reihenfolge
+        zusammenstapeln, sodass die Spielfigur das Ziel erreicht. Nachdem Sie damit fertig sind, prüfen Sie ihre Antwort
+        bitte durch einen Klick auf den Button <span class="text-danger">Programm ausführen</span>. Wenn Sie alle Level
+        abgeschlossen haben, dann kommen Sie durch einen Klick auf den Button <span class="text-success">Next</span> zum
+        nächsten Abschnitt.
+    </p>
+    <div class="embed-responsive embed-responsive-16by9 blockly_games_frame">
+        <iframe class="embed-responsive-item" src="{% url 'labyrinth' %}"></iframe>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_loop' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    #
+{% endblock lesson_nav_buttons_next_page %}

@@ -1,0 +1,22 @@
+!!!WICHTIG!!!
+
+Durch die unterschiedlichen Bauweisen des blockly-games-Projekts und Django wurden einige URLS hardcoded, um mit dem
+Django-Framework zu funktionieren. Der größte Teil wurde in den JavaScript-Files mithilfe '/static/...' erreicht, das
+sollte auch bei einem verschieben der statischen Daten keine Probleme machen, da der Zugriffs-Key 'static' bleiben
+sollte.
+
+Aus oben genannten Grund wird ebenfalls das uncompressed-JavaScript-File der Games verwendet, da beim builden das
+uncompressed.js-File immer so geändert wird, dass die Pfade zu den statischen Dateien in Django nicht mehr passen.
+
+Ebenfalls muss ein Script im Folder 'load_language_pack_scripts' angelegt werden, um das gewünschte uncompressed.js-File
+des jeweiligen Games zu laden. Dieses muss natürlich im jeweiligen template-File des Games eingebunden werden.
+_______________________________________________________________________________________________________________________
+
+!!!TO-DO bei Änderungen!!!
+
+Falls das Game unter einer anderen URL nach dem WebsiteName (also z.B. nach www.xxx.de/...) erreichbar sein soll, so
+muss im jeweiligen uncompressed.js-File der Teil nach dem Beispiel getrimmed werden (siehe uncompressed.js-File des
+jeweiligen Games unten).
+
+Außerdem muss im jeweiligen Game-JavaScript-File (z.B. maze.js) bei Änderung des WebsiteNamens die URL für die
+Maze.SKINS geändert werden (hier leider hardcoded die komplette URL).

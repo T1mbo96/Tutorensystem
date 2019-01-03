@@ -1,0 +1,42 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block sidebar_page_content %}
+    <h1>Schleifen</h1>
+    <p>
+        Eine Schleife ist ebenfalls eine Kontrollanweisung in der Programmierung, welche es ermöglicht, dass ein
+        bestimmter Teil des Codes wiederholt ausgeführt wird. Sie besteht aus zwei Teilen, der Schleifenbedingung und
+        dem Schleifenrumpf. Die Schleifenbedingung prüft, ob ein bestimmter Zustand zutreffend ist oder nicht (z.B. ob
+        die Spielfigur das Ziel erreicht hat). Der Schleifenrumpf enthält die Anweisungen, die ausgeführt werden sollen,
+        wenn der zu überprüfende Zustand in der Schleifenbedingung zutreffend ist. Anders als bei der bedingten
+        Anweisung wird der Code im Schleifenrumpf so lange ausgeführt, solange der Zustand in der Schleifenbedingung
+        zutreffend ist. Ein Beispiel des zugehörigen Blocks in Blockly ist im folgenden Bild dargestellt.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_1/blockly_example_loop.PNG' %}" class="rounded"
+             alt="Loop block">
+    </div>
+    <p></p>
+    <p>
+        Die erste Zeile <span class="text_highlighted">wiederhole bis Marker</span> stellt die
+        Schleifenbedingung und die zweite Zeile <span class="text_highlighted">ausführen</span> stellt den
+        Schleifenrumpf dar. Dies bedeutet, dass die Blöcke/Anweisungen, die im Schleifenrumpf <span
+            class="text_highlighted">ausführen</span> stehen, so oft ausgeführt werden, bis die Spielfigur den Marker
+        erreicht hat bzw. bis die Schleifenbedingung erfüllt ist, also der Zustand in der Schleifenbedingung zutreffend
+        ist.
+    </p>
+    <h2>Hilfreiche Links</h2>
+    <ul>
+        <li>
+            <a href="https://de.wikipedia.org/wiki/Schleife_(Programmierung)" target="_blank"><span class="link_color">Wikipedia Schleifen</span></a>
+        </li>
+    </ul>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_conditional_statements' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_blockly_games_labyrinth' %}
+{% endblock lesson_nav_buttons_next_page %}

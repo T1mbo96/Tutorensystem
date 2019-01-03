@@ -1,0 +1,38 @@
+{% extends 'template_pages/sidebar.html' %}
+{% load static %}
+
+{% block title %}
+    Lektion 1
+{% endblock title %}
+
+{% block lesson_1_active %}
+    active
+{% endblock lesson_1_active %}
+
+{% block sidebar_header %}
+    Lektion 1
+{% endblock sidebar_header %}
+
+{% block sidebar_items %}
+    <li>
+        <a href="{% url 'lesson_1_introduction' %}">Einführung</a>
+    </li>
+    <li>
+        <a href="{% url 'lesson_1_blockly_games_puzzle' %}">Spiel: Puzzle</a>
+    </li>
+    <li>
+        <a href="{% url 'lesson_1_labyrinth_preparation' %}">Labyrinth Vorbereitungen</a>
+    </li>
+    <li>
+        <a href="{% url 'lesson_1_instructions' %}">Anweisungen</a>
+    </li>
+    <li>
+        <a href="{% url 'lesson_1_conditional_statements' %}">Bedingte Anweisungen</a>
+    </li>
+    <li>
+        <a href="{% url 'lesson_1_loop' %}">Schleifen</a>
+    </li>
+    <li>
+        <a href="{% url 'lesson_1_blockly_games_labyrinth' %}">Spiel: Labyrinth</a>
+    </li>
+{% endblock sidebar_items %}

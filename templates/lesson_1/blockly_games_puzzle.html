@@ -1,0 +1,29 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block sidebar_page_content %}
+    <h1>Puzzle</h1>
+    <p>
+        Nachfolgendes Puzzle soll Sie mit der Funktionsweise des Code-Editors und Blockly vertraut machen. Das Spiel
+        ist ebenfalls in den <a href="https://github.com/google/blockly-games/wiki" target="_blank"><span
+            class="link_color">blockly-games</span></a> der Google Developer enthalten.
+    </p>
+    <p>
+        Sie müssen jedem Tier das passende Bild und die passenden Eigenschaften anhängen sowie die Anzahl seiner
+        Beine auswählen. Nachdem Sie damit fertig sind, prüfen Sie ihre Antwort bitte durch einen Klick auf den Button
+        <span class="text-danger">Antwort überprüfen</span>. Wenn Sie alles richtig zugeordnet haben, dann kommen Sie
+        durch einen Klick auf den Button <span class="text-success">Next</span> zum nächsten Abschnitt.
+    </p>
+    <div class="embed-responsive embed-responsive-16by9 blockly_games_frame">
+        <iframe class="embed-responsive-item" src="https://blockly-games.appspot.com/puzzle?lang=de"></iframe>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_introduction' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_labyrinth_preparation' %}
+{% endblock lesson_nav_buttons_next_page %}

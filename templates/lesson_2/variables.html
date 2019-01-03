@@ -1,0 +1,87 @@
+{% extends 'template_pages/lesson_2_base.html' %}
+{% load static %}
+
+{% block lesson_2_variables_active %}
+    sidebar_active
+{% endblock lesson_2_variables_active %}
+
+{% block sidebar_page_content %}
+    <h1>Variablen</h1>
+    <p>
+        In der Programmiersprache Python bezeichnet eine Variable, analog zu den Spielen in Blockly, keinen bestimmten
+        Typ, weshalb ebenfalls keine Deklaration benötigt wird. Benötigt man im Programm bespielsweise eine Variable
+        <span class="text_highlighted">i</span> mit dem Wert <span class="text_highlighted">50</span>, so erreicht man
+        dies einfach mit der folgenden Anweisung.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_2/python_variables_example.PNG' %}" class="rounded"
+             alt="Example of a python variable i with value 50">
+    </div>
+    <p></p>
+    <p>
+        Aus dem oben genannten Grund können Variablen in Python ihren Typ sogar ändern, nachdem sie festgelegt wurden.
+        Ein Beispiel dafür ist in folgendem Bild ersichtlich.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_2/python_variables_redeclare_example.PNG' %}" class="rounded"
+             alt="Example of a python variable i with value 50">
+    </div>
+    <p></p>
+    <h3>Aufgabe</h3>
+    <div class="description_container">
+        Im folgenden Textfeld können Sie sich nun selbst daran versuchen eine Variable zu erstellen, um mit der Syntax
+        und Funktionsweise in Python vertraut zu werden. Erzeugen Sie bitte eine Variable mit Namen <span
+            class="text_highlighted">integer</span>, deren Wert Sie auf <span class="text_highlighted">50</span>
+        setzen. Anschließend wird die Variable mithilfe der print()-Funktion ausgeben. Wenn Sie ihren Code eingegeben
+        haben können Sie ihn mit einem Klick auf den Button <span class="text_highlighted">Run</span> testen. Um eine
+        Rückmeldung zu erhalten, ob ihr Code richtig ist, benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
+    </div>
+    <p></p>
+    <h5>Bitte Code hier eingeben:</h5>
+    <div class="skulpt_code_container">
+        <form>
+            <textarea id="custom_code" cols="40" rows="10">
+# In folgender Zeile bitte ihren Code eintragen
+
+# Hiermit wird der Wert der Variable 'integer' ausgegeben
+print(integer)</textarea>
+            <br/>
+            <div id="skulpt_run_btn">
+                <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
+                <button type="button" onclick="variables_test_code()" class="form-btn btn my-2 my-sm-0">Test</button>
+            </div>
+        </form>
+        <p></p>
+        <div class="alert alert-success" role="alert" id="correct" style="display: none">
+            Klasse! Dein Code war richtig!
+        </div>
+        <div class="alert alert-danger" role="alert" id="wrong" style="display: none">
+            Schade, dein Code war leider nicht richtig! Versuche es noch einmal!
+        </div>
+        <p></p>
+    </div>
+    <h5>Output:</h5>
+    <div class="description_container">
+        <pre id="output"></pre>
+    </div>
+    <p></p>
+    <h3>Hilfreiche Links</h3>
+    <ul>
+        <li>
+            <a href="https://www.w3schools.com/python/python_variables.asp" target="_blank"><span
+                    class="link_color">Python Variablen</span></a>
+        </li>
+        <li>
+            <a href="https://de.wikipedia.org/wiki/Variable_(Programmierung)" target="_blank"><span
+                    class="link_color">Wikipedia Variable</span></a>
+        </li>
+    </ul>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_2_structuring' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_2_datatypes' %}
+{% endblock lesson_nav_buttons_next_page %}

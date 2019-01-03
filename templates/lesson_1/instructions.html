@@ -1,0 +1,34 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block sidebar_page_content %}
+    <h1>Anweisungen</h1>
+    <p>
+        Eine Anweisung ist eine einzelne, in der Syntax der jeweiligen Programmiersprache formulierte, einzelne
+        Vorschrift, welche bei der Abarbeitung des Programms ausgeführt wird. Eine Anweisung kann eine Zuweisung oder
+        Kontrollanweisung, aber auch zum Beispiel ein Funktionsaufruf sein (Die Bedeutung der einzelnen hier genannten
+        Konstrukte wird in späteren Abschnitten ersichtlich). Im nächsten Spiel, welches Sie lösen dürfen, besteht eine
+        Anweisung zum Beispiel daraus, dass die Spielfigur vorwärts laufen oder rechts bzw. links abbiegen soll. In
+        folgendem Bild sind Beispiele des zugehörigen Blöcke in Blockly dargestellt.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_1/blockly_example_instructions.PNG' %}" class="rounded"
+             alt="Instructions block">
+    </div>
+    <p></p>
+    <h2>Hilfreiche Links</h2>
+    <ul>
+        <li>
+            <a href="https://de.wikipedia.org/wiki/Anweisung_(Programmierung)" target="_blank"><span class="link_color">Wikipedia Anweisungen</span></a>
+        </li>
+    </ul>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_labyrinth_preparation' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_conditional_statements' %}
+{% endblock lesson_nav_buttons_next_page %}

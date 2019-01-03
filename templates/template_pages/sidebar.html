@@ -1,0 +1,69 @@
+{% extends 'template_pages/base.html' %}
+{% load static %}
+
+{% block head_css_page %}
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="{% static 'code_mirror/lib/codemirror.css' %}">
+    <link rel="stylesheet" href="{% static 'css/template_pages/sidebar.css' %}">
+{% endblock head_css_page %}
+
+{% block content_container %}
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+            crossorigin="anonymous"></script>
+
+    {% block scripts_for_python_browser_exercises %}{% endblock scripts_for_python_browser_exercises %}
+
+    <div class="sidebar_wrapper">
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>{% block sidebar_header %}{% endblock sidebar_header %}</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    {% block sidebar_items %}{% endblock sidebar_items %}
+                </ul>
+            </nav>
+
+            <div id="content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar_toggle_nav">
+                    <div class="container-fluid">
+
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+
+                    </div>
+                </nav>
+
+                {% block sidebar_page_content %}{% endblock sidebar_page_content %}
+
+                {% block lesson_nav_buttons %}
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="{% block lesson_nav_buttons_prev_page %}{% endblock lesson_nav_buttons_prev_page %}"
+                           class="form-btn btn btn-danger my-2 my-sm-0">
+                            Prev
+                        </a>
+                        <a href="{% block lesson_nav_buttons_next_page %}{% endblock lesson_nav_buttons_next_page %}"
+                           class="form-btn btn btn-success my-2 my-sm-0">
+                            Next
+                        </a>
+                    </div>
+                {% endblock lesson_nav_buttons %}
+            </div>
+        </div>
+    </div>
+{% endblock content_container %}
+
+{% block footer_javascript_page %}
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="{% static 'js/template_pages/sidebar.js' %}"></script>
+{% endblock footer_javascript_page %}

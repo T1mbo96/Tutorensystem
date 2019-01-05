@@ -1,10 +1,7 @@
 from django.urls import path, include
-from . import views
+from PythonTutorSystem import views
 
 urlpatterns = [
-    # registration
-    path('Account/sign_up/', views.SignUp.as_view(), name='sign_up'),
-
     # index
     path('Home/', views.index, name='index'),
 

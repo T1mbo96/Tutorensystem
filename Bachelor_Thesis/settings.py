@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'PythonTutorSystem.apps.PythontutorsystemConfig',
+    'widget_tweaks',
+    'Accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,5 +124,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

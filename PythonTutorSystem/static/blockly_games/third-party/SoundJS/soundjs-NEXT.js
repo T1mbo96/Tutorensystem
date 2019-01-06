@@ -3753,7 +3753,7 @@ this.createjs = this.createjs || {};
 	 * or register multiple sounds using {{#crossLink "Sound/registerSounds"}}{{/crossLink}}. If you don't register a
 	 * sound prior to attempting to play it using {{#crossLink "Sound/play"}}{{/crossLink}} or create it using {{#crossLink "Sound/createInstance"}}{{/crossLink}},
 	 * the sound source will be automatically registered but playback will fail as the source will not be ready. If you use
-	 * <a href="http://preloadjs.com" target="_blank">PreloadJS</a>, registration is handled for you when the sound is
+	 * <a href="http://preloadjs.com" target="_blank">PreloadJS</a>, accounts is handled for you when the sound is
 	 * preloaded. It is recommended to preload sounds either internally using the register functions or externally using
 	 * PreloadJS so they are ready when you want to use them.
 	 *

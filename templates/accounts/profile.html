@@ -1,0 +1,16 @@
+{% extends 'template_pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    Profil
+{% endblock title %}
+
+{% block head_css_page %}
+    <link href="{% static 'css/accounts/profile.css' %}">
+{% endblock head_css_page %}
+
+{% block content_container %}
+    <div class="container">
+        <a class="btn btn-secondary" href="{% url 'password_change' %}">Change password</a>
+    </div>
+{% endblock content_container %}

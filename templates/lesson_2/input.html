@@ -1,10 +1,61 @@
 {% extends 'template_pages/lesson_2_base.html' %}
 {% load static %}
 
+{% block lesson_2_input_active %}
+    sidebar_active
+{% endblock lesson_2_input_active %}
+
+{% block sidebar_page_content %}
+    <h1>Input-Funktion</h1>
+    <p>
+        Wie Sie im vorherigen Abschnitt kennengelernt haben, muss jedes Programm mit seiner Außenwelt in Kontakt
+        treten. Sie haben bereits in Erfahrung bringen können, wie man mithilfe der Print-Funktion Werte in der Konsole
+        ausgibt. Nun lernen Sie, wie man von der Konsole Werte einlesen und mit diesen arbeiten kann.
+    </p>
+    <p>
+        Da Skulpt momentan eigentlich noch für Python 2 konzipiert wurde und noch nicht die komplette Funktionalität von
+        Python 3 aufweist, muss dieser Abschnitt unterteilt werden. Machen Sie sich allerdings keine Sorgen, die
+        Funktionen in Python 2 und Python 3 weisen im Endeffekt dieselbe Funktionsweise auf, nur die Namen haben sich
+        geändert. Die Print-Funktion im vorherigen Beispiel ist übrigens schon aus Python 3, da hierfür bereits das
+        Modul für Skulpt programmiert wurde. Leider ist dies für die Input-Funktion noch nicht geschehen.
+    </p>
+    <h3>Python 2</h3>
+    <p>
+        In Python 2 werden die Werte mithilfe der Funktion <span class="text_highlighted">input()</span> von der Konsole
+        eingelesen, welchen direkt ihr passender Datentyp zugewiesen wird. Möchte man jeglichen Input als String haben,
+        so benutzt man die Funktion <span class="text_highlighted">raw_input()</span>.
+    </p>
+    <h3>Python 3</h3>
+    <p>
+        In Python 3 benutzt man für das Einlesen als String die Funktion <span class="text_highlighted">input()</span>
+        (= <span class="text_highlighted">raw_input()</span> in Python 2). Um den eingelesenen Werten nun direkt die
+        richtigen Datentypen zuzuweisen, muss man die Funktion <span class="text_highlighted">eval()</span>benutzen.
+        Diese Funktion benötigt aber im Gegensatz zur Input-Funktion in Python 2 noch die Funktion <span
+            class="text_highlighted">input()</span> als Parameter, woraus sich <span class="text_highlighted">eval(input())</span>
+        ergibt.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_2/python_input_example.PNG' %}" class="rounded"
+             alt="Example of input function in python 3">
+    </div>
+    <p></p>
+    <p>
+        <span class="text_highlighted">Merke:</span> Wenn Sie die Input-Funktion in Skulpt verwenden wollen, dann
+        benutzen sie bitte die Python 2 Version.
+    </p>
+    <h3>Hilfreiche Links</h3>
+    <ul>
+        <li>
+            <a href="https://www.python-kurs.eu/python3_eingabe.php" target="_blank"><span
+                    class="link_color">Python Input</span></a>
+        </li>
+    </ul>
+{% endblock sidebar_page_content %}
+
 {% block lesson_nav_buttons_prev_page %}
-    {% url 'lesson_2_print' %}
+    {% url 'lesson_2_exercises_print' %}
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'lesson_2_conditional_statements' %}
+    {% url 'lesson_2_exercises_input' %}
 {% endblock lesson_nav_buttons_next_page %}

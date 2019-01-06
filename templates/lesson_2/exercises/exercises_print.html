@@ -1,0 +1,61 @@
+{% extends 'template_pages/lesson_2_base.html' %}
+{% load static %}
+
+{% block lesson_2_exercises_print_active %}
+    sidebar_active
+{% endblock lesson_2_exercises_print_active %}
+
+{% block sidebar_page_content %}
+    <h1>Aufgabe</h1>
+    <div class="description_container">
+        Geben Sie bitte zuerst die Variablen <span class="text_highlighted">one</span> und <span
+            class="text_highlighted">two</span> mithilfe der Print-Funktion standardmäßig in einem Funktionsaufruf aus.
+        Anschließend sollen die Variablen <span class="text_highlighted">one</span> und <span class="text_highlighted">three</span>
+        mit einem <span class="text_highlighted">& (und)</span> getrennt ausgegeben werden. Zum Schluss soll dann noch
+        die Variable <span class="text_highlighted">one</span> mit einem <span class="text_highlighted">!</span> am Ende
+        ausgegeben werden, ohne Zeilenumbruch. Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf
+        den Button <span class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code
+        richtig ist, benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
+    </div>
+    <p></p>
+    <h5>Bitte Code hier eingeben:</h5>
+    <div class="skulpt_code_container">
+        <form>
+            <textarea id="custom_code" cols="40" rows="10">
+# Hier werden die Variablen erzeugt
+one = "Variable"
+two = 10
+three = 3.5
+# Geben Sie nun die Variablen den Anweisungen folgend aus
+
+
+</textarea>
+            <br/>
+            <div id="skulpt_run_btn">
+                <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
+                <button type="button" onclick="print_test_code()" class="form-btn btn my-2 my-sm-0">Test</button>
+            </div>
+        </form>
+        <p></p>
+        <div class="alert alert-success" role="alert" id="correct" style="display: none">
+            Klasse! Dein Code war richtig!
+        </div>
+        <div class="alert alert-danger" role="alert" id="wrong" style="display: none">
+            Schade, dein Code war leider nicht richtig! Versuche es noch einmal!
+        </div>
+        <p></p>
+    </div>
+    <h5>Output:</h5>
+    <div class="description_container">
+        <pre id="output"></pre>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_2_print' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_2_input' %}
+{% endblock lesson_nav_buttons_next_page %}

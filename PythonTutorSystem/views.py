@@ -49,8 +49,29 @@ def lesson_1_blockly_games_labyrinth(request):
     return render(request, 'lesson_1/blockly_games_labyrinth.html')
 
 
+# lesson_2_exercises
 @login_required
+def lesson_2_exercises_variables(request):
+    return render(request, 'lesson_2/exercises/exercises_variables.html')
+
+
+@login_required
+def lesson_2_exercises_strings(request):
+    return render(request, 'lesson_2/exercises/exercises_strings.html')
+
+
+@login_required
+def lesson_2_exercises_print(request):
+    return render(request, 'lesson_2/exercises/exercises_print.html')
+
+
+@login_required
+def lesson_2_exercises_input(request):
+    return render(request, 'lesson_2/exercises/exercises_input.html')
+
+
 # lesson_2
+@login_required
 def lesson_2_introduction(request):
     return render(request, 'lesson_2/introduction.html')
 

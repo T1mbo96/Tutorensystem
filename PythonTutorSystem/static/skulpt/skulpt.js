@@ -1,4 +1,5 @@
 var editor;
+Sk.python3 = true;
 
 function outf(text) {
     var mypre = document.getElementById("output");

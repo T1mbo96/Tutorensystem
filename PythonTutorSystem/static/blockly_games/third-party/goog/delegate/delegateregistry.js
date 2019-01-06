@@ -64,9 +64,9 @@ class DelegateRegistryBase {
   }
 
   /**
-   * Configures this registry to allow late registration.  Normally it is an
+   * Configures this registry to allow late accounts.  Normally it is an
    * error to register a delegate after calling `delegate()` or `delegates()`.
-   * If late registration is allowed, then this is no longer an error.  This
+   * If late accounts is allowed, then this is no longer an error.  This
    * check only ever happens in debug mode.  Returns this.
    * @return {THIS}
    * @this {THIS}
@@ -143,7 +143,7 @@ class DelegateRegistryBase {
   }
 
   /**
-   * Checks whether a new registration may be added.
+   * Checks whether a new accounts may be added.
    * @private
    */
   checkRegistration_() {
@@ -237,8 +237,8 @@ class DelegateRegistryBase {
  * reasonable behavior.
  *
  * Finally, `DelegateRegistry.Prioritized` requires passing a
- * unique priority to each delegate registration (collisions are asserted in
- * debug mode, but will fall back on registration order in production).
+ * unique priority to each delegate accounts (collisions are asserted in
+ * debug mode, but will fall back on accounts order in production).
  *
  *
  * ## Wrapped Delegator

@@ -32,7 +32,7 @@ goog.require('goog.messaging.MultiChannel');
  * Creates a new RespondingChannel wrapping a single MessageChannel.
  * @param {goog.messaging.MessageChannel} messageChannel The messageChannel to
  *     to wrap and allow for responses. This channel must not have any existing
- *     services registered. All service registration must be done through the
+ *     services registered. All service accounts must be done through the
  *     {@link RespondingChannel#registerService} api instead. The other end of
  *     channel must also be a RespondingChannel.
  * @constructor

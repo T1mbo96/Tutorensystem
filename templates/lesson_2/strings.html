@@ -36,51 +36,6 @@
         Link <a href="https://www.tutorialspoint.com/python/python_strings.htm" target="_blank"><span
             class="link_color">Python Strings 1</span></a> ansehen.
     </p>
-    <h3>Aufgabe</h3>
-    <div class="description_container">
-        Erzeugen Sie bitte eine Variable mit Namen <span class="text_highlighted">test_string</span>, deren Wert Sie auf
-        <span class="text_highlighted">Hallo, Welt!</span> setzen. Anschließend erzeugen Sie bitte drei weitere
-        Variablen mit den Namen <span class="text_highlighted">a</span>, <span class="text_highlighted">b</span> und
-        <span class="text_highlighted">c</span>. Weißen Sie <span class="text_highlighted">a</span> bitte den Wert des
-        sechsten Elements, <span class="text_highlighted">b</span> den Wert des zweiten Elements und <span
-            class="text_highlighted">c</span> den Wert des letzten Elements zu. Wenn Sie ihren Code eingegeben haben
-        können Sie ihn mit einem Klick auf den Button <span class="text_highlighted">Run</span> testen. Um eine
-        Rückmeldung zu erhalten, ob ihr Code richtig ist, benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
-    </div>
-    <p></p>
-    <h5>Bitte Code hier eingeben:</h5>
-    <div class="skulpt_code_container">
-        <form>
-            <textarea id="custom_code" cols="40" rows="10">
-# In den folgenden Zeilen bitte ihren Code eintragen
-
-
-
-# Hiermit wird der Wert der Variablen ausgegeben
-print(test_string)
-print(a)
-print(b)
-print(c)</textarea>
-            <br/>
-            <div id="skulpt_run_btn">
-                <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
-                <button type="button" onclick="strings_test_code()" class="form-btn btn my-2 my-sm-0">Test</button>
-            </div>
-        </form>
-        <p></p>
-        <div class="alert alert-success" role="alert" id="correct" style="display: none">
-            Klasse! Dein Code war richtig!
-        </div>
-        <div class="alert alert-danger" role="alert" id="wrong" style="display: none">
-            Schade, dein Code war leider nicht richtig! Versuche es noch einmal!
-        </div>
-        <p></p>
-    </div>
-    <h5>Output:</h5>
-    <div class="description_container">
-        <pre id="output"></pre>
-    </div>
-    <p></p>
     <h3>Hilfreiche Links</h3>
     <ul>
         <li>
@@ -101,5 +56,5 @@ print(c)</textarea>
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'lesson_2_operators' %}
+    {% url 'lesson_2_exercises_strings' %}
 {% endblock lesson_nav_buttons_next_page %}

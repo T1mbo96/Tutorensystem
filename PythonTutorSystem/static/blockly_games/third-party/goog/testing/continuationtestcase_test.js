@@ -291,7 +291,7 @@ function testOutOfOrderWaits() {
 
   // Note that if the delta between the timeout is too small, two
   // continuation may be invoked at the same timer tick, using the
-  // registration order.
+  // accounts order.
   waitForTimeout(function() { assertEquals(3, ++counter); }, 200);
   waitForTimeout(function() { assertEquals(1, ++counter); }, 0);
   waitForTimeout(function() { assertEquals(2, ++counter); }, 100);

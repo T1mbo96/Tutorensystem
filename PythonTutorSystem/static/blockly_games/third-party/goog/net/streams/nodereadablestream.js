@@ -68,7 +68,7 @@ goog.net.streams.NodeReadableStream.EventType = {
  * Note that under the object mode, an event of DATA will deliver a message
  * of 1) JSON compliant JS object, including arrays; or 2) an ArrayBuffer.
  *
- * Ordering: messages will be delivered to callbacks in their registration
+ * Ordering: messages will be delivered to callbacks in their accounts
  * order. There is no ordering between on() and once() callbacks.
  *
  * Exceptions from callbacks will be caught and ignored.

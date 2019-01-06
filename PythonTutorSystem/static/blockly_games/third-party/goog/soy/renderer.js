@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Provides a soy renderer that allows registration of
+ * @fileoverview Provides a soy renderer that allows accounts of
  * injected data ("globals") that will be passed into the rendered
  * templates.
  *

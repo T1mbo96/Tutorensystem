@@ -627,7 +627,7 @@ goog.editor.plugins.UndoRedo.prototype.updateCurrentState_ = function(
       // so we use fieldObj.getInjectableContents to map between them.
       // We cannot use getInjectableContents when first creating the undo
       // content for a field with lorem, because on enable when this is first
-      // called we can't guarantee plugin registration order, so the
+      // called we can't guarantee plugin accounts order, so the
       // injectableContents at that time might not match the final
       // injectableContents.
       var emptyContents = fieldObj.getInjectableContents('', {});

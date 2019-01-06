@@ -857,11 +857,11 @@ goog.events.handleBrowserEvent_ = function(listener, opt_evt) {
         //
         // We can technically rely on IE to perform bubble event
         // propagation. However, it turns out that IE fires events in
-        // opposite order of attachEvent registration, which broke
+        // opposite order of attachEvent accounts, which broke
         // some code and tests that rely on the order. (While W3C DOM
         // Level 2 Events TR leaves the event ordering unspecified,
         // modern browsers and W3C DOM Level 3 Events Working Draft
-        // actually specify the order as the registration order.)
+        // actually specify the order as the accounts order.)
         for (var i = 0; !evt.propagationStopped_ && i < ancestors.length; i++) {
           evt.currentTarget = ancestors[i];
           var result =

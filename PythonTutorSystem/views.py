@@ -1,5 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
+
+
+def test(request):
+    return render(request, 'test.html')
 
 
 # index
@@ -68,6 +72,11 @@ def lesson_2_exercises_print(request):
 @login_required
 def lesson_2_exercises_input(request):
     return render(request, 'lesson_2/exercises/exercises_input.html')
+
+
+@login_required
+def lesson_2_exercises_conditional_statements(request):
+    return render(request, 'lesson_2/exercises/exercises_conditional_statements.html')
 
 
 # lesson_2

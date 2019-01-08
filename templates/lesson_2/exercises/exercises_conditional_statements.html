@@ -1,0 +1,78 @@
+{% extends 'template_pages/lesson_2_base.html' %}
+{% load static %}
+
+{% block lesson_2_exercises_conditional_statements_active %}
+    sidebar_active
+{% endblock lesson_2_exercises_conditional_statements_active %}
+
+{% block sidebar_page_content %}
+    <h1>Aufgabe</h1>
+    <p>
+        Schreiben Sie für die nachfolgendee Tabelle eine bedingte Anweisung, sodass ein Wettbewerber wissen kann,
+        welchen der Preise aus der Tabelle er gewonnen hat, basierend auf der Anzahl der erzielten Punkte, die in der
+        ganzzahligen Variable <span class="text_highlighted">points</span> gespeichert ist.
+    <p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_2/python_exercises_conditional_statements_table.PNG' %}" class="rounded"
+             alt="Table with prize ranges">
+    </div>
+    <p></p>
+    <div class="alert alert-primary" role="alert">
+        Alle unteren und oberen Grenzen sind hier inklusive und Punkte können nur positive ganzzahlige Werte bis zu 200
+        annehmen.
+    </div>
+    <p>
+        Weisen Sie in Ihrer bedingten Anweisung der Variable <span class="text_highlighted">result</span> eine
+        Zeichenfolge (String) zu, die, basierend auf dem Wert der Punkte, die entsprechende Nachricht enthält. Wenn ein
+        Preis gewonnen wurde, sollte die Nachricht <span class="text_highlighted">Sehr gut! Sie haben einen [Preisname] gewonnen!</span>
+        (Ersetzen Sie [Preisname] mit dem Namen des jeweiligen Preises aus der Tabelle) ausgegeben werden. Wenn es
+        keinen Preis gibt, sollte in der Nachricht <span class="text_highlighted">Oh schade, diesmal gibt es keinen Preis.</span>
+        stehen.
+    </p>
+    <p>
+        Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
+            class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig ist,
+        benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
+    </p>
+    <div class="alert alert-primary" role="alert">
+        Sie dürfen ihren eigenen Code gerne mit anderen Eingaben testen. Um den Test bestehen zu können, sollten Sie
+        zum testen nur den ursprünglichen Wert von 174 nutzen.
+    </div>
+    <h5>Bitte Code hier eingeben:</h5>
+    <div class="skulpt_code_container">
+        <form>
+            <textarea id="custom_code" cols="40" rows="10">points = 174 # Nutzen Sie diesen Wert für die Abgabe
+# Schreiben Sie Ihre bedingte Anweisung bitte hier
+
+
+# Hiermit wird der Wert der Variable 'result' ausgegeben
+print(result)</textarea>
+            <br/>
+            <div id="skulpt_run_btn">
+                <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
+                <button type="button" onclick="conditional_statements_test_code()" class="form-btn btn my-2 my-sm-0">Test</button>
+            </div>
+        </form>
+        <p></p>
+        <div class="alert alert-success" role="alert" id="correct" style="display: none">
+            Klasse! Dein Code war richtig!
+        </div>
+        <div class="alert alert-danger" role="alert" id="wrong" style="display: none">
+            Schade, dein Code war leider nicht richtig! Versuche es noch einmal!
+        </div>
+        <p></p>
+    </div>
+    <h5>Output:</h5>
+    <div class="description_container">
+        <pre id="output"></pre>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_2_conditional_statements' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_2_while_loop' %}
+{% endblock lesson_nav_buttons_next_page %}

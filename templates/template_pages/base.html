@@ -23,6 +23,7 @@
                   integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
                   crossorigin="anonymous">
             <link rel="stylesheet" href="{% static 'css/template_pages/base.css' %}">
+            <link rel="stylesheet" href="{% static 'css/template_pages/footer.css' %}">
         {% endblock head_css_site %}
         {% block head_css_page %}
         {% endblock head_css_page %}
@@ -31,57 +32,59 @@
     {% endblock head_css %}
 </head>
 <body>
-<header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'index' %}">Learn_Python</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item {% block home_active %}{% endblock home_active %}">
-                    <a class="nav-link" href="{% url 'index' %}">Home</a>
-                </li>
+{% block header %}
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark main_color">
+            <a class="navbar-brand" href="{% url 'index' %}">Learn_Python</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item {% block home_active %}{% endblock home_active %}">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item {% block lesson_1_active %}{% endblock lesson_1_active %}">
+                            <a class="nav-link" href="{% url 'lesson_1_introduction' %}">Lektion 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block lesson_2_active %}{% endblock lesson_2_active %}"
+                               href="{% url 'lesson_2_introduction' %}">Lektion 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lektion 3</a>
+                        </li>
+                    {% endif %}
+                </ul>
                 {% if user.is_authenticated %}
-                    <li class="nav-item {% block lesson_1_active %}{% endblock lesson_1_active %}">
-                        <a class="nav-link" href="{% url 'lesson_1_introduction' %}">Lektion 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% block lesson_2_active %}{% endblock lesson_2_active %}"
-                           href="{% url 'lesson_2_introduction' %}">Lektion 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Lektion 3</a>
-                    </li>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="{% url 'logout' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="{% url 'login' %}" class="form-btn btn btn-outline-light my-2 my-sm-0"
+                               id="login_button">
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'sign_up' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
+                                Registrieren
+                            </a>
+                        </li>
+                    </ul>
                 {% endif %}
-            </ul>
-            {% if user.is_authenticated %}
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="{% url 'logout' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
-                            Logout
-                        </a>
-                    </li>
-                </ul>
-            {% else %}
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="{% url 'login' %}" class="form-btn btn btn-outline-light my-2 my-sm-0"
-                           id="login_button">
-                            Login
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'sign_up' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
-                            Registrieren
-                        </a>
-                    </li>
-                </ul>
-            {% endif %}
-        </div>
-    </nav>
-</header>
+            </div>
+        </nav>
+    </header>
+{% endblock header %}
 {% block content_container %}{% endblock content_container %}
 </body>
 <footer>
@@ -100,19 +103,5 @@
         {% block footer_javascript_page %}{% endblock footer_javascript_page %}
         {% block footer_javascript_section %}{% endblock footer_javascript_section %}
     {% endblock footer_javascript %}
-    <ul class="nav justify-content-center sticky-bottom navbar-dark">
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}"><span class="link_color">About</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'impressum' %}"><span class="link_color">Impressum</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'data_protection' %}"><span class="link_color">Datenschutz</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'sitemap' %}"><span class="link_color">Sitemap</span></a>
-        </li>
-    </ul>
 </footer>
 </html>

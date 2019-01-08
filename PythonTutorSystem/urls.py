@@ -2,6 +2,8 @@ from django.urls import path, include
 from PythonTutorSystem import views
 
 urlpatterns = [
+    path('Test/', views.test, name='test'),
+
     # index
     path('Home/', views.index, name='index'),
 

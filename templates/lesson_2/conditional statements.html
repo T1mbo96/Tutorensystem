@@ -1,10 +1,47 @@
 {% extends 'template_pages/lesson_2_base.html' %}
 {% load static %}
 
+{% block lesson_2_conditional_statements_active %}
+    sidebar_active
+{% endblock lesson_2_conditional_statements_active %}
+
+{% block sidebar_page_content %}
+    <h1>Bedingte Anweisungen</h1>
+    <p>
+        Die bedingten Anweisungen haben Sie in <a href="{% url 'lesson_1_conditional_statements' %}" class="link_color"
+                                                  target="_blank"><span class="link_color">Lektion 1</span></a> bereits
+        kennengelernt, weshalb die Funktionsweise keiner ausführlichen Erläuterung mehr bedarf. Allerdings ist wichtig
+        zu wissen, dass man zwischen dem <span class="text_highlighted">if</span> und <span class="text_highlighted">else</span>
+        das Schlüsselwort <span class="text_highlighted">elif</span> einfügen kann, wodurch man die bedingte Anweisung
+        beliebig verlängern kann, ohne viele <span class="text_highlighted">if-Blöcke</span> ineinander verschachteln zu
+        müssen.
+    </p>
+    <div class="text-center">
+        <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}" class="rounded"
+             alt="Example of conditional statements">
+    </div>
+    <p></p>
+    <h3>Hilfreiche Links</h3>
+    <ul>
+        <li>
+            <a href="https://www.python-kurs.eu/python3_bedingte_anweisungen.php" target="_blank"><span
+                    class="link_color">Python Bedingte Anweisungen 1</span></a>
+        </li>
+        <li>
+            <a href="https://www.tutorialspoint.com/python/python_decision_making.htm" target="_blank"><span
+                    class="link_color">Python Bedingte Anweisungen 2</span></a>
+        </li>
+        <li>
+            <a href="https://de.wikipedia.org/wiki/Bedingte_Anweisung_und_Verzweigung" target="_blank"><span
+                    class="link_color">Wikipedia Bedingte Anweisungen</span></a>
+        </li>
+    </ul>
+{% endblock sidebar_page_content %}
+
 {% block lesson_nav_buttons_prev_page %}
     {% url 'lesson_2_exercises_input' %}
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'lesson_2_while_loop' %}
+    {% url 'lesson_2_exercises_conditional_statements' %}
 {% endblock lesson_nav_buttons_next_page %}

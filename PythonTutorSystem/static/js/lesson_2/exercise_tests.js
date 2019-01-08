@@ -1,41 +1,33 @@
 // Variables
 function variables_test_code() {
-    runit();
-    var _output = document.getElementById('output').innerText;
-    if(_output==="50\n") {
-        show_success_alert();
-    } else {
-        show_danger_alert();
-    }
+    test_code("50\n");
 }
 
 // Strings
 function strings_test_code() {
-    runit();
-    var _output = document.getElementById('output').innerText;
-    if(_output==="Hallo, Welt!\n,\nH\n!\n") {
-        show_success_alert();
-    } else {
-        show_danger_alert();
-    }
+    test_code("Hallo, Welt!\n,\nH\n!\n");
 }
 
 // Print-Function
 function print_test_code() {
-    runit();
-    var _output = document.getElementById('output').innerText;
-    if(_output==="Variable 10\nVariable&3.5\nVariable!") {
-        show_success_alert();
-    } else {
-        show_danger_alert();
-    }
+    test_code("Variable 10\nVariable&3.5\nVariable!");
 }
 
 // Input-Function
 function input_test_code() {
+    test_code("532\n");
+}
+
+// Conditional Statements
+function conditional_statements_test_code() {
+    test_code("Sehr gut! Sie haben einen wafer-thin mint gewonnen!\n");
+}
+
+// Template Test-Function
+function test_code(solution) {
     runit();
     var _output = document.getElementById('output').innerText;
-    if(_output==="532\n") {
+    if(_output===solution) {
         show_success_alert();
     } else {
         show_danger_alert();

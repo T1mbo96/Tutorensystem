@@ -7,37 +7,48 @@
 
 {% block sidebar_page_content %}
     <h1>Variablen</h1>
-    <p>
-        In der Programmiersprache Python bezeichnet eine Variable, analog zu den Spielen in Blockly, keinen bestimmten
-        Typ, weshalb ebenfalls keine Deklaration benötigt wird. Benötigt man im Programm bespielsweise eine Variable
-        <span class="text_highlighted">i</span> mit dem Wert <span class="text_highlighted">50</span>, so erreicht man
-        dies einfach mit der folgenden Anweisung.
-    </p>
-    <div class="text-center">
-        <img src="{% static 'pictures/lesson_2/python_variables_example.PNG' %}" class="rounded"
-             alt="Example of a python variable i with value 50">
+    <div class="card">
+        <div class="card-body">
+                In der Programmiersprache Python bezeichnet eine Variable, analog zu den Spielen in Blockly, keinen
+                bestimmten
+                Typ, weshalb ebenfalls keine Deklaration benötigt wird. Benötigt man im Programm bespielsweise eine
+                Variable
+                <span class="text_highlighted">i</span> mit dem Wert <span class="text_highlighted">50</span>, so
+                erreicht man
+                dies einfach mit der folgenden Anweisung.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_variables_example.PNG' %}" class="rounded"
+                     alt="Example of a python variable i with value 50">
+            </div>
+            <p></p>
+                Aus dem oben genannten Grund können Variablen in Python ihren Typ sogar ändern, nachdem sie festgelegt
+                wurden.
+                Ein Beispiel dafür ist in folgendem Bild ersichtlich.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_variables_redeclare_example.PNG' %}" class="rounded"
+                     alt="Example of a python variable i with value 50">
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.w3schools.com/python/python_variables.asp" target="_blank"><span
+                            class="link_color">Python Variablen</span></a>
+                </li>
+                <li>
+                    <a href="https://de.wikipedia.org/wiki/Variable_(Programmierung)" target="_blank"><span
+                            class="link_color">Wikipedia Variable</span></a>
+                </li>
+            </ul>
+        </div>
     </div>
     <p></p>
-    <p>
-        Aus dem oben genannten Grund können Variablen in Python ihren Typ sogar ändern, nachdem sie festgelegt wurden.
-        Ein Beispiel dafür ist in folgendem Bild ersichtlich.
-    </p>
-    <div class="text-center">
-        <img src="{% static 'pictures/lesson_2/python_variables_redeclare_example.PNG' %}" class="rounded"
-             alt="Example of a python variable i with value 50">
-    </div>
-    <p></p>
-    <h3>Hilfreiche Links</h3>
-    <ul>
-        <li>
-            <a href="https://www.w3schools.com/python/python_variables.asp" target="_blank"><span
-                    class="link_color">Python Variablen</span></a>
-        </li>
-        <li>
-            <a href="https://de.wikipedia.org/wiki/Variable_(Programmierung)" target="_blank"><span
-                    class="link_color">Wikipedia Variable</span></a>
-        </li>
-    </ul>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

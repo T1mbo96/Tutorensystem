@@ -113,11 +113,22 @@ ul ul a {
     width: 100%;
     height: 391px;
     background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f7f7f7;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .skulpt_code_container {
     min-width: 500px;
     width: 100%;
+}
+
+.text_area_wrapper {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f7f7f7;
 }
 
 #skulpt_run_btn {
@@ -128,4 +139,8 @@ ul ul a {
     margin: auto;
     width: 50%;
     min-width: 500px;
+}
+
+.card {
+    margin-top: 12px;
 }

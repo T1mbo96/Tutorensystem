@@ -33,8 +33,11 @@ function runit() {
 }
 
 function hide_alerts() {
-    document.getElementById('wrong').style.display = 'none';
-    document.getElementById('correct').style.display = 'none';
+    let alert_array = document.getElementsByClassName('_alert');
+
+    for (let counter = 0; counter < alert_array.length; counter++) {
+        alert_array[counter].style.display = 'none';
+    }
 }
 
 $(document).ready(function () {
@@ -45,21 +48,3 @@ $(document).ready(function () {
         mode: "python",
     });
 });
-
-function show_success_alert() {
-    if (document.getElementById('correct').style.display === 'none') {
-        if (document.getElementById('wrong').style.display === 'block') {
-            document.getElementById('wrong').style.display = 'none';
-        }
-        document.getElementById('correct').style.display = 'block';
-    }
-}
-
-function show_danger_alert() {
-    if (document.getElementById('wrong').style.display === 'none') {
-        if (document.getElementById('correct').style.display === 'block') {
-            document.getElementById('correct').style.display = 'none';
-        }
-        document.getElementById('wrong').style.display = 'block';
-    }
-}

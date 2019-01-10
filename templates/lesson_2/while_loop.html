@@ -1,6 +1,14 @@
 {% extends 'template_pages/lesson_2_base.html' %}
 {% load static %}
 
+{% block lesson_2_while_loop_active %}
+    sidebar_active
+{% endblock lesson_2_while_loop_active %}
+
+{% block sidebar_page_content %}
+    <h1>while-Schleife</h1>
+{% endblock sidebar_page_content %}
+
 {% block lesson_nav_buttons_prev_page %}
     {% url 'lesson_2_exercises_conditional_statements' %}
 {% endblock lesson_nav_buttons_prev_page %}

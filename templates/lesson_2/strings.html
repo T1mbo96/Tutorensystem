@@ -7,48 +7,62 @@
 
 {% block sidebar_page_content %}
     <h1>Strings</h1>
-    <p>
-        Ein String gehört zu den sogenannten sequentiellen Datentypen. Diese enthalten eine Folge von gleichartigen
-        oder verschiedenartigen Elementen, welche eine definierte Reihenfolge aufweisen. Aus diesem Grund kann man
-        mithilfe von Indices auf die Elemente, die in einem sequentiellen Datentyp gespeichert sind, zugreifen. Ein
-        String im Speziellen ist eine Zeichenkette, die durch das in Anführungszeichen setzen von Zeichen erzeugt
-        werden.
-    </p>
-    <div class="text-center">
-        <img src="{% static 'pictures/lesson_2/string_indices_example.PNG' %}" class="rounded"
-             alt="Example of the indices of a string">
+    <div class="card">
+        <div class="card-body">
+            Ein String gehört zu den sogenannten sequentiellen Datentypen. Diese enthalten eine Folge von
+            gleichartigen
+            oder verschiedenartigen Elementen, welche eine definierte Reihenfolge aufweisen. Aus diesem Grund kann
+            man
+            mithilfe von Indices auf die Elemente, die in einem sequentiellen Datentyp gespeichert sind, zugreifen.
+            Ein
+            String im Speziellen ist eine Zeichenkette, die durch das in Anführungszeichen setzen von Zeichen
+            erzeugt
+            werden.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/string_indices_example.PNG' %}" class="rounded"
+                     alt="Example of the indices of a string">
+            </div>
+            <p></p>
+            Wie man in obiger Abbildung gut erkennen kann, werden die Elemente mit 0 beginnend, von links nach
+            rechts,
+            indexiert. Man kann auf einen sequentiellen Datentyp allerdings auch von rechts beginnend nach links
+            zugreifen,
+            woraus sich dann eine Indexierung von -1 absteigend ergibt. Somit kann man jedes Element direkt einzeln
+            ansprechen.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_strings_example.PNG' %}" class="rounded"
+                     alt="Example of a string in python">
+            </div>
+            <p></p>
+            Es gibt einige Möglichkeiten, was man mit Strings im Speziellen bzw. sequentiellen Datentypen im
+            Allgemeinen
+            alles anstellen kann. Um eine Zusammenfassung über die Möglichkeiten zu erhalten, können Sie sich den
+            ersten
+            Link <a href="https://www.tutorialspoint.com/python/python_strings.htm" target="_blank"><span
+                class="link_color">Python Strings 1</span></a> ansehen.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_strings.htm" target="_blank"><span
+                            class="link_color">Python Strings 1</span></a>
+                </li>
+                <li>
+                    <a href="https://www.python-kurs.eu/python3_sequentielle_datentypen.php" target="_blank"><span
+                            class="link_color">Python Strings 2</span></a>
+                </li>
+                <li>
+                    <a href="https://de.wikipedia.org/wiki/Zeichenkette" target="_blank"><span class="link_color">Wikipedia String</span></a>
+                </li>
+            </ul>
+        </div>
     </div>
     <p></p>
-    <p>
-        Wie man in obiger Abbildung gut erkennen kann, werden die Elemente mit 0 beginnend, von links nach rechts,
-        indexiert. Man kann auf einen sequentiellen Datentyp allerdings auch von rechts beginnend nach links zugreifen,
-        woraus sich dann eine Indexierung von -1 absteigend ergibt. Somit kann man jedes Element direkt einzeln
-        ansprechen.
-    </p>
-    <div class="text-center">
-        <img src="{% static 'pictures/lesson_2/python_strings_example.PNG' %}" class="rounded"
-             alt="Example of a string in python">
-    </div>
-    <p></p>
-    <p>
-        Es gibt einige Möglichkeiten, was man mit Strings im Speziellen bzw. sequentiellen Datentypen im Allgemeinen
-        alles anstellen kann. Um eine Zusammenfassung über die Möglichkeiten zu erhalten, können Sie sich den ersten
-        Link <a href="https://www.tutorialspoint.com/python/python_strings.htm" target="_blank"><span
-            class="link_color">Python Strings 1</span></a> ansehen.
-    </p>
-    <h3>Hilfreiche Links</h3>
-    <ul>
-        <li>
-            <a href="https://www.tutorialspoint.com/python/python_strings.htm" target="_blank"><span class="link_color">Python Strings 1</span></a>
-        </li>
-        <li>
-            <a href="https://www.python-kurs.eu/python3_sequentielle_datentypen.php" target="_blank"><span
-                    class="link_color">Python Strings 2</span></a>
-        </li>
-        <li>
-            <a href="https://de.wikipedia.org/wiki/Zeichenkette" target="_blank"><span class="link_color">Wikipedia String</span></a>
-        </li>
-    </ul>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

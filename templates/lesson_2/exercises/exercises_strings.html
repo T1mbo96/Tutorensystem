@@ -7,22 +7,34 @@
 
 {% block sidebar_page_content %}
     <h1>Aufgabe: Strings</h1>
-    <p>
-        Erzeugen Sie bitte eine Variable mit Namen <span class="text_highlighted">test_string</span>, deren Wert Sie auf
-        <span class="text_highlighted">Hallo, Welt!</span> setzen. Anschließend erzeugen Sie bitte drei weitere
-        Variablen mit den Namen <span class="text_highlighted">a</span>, <span class="text_highlighted">b</span> und
-        <span class="text_highlighted">c</span>. Weißen Sie <span class="text_highlighted">a</span> bitte den Wert des
-        sechsten Elements, <span class="text_highlighted">b</span> den Wert des zweiten Elements und <span
-            class="text_highlighted">c</span> den Wert des letzten Elements zu.
-    </p>
-    <p>
-        Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
-            class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig ist,
-        benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
-    </p>
-    <h5>Bitte Code hier eingeben:</h5>
-    <div class="skulpt_code_container">
-        <form>
+    <div class="card">
+        <div class="card-body">
+            Erzeugen Sie bitte eine Variable mit Namen <span class="text_highlighted">test_string</span>, deren Wert
+            Sie auf
+            <span class="text_highlighted">Hallo, Welt!</span> setzen. Anschließend erzeugen Sie bitte drei weitere
+            Variablen mit den Namen <span class="text_highlighted">first_string</span>, <span
+                class="text_highlighted">second_string</span>
+            und <span class="text_highlighted">third_string</span>. Weißen Sie <span
+                class="text_highlighted">first_string</span> bitte den Wert des sechsten Elements, <span
+                class="text_highlighted">second_string</span> den Wert des zweiten Elements und <span
+                class="text_highlighted">third_string</span> den Wert des letzten Elements zu. Nutzen Sie zu
+            Lernzwecken
+            bitte die Zuweisung durch Indexierung der <span class="text_highlighted">test_string</span> Variable,
+            wie Sie in
+            vorhergehendem Abschnitt gelernt haben.
+            <p></p>
+            Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
+                class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
+            ist,
+            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5>Bitte Code hier eingeben:</h5>
+            <div class="skulpt_code_container">
+                <form>
+                    <div class="text_area_wrapper">
             <textarea id="custom_code" cols="40" rows="10">
 # In den folgenden Zeilen bitte ihren Code eintragen
 
@@ -30,27 +42,50 @@
 
 # Hiermit werden die Werte der Variablen ausgegeben
 print(test_string)
-print(a)
-print(b)
-print(c)</textarea>
-            <br/>
-            <div id="skulpt_run_btn">
-                <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
-                <button type="button" onclick="strings_test_code()" class="form-btn btn my-2 my-sm-0">Test</button>
+print(first_string)
+print(second_string)
+print(third_string)</textarea>
+                    </div>
+                    <br/>
+                    <div id="skulpt_run_btn">
+                        <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
+                        <button type="button" onclick="strings_test_code()" class="form-btn btn my-2 my-sm-0">Test
+                        </button>
+                    </div>
+                </form>
             </div>
-        </form>
-        <p></p>
-        <div class="alert alert-success" role="alert" id="correct" style="display: none">
-            Klasse! Dein Code war richtig!
+            <p></p>
+            <div class="alert alert-success _alert" role="alert" id="correct_1" style="display: none">
+                Klasse! Die Variable 'test_string' ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_1" style="display: none">
+                Schade, die Variable 'test_string' ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_2" style="display: none">
+                Klasse! Die Variable 'first_string' ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_2" style="display: none">
+                Schade, die Variable 'first_string' ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_3" style="display: none">
+                Klasse! Die Variable 'second_string' ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_3" style="display: none">
+                Schade, die Variable 'second_string' ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_4" style="display: none">
+                Klasse! die Variable 'third_string' ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_4" style="display: none">
+                Schade, die Variable 'third_string' ist leider nicht korrekt!
+            </div>
+            <p></p>
+            <h5>Output:</h5>
+            <div class="description_container">
+                <pre id="output"></pre>
+            </div>
+            <p></p>
         </div>
-        <div class="alert alert-danger" role="alert" id="wrong" style="display: none">
-            Schade, dein Code war leider nicht richtig! Versuche es noch einmal!
-        </div>
-        <p></p>
-    </div>
-    <h5>Output:</h5>
-    <div class="description_container">
-        <pre id="output"></pre>
     </div>
     <p></p>
 {% endblock sidebar_page_content %}

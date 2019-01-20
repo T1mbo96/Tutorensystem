@@ -1,0 +1,9 @@
+{% load static %}
+
+{% block sidebar_page_content %}
+    <link rel="stylesheet" href="{% static 'blockly_games/common/common.css' %}">
+    <link rel="stylesheet" href="{% static 'blockly_games/pond/docs/style.css' %}">
+    <script src="{% static 'blockly_games/common/boot.js' %}"></script>
+
+    <script src="{% static 'blockly_games/load_language_pack_script/pond_documentation.js' %}"></script>
+{% endblock sidebar_page_content %}

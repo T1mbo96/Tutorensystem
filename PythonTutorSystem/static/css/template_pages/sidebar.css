@@ -143,4 +143,10 @@ ul ul a {
 
 .card {
     margin-top: 12px;
+    margin-right: 10px;
+}
+
+.scaled_img {
+    max-width: 100%;
+    height: auto;
 }

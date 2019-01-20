@@ -19,6 +19,7 @@ urlpatterns = [
     path('Bedingte_Anweisungen/Aufgabe/', views.lesson_2_exercises_conditional_statements,
          name='lesson_2_exercises_conditional_statements'),
     path('while_Schleife/', views.lesson_2_while_loop, name='lesson_2_while_loop'),
+    path('while_Schleife/Aufgabe/', views.lesson_2_exercises_while_loop, name='lesson_2_exercises_while_loop'),
     path('for_Schleife/', views.lesson_2_for_loop, name='lesson_2_for_loop'),
     path('Liste/', views.lesson_2_list, name='lesson_2_list'),
     path('Tupel/', views.lesson_2_tuple, name='lesson_2_tuple'),

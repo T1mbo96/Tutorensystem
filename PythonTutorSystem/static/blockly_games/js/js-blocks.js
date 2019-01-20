@@ -41,6 +41,13 @@ goog.require('Blockly.JavaScript.loops');
 goog.require('Blockly.JavaScript.math');
 goog.require('Blockly.JavaScript.procedures');
 goog.require('Blockly.JavaScript.variables');
+goog.require('Blockly.Python');
+goog.require('Blockly.Python.lists');
+goog.require('Blockly.Python.logic');
+goog.require('Blockly.Python.loops');
+goog.require('Blockly.Python.math');
+goog.require('Blockly.Python.procedures');
+goog.require('Blockly.Python.variables');
 goog.require('BlocklyGames');
 goog.require('BlocklyGames.Msg');
 
@@ -56,12 +63,12 @@ Blockly.Blocks['controls_if'].init = function() {
   this.setColour(Blockly.Msg['LOGIC_HUE']);
   this.appendValueInput('IF0')
       .setCheck('Boolean')
-      .appendField('if (');
+      .appendField('if ');
   this.appendDummyInput()
-      .appendField(') {');
+      .appendField(':');
   this.appendStatementInput('DO0');
   this.appendDummyInput('TAIL')
-      .appendField('}');
+      .appendField('');
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
@@ -95,14 +102,14 @@ Blockly.Blocks['controls_if'].updateShape_ = function() {
   for (var i = 1; i <= this.elseifCount_; i++) {
     this.appendValueInput('IF' + i)
         .setCheck('Boolean')
-        .appendField('} else if (');
+        .appendField('elif ');
     this.appendDummyInput('TAIL' + i)
-        .appendField(') {');
+        .appendField(':');
     this.appendStatementInput('DO' + i);
   }
   if (this.elseCount_) {
     this.appendDummyInput('ELSEMSG')
-        .appendField('} else {');
+        .appendField('else:');
     this.appendStatementInput('ELSE');
   }
   // Move final '}' to the end.
@@ -146,13 +153,13 @@ Blockly.Blocks['logic_compare'].init = function() {
   this.prevBlocks_ = [null, null];
 };
 
-Blockly.Msg['LOGIC_OPERATION_AND'] = '&&';
-Blockly.Msg['LOGIC_OPERATION_OR'] = '||';
+Blockly.Msg['LOGIC_OPERATION_AND'] = 'and';
+Blockly.Msg['LOGIC_OPERATION_OR'] = 'or';
 
-Blockly.Msg['LOGIC_NEGATE_TITLE'] = '! %1';
+Blockly.Msg['LOGIC_NEGATE_TITLE'] = 'not %1';
 
-Blockly.Msg['LOGIC_BOOLEAN_TRUE'] = 'true';
-Blockly.Msg['LOGIC_BOOLEAN_FALSE'] = 'false';
+Blockly.Msg['LOGIC_BOOLEAN_TRUE'] = 'True';
+Blockly.Msg['LOGIC_BOOLEAN_FALSE'] = 'False';
 
 /**
  * Block for 'while' loop.
@@ -160,7 +167,7 @@ Blockly.Msg['LOGIC_BOOLEAN_FALSE'] = 'false';
  */
 Blockly.Blocks['controls_whileUntil'].init = function() {
   this.jsonInit({
-    "message0": "while ( %1 ) { %2 %3 }",
+    "message0": "while  %1: %2 %3",
     "args0": [
       {
         "type": "input_value",
@@ -190,7 +197,7 @@ Blockly.Blocks['controls_whileUntil'].init = function() {
  */
 Blockly.Blocks['controls_for'].init = function() {
   this.jsonInit({
-    "message0": "for (var %1 = %2;  %3 < %4;  %5 += 1) { %6 %7 }",
+    "message0": "for %1 in range(%4): %6 %7",
     "args0": [
       {
         "type": "field_variable",
@@ -271,8 +278,24 @@ Blockly.JavaScript['controls_for'] = function(block) {
   return code;
 };
 
-Blockly.Msg['CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK'] = 'break ;';
-Blockly.Msg['CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE'] = 'continue ;';
+Blockly.Python['controls_for'] = function(block) {
+  // For loop.
+  var variable = Blockly.Python.variableDB_.getName(
+      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  var from = Blockly.Python.valueToCode(block, 'FROM',
+      Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+  var to = Blockly.Python.valueToCode(block, 'TO',
+      Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+  var branch = Blockly.Python.statementToCode(block, 'DO');
+
+  branch = Blockly.JavaScript.addLoopTrap(branch, block.id);
+  var code = 'for ' + variable + ' in range( ' + to + '):\n' +
+      branch + '\n';
+  return code;
+};
+
+Blockly.Msg['CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK'] = 'break';
+Blockly.Msg['CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE'] = 'continue';
 
 /**
  * Block for basic arithmetic operator.
@@ -328,7 +351,7 @@ Blockly.Blocks['math_arithmetic'].init = function() {
  */
 Blockly.Blocks['math_change'].init = function() {
   this.jsonInit({
-    "message0": "%1 += %2;",
+    "message0": "%1 += %2",
     "args0": [
       {
         "type": "field_variable",
@@ -371,6 +394,15 @@ Blockly.JavaScript['math_change'] = function(block) {
   return varName + ' += ' + delta + ';\n';
 };
 
+Blockly.Python['math_change'] = function(block) {
+  // Add to a variable in place.
+  var delta = Blockly.Python.valueToCode(block, 'DELTA',
+      Blockly.JavaScript.ORDER_ADDITION) || '0';
+  var varName = Blockly.Python.variableDB_.getName(
+      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  return varName + ' += ' + delta + '\n';
+};
+
 /**
  * Block for random integer between [X] and [Y].
  * @this Blockly.Block
@@ -379,7 +411,7 @@ Blockly.Blocks['math_random_int'].init = function() {
   this.jsonInit({
     "message0": "%1(%2,%3)",
     "args0": [
-      "Math.randomInt",
+      "random.randint",
       {
         "type": "input_value",
         "name": "FROM",
@@ -399,7 +431,7 @@ Blockly.Blocks['math_random_int'].init = function() {
   });
 };
 
-Blockly.Msg['MATH_RANDOM_FLOAT_TITLE_RANDOM'] = 'Math.random  (  )';
+Blockly.Msg['MATH_RANDOM_FLOAT_TITLE_RANDOM'] = 'random.random  (  )';
 
 Blockly.Msg['LISTS_CREATE_EMPTY_TITLE'] = '[ ]';
 Blockly.Msg['LISTS_CREATE_WITH_INPUT_WITH'] = '[';
@@ -531,11 +563,11 @@ Blockly.Blocks['variables_set'].init = function() {
   this.setHelpUrl(Blockly.Msg['VARIABLES_SET_HELPURL']);
   this.setColour(Blockly.Msg['VARIABLES_HUE']);
   this.appendValueInput('VALUE')
-      .appendField('var')
+      .appendField('')
       .appendField(new Blockly.FieldVariable('name'), 'VAR')
       .appendField('=');
   this.appendDummyInput()
-      .appendField(';');
+      .appendField('');
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
@@ -556,11 +588,11 @@ Blockly.Blocks['procedures_defnoreturn'].init = function() {
       .appendField(nameField, 'NAME')
       .appendField('(')
       .appendField('', 'PARAMS')
-      .appendField(') {');
+      .appendField('):');
   // Append statement block to the function definition here.
   this.setStatements_(true);
   this.appendDummyInput()
-      .appendField('}');
+      .appendField('');
   this.setMutator(new Blockly.Mutator(['procedures_mutatorarg']));
   if (Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']) {
     this.setCommentText(Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']);
@@ -586,12 +618,12 @@ Blockly.Blocks['procedures_defreturn'].init = function() {
       .appendField(nameField, 'NAME')
       .appendField('(')
       .appendField('', 'PARAMS')
-      .appendField(') {');
+      .appendField('):');
   this.appendValueInput('RETURN')
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField('return');
   this.appendDummyInput()
-      .appendField('}');
+      .appendField('');
   this.setMutator(new Blockly.Mutator(['procedures_mutatorarg']));
   if (Blockly.Msg['PROCEDURES_DEFRETURN_COMMENT']) {
     this.setCommentText(Blockly.Msg['PROCEDURES_DEFRETURN_COMMENT']);
@@ -618,7 +650,7 @@ Blockly.Blocks['procedures_callnoreturn'].init = function() {
       .appendField('', 'NAME')
       .appendField('(');
   this.appendDummyInput('TAIL')
-      .appendField(');');
+      .appendField(')');
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);

@@ -70,6 +70,7 @@ BlocklyInterface.init = function() {
   // Switch to zero-based indexing so that later JS levels match the blocks.
   Blockly.Blocks && (Blockly.Blocks.ONE_BASED_INDEXING = false);
   Blockly.JavaScript && (Blockly.JavaScript.ONE_BASED_INDEXING = false);
+  Blockly.Python && (Blockly.Python.ONE_BASED_INDEXING = false);
 };
 
 /**

@@ -1,0 +1,20 @@
+{% extends 'template_pages/sidebar.html' %}
+{% load static %}
+
+{% block title %}
+    Lektion 3
+{% endblock title %}
+
+{% block lesson_3_active %}
+    active
+{% endblock lesson_3_active %}
+
+{% block sidebar_header %}
+    Lektion 3
+{% endblock sidebar_header %}
+
+{% block sidebar_items %}
+    <li>
+        <a href="{% url 'lesson_3_repl_test' %}">Repl.it Test</a>
+    </li>
+{% endblock sidebar_items %}

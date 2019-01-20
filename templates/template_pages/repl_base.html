@@ -1,0 +1,32 @@
+{% extends 'template_pages/lesson_3_base.html' %}
+{% load static %}
+
+{% block full_screen_content %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar_toggle_nav">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>
+
+        </div>
+    </nav>
+    {% block repl_inject_frame %}{% endblock repl_inject_frame %}
+    <div class="center_content">
+        {% block lesson_nav_buttons %}
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="{% block lesson_nav_buttons_prev_page %}{% endblock lesson_nav_buttons_prev_page %}"
+                   class="form-btn btn btn-danger my-2 my-sm-0">
+                    Prev
+                </a>
+                <a href="{% block lesson_nav_buttons_next_page %}{% endblock lesson_nav_buttons_next_page %}"
+                   class="form-btn btn btn-success my-2 my-sm-0">
+                    Next
+                </a>
+            </div>
+        {% endblock lesson_nav_buttons %}
+        <hr/>
+        {% include 'template_pages/footer.html' %}
+    </div>
+{% endblock full_screen_content %}

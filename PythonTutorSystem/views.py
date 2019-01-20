@@ -14,13 +14,53 @@ def index(request):
 # blockly_games
 @login_required
 def labyrinth(request):
-    return render(request, 'blockly_games/labyrinth.html')
+    return render(request, 'lesson_1/blockly_games/labyrinth.html')
+
+
+@login_required
+def puzzle(request):
+    return render(request, 'lesson_1/blockly_games/puzzle.html')
+
+
+@login_required
+def bird(request):
+    return render(request, 'lesson_1/blockly_games/bird.html')
+
+
+@login_required
+def turtle(request):
+    return render(request, 'lesson_1/blockly_games/turtle.html')
+
+
+@login_required
+def movie(request):
+    return render(request, 'lesson_1/blockly_games/movie.html')
+
+
+@login_required
+def pond(request):
+    return render(request, 'lesson_1/blockly_games/pond.html')
+
+
+@login_required
+def pond_documentation(request):
+    return render(request, 'lesson_1/blockly_games/pond_documentation.html')
+
+
+@login_required
+def pond_documentation_functions(request):
+    return render(request, 'lesson_1/blockly_games/pond_documentation_functions.html')
 
 
 # lesson_1
 @login_required
 def lesson_1_introduction(request):
     return render(request, 'lesson_1/introduction.html')
+
+
+@login_required
+def lesson_1_blockly_games_explanation(request):
+    return render(request, 'lesson_1/blockly_games_explanation.html')
 
 
 @login_required
@@ -53,6 +93,81 @@ def lesson_1_blockly_games_labyrinth(request):
     return render(request, 'lesson_1/blockly_games_labyrinth.html')
 
 
+@login_required
+def lesson_1_bird_preparation(request):
+    return render(request, 'lesson_1/bird_preparation.html')
+
+
+@login_required
+def lesson_1_variables(request):
+    return render(request, 'lesson_1/variables.html')
+
+
+@login_required
+def lesson_1_conditional_statements_addition(request):
+    return render(request, 'lesson_1/conditional_statements_addition.html')
+
+
+@login_required
+def lesson_1_logic_and(request):
+    return render(request, 'lesson_1/logic_and.html')
+
+
+@login_required
+def lesson_1_blockly_games_bird(request):
+    return render(request, 'lesson_1/blockly_games_bird.html')
+
+
+@login_required
+def lesson_1_turtle_preparation(request):
+    return render(request, 'lesson_1/turtle_preparation.html')
+
+
+@login_required
+def lesson_1_counting_loop(request):
+    return render(request, 'lesson_1/counting_loop.html')
+
+
+@login_required
+def lesson_1_variables_addition(request):
+    return render(request, 'lesson_1/variables_addition.html')
+
+
+@login_required
+def lesson_1_functions(request):
+    return render(request, 'lesson_1/functions.html')
+
+
+@login_required
+def lesson_1_blockly_games_turtle(request):
+    return render(request, 'lesson_1/blockly_games_turtle.html')
+
+
+@login_required
+def lesson_1_blockly_games_movie(request):
+    return render(request, 'lesson_1/blockly_games_movie.html')
+
+
+@login_required
+def lesson_1_pond_preparation(request):
+    return render(request, 'lesson_1/pond_preparation.html')
+
+
+@login_required
+def lesson_1_blockly_games_pond(request):
+    return render(request, 'lesson_1/blockly_games_pond.html')
+
+
+@login_required
+def lesson_1_pond_solution(request):
+    return render(request, 'lesson_1/pond_solution.html')
+
+
+@login_required
+def lesson_1_wrap_up(request):
+    return render(request, 'lesson_1/wrap_up.html')
+
+
 # lesson_2_exercises
 @login_required
 def lesson_2_exercises_variables(request):
@@ -77,6 +192,11 @@ def lesson_2_exercises_input(request):
 @login_required
 def lesson_2_exercises_conditional_statements(request):
     return render(request, 'lesson_2/exercises/exercises_conditional_statements.html')
+
+
+@login_required
+def lesson_2_exercises_while_loop(request):
+    return render(request, 'lesson_2/exercises/exercises_while_loop.html')
 
 
 # lesson_2
@@ -188,6 +308,12 @@ def lesson_2_classes(request):
 @login_required 
 def lesson_2_heredity(request):
     return render(request, 'lesson_2/heredity.html')
+
+
+# lesson_3
+@login_required
+def lesson_3_repl_test(request):
+    return render(request, 'lesson_3/repl_test.html')
 
 
 # footer

@@ -1,0 +1,33 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block lesson_1_pond_solution_active %}
+    sidebar_active
+{% endblock lesson_1_pond_solution_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Teich-Lösung</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Nachfolgend eine Möglichkeit das vorhergehende Spiel zu lösen.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_1/blockly_example_pond_solution.PNG' %}"
+                     class="rounded zoomer scaled_img" alt="pond solution">
+            </div>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_blockly_games_pond' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_wrap_up' %}
+{% endblock lesson_nav_buttons_next_page %}

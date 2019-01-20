@@ -20,3 +20,5 @@ jeweiligen Games unten).
 
 Außerdem muss im jeweiligen Game-JavaScript-File (z.B. maze.js) bei Änderung des WebsiteNamens die URL für die
 Maze.SKINS geändert werden (hier leider hardcoded die komplette URL).
+
+Außerdem müssen die absoluten Pfade der Images in den soy-Files der jeweiligen Games angepasst werden.

@@ -1,17 +1,28 @@
 {% extends 'template_pages/lesson_1_base.html' %}
 {% load static %}
 
+{% block lesson_1_labyrinth_preparation_active %}
+    sidebar_active
+{% endblock lesson_1_labyrinth_preparation_active %}
+
 {% block sidebar_page_content %}
-    <h1>Labyrinth Vorbereitungen</h1>
-    <p>
-        Das nächste Spiel, das Sie absolvieren dürfen, ist ein Labyrinth, in welchem Sie eine Spielfigur mithilfe von
-        Blöcken von ihrer Ausgangsposition bis an das Ziel (einem Marker) führen müssen. Im folgenden wird das Spielfeld
-        aufgezeigt, damit Sie die Erläuterungen zu den einzelnen Blöcken und Konstrukten in den nächsten Abschnitten
-        nachvollziehen können.
-    </p>
-    <div class="text-center">
-        <img src="{% static 'pictures/lesson_1/blockly_example_labyrinth_field.PNG' %}" class="rounded"
-             alt="Labyrinth field">
+    <div class="card">
+        <div class="card-body">
+            <h1>Labyrinth Spielfeld</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Das nächste Spiel, das Sie absolvieren dürfen, ist ein Labyrinth, in welchem Sie eine Spielfigur mithilfe
+            von Blöcken von ihrer Ausgangsposition bis an das Ziel (einem Marker) führen müssen. Im folgenden wird das
+            Spielfeld aufgezeigt, damit Sie die Erläuterungen zu den einzelnen Blöcken und Konstrukten in den nächsten
+            Abschnitten nachvollziehen können.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_1/blockly_example_labyrinth_field.PNG' %}" class="rounded"
+                     alt="Labyrinth field">
+            </div>
+        </div>
     </div>
     <p></p>
 {% endblock sidebar_page_content %}

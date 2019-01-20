@@ -1,0 +1,11 @@
+{% extends 'template_pages/repl_base.html' %}
+{% load static %}
+
+{% block full_screen_content %}
+    <div class="embed-responsive embed-responsive-16by9 blockly_games_frame">
+        <iframe height="100%" width="100%" src="https://repl.it/login" scrolling="no" frameborder="no"
+                allowtransparency="true" allowfullscreen="true"
+                sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </div>
+    <p></p>
+{% endblock full_screen_content %}

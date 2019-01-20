@@ -1,0 +1,51 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block lesson_1_wrap_up_active %}
+    sidebar_active
+{% endblock lesson_1_wrap_up_active %}
+
+{% block sidebar_page_content %}
+    <link rel="stylesheet" href="{% static 'css/animations/wickedcss.min.css' %}">
+
+    <div class="card">
+        <div class="card-body">
+            <h1>Zusammenfassung</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center">
+                <img src="{% static 'pictures/yeah!!!.jpg' %}" class="rounded zoomer scaled_img" alt="congrats picture">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Herzlichen Glückwunsch!</h3>
+            Sie durften sich in der ersten Lektion von Learn_Python durch mehrere Spiele kämpfen, die sie mithilfe von
+            Blockly bearbeiten konnten. Dabei haben Sie grundlegende Programmierkonstrukte, wie zum Beispiel Schleifen,
+            bedingte Anweisungen oder Funktionen kennengelernt, die Ihnen in den nächsten Lektionen helfen werden
+            eigenen Code in Python zu schreiben.
+            <p></p>
+            In der zweiten Lektion von Learn_Python werden Sie nun alle relevanten Konstrukte in Python wiederholen bzw.
+            neue erlernen. Auch werden Sie sich mit der Syntax, also den grundlegenden Regeln der Schreibweise einer
+            Programmiersprache, beschäftigen, um nach Abschluss dieser zweiten Lektion selbstständig die Aufgaben in
+            Lektion 3 in einer richtigen IDE (<a
+                href="https://de.wikipedia.org/wiki/Integrierte_Entwicklungsumgebung"><span class="link_color"><u>I</u>ntegrated <u>D</u>evelopment <u>E</u>nvironment</span></a>)
+            zu bearbeiten.
+            <p></p>
+            Sie können entweder unten auf den Button <span class="text-success">Next</span> klicken oder oben im Menü
+            Lektion 2 auswählen, um zur nächsten Lektion zu gelangen.
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_pond_solution' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_2_introduction' %}
+{% endblock lesson_nav_buttons_next_page %}

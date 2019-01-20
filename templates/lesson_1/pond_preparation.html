@@ -1,0 +1,53 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block lesson_1_pond_preparation_active %}
+    sidebar_active
+{% endblock lesson_1_pond_preparation_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Teich-Spielfeld</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Im folgenden Spielen dürfen Sie eine Ente steuern, welche durch Schwimmen, Scannen und Schießen der Kanone,
+            versuchen muss, selbst nicht unterzugehen und die anderen Enten zu versenken, indem sie deren Leben
+            auf 0 bringt.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_1/blockly_example_pond_game.gif' %}"
+                     class="rounded zoomer scaled_img" alt="pond field">
+            </div>
+            <p></p>
+            Für diese Aufgaben bekommen Sie eine Vielzahl an Blöcken zur Verfügung gestellt. Wenn Sie einmal nicht
+            wissen, was welcher Block kann oder für was Sie diesen Block einsetzen sollen, dann können Sie mit einem
+            Klick auf den Button <span class="text_highlighted">Documentation</span> die Dokumentation der Blöcke
+            öffnen, in welcher zu allen Blöcken eine Erklärung und teilweise ein Beispiel aufgeführt ist.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Lösung</h3>
+            Falls Sie überhaupt nicht auf eine Lösung kommen oder sich Inspirationen holen möchten, dann wird im
+            Abschnitt nach dem Spiel ein Lösungsvorschlag zur Verfügung gestellt.
+            <p></p>
+            <div class="alert alert-primary" role="alert">
+                Achtung! Wenn Sie die Seite mit dem Spiel verlassen, dann geht auch ihr Fortschritt verloren. Wenn Sie
+                also den Lösungsvorschlag anschauen möchten, um dann weiter an ihren Blocks zu arbeiten, öffnen Sie ihn
+                am besten in einem neuen Tab, ohne die Seite mit dem Spiel zu schließen!
+            </div>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_blockly_games_turtle' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_blockly_games_pond' %}
+{% endblock lesson_nav_buttons_next_page %}

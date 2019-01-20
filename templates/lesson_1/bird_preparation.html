@@ -1,0 +1,37 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block lesson_1_bird_preparation_active %}
+    sidebar_active
+{% endblock lesson_1_bird_preparation_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Vogel-Spielfeld</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Im nächsten Spiel steuern sie wieder eine Spielfigur; diesmal allerdings einen Vogel, der zu seinem Nest
+            möchte und unter Umständen vorher noch einen Wurm einsammeln muss. Das Spielfeld setzt sich aus dem Vogel,
+            dem Nest, u.U. dem Wurm und einem Hindernis zusammen, welches Umgangen werden muss. Außerdem bekommen sie
+            teilweise eine Skala, welche als Koordinatensystem dient, an den Seitenrändern zur Verfügung gestellt, um
+            einfacher navigieren zu können.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_1/blockly_example_bird_field.PNG' %}" class="rounded"
+                     alt="Labyrinth field">
+            </div>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_blockly_games_labyrinth' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_variables' %}
+{% endblock lesson_nav_buttons_next_page %}

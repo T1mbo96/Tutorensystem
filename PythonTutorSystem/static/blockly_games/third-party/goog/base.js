@@ -302,7 +302,7 @@ goog.provide = function(name) {
     // Ensure that the same namespace isn't provided twice.
     // A goog.module/goog.provide maps a goog.require to a specific file
     if (goog.isProvided_(name)) {
-      throw new Error('Namespace "' + name + '" already declared.');
+      console.log('Namespace "' + name + '" already declared.');
     }
   }
 

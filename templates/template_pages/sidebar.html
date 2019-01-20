@@ -31,37 +31,39 @@
         </nav>
 
         <div id="content">
-            <div class="center_content">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar_toggle_nav">
-                    <div class="container-fluid">
+            {% block full_screen_content %}
+                <div class="center_content">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar_toggle_nav">
+                        <div class="container-fluid">
 
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                            <span>Toggle Sidebar</span>
-                        </button>
+                            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                <i class="fas fa-align-left"></i>
+                                <span>Toggle Sidebar</span>
+                            </button>
 
-                    </div>
-                </nav>
+                        </div>
+                    </nav>
 
-                {% block sidebar_page_content %}{% endblock sidebar_page_content %}
+                    {% block sidebar_page_content %}{% endblock sidebar_page_content %}
 
-                {% block lesson_nav_buttons %}
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <a href="
+                    {% block lesson_nav_buttons %}
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="
                                     {% block lesson_nav_buttons_prev_page %}{% endblock lesson_nav_buttons_prev_page %}"
-                           class="form-btn btn btn-danger my-2 my-sm-0">
-                            Prev
-                        </a>
-                        <a href="
+                               class="form-btn btn btn-danger my-2 my-sm-0">
+                                Prev
+                            </a>
+                            <a href="
                                     {% block lesson_nav_buttons_next_page %}{% endblock lesson_nav_buttons_next_page %}"
-                           class="form-btn btn btn-success my-2 my-sm-0">
-                            Next
-                        </a>
-                    </div>
-                {% endblock lesson_nav_buttons %}
-                <hr/>
-            {% include 'template_pages/footer.html' %}
-            </div>
+                               class="form-btn btn btn-success my-2 my-sm-0">
+                                Next
+                            </a>
+                        </div>
+                    {% endblock lesson_nav_buttons %}
+                    <hr/>
+                    {% include 'template_pages/footer.html' %}
+                </div>
+            {% endblock full_screen_content %}
         </div>
     </div>
 {% endblock content_container %}

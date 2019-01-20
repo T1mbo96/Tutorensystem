@@ -1,0 +1,14 @@
+{% load static %}
+
+{% block sidebar_page_content %}
+    <link rel="stylesheet" href="{% static 'blockly_games/common/common.css' %}">
+    <link rel="stylesheet" href="{% static 'blockly_games/turtle/style.css' %}">
+    <script src="{% static 'blockly_games/common/boot.js' %}"></script>
+    <script src="{% static 'blockly_games/common/storage.js' %}"></script>
+
+    <!-- Generate Python Code -->
+    <script src="{% static 'blockly_games/third-party/blockly/blockly_compressed.js' %}"></script>
+    <script src="{% static 'blockly_games/third-party/blockly/blocks_compressed.js' %}"></script>
+    <script src="{% static 'blockly_games/third-party/blockly/python_compressed.js' %}"></script>
+    <script src="{% static 'blockly_games/load_language_pack_script/turtle.js' %}"></script>
+{% endblock sidebar_page_content %}

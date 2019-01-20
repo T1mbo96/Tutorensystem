@@ -24,7 +24,13 @@ function input_test_code() {
 
 // Conditional Statements
 function conditional_statements_test_code() {
-    let solution_array = ["Sehr gut! Sie haben einen wafer-thin mint gewonnen!"]
+    let solution_array = ["Sehr gut! Sie haben einen wafer-thin mint gewonnen!"];
+    test_code(solution_array);
+}
+
+// While-Loop
+function while_loop_test_code() {
+    let solution_array = ["10", "8", "6", "4", "2", "0"];
     test_code(solution_array);
 }
 

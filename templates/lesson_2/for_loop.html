@@ -1,10 +1,117 @@
 {% extends 'template_pages/lesson_2_base.html' %}
 {% load static %}
 
+{% block lesson_2_for_loop_active %}
+    sidebar_active
+{% endblock lesson_2_for_loop_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>for-Schleife</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Auch die for-Schleife konnten Sie in <a href="#" class="link_color" target="_blank"><span
+                class="link_color">Lektion 1</span></a> schon ausprobieren und ihre Funktionsweise verstehen. Allerdings
+            wurde diese Schleifenart in den Spielen nur als sogenannte <span
+                class="text_highlighted">Zählschleife</span> verwendet, welche es per se so in Python nicht gibt.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Zählschleife</h3>
+            Bei dieser Variante einer Schleife muss die <span class="text_highlighted">Schleifenvariable</span>, also
+            <span class="text_highlighted">Startwert</span>, <span class="text_highlighted">Endwert</span> und die <span
+                class="text_highlighted">Schrittweite</span> numerisch sein. Das heißt, die <span
+                class="text_highlighted">Schleifenvariable</span> wird auf einen <span class="text_highlighted">Startwert</span>
+            gesetzt, welche anschließend, vom <span class="text_highlighted">Startwert</span> ausgehend, um die
+            festgesetzte <span class="text_highlighted">Schrittweite</span> inkrementiert/dekrementiert/etc. wird. Dies
+            geschieht so lange, bis die <span class="text_highlighted">Schleifenvariable</span> einen gewissen <span
+                class="text_highlighted">Endwert</span> erreicht und die Schleife dadurch verlassen wird.
+            <p></p>
+            Wie oben erwähnt, gibt es diese Schleifenform in Python eigentlich nicht. Man kann dieses Verhalten aber
+            durch die Benutzung der <span class="text_highlighted">range-Funktion</span> modellieren. Diese Funktion
+            liefert einen <a href="https://de.wikipedia.org/wiki/Iterator"><span class="link_color">Iterator</span></a>,
+            der eine gewisse Anzahl an Zahlen generieren kann.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_for_loop_range_example.PNG' %}" class="rounded"
+                     alt="Example of range function">
+            </div>
+            <p></p>
+            Man kann auch einen Start- sowie Endpunkt definieren, sodass die Zahlen von <span class="text_highlighted">begin</span>
+            (inklusive) bis <span class="text_highlighted">end</span>
+            (exklusive) generiert werden.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_for_loop_range_begin_end_example.PNG' %}" class="rounded"
+                     alt="Example of range function with begin and end">
+            </div>
+            <p></p>
+            Außerdem kann man die Schrittweite angeben, in welcher die Zahlen generiert werden sollen. Diese gibt man
+            einfach nach <span class="text_highlighted">begin</span> und <span class="text_highlighted">end</span> an.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_for_loop_range_begin_end_increment_example.PNG' %}"
+                     class="rounded"
+                     alt="Example of range function with begin, end and increment">
+            </div>
+            <p></p>
+            Somit kann man diese Funktion folgendermaßen nutzen, um die standardmäßige for-Schleife von Python als
+            Zählschleife zu verwenden.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_for_loop_with_range.PNG' %}"
+                     class="rounded"
+                     alt="Example of for loop with range">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Foreach-Schleife</h3>
+            Die standardmäßige for-Schleife in Python ist eine sogenannte foreach-Schleife. Diese Schleifenart dient der
+            Iteration über eine Sequenz von Objekten,
+            wie zum Beispiel den Zeichen in einem String. Sie kann ebenfalls einen <span class="text_highlighted">else-Teil</span>
+            besitzen, äquivalent zu dem der while-Schleife.
+            Dies bedeutet, dass man ebenfalls die Schlüsselwörter <span class="text_highlighted">break</span> und <span
+                class="text_highlighted">continue</span> verwenden kann sowie, dass dieselben
+            Regeln dafür gelten.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_for_loop_examples.PNG' %}" class="rounded"
+                     alt="Example of for loop">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.python-kurs.eu/python3_for-schleife.php" target="_blank"><span
+                            class="link_color">Python for-Schleife</span></a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_loops.htm" target="_blank"><span
+                            class="link_color">Python Schleifen</span></a>
+                </li>
+                <li>
+                    <a href="https://de.wikipedia.org/wiki/Schleife_(Programmierung)" target="_blank"><span
+                            class="link_color">Wikipedia Schleifen</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
 {% block lesson_nav_buttons_prev_page %}
-    {% url 'lesson_2_while_loop' %}
+    {% url 'lesson_2_exercises_while_loop' %}
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'lesson_2_strings' %}
+    {% url 'lesson_2_list' %}
 {% endblock lesson_nav_buttons_next_page %}

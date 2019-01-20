@@ -1,0 +1,21 @@
+{% extends 'template_pages/blockly_games_base.html' %}
+{% load static %}
+
+{% block lesson_1_blockly_games_pond_active %}
+    sidebar_active
+{% endblock lesson_1_blockly_games_pond_active %}
+
+{% block blockly_games_inject_frame %}
+    <div class="embed-responsive embed-responsive-16by9 blockly_games_frame">
+        <iframe class="embed-responsive-item" src="{% url 'pond' %}"></iframe>
+    </div>
+    <p></p>
+{% endblock blockly_games_inject_frame %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_pond_preparation' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_pond_solution' %}
+{% endblock lesson_nav_buttons_next_page %}

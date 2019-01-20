@@ -16,6 +16,9 @@ urlpatterns = [
     # lesson_2
     path('Lektion_2/', include('PythonTutorSystem.lesson_2_urls')),
 
+    # lesson_3
+    path('Lektion_3/', include('PythonTutorSystem.lesson_3_urls')),
+
     # footer
     path('About/', views.about, name='about'),
     path('Impressum/', views.impressum, name='impressum'),

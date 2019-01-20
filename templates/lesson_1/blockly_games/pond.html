@@ -1,0 +1,13 @@
+{% load static %}
+
+{% block sidebar_page_content %}
+    <link rel="stylesheet" href="{% static 'blockly_games/common/common.css' %}">
+    <link rel="stylesheet" href="{% static 'blockly_games/pond/style.css' %}">
+    <script src="{% static 'blockly_games/common/boot.js' %}"></script>
+    <script src="{% static 'blockly_games/common/storage.js' %}"></script>
+
+    <script src="{% static 'blockly_games/load_language_pack_script/pond.js' %}"></script>
+    <script src="{% static 'blockly_games/third-party/ace/ace.js' %}"></script>
+    <script src="{% static 'blockly_games/third-party/ace/theme-chrome.js' %}"></script>
+    <script src="{% static 'blockly_games/third-party/ace/mode-javascript.js' %}"></script>
+{% endblock sidebar_page_content %}

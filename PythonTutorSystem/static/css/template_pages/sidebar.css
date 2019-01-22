@@ -100,7 +100,7 @@ ul ul a {
 }
 
 .blockly_games_frame {
-    min-width: 1400px;
+    min-width: 100%;
     min-height: 562px;
 }
 

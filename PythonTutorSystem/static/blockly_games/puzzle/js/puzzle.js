@@ -57,7 +57,7 @@ Puzzle.init = function() {
   window.addEventListener('resize', onresize);
 
   BlocklyGames.workspace = Blockly.inject('blockly',
-      {'media': 'http://127.0.0.1:8000/static/blockly_games/third-party/blockly/media/',
+      {'media': '/static/blockly_games/third-party/blockly/media/',
        'rtl': rtl,
        'scrollbars': false,
        'trashcan': false});
@@ -162,7 +162,7 @@ Puzzle.init = function() {
   Blockly.SNAP_RADIUS *= 2;
   // Preload the win sound.
   BlocklyGames.workspace.getAudioManager().load(
-      ['http://127.0.0.1:8000/static/blockly_games/puzzle/win.mp3', 'http://127.0.0.1:8000/static/blockly_games/puzzle/win.ogg'], 'win');
+      ['/static/blockly_games/puzzle/win.mp3', '/static/blockly_games/puzzle/win.ogg'], 'win');
 };
 
 /**

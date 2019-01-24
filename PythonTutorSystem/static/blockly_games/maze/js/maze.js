@@ -68,38 +68,38 @@ Maze.SKINS = [
   // crashSound: List of sounds (in various formats) for player crashes.
   // crashType: Behaviour when player crashes (stop, spin, or fall).
   {
-    sprite: 'http://127.0.0.1:8000/static/blockly_games/maze/pegman.png',
-    tiles: 'http://127.0.0.1:8000/static/blockly_games/maze/tiles_pegman.png',
-    marker: 'http://127.0.0.1:8000/static/blockly_games/maze/marker.png',
+    sprite: '/static/blockly_games/maze/pegman.png',
+    tiles: '/static/blockly_games/maze/tiles_pegman.png',
+    marker: '/static/blockly_games/maze/marker.png',
     background: false,
     graph: false,
     look: '#000',
-    winSound: ['http://127.0.0.1:8000/static/blockly_games/maze/win.mp3', 'http://127.0.0.1:8000/static/blockly_games/maze/win.ogg'],
-    crashSound: ['http://127.0.0.1:8000/static/blockly_games/maze/fail_pegman.mp3', 'http://127.0.0.1:8000/static/blockly_games/maze/fail_pegman.ogg'],
+    winSound: ['/static/blockly_games/maze/win.mp3', '/static/blockly_games/maze/win.ogg'],
+    crashSound: ['/static/blockly_games/maze/fail_pegman.mp3', '/static/blockly_games/maze/fail_pegman.ogg'],
     crashType: Maze.CRASH_STOP
   },
   {
-    sprite: 'http://127.0.0.1:8000/static/blockly_games/maze/astro.png',
-    tiles: 'http://127.0.0.1:8000/static/blockly_games/maze/tiles_astro.png',
-    marker: 'http://127.0.0.1:8000/static/blockly_games/maze/marker.png',
-    background: 'http://127.0.0.1:8000/static/blockly_games/maze/bg_astro.jpg',
+    sprite: '/static/blockly_games/maze/astro.png',
+    tiles: '/static/blockly_games/maze/tiles_astro.png',
+    marker: '/static/blockly_games/maze/marker.png',
+    background: '/static/blockly_games/maze/bg_astro.jpg',
     // Coma star cluster, photo by George Hatfield, used with permission.
     graph: false,
     look: '#fff',
-    winSound: ['http://127.0.0.1:8000/static/blockly_games/maze/win.mp3', 'http://127.0.0.1:8000/static/blockly_games/maze/win.ogg'],
-    crashSound: ['http://127.0.0.1:8000/static/blockly_games/maze/fail_astro.mp3', 'http://127.0.0.1:8000/static/blockly_games/maze/fail_astro.ogg'],
+    winSound: ['/static/blockly_games/maze/win.mp3', '/static/blockly_games/maze/win.ogg'],
+    crashSound: ['/static/blockly_games/maze/fail_astro.mp3', '/static/blockly_games/maze/fail_astro.ogg'],
     crashType: Maze.CRASH_SPIN
   },
   {
-    sprite: 'http://127.0.0.1:8000/static/blockly_games/maze/panda.png',
-    tiles: 'http://127.0.0.1:8000/static/blockly_games/maze/tiles_panda.png',
-    marker: 'http://127.0.0.1:8000/static/blockly_games/maze/marker.png',
-    background: 'http://127.0.0.1:8000/static/blockly_games/maze/bg_panda.jpg',
+    sprite: '/static/blockly_games/maze/panda.png',
+    tiles: '/static/blockly_games/maze/tiles_panda.png',
+    marker: '/static/blockly_games/maze/marker.png',
+    background: '/static/blockly_games/maze/bg_panda.jpg',
     // Spring canopy, photo by Rupert Fleetingly, CC licensed for reuse.
     graph: false,
     look: '#000',
-    winSound: ['http://127.0.0.1:8000/static/blockly_games/maze/win.mp3', 'http://127.0.0.1:8000/static/blockly_games/maze/win.ogg'],
-    crashSound: ['http://127.0.0.1:8000/static/blockly_games/maze/fail_panda.mp3', 'http://127.0.0.1:8000/static/blockly_games/maze/fail_panda.ogg'],
+    winSound: ['/static/blockly_games/maze/win.mp3', '/static/blockly_games/maze/win.ogg'],
+    crashSound: ['/static/blockly_games/maze/fail_panda.mp3', '/static/blockly_games/maze/fail_panda.ogg'],
     crashType: Maze.CRASH_FALL
   }
 ];

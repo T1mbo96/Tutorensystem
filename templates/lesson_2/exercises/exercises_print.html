@@ -6,6 +6,9 @@
 {% endblock lesson_2_exercises_print_active %}
 
 {% block sidebar_page_content %}
+    <!-- Key for localStorage -->
+    <div id="local_storage_key" style="display: none">exercises_print</div>
+
     <div class="card">
         <div class="card-body">
             <h1>Aufgabe: Print-Funktion</h1>
@@ -31,7 +34,9 @@
             Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
                 class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
             ist,
-            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
+            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
+            beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach mit
+            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
         </div>
     </div>
     <div class="card">
@@ -52,8 +57,10 @@ three = 3.5
                     </div>
                     <br/>
                     <div id="skulpt_run_btn">
-                        <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
-                        <button type="button" onclick="print_test_code()" class="form-btn btn my-2 my-sm-0">Test
+                        <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run</button>
+                        <button type="button" onclick="print_test_code()" class="form-btn btn btn-info my-2 my-sm-0">Test
+                        </button>
+                        <button type="button" onclick="reset_skulpt()" class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
                         </button>
                     </div>
                 </form>

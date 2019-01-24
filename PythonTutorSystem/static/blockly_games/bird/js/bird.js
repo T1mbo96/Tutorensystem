@@ -204,7 +204,7 @@ Bird.drawMap = function() {
   var nestImage = document.createElementNS(Blockly.SVG_NS, 'image');
   nestImage.setAttribute('id', 'nest');
   nestImage.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      'http://127.0.0.1:8000/static/blockly_games/bird/nest.png');
+      '/static/blockly_games/bird/nest.png');
   nestImage.setAttribute('height', Bird.NEST_ICON_SIZE);
   nestImage.setAttribute('width', Bird.NEST_ICON_SIZE);
   svg.appendChild(nestImage);
@@ -214,7 +214,7 @@ Bird.drawMap = function() {
     var birdImage = document.createElementNS(Blockly.SVG_NS, 'image');
     birdImage.setAttribute('id', 'worm');
     birdImage.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        'http://127.0.0.1:8000/static/blockly_games/bird/worm.png');
+        '/static/blockly_games/bird/worm.png');
     birdImage.setAttribute('height', Bird.WORM_ICON_SIZE);
     birdImage.setAttribute('width', Bird.WORM_ICON_SIZE);
     svg.appendChild(birdImage);
@@ -234,7 +234,7 @@ Bird.drawMap = function() {
   var birdIcon = document.createElementNS(Blockly.SVG_NS, 'image');
   birdIcon.setAttribute('id', 'bird');
   birdIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      'http://127.0.0.1:8000/static/blockly_games/bird/birds-120.png');
+      '/static/blockly_games/bird/birds-120.png');
   birdIcon.setAttribute('height', Bird.BIRD_ICON_SIZE * 4); // 120 * 4 = 480
   birdIcon.setAttribute('width', Bird.BIRD_ICON_SIZE * 12); // 120 * 12 = 1440
   birdIcon.setAttribute('clip-path', 'url(#birdClipPath)');
@@ -328,16 +328,16 @@ Bird.init = function() {
 
   var toolbox = document.getElementById('toolbox');
   BlocklyGames.workspace = Blockly.inject('blockly',
-      {'media': 'http://127.0.0.1:8000/static/blockly_games/third-party/blockly/media/',
+      {'media': '/static/blockly_games/third-party/blockly/media/',
        'rtl': rtl,
        'toolbox': toolbox,
        'trashcan': true});
   BlocklyGames.workspace.getAudioManager().load(
-      ['http://127.0.0.1:8000/static/blockly_games/bird/quack.ogg', 'http://127.0.0.1:8000/static/blockly_games/bird/quack.mp3'], 'quack');
+      ['/static/blockly_games/bird/quack.ogg', '/static/blockly_games/bird/quack.mp3'], 'quack');
   BlocklyGames.workspace.getAudioManager().load(
-      ['http://127.0.0.1:8000/static/blockly_games/bird/whack.mp3', 'http://127.0.0.1:8000/static/blockly_games/bird/whack.ogg'], 'whack');
+      ['/static/blockly_games/bird/whack.mp3', '/static/blockly_games/bird/whack.ogg'], 'whack');
   BlocklyGames.workspace.getAudioManager().load(
-      ['http://127.0.0.1:8000/static/blockly_games/bird/worm.mp3', 'http://127.0.0.1:8000/static/blockly_games/bird/worm.ogg'], 'worm');
+      ['/static/blockly_games/bird/worm.mp3', '/static/blockly_games/bird/worm.ogg'], 'worm');
   if (BlocklyGames.LEVEL > 1) {
     BlocklyGames.workspace.addChangeListener(Blockly.Events.disableOrphans);
   }

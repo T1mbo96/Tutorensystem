@@ -24,7 +24,7 @@ function input_test_code() {
 
 // Conditional Statements
 function conditional_statements_test_code() {
-    let solution_array = ["Sehr gut! Sie haben einen wafer-thin mint gewonnen!"];
+    let solution_array = ["Sehr gut! Sie haben einen Gutschein gewonnen!"];
     test_code(solution_array);
 }
 
@@ -79,4 +79,9 @@ function show_numbered_danger_alert(number) {
         }
         document.getElementById(numbered_alert_danger).style.display = 'block';
     }
+}
+
+function reset_skulpt() {
+    var text = document.getElementById("custom_code").value;
+    editor.setValue(text);
 }

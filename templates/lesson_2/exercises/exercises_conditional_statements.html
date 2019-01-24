@@ -6,6 +6,9 @@
 {% endblock lesson_2_exercises_conditional_statements_active %}
 
 {% block sidebar_page_content %}
+    <!-- Key for localStorage -->
+    <div id="local_storage_key" style="display: none">exercises_conditional_statements</div>
+
     <div class="card">
         <div class="card-body">
             <h1>Aufgabe: Bedingte Anweisungen</h1>
@@ -13,17 +16,37 @@
     </div>
     <div class="card">
         <div class="card-body">
-            Schreiben Sie für die nachfolgendee Tabelle eine bedingte Anweisung, sodass ein Wettbewerber wissen
-            kann,
-            welchen der Preise aus der Tabelle er gewonnen hat, basierend auf der Anzahl der erzielten Punkte, die
-            in der
-            ganzzahligen Variable <span class="text_highlighted">points</span> gespeichert ist.
+            Schreiben Sie für die nachfolgende Tabelle eine bedingte Anweisung, sodass ein Wettbewerber wissen
+            kann, welchen der Preise aus der Tabelle er gewonnen hat. Die Auswahl des Preises basiert auf der Anzahl der
+            erzielten Punkte, die in der ganzzahligen Variable <span class="text_highlighted">points</span> gespeichert
+            ist.
             <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_2/python_exercises_conditional_statements_table.PNG' %}"
-                     class="rounded"
-                     alt="Table with prize ranges">
-            </div>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Points</th>
+                    <th scope="col">Preis</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1-80</th>
+                    <td>Kuscheltier</td>
+                </tr>
+                <tr>
+                    <th scope="row">81-130</th>
+                    <td>Ferngesteuertes Auto</td>
+                </tr>
+                <tr>
+                    <th scope="row">131-170</th>
+                    <td>Kein Preis</td>
+                </tr>
+                <tr>
+                    <th scope="row">171-200</th>
+                    <td>Gutschein</td>
+                </tr>
+                </tbody>
+            </table>
             <p></p>
             <div class="alert alert-primary" role="alert">
                 Alle unteren und oberen Grenzen sind hier inklusive und Punkte können nur positive ganzzahlige Werte bis
@@ -42,7 +65,9 @@
             Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
                 class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
             ist,
-            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>.
+            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
+            beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach mit
+            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
             <p></p>
             <div class="alert alert-primary" role="alert">
                 Sie dürfen ihren eigenen Code gerne mit anderen Eingaben testen. Um den Test bestehen zu können, sollten
@@ -66,10 +91,12 @@ print(result)</textarea>
                     </div>
                     <br/>
                     <div id="skulpt_run_btn">
-                        <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
+                        <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run</button>
                         <button type="button" onclick="conditional_statements_test_code()"
-                                class="form-btn btn my-2 my-sm-0">
+                                class="form-btn btn btn-info my-2 my-sm-0">
                             Test
+                        </button>
+                        <button type="button" onclick="reset_skulpt()" class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
                         </button>
                     </div>
                 </form>

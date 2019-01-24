@@ -6,6 +6,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="{% static 'code_mirror/lib/codemirror.css' %}">
     <link rel="stylesheet" href="{% static 'css/template_pages/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'skulpt/skulpt.css' %}">
 {% endblock head_css_page %}
 
 {% block content_container %}
@@ -16,6 +17,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
             integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
             crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/lesson_2/exercises_local_storage.js' %}"></script>
 
     {% block scripts_for_python_browser_exercises %}{% endblock scripts_for_python_browser_exercises %}
 

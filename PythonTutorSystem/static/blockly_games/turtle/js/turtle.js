@@ -160,7 +160,7 @@ Turtle.init = function() {
 
   // Preload the win sound.
   BlocklyGames.workspace.getAudioManager().load(
-      ['http://127.0.0.1:8000/static/blockly_games/turtle/win.mp3', 'http://127.0.0.1:8000/static/blockly_games/turtle/win.ogg'], 'win');
+      ['/static/blockly_games/turtle/win.mp3', '/static/blockly_games/turtle/win.ogg'], 'win');
   // Lazy-load the JavaScript interpreter.
   setTimeout(BlocklyInterface.importInterpreter, 1);
   // Lazy-load the syntax-highlighting.

@@ -34,12 +34,19 @@ function while_loop_test_code() {
     test_code(solution_array);
 }
 
-// Template Test-Function
+// While-Loop
+function list_test_code() {
+    let solution_array = ["Die 1. Primzahl ist: 2", "Die 2. Primzahl ist: 3", "Die 3. Primzahl ist: 5", "Die 4. Primzahl ist: 7", "Die 5. Primzahl ist: 11", "Die 6. Primzahl ist: 13", "Die 7. Primzahl ist: 17", "Die 8. Primzahl ist: 19", "Die 9. Primzahl ist: 23", "Die 10. Primzahl ist: 29"];
+    test_code(solution_array);
+}
+
+// Test output of the user implemented code
 function test_code(solution_array) {
     runit();
     let output_array = document.getElementById('output').innerText.split("\n");
     let template_array = [];
 
+    // Generate array that has as many indices as available alerts
     for (let counter = 0; counter < solution_array.length; counter++) {
         if (counter < output_array.length) {
             template_array[counter] = output_array[counter];
@@ -48,6 +55,7 @@ function test_code(solution_array) {
         }
     }
 
+    // Show success or fail alerts
     for (let counter = 0; counter < template_array.length; counter++) {
         if (template_array[counter] === solution_array[counter]) {
             show_numbered_success_alert(counter + 1);
@@ -57,6 +65,7 @@ function test_code(solution_array) {
     }
 }
 
+// Show success alert and hide fail alert
 function show_numbered_success_alert(number) {
     let numbered_alert_success = 'correct_' + number;
     let numbered_alert_danger = 'wrong_' + number;
@@ -69,6 +78,7 @@ function show_numbered_success_alert(number) {
     }
 }
 
+// Show fail alert and hide success alert
 function show_numbered_danger_alert(number) {
     let numbered_alert_success = 'correct_' + number;
     let numbered_alert_danger = 'wrong_' + number;
@@ -81,6 +91,7 @@ function show_numbered_danger_alert(number) {
     }
 }
 
+// Reset value of editor to default
 function reset_skulpt() {
     var text = document.getElementById("custom_code").value;
     editor.setValue(text);

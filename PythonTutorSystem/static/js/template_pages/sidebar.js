@@ -29,7 +29,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
+        theme: "minimal",
     });
 
     $('#sidebarCollapse').on('click', function () {
@@ -41,6 +41,8 @@ $(document).ready(function () {
         // in our CSS
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
+
+    $('#sidebar').mCustomScrollbar("scrollTo", document.getElementById('scroll_anchor').innerText, {scrollInertia: 0});
 
 });
 

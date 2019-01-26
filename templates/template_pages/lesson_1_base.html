@@ -14,70 +14,75 @@
 {% endblock sidebar_header %}
 
 {% block sidebar_items %}
-    <li class="{% block lesson_1_introduction_active %}{% endblock lesson_1_introduction_active %}">
+    <li class="{% block lesson_1_introduction_active %}{% endblock lesson_1_introduction_active %}" id="lesson_1_introduction">
         <a href="{% url 'lesson_1_introduction' %}">Einführung</a>
     </li>
-    <li class="{% block lesson_1_blockly_games_explanation_active %}{% endblock lesson_1_blockly_games_explanation_active %}">
+    <li class="{% block lesson_1_blockly_games_explanation_active %}{% endblock lesson_1_blockly_games_explanation_active %}" id="lesson_1_blockly_games_explanation">
         <a href="{% url 'lesson_1_blockly_games_explanation' %}">Blockly_Games Spiele</a>
     </li>
-    <li class="{% block lesson_1_blockly_games_puzzle_active %}{% endblock lesson_1_blockly_games_puzzle_active %}">
+    <li class="{% block lesson_1_blockly_games_puzzle_active %}{% endblock lesson_1_blockly_games_puzzle_active %}" id="lesson_1_blockly_games_puzzle">
         <a href="{% url 'lesson_1_blockly_games_puzzle' %}">Spiel: Puzzle</a>
     </li>
-    <li class="{% block lesson_1_labyrinth_preparation_active %}{% endblock lesson_1_labyrinth_preparation_active %}">
+    <li class="{% block lesson_1_labyrinth_preparation_active %}{% endblock lesson_1_labyrinth_preparation_active %}" id="lesson_1_labyrinth_preparation">
         <a href="{% url 'lesson_1_labyrinth_preparation' %}">Labyrinth-Spielfeld</a>
     </li>
-    <li class="{% block lesson_1_instructions_active %}{% endblock lesson_1_instructions_active %}">
+    <li class="{% block lesson_1_instructions_active %}{% endblock lesson_1_instructions_active %}" id="lesson_1_instructions">
         <a href="{% url 'lesson_1_instructions' %}">Anweisungen</a>
     </li>
-    <li class="{% block lesson_1_conditional_statements_active %}{% endblock lesson_1_conditional_statements_active %}">
+    <li class="{% block lesson_1_conditional_statements_active %}{% endblock lesson_1_conditional_statements_active %}" id="lesson_1_conditional_statements">
         <a href="{% url 'lesson_1_conditional_statements' %}">Bedingte Anweisungen</a>
     </li>
-    <li class="{% block lesson_1_loop_active %}{% endblock lesson_1_loop_active %}">
+    <li class="{% block lesson_1_loop_active %}{% endblock lesson_1_loop_active %}" id="lesson_1_loop">
         <a href="{% url 'lesson_1_loop' %}">Schleifen</a>
     </li>
-    <li class="{% block lesson_1_blockly_games_labyrinth_active %}{% endblock lesson_1_blockly_games_labyrinth_active %}">
+    <li class="{% block lesson_1_blockly_games_labyrinth_active %}{% endblock lesson_1_blockly_games_labyrinth_active %}" id="lesson_1_blockly_games_labyrinth">
         <a href="{% url 'lesson_1_blockly_games_labyrinth' %}">Spiel: Labyrinth</a>
     </li>
-    <li class="{% block lesson_1_bird_preparation_active %}{% endblock lesson_1_bird_preparation_active %}">
+    <li class="{% block lesson_1_bird_preparation_active %}{% endblock lesson_1_bird_preparation_active %}" id="lesson_1_bird_preparation">
         <a href="{% url 'lesson_1_bird_preparation' %}">Vogel-Spielfeld</a>
     </li>
-    <li class="{% block lesson_1_variables_active %}{% endblock lesson_1_variables_active %}">
+    <li class="{% block lesson_1_variables_active %}{% endblock lesson_1_variables_active %}" id="lesson_1_variables">
         <a href="{% url 'lesson_1_variables' %}">Variablen</a>
     </li>
-    <li class="{% block lesson_1_conditional_statements_addition_active %}{% endblock lesson_1_conditional_statements_addition_active %}">
+    <li class="{% block lesson_1_conditional_statements_addition_active %}{% endblock lesson_1_conditional_statements_addition_active %}" id="lesson_1_conditional_statements_addition">
         <a href="{% url 'lesson_1_conditional_statements_addition' %}">Bedingte Anweisungen: Zusatz</a>
     </li>
-    <li class="{% block lesson_1_logic_and_active %}{% endblock lesson_1_logic_and_active %}">
+    <li class="{% block lesson_1_logic_and_active %}{% endblock lesson_1_logic_and_active %}" id="lesson_1_logic_and">
         <a href="{% url 'lesson_1_logic_and' %}">Logischer Operator: Und</a>
     </li>
-    <li class="{% block lesson_1_blockly_games_bird_active %}{% endblock lesson_1_blockly_games_bird_active %}">
+    <li class="{% block lesson_1_blockly_games_bird_active %}{% endblock lesson_1_blockly_games_bird_active %}" id="lesson_1_blockly_games_bird">
         <a href="{% url 'lesson_1_blockly_games_bird' %}">Spiel: Vogel</a>
     </li>
-    <li class="{% block lesson_1_turtle_preparation_active %}{% endblock lesson_1_turtle_preparation_active %}">
+    <li class="{% block lesson_1_turtle_preparation_active %}{% endblock lesson_1_turtle_preparation_active %}" id="lesson_1_turtle_preparation">
         <a href="{% url 'lesson_1_turtle_preparation' %}">Schildkröte-Spielfeld</a>
     </li>
-    <li class="{% block lesson_1_counting_loop_active %}{% endblock lesson_1_counting_loop_active %}">
+    <li class="{% block lesson_1_counting_loop_active %}{% endblock lesson_1_counting_loop_active %}" id="lesson_1_counting_loop">
         <a href="{% url 'lesson_1_counting_loop' %}">Schleifen: Zählschleife</a>
     </li>
-    <li class="{% block lesson_1_variables_addition_active %}{% endblock lesson_1_variables_addition_active %}">
+    <li class="{% block lesson_1_variables_addition_active %}{% endblock lesson_1_variables_addition_active %}" id="lesson_1_variables_addition">
         <a href="{% url 'lesson_1_variables_addition' %}">Variablen: Zusatz</a>
     </li>
-    <li class="{% block lesson_1_functions_active %}{% endblock lesson_1_functions_active %}">
+    <li class="{% block lesson_1_functions_active %}{% endblock lesson_1_functions_active %}" id="lesson_1_functions">
         <a href="{% url 'lesson_1_functions' %}">Funktionen</a>
     </li>
-    <li class="{% block lesson_1_blockly_games_turtle_active %}{% endblock lesson_1_blockly_games_turtle_active %}">
+    <li class="{% block lesson_1_blockly_games_turtle_active %}{% endblock lesson_1_blockly_games_turtle_active %}" id="lesson_1_blockly_games_turtle">
         <a href="{% url 'lesson_1_blockly_games_turtle' %}">Spiel: Schildkröte</a>
     </li>
-    <li class="{% block lesson_1_pond_preparation_active %}{% endblock lesson_1_pond_preparation_active %}">
+    <li class="{% block lesson_1_pond_preparation_active %}{% endblock lesson_1_pond_preparation_active %}" id="lesson_1_pond_preparation">
         <a href="{% url 'lesson_1_pond_preparation' %}">Teich-Spielfeld</a>
     </li>
-    <li class="{% block lesson_1_blockly_games_pond_active %}{% endblock lesson_1_blockly_games_pond_active %}">
+    <li class="{% block lesson_1_blockly_games_pond_active %}{% endblock lesson_1_blockly_games_pond_active %}" id="lesson_1_blockly_games_pond">
         <a href="{% url 'lesson_1_blockly_games_pond' %}">Spiel: Teich</a>
     </li>
-    <li class="{% block lesson_1_pond_solution_active %}{% endblock lesson_1_pond_solution_active %}">
+    <li class="{% block lesson_1_pond_solution_active %}{% endblock lesson_1_pond_solution_active %}" id="lesson_1_pond_solution">
         <a href="{% url 'lesson_1_pond_solution' %}">Teich-Lösung</a>
     </li>
-    <li class="{% block lesson_1_wrap_up_active %}{% endblock lesson_1_wrap_up_active %}">
+    <li class="{% block lesson_1_wrap_up_active %}{% endblock lesson_1_wrap_up_active %}" id="lesson_1_wrap_up">
         <a href="{% url 'lesson_1_wrap_up' %}">Zusammenfassung</a>
     </li>
 {% endblock sidebar_items %}
+
+{% block scripts_for_blockly_games_iframes %}
+    <!-- iframe onload -->
+    <script src="{% static 'js/lesson_1/blockly_games_iframes.js' %}"></script>
+{% endblock scripts_for_blockly_games_iframes %}

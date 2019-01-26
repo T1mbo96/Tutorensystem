@@ -100,8 +100,7 @@ ul ul a {
 }
 
 .blockly_games_frame {
-    min-width: 100%;
-    min-height: 562px;
+    width: 100%;
 }
 
 .center_content {
@@ -118,4 +117,9 @@ ul ul a {
 .scaled_img {
     max-width: 100%;
     height: auto;
+}
+
+.loading_icon_center {
+    text-align: center;
+    margin-top: 25%;
 }

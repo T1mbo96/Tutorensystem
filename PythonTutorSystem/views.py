@@ -199,6 +199,11 @@ def lesson_2_exercises_while_loop(request):
     return render(request, 'lesson_2/exercises/exercises_while_loop.html')
 
 
+@login_required
+def lesson_2_exercises_list(request):
+    return render(request, 'lesson_2/exercises/exercises_list.html')
+
+
 # lesson_2
 @login_required
 def lesson_2_introduction(request):

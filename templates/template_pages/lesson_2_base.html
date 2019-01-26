@@ -14,90 +14,107 @@
 {% endblock sidebar_header %}
 
 {% block sidebar_items %}
-    <li class="{% block lesson_2_introduction_active %}{% endblock lesson_2_introduction_active %}">
+    <li class="{% block lesson_2_introduction_active %}{% endblock lesson_2_introduction_active %}"
+        id="lesson_2_introduction">
         <a href="{% url 'lesson_2_introduction' %}">Einführung</a>
     </li>
-    <li class="{% block lesson_2_structuring_active %}{% endblock lesson_2_structuring_active %}">
+    <li class="{% block lesson_2_structuring_active %}{% endblock lesson_2_structuring_active %}"
+        id="lesson_2_structuring">
         <a href="{% url 'lesson_2_structuring' %}">Strukturierung</a>
     </li>
-    <li class="{% block lesson_2_variables_active %}{% endblock lesson_2_variables_active %}">
+    <li class="{% block lesson_2_variables_active %}{% endblock lesson_2_variables_active %}" id="lesson_2_variables">
         <a href="{% url 'lesson_2_variables' %}">Variablen</a>
     </li>
-    <li class="{% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}">
+    <li class="{% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"
+        id="lesson_2_exercises_variables">
         <a href="{% url 'lesson_2_exercises_variables' %}">Aufgabe: Variablen</a>
     </li>
-    <li class="{% block lesson_2_datatypes_active %}{% endblock lesson_2_datatypes_active %}">
+    <li class="{% block lesson_2_datatypes_active %}{% endblock lesson_2_datatypes_active %}" id="lesson_2_datatypes">
         <a href="{% url 'lesson_2_datatypes' %}">Datentypen</a>
     </li>
-    <li class="{% block lesson_2_strings_active %}{% endblock lesson_2_strings_active %}">
+    <li class="{% block lesson_2_strings_active %}{% endblock lesson_2_strings_active %}" id="lesson_2_strings">
         <a href="{% url 'lesson_2_strings' %}">Strings</a>
     </li>
-    <li class="{% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}">
+    <li class="{% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"
+        id="lesson_2_exercises_strings">
         <a href="{% url 'lesson_2_exercises_strings' %}">Aufgabe: Strings</a>
     </li>
-    <li class="{% block lesson_2_operators_active %}{% endblock lesson_2_operators_active %}">
+    <li class="{% block lesson_2_operators_active %}{% endblock lesson_2_operators_active %}" id="lesson_2_operators">
         <a href="{% url 'lesson_2_operators' %}">Operatoren</a>
     </li>
-    <li class="{% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}">
+    <li class="{% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"
+        id="lesson_2_operators_precedence">
         <a href="{% url 'lesson_2_operators_precedence' %}">Operatoren: Priorität</a>
     </li>
-    <li class="{% block lesson_2_print_active %}{% endblock lesson_2_print_active %}">
+    <li class="{% block lesson_2_print_active %}{% endblock lesson_2_print_active %}" id="lesson_2_print">
         <a href="{% url 'lesson_2_print' %}">Print-Funktion</a>
     </li>
-    <li class="{% block lesson_2_exercises_print_active %}{% endblock lesson_2_exercises_print_active %}">
+    <li class="{% block lesson_2_exercises_print_active %}{% endblock lesson_2_exercises_print_active %}"
+        id="lesson_2_exercises_print">
         <a href="{% url 'lesson_2_exercises_print' %}">Aufgabe: Print-Funktion</a>
     </li>
-    <li class="{% block lesson_2_input_active %}{% endblock lesson_2_input_active %}">
+    <li class="{% block lesson_2_input_active %}{% endblock lesson_2_input_active %}" id="lesson_2_input">
         <a href="{% url 'lesson_2_input' %}">Input-Funktion</a>
     </li>
-    <li class="{% block lesson_2_exercises_input_active %}{% endblock lesson_2_exercises_input_active %}">
+    <li class="{% block lesson_2_exercises_input_active %}{% endblock lesson_2_exercises_input_active %}"
+        id="lesson_2_exercises_input">
         <a href="{% url 'lesson_2_exercises_input' %}">Aufgabe: Input-Funktion</a>
     </li>
-    <li class="{% block lesson_2_conditional_statements_active %}{% endblock lesson_2_conditional_statements_active %}">
+    <li class="{% block lesson_2_conditional_statements_active %}{% endblock lesson_2_conditional_statements_active %}"
+        id="lesson_2_conditional_statements">
         <a href="{% url 'lesson_2_conditional_statements' %}">Bedingte Anweisungen</a>
     </li>
     <li class="
-            {% block lesson_2_exercises_conditional_statements_active %}{% endblock lesson_2_exercises_conditional_statements_active %}">
+            {% block lesson_2_exercises_conditional_statements_active %}{% endblock lesson_2_exercises_conditional_statements_active %}"
+        id="lesson_2_exercises_conditional_statements">
         <a href="{% url 'lesson_2_exercises_conditional_statements' %}">Aufgabe: Bedingte Anweisungen</a>
     </li>
-    <li class="{% block lesson_2_while_loop_active %}{% endblock lesson_2_while_loop_active %}">
+    <li class="{% block lesson_2_while_loop_active %}{% endblock lesson_2_while_loop_active %}"
+        id="lesson_2_while_loop">
         <a href="{% url 'lesson_2_while_loop' %}">while-Schleife</a>
     </li>
-    <li class="{% block lesson_2_exercises_while_loop_active %}{% endblock lesson_2_exercises_while_loop_active %}">
+    <li class="{% block lesson_2_exercises_while_loop_active %}{% endblock lesson_2_exercises_while_loop_active %}"
+        id="lesson_2_exercises_while_loop">
         <a href="{% url 'lesson_2_exercises_while_loop' %}">Aufgabe: while-Schleife</a>
     </li>
-    <li class="{% block lesson_2_for_loop_active %}{% endblock lesson_2_for_loop_active %}">
+    <li class="{% block lesson_2_for_loop_active %}{% endblock lesson_2_for_loop_active %}" id="lesson_2_for_loop">
         <a href="{% url 'lesson_2_for_loop' %}">for-Schleife</a>
     </li>
-    <li class="{% block lesson_2_list_active %}{% endblock lesson_2_list_active %}">
+    <li class="{% block lesson_2_list_active %}{% endblock lesson_2_list_active %}" id="lesson_2_list">
         <a href="{% url 'lesson_2_list' %}">Listen</a>
     </li>
-    <li class="{% block lesson_2_tuple_active %}{% endblock lesson_2_tuple_active %}">
+    <li class="{% block lesson_2_exercises_list_active %}{% endblock lesson_2_exercises_list_active %}" id="lesson_2_exercises_list">
+        <a href="{% url 'lesson_2_exercises_list' %}">Aufgabe: Listen</a>
+    </li>
+    <li class="{% block lesson_2_tuple_active %}{% endblock lesson_2_tuple_active %}" id="lesson_2_tuple">
         <a href="{% url 'lesson_2_tuple' %}">Tupel</a>
     </li>
-    <li class="{% block lesson_2_set_active %}{% endblock lesson_2_set_active %}">
+    <li class="{% block lesson_2_set_active %}{% endblock lesson_2_set_active %}" id="lesson_2_set">
         <a href="{% url 'lesson_2_set' %}">Set</a>
     </li>
-    <li class="{% block lesson_2_dictionary_active %}{% endblock lesson_2_dictionary_active %}">
+    <li class="{% block lesson_2_dictionary_active %}{% endblock lesson_2_dictionary_active %}"
+        id="lesson_2_dictionary">
         <a href="{% url 'lesson_2_dictionary' %}">Dictionary</a>
     </li>
-    <li class="{% block lesson_2_functions_active %}{% endblock lesson_2_functions_active %}">
+    <li class="{% block lesson_2_functions_active %}{% endblock lesson_2_functions_active %}" id="lesson_2_functions">
         <a href="{% url 'lesson_2_functions' %}">Funktionen</a>
     </li>
-    <li class="{% block lesson_2_recursion_active %}{% endblock lesson_2_recursion_active %}">
+    <li class="{% block lesson_2_recursion_active %}{% endblock lesson_2_recursion_active %}" id="lesson_2_recursion">
         <a href="{% url 'lesson_2_recursion' %}">Rekursion</a>
     </li>
-    <li class="{% block lesson_2_namespace_active %}{% endblock lesson_2_namespace_active %}">
+    <li class="{% block lesson_2_namespace_active %}{% endblock lesson_2_namespace_active %}" id="lesson_2_namespace">
         <a href="{% url 'lesson_2_namespace' %}">Namensraum</a>
     </li>
     <li class="
-            {% block lesson_2_object_oriented_programming_active %}{% endblock lesson_2_object_oriented_programming_active %}">
+
+            {% block lesson_2_object_oriented_programming_active %}{% endblock lesson_2_object_oriented_programming_active %}"
+        id="lesson_2_oop">
         <a href="{% url 'lesson_2_object_oriented_programming' %}">Objektorientiertes Programmieren (OOP)</a>
     </li>
-    <li class="{% block lesson_2_classes_active %}{% endblock lesson_2_classes_active %}">
+    <li class="{% block lesson_2_classes_active %}{% endblock lesson_2_classes_active %}" id="lesson_2_classes">
         <a href="{% url 'lesson_2_classes' %}">Klassen</a>
     </li>
-    <li class="{% block lesson_2_heredity_active %}{% endblock lesson_2_heredity_active %}">
+    <li class="{% block lesson_2_heredity_active %}{% endblock lesson_2_heredity_active %}" id="lesson_2_heredity">
         <a href="{% url 'lesson_2_heredity' %}">Vererbung</a>
     </li>
 {% endblock sidebar_items %}
@@ -115,4 +132,5 @@
 
     <!-- Exercise Tests -->
     <script src="{% static 'js/lesson_2/exercise_tests.js' %}"></script>
+    <script src="{% static 'js/lesson_2/exercises_local_storage.js' %}"></script>
 {% endblock scripts_for_python_browser_exercises %}

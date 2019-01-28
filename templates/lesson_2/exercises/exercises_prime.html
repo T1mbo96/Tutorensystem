@@ -1,0 +1,158 @@
+{% extends 'template_pages/lesson_2_base.html' %}
+{% load static %}
+
+{% block lesson_2_exercises_prime_active %}
+    sidebar_active
+{% endblock lesson_2_exercises_prime_active %}
+
+{% block sidebar_page_content %}
+    <!-- Key for localStorage -->
+    <div id="local_storage_key" style="display: none">exercises_prime</div>
+
+    <!-- Sidebar scroll anchor -->
+    <div id="scroll_anchor" style="display: none">bottom</div>
+
+    <div class="card">
+        <div class="card-body">
+            <h1>Aufgabe: Primzahlen</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Dies ist die erste größere Aufgabe, die Sie lösen dürfen. Erstellen Sie bitte ein Programm, welches prüft,
+            ob eine Zahl eine Primzahl ist oder nicht. Hierfür überprüfen Sie bitte alle Zahlen von 0 (exklusive) bis
+            29 (inklusive) und speichern die jeweilige Zahl, bei erfolgreicher Prüfung auf eine Primzahl, in einer
+            Liste.
+            <p></p>
+            Abschließend geben Sie die Liste bitte in folgender Form aus: <br>
+            Die 1. Primzahl ist: x <br>
+            Die 2. Primzahl ist: y <br>
+            Die 3. Primzahl ist: z <br>
+            usw.
+            <p></p>
+            x, y und z stehen in diesem Beispiel natürlich nur als Platzhalter für die jeweilige Primzahl.
+            <p></p>
+            <div class="alert alert-primary" role="alert">
+                Falls Sie keinen Ansatzpunkt haben, wie man Primzahlen ermittelt, rufen Sie bitte den Link <a
+                    href="https://de.wikipedia.org/wiki/Primzahltest" target="_blank"><span
+                    class="link_color">Primzahltests</span></a> auf. Dort werden mehrere Verfahren zur Ermittlung von
+                Primzahlen erläutert.
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5>Bitte Code hier eingeben:</h5>
+            <div class="skulpt_code_container">
+                <form>
+                    <div class="text_area_wrapper">
+            <textarea id="custom_code" cols="40" rows="10">
+# In den folgenden Zeile bitte ihren Code eintragen
+
+
+
+
+</textarea>
+                    </div>
+                    <br/>
+                    <div id="skulpt_run_btn">
+                        <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run</button>
+                        <button type="button" onclick="prime_test_code()" class="form-btn btn btn-info my-2 my-sm-0">
+                            Test
+                        </button>
+                        <button type="button" onclick="reset_skulpt()"
+                                class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <p></p>
+            <div class="alert alert-success _alert" role="alert" id="correct_1" style="display: none">
+                Klasse! Die Ausgabe der 1. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_1" style="display: none">
+                Schade, die Ausgabe der 1. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_2" style="display: none">
+                Klasse! Die Ausgabe der 2. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_2" style="display: none">
+                Schade, die Ausgabe der 2. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_3" style="display: none">
+                Klasse! Die Ausgabe der 3. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_3" style="display: none">
+                Schade, die Ausgabe der 3. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_4" style="display: none">
+                Klasse! Die Ausgabe der 4. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_4" style="display: none">
+                Schade, die Ausgabe der 4. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_5" style="display: none">
+                Klasse! Die Ausgabe der 5. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_5" style="display: none">
+                Schade, die Ausgabe der 5. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_6" style="display: none">
+                Klasse! Die Ausgabe der 6. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_6" style="display: none">
+                Schade, die Ausgabe der 6. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_7" style="display: none">
+                Klasse! Die Ausgabe der 7. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_7" style="display: none">
+                Schade, die Ausgabe der 7. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_8" style="display: none">
+                Klasse! Die Ausgabe der 8. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_8" style="display: none">
+                Schade, die Ausgabe der 8. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_9" style="display: none">
+                Klasse! Die Ausgabe der 9. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_9" style="display: none">
+                Schade, die Ausgabe der 9. Primzahl ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert" role="alert" id="correct_10" style="display: none">
+                Klasse! Die Ausgabe der 10. Primzahl ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert" role="alert" id="wrong_10" style="display: none">
+                Schade, die Ausgabe der 10. Primzahl ist leider nicht korrekt!
+            </div>
+            <p></p>
+            <h5>Output:</h5>
+            <div class="description_container">
+                <pre id="output"></pre>
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://de.wikipedia.org/wiki/Primzahltest" target="_blank"><span
+                            class="link_color">Primzahltests</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    #
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    #
+{% endblock lesson_nav_buttons_next_page %}

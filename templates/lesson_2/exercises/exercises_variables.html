@@ -9,15 +9,12 @@
     <!-- Key for localStorage -->
     <div id="local_storage_key" style="display: none">exercises_variables</div>
 
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">top</div>
-
     <div class="card">
         <div class="card-body">
             <h1>Aufgabe: Variablen</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             Im folgenden Textfeld können Sie sich nun selbst daran versuchen eine Variable zu erstellen, um mit der
             Syntax
@@ -34,7 +31,7 @@
         </div>
     </div>
     <p></p>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h5>Bitte Code hier eingeben:</h5>
             <div class="skulpt_code_container">
@@ -60,10 +57,10 @@ print(integer)</textarea>
                 </form>
             </div>
             <p></p>
-            <div class="alert alert-success _alert" role="alert" id="correct_1" style="display: none">
+            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
                 Klasse! Die Variable 'integer' ist korrekt!
             </div>
-            <div class="alert alert-danger _alert" role="alert" id="wrong_1" style="display: none">
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
                 Schade, die Variable 'integer' ist leider nicht korrekt!
             </div>
             <p></p>

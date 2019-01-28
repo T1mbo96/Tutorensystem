@@ -6,21 +6,18 @@
 {% endblock lesson_2_while_loop_active %}
 
 {% block sidebar_page_content %}
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">50%</div>
-
     <div class="card">
         <div class="card-body">
             <h1>while-Schleife</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             Sie haben die while-Schleife ebenfalls in <a href="{% url 'lesson_1_loop' %}" class="link_color"
                                                          target="_blank"><span class="link_color">Lektion 1</span></a>
             kennengelernt. Neu hinzu kommt, dass diese Schleifenart einen <span
-                class="text_highlighted">else-Teil</span> haben kann. Dieser <span
-                class="text_highlighted">else-Teil</span> wird ausgeführt, sobald die Schleifenbedingung nicht mehr
+                class="text_highlighted">else-Teil</span> haben kann (vgl. bedingte Anweisungen). Dieser <span
+                class="text_highlighted">else-Teil</span> wird ausgeführt, sobald die Schleifenbedingung <u>nicht</u> mehr
             erfüllt ist.
             <p></p>
             <div class="text-center">
@@ -29,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Break & Continue</h3>
             Mit den Schlüsselwörtern <span class="text_highlighted">break</span> und <span class="text_highlighted">continue</span>
@@ -45,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             <h3>Hilfreiche Links</h3>
             <ul>

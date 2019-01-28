@@ -23,6 +23,7 @@ urlpatterns = [
     path('Schleifen/Zählschleife/', views.lesson_1_counting_loop, name='lesson_1_counting_loop'),
     path('Funktionen/', views.lesson_1_functions, name='lesson_1_functions'),
     path('Blockly_Games/Schildkröte/', views.lesson_1_blockly_games_turtle, name='lesson_1_blockly_games_turtle'),
+    path('Blockly_Games/Film/Spielfeld/', views.lesson_1_movie_preparation, name='lesson_1_movie_preparation'),
     path('Blockly_Games/Film/', views.lesson_1_blockly_games_movie, name='lesson_1_blockly_games_movie'),
     path('Blockly_Games/Teich/Spielfeld/', views.lesson_1_pond_preparation, name='lesson_1_pond_preparation'),
     path('Blockly_Games/Teich/', views.lesson_1_blockly_games_pond, name='lesson_1_blockly_games_pond'),

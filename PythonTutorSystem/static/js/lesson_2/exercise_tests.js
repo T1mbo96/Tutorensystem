@@ -6,7 +6,7 @@ function variables_test_code() {
 
 // Strings
 function strings_test_code() {
-    let solution_array = ["Hallo, Welt!", ",", "H", "!"];
+    let solution_array = ["Hallo, Welt!", ",", "a", "!"];
     test_code(solution_array);
 }
 
@@ -24,7 +24,7 @@ function input_test_code() {
 
 // Conditional Statements
 function conditional_statements_test_code() {
-    let solution_array = ["Sehr gut! Sie haben einen Gutschein gewonnen!"];
+    let solution_array = ["Sehr gut! Sie haben ein Puzzle gewonnen!"];
     test_code(solution_array);
 }
 
@@ -34,8 +34,14 @@ function while_loop_test_code() {
     test_code(solution_array);
 }
 
-// While-Loop
+// List
 function list_test_code() {
+    let solution_array = ["2 3 5 6 7 8 9 10 12 13 14 17 23 27 35 43 58 76 89 100 102 120 125 224"];
+    test_code(solution_array);
+}
+
+// Prime
+function prime_test_code() {
     let solution_array = ["Die 1. Primzahl ist: 2", "Die 2. Primzahl ist: 3", "Die 3. Primzahl ist: 5", "Die 4. Primzahl ist: 7", "Die 5. Primzahl ist: 11", "Die 6. Primzahl ist: 13", "Die 7. Primzahl ist: 17", "Die 8. Primzahl ist: 19", "Die 9. Primzahl ist: 23", "Die 10. Primzahl ist: 29"];
     test_code(solution_array);
 }

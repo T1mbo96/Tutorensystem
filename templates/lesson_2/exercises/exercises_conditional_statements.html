@@ -9,18 +9,16 @@
     <!-- Key for localStorage -->
     <div id="local_storage_key" style="display: none">exercises_conditional_statements</div>
 
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">50%</div>
-
     <div class="card">
         <div class="card-body">
             <h1>Aufgabe: Bedingte Anweisungen</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
-            Schreiben Sie für die nachfolgende Tabelle eine bedingte Anweisung, sodass ein Wettbewerber wissen
-            kann, welchen der Preise aus der Tabelle er gewonnen hat. Die Auswahl des Preises basiert auf der Anzahl der
+            Schreiben Sie <u>eine</u> bedingte Anweisung, in der für jedes Punkteintervall der nachfolgenden Tabelle der
+            entsprechende Preis ausgegeben wird, sodass ein Wettbewerber wissen
+            kann, welchen der Preise er aus der Tabelle gewonnen hat. Die Auswahl des Preises basiert auf der Anzahl der
             erzielten Punkte, die in der ganzzahligen Variable <span class="text_highlighted">points</span> gespeichert
             ist.
             <p></p>
@@ -46,7 +44,7 @@
                 </tr>
                 <tr>
                     <th scope="row">171-200</th>
-                    <td>Gutschein</td>
+                    <td>Puzzle</td>
                 </tr>
                 </tbody>
             </table>
@@ -56,11 +54,12 @@
                 zu 200
                 annehmen.
             </div>
-            Weisen Sie in Ihrer bedingten Anweisung der Variable <span class="text_highlighted">result</span> eine
+            Erzeugen und weisen Sie in Ihrer bedingten Anweisung der Variable <span
+                class="text_highlighted">result</span> eine
             Zeichenfolge (String) zu, die, basierend auf dem Wert der Punkte, die entsprechende Nachricht enthält.
             Wenn ein
-            Preis gewonnen wurde, sollte die Nachricht <span class="text_highlighted">Sehr gut! Sie haben einen [Preisname] gewonnen!</span>
-            (Ersetzen Sie [Preisname] mit dem Namen des jeweiligen Preises aus der Tabelle) ausgegeben werden. Wenn
+            Preis gewonnen wurde, sollte die Nachricht <span class="text_highlighted">Sehr gut! Sie haben ein [Preisname] gewonnen!</span>
+            ausgegeben werden (Ersetzen Sie [Preisname] mit dem Namen des jeweiligen Preises aus der Tabelle). Wenn
             es
             keinen Preis gibt, sollte in der Nachricht <span class="text_highlighted">Oh schade, diesmal gibt es keinen Preis.</span>
             stehen.
@@ -79,14 +78,19 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h5>Bitte Code hier eingeben:</h5>
             <div class="skulpt_code_container">
                 <form>
                     <div class="text_area_wrapper">
-            <textarea id="custom_code" cols="40" rows="10">points = 174 # Nutzen Sie diesen Wert für die Abgabe
+            <textarea id="custom_code" cols="40" rows="10">points = 174 # Variable, in der die erreichte Punktzahl gespeichert wird
+result = "" # Variable, der Sie die jeweilige Ausgabe zuweisen
 # Schreiben Sie Ihre bedingte Anweisung bitte hier
+
+
+
+
 
 
 # Hiermit wird der Wert der Variable 'result' ausgegeben
@@ -99,16 +103,17 @@ print(result)</textarea>
                                 class="form-btn btn btn-info my-2 my-sm-0">
                             Test
                         </button>
-                        <button type="button" onclick="reset_skulpt()" class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
+                        <button type="button" onclick="reset_skulpt()"
+                                class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
                         </button>
                     </div>
                 </form>
             </div>
             <p></p>
-            <div class="alert alert-success _alert" role="alert" id="correct_1" style="display: none">
+            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
                 Klasse! Sie haben den richtigen Preis korrekt ausgegeben!
             </div>
-            <div class="alert alert-danger _alert" role="alert" id="wrong_1" style="display: none">
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
                 Schade, der Preis oder die Nachricht ist leider nicht korrekt!
             </div>
             <p></p>

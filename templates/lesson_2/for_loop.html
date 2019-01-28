@@ -6,15 +6,12 @@
 {% endblock lesson_2_for_loop_active %}
 
 {% block sidebar_page_content %}
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">50%</div>
-
     <div class="card">
         <div class="card-body">
             <h1>for-Schleife</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             Auch die for-Schleife konnten Sie in <a href="#" class="link_color" target="_blank"><span
                 class="link_color">Lektion 1</span></a> schon ausprobieren und ihre Funktionsweise verstehen. Allerdings
@@ -22,7 +19,7 @@
                 class="text_highlighted">Zählschleife</span> verwendet, welche es per se so in Python nicht gibt.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Zählschleife</h3>
             Bei dieser Variante einer Schleife muss die <span class="text_highlighted">Schleifenvariable</span>, also
@@ -70,13 +67,20 @@
                      class="rounded"
                      alt="Example of for loop with range">
             </div>
+            <p></p>
+            Die Variable <span class="text_highlighted">counter</span> ist hierbei die Schleifenvariable, welche den
+            entsprechenden Wert in jedem Schleifendurchlauf annimmt. In diesem Beispiel also im ersten Durchlauf den
+            Wert <span class="text_highlighted">0</span>, im zweiten Durchlauf den Wert <span
+                class="text_highlighted">2</span> und im dritten Durchlauf den Wert <span
+                class="text_highlighted">4</span>. Die Variable <span class="text_highlighted">counter</span> kann
+            ebenfalls beliebig benannt werden.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             <h3>Foreach-Schleife</h3>
             Die standardmäßige for-Schleife in Python ist eine sogenannte foreach-Schleife. Diese Schleifenart dient der
-            Iteration über eine Sequenz von Objekten,
+            Iteration über eine Sequenz von Objekten (also dem Durchgehen aller Elemente),
             wie zum Beispiel den Zeichen in einem String. Sie kann ebenfalls einen <span class="text_highlighted">else-Teil</span>
             besitzen, äquivalent zu dem der while-Schleife.
             Dies bedeutet, dass man ebenfalls die Schlüsselwörter <span class="text_highlighted">break</span> und <span
@@ -89,7 +93,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Hilfreiche Links</h3>
             <ul>

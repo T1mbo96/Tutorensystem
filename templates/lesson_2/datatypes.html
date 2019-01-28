@@ -6,15 +6,12 @@
 {% endblock lesson_2_datatypes_active %}
 
 {% block sidebar_page_content %}
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">top</div>
-
     <div class="card">
         <div class="card-body">
             <h1>Datentypen</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             Ein Datentyp bezeichnet die Zusammenfassung konkreter Wertebereiche und die darauf definierten
             Operationen zu
@@ -29,7 +26,7 @@
             außerdem mithilfe einer speziellen Funktion in einen anderen umgewandelt werden.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Numerische Datentypen</h3>
             <p></p>
@@ -75,7 +72,8 @@
             definiert
             sind, angewendet werden können. Außerdem können zusätzlich auch noch die logischen Operatoren <span
                 class="text_highlighted">not</span>, <span class="text_highlighted">and</span> und <span
-                class="text_highlighted">or</span> auf booleschen Variablen angewendet werden.
+                class="text_highlighted">or</span> auf booleschen Variablen angewendet werden (Mehr dazu im Abschnitt <a
+                href="{% url 'lesson_2_operators' %}"><span class="link_color">Operatoren</span></a>).
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/lesson_2/python_datatypes_example.PNG' %}" class="rounded"
@@ -84,14 +82,14 @@
             <p></p>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             <h3>Weitere Datentypen</h3>
             Es werden noch weitere Datentypen in kommenden Abschnitten erläutert werden, die komplexer sind und die
             Erklärung somit einer eigenen Seite bedarf.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Hilfreiche Links</h3>
             <ul>

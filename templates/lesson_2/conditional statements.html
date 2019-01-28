@@ -6,23 +6,16 @@
 {% endblock lesson_2_conditional_statements_active %}
 
 {% block sidebar_page_content %}
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">50%</div>
-
     <div class="card">
         <div class="card-body">
             <h1>Bedingte Anweisungen</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             Die bedingten Anweisungen haben Sie in <a href="{% url 'lesson_1_conditional_statements' %}"
-                                                      class="link_color" target="_blank"><span class="link_color">Lektion 1</span></a>bereits
-            kennengelernt, weshalb die Funktionsweise keiner ausführlichen Erläuterung mehr bedarf. Allerdings ist
-            wichtig zu wissen, dass man zwischen dem <span class="text_highlighted">if</span> und <span
-                class="text_highlighted">else</span>das Schlüsselwort <span class="text_highlighted">elif</span>
-            einfügen kann, wodurch man die bedingte Anweisung beliebig verlängern kann, ohne viele <span
-                class="text_highlighted">if-Blöcke</span> ineinander verschachteln zu müssen.
+                                                      class="link_color" target="_blank"><span class="link_color">Lektion 1</span></a> bereits
+            kennengelernt, weshalb die Funktionsweise keiner ausführlichen Erläuterung mehr bedarf.
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}" class="rounded"
@@ -30,7 +23,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Hilfreiche Links</h3>
             <ul>

@@ -6,21 +6,17 @@
 {% endblock lesson_2_list_active %}
 
 {% block sidebar_page_content %}
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">bottom</div>
-
     <div class="card">
         <div class="card-body">
             <h1>Listen</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             Eine Liste ist ein sogenannter sequentieller Datentyp. Das bedeutet, dass in Listen ebenfalls mehrere
             Elemente gespeichert werden können, die über einen Index auswählbar sind (vgl. Strings). Der große
             Unterschied zu Strings ist jedoch, dass die gespeicherten Elemente nicht vom selben Typ sein müssen. Eine
-            Liste wird mit eckigen Klammern <span class="text_highlighted">[]</span> initialisiert. Außerdem kann man,
-            analog zu der Vorgehensweise bei Strings, auf die einzelnen Elemente mithilfe der Indizes zugreifen.
+            Liste wird mit eckigen Klammern <span class="text_highlighted">[]</span> initialisiert.
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/lesson_2/python_list_example.PNG' %}" class="rounded"
@@ -33,7 +29,7 @@
                 class="link_color">Python Listen 1</span></a>.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Grundlegende Operationen</h3>
             <p></p>
@@ -70,7 +66,7 @@
             </table>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             <h3>Iteration</h3>
             Um alle Elemente eines sequentiellen Datentyps durchzugehen benutzt man die im vorherigen Abschnitt erlernte
@@ -84,12 +80,12 @@
             Die Bezeichnung <span class="text_highlighted">element</span> könnte man hierbei beliebig variieren.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Schneiden</h3>
             Es kann auch auf mehrere Elemente einer Liste auf einmal zugegriffen werden. Dafür verwendet man einen
             Doppelpunkt <span class="text_highlighted">:</span> und die Schreibweise, um auf einen bestimmten Index
-            zuzugreifen.
+            zuzugreifen. <span class="text_highlighted">!!!TODO!!! Zahlen gegen was anderes austauschen wegen Verwechslungsgefahr.</span>
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/lesson_2/python_list_slicing.PNG' %}" class="rounded"
@@ -113,10 +109,10 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             <h3>Append</h3>
-            Um einer Liste einen neuen Eintrag hinzuzufügen benutzt man die <span class="text_highlighted">append</span>-Methode.
+            Um einer Liste einen neues Element hinzuzufügen benutzt man die <span class="text_highlighted">append</span>-Methode.
             Mithilfe dieser wird das gewünschte Element ans Ende der Liste angehängt.
             <p></p>
             <div class="text-center">
@@ -125,7 +121,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Delete</h3>
             Man kann Elemente aus einer Liste ebenfalls wieder löschen. Dies geschieht mithilfe des Schlüsselworts <span
@@ -137,7 +133,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             <h3>Hilfreiche Links</h3>
             <ul>
@@ -168,5 +164,5 @@
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'lesson_2_tuple' %}
+    {% url 'lesson_2_exercises_list' %}
 {% endblock lesson_nav_buttons_next_page %}

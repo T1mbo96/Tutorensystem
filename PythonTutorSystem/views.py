@@ -144,6 +144,11 @@ def lesson_1_blockly_games_turtle(request):
 
 
 @login_required
+def lesson_1_movie_preparation(request):
+    return render(request, 'lesson_1/movie_preparation.html')
+
+
+@login_required
 def lesson_1_blockly_games_movie(request):
     return render(request, 'lesson_1/blockly_games_movie.html')
 

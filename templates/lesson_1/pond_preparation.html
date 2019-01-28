@@ -6,9 +6,6 @@
 {% endblock lesson_1_pond_preparation_active %}
 
 {% block sidebar_page_content %}
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">bottom</div>
-
     <div class="card">
         <div class="card-body">
             <h1>Teich-Spielfeld</h1>
@@ -22,7 +19,7 @@
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/lesson_1/blockly_example_pond_game.gif' %}"
-                     class="rounded zoomer scaled_img" alt="pond field">
+                     class="rounded scaled_img" alt="pond field">
             </div>
             <p></p>
             Für diese Aufgaben bekommen Sie eine Vielzahl an Blöcken zur Verfügung gestellt. Wenn Sie einmal nicht
@@ -31,7 +28,7 @@
             öffnen, in welcher zu allen Blöcken eine Erklärung und teilweise ein Beispiel aufgeführt ist.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h3>Lösung</h3>
             Falls Sie überhaupt nicht auf eine Lösung kommen oder sich Inspirationen holen möchten, dann wird im
@@ -48,7 +45,7 @@
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}
-    {% url 'lesson_1_blockly_games_turtle' %}
+    {% url 'lesson_1_blockly_games_movie' %}
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}

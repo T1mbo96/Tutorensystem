@@ -9,15 +9,12 @@
     <!-- Key for localStorage -->
     <div id="local_storage_key" style="display: none">exercises_input</div>
 
-    <!-- Sidebar scroll anchor -->
-    <div id="scroll_anchor" style="display: none">50%</div>
-
     <div class="card">
         <div class="card-body">
             <h1>Aufgabe: Input-Funktion</h1>
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInRightBig">
         <div class="card-body">
             Lesen Sie bitte mithilfe der Input-Funktion den Wert <span class="text_highlighted">532</span> von der
             Konsole
@@ -37,7 +34,7 @@
             einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
         </div>
     </div>
-    <div class="card">
+    <div class="card aniview" data-av-animation="fadeInLeftBig">
         <div class="card-body">
             <h5>Bitte Code hier eingeben:</h5>
             <div class="skulpt_code_container">
@@ -61,10 +58,10 @@ print(x)
                 </form>
             </div>
             <p></p>
-            <div class="alert alert-success _alert" role="alert" id="correct_1" style="display: none">
+            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
                 Klasse! Sie haben der Variable 'x' den richtigen Wert zugewiesen!
             </div>
-            <div class="alert alert-danger _alert" role="alert" id="wrong_1" style="display: none">
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
                 Schade, die Variable 'x' ist leider nicht korrekt!
             </div>
             <p></p>

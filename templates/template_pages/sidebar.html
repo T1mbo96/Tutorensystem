@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'code_mirror/lib/codemirror.css' %}">
     <link rel="stylesheet" href="{% static 'css/template_pages/sidebar.css' %}">
     <link rel="stylesheet" href="{% static 'skulpt/skulpt.css' %}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 {% endblock head_css_page %}
 
 {% block content_container %}
@@ -71,6 +72,19 @@
             {% endblock full_screen_content %}
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
+    <script>
+        var options = {
+
+            // delay the animation sequence until '100' pixels have come into view
+            animateThreshold: 100,
+
+            // The frequency of which the user scrolling is 'tested'.
+            scrollPollInterval: 20
+        }
+        $('.aniview').AniView(options);
+    </script>
 {% endblock content_container %}
 
 {% block footer_javascript_page %}

@@ -11,33 +11,40 @@
             <h1>Logischer Operator: Und</h1>
         </div>
     </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            Ein Operator ist ein Symbol zur Durchführung linguistischer, logischer oder mathematischer Operationen (z.B.
-            + oder -). In diesem Fall beschäftigen wir uns mit dem logischen Operator <span
-                class="text_highlighted">and</span>. Wie Sie wahrscheinlich schon richtig vermuten werden, ist dies
-            einfach eine simple und-Verknüpfung zwischen zwei Werten oder Bedingungen.
-            <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_1/blockly_example_logic_and.PNG' %}" class="rounded"
-                     alt="logic and block">
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Ein Operator ist ein Symbol zur Durchführung linguistischer, logischer oder mathematischer Operationen
+                (z.B.
+                + oder -). In diesem Fall beschäftigen wir uns mit dem logischen Operator <span
+                    class="text_highlighted">and</span>. Wie Sie wahrscheinlich schon richtig vermuten werden, ist dies
+                einfach eine simple und-Verknüpfung zwischen zwei Werten oder Bedingungen.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_logic_and.PNG' %}" class="rounded"
+                         alt="logic and block">
+                </div>
+                <p></p>
+                Der zugehörige Block weist zwei Lücken auf und erwartet deshalb zwei weitere Blöcke, die Sie miteinander
+                verknüpfen wollen, wie in folgendem Beispiel zu sehen ist. Übrigens ist das <span
+                    class="text_highlighted"><</span> bzw. <span class="text_highlighted">></span> -Zeichen ebenfalls
+                ein
+                Operator. Diese fallen in die Kategorie der mathematischen Operatoren.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_logic_and_with_values.PNG' %}"
+                         class="rounded"
+                         alt="logic and block with values">
+                </div>
+                <p></p>
+                Wenn man das vorherige Beispiel nun z.B. in einer bedingten Anweisung als Bedingung einsetzen würde,
+                dann
+                würde die Bedingung nur dann zutreffen, wenn <span
+                    class="text_highlighted">x kleiner als 50 ist <u>UND</u> y größer als 50 ist</span>.
             </div>
-            <p></p>
-            Der zugehörige Block weist zwei Lücken auf und erwartet deshalb zwei weitere Blöcke, die Sie miteinander
-            verknüpfen wollen, wie in folgendem Beispiel zu sehen ist. Übrigens ist das <span
-                class="text_highlighted"><</span> bzw. <span class="text_highlighted">></span> -Zeichen ebenfalls ein
-            Operator. Diese fallen in die Kategorie der mathematischen Operatoren.
-            <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_1/blockly_example_logic_and_with_values.PNG' %}" class="rounded"
-                     alt="logic and block with values">
-            </div>
-            <p></p>
-            Wenn man das vorherige Beispiel nun z.B. in einer bedingten Anweisung als Bedingung einsetzen würde, dann
-            würde die Bedingung nur dann zutreffen, wenn <span class="text_highlighted">x kleiner als 50 ist <u>UND</u> y größer als 50 ist</span>.
         </div>
+        <p></p>
     </div>
-    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

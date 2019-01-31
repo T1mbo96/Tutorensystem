@@ -11,76 +11,81 @@
             <h1>Strukturierung</h1>
         </div>
     </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            <h3>Blöcke</h3>
-            Ein Block in einem Skript oder einem Programm ist eine Gruppe von Anweisungen. Er besteht aus wenigstens
-            einer
-            Anweisung und der <a href="https://de.wikipedia.org/wiki/Deklaration_(Programmierung)"
-                                 target="_blank"><span
-                class="link_color">Deklaration</span></a> für den Block selbst. Blöcke werden dazu verwendet, um den
-            Geltungsbereich von Variablen und Funktionen zu beschränken und können auch selbst wieder Blöcke
-            enthalten,
-            woraus eine verschachtelte Struktur entsteht.
-        </div>
-    </div>
-    <div class="card aniview" data-av-animation="fadeInLeftBig">
-        <div class="card-body">
-            <h3>Einrückung</h3>
-            In Python wird ein Block mithilfe von Einrückungen strukturiert, entgegen anderer Programmiersprachen
-            wie z.B.
-            Java oder C, in denen die Strukturierung mithilfe von Klammern, Schlüsselwörtern oder Semikolons
-            erfolgt. Somit
-            sind Leerzeichen am Anfang einer Zeile in Python von zentraler Bedeutung, um ein lauffähiges Programm
-            entwickeln
-            zu können. Außerdem unerlässlich ist der Doppelpunkt am Ende des Anweisungskopfs und die gleichmäßige
-            Einrückung
-            der zugehörigen Anweisungen, wie in der unteren Abbildung zu erkennen. Eine beispielhafte Illustration
-            von
-            verschiedenen Blöcken, durch Einrückung getrennt, ist in folgender Grafik zu erkennen.
-            <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_2/python_blocks.png' %}" class="rounded" alt="Example of blocks"
-                     title="Bildquelle: https://www.python-kurs.eu/python3_bloecke.php">
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Blöcke</h3>
+                Ein Block in einem Skript oder einem Programm ist eine Gruppe von Anweisungen. Er besteht aus wenigstens
+                einer
+                Anweisung und der <a href="https://de.wikipedia.org/wiki/Deklaration_(Programmierung)"
+                                     target="_blank"><span
+                    class="link_color">Deklaration</span></a> für den Block selbst. Blöcke werden dazu verwendet, um den
+                Geltungsbereich von Variablen und Funktionen zu beschränken und können auch selbst wieder Blöcke
+                enthalten,
+                woraus eine verschachtelte Struktur entsteht.
             </div>
-            <p></p>
-            Außerdem noch ein Beispiel eines kleinen, vollständigen Programms zur Berechnung des größten gemeinsamen
-            Teilers, damit Sie den Unterschied zwischen einer Programmiersprache wie C und Python erkennen können.
-            Es dient
-            lediglich zur Veranschaulichung der unterschiedlichen Strukturierungen, Sie müssen es also noch nicht
-            komplett
-            verstehen können. Zuerst das Python-Programm und anschließend das C-Programm.
-            <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_2/python_ggt_example.PNG' %}" class="rounded"
-                     alt="Example of ggt in python" title="Python-Programm">
-            </div>
-            <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_2/c_ggt_example.PNG' %}" class="rounded" alt="Example of ggt in c"
-                     title="C-Programm">
-            </div>
-            <p></p>
-            Die Strukturierung durch Einrückungen und Zeilenumbrüche im C-Programm dient lediglich der besseren
-            Vergleichbarkeit, könnte theoretisch aber auch entfallen und ist nicht unbedingt notwendig. Dies
-            bedeutet, dass
-            man das C-Programm auch in einer einzigen Zeile schreiben könnte.
         </div>
-    </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            <h3>Hilfreiche Links</h3>
-            <ul>
-                <li>
-                    <a href="https://de.wikipedia.org/wiki/Blockstruktur" target="_blank"><span class="link_color">Wikipedia Blockstruktur</span></a>
-                </li>
-                <li>
-                    <a href="https://www.python-kurs.eu/python3_bloecke.php" target="_blank"><span class="link_color">Strukturierung durch Einrückung</span></a>
-                </li>
-            </ul>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Einrückung</h3>
+                In Python wird ein Block mithilfe von Einrückungen strukturiert, entgegen anderer Programmiersprachen
+                wie z.B.
+                Java oder C, in denen die Strukturierung mithilfe von Klammern, Schlüsselwörtern oder Semikolons
+                erfolgt. Somit
+                sind Leerzeichen am Anfang einer Zeile in Python von zentraler Bedeutung, um ein lauffähiges Programm
+                entwickeln
+                zu können. Außerdem unerlässlich ist der Doppelpunkt am Ende des Anweisungskopfs und die gleichmäßige
+                Einrückung
+                der zugehörigen Anweisungen, wie in der unteren Abbildung zu erkennen. Eine beispielhafte Illustration
+                von
+                verschiedenen Blöcken, durch Einrückung getrennt, ist in folgender Grafik zu erkennen.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_blocks.png' %}" class="rounded"
+                         alt="Example of blocks"
+                         title="Bildquelle: https://www.python-kurs.eu/python3_bloecke.php">
+                </div>
+                <p></p>
+                Außerdem noch ein Beispiel eines kleinen, vollständigen Programms zur Berechnung des größten gemeinsamen
+                Teilers, damit Sie den Unterschied zwischen einer Programmiersprache wie C und Python erkennen können.
+                Es dient
+                lediglich zur Veranschaulichung der unterschiedlichen Strukturierungen, Sie müssen es also noch nicht
+                komplett
+                verstehen können. Zuerst das Python-Programm und anschließend das C-Programm.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_ggt_example.PNG' %}" class="rounded"
+                         alt="Example of ggt in python" title="Python-Programm">
+                </div>
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/c_ggt_example.PNG' %}" class="rounded"
+                         alt="Example of ggt in c"
+                         title="C-Programm">
+                </div>
+                <p></p>
+                Die Strukturierung durch Einrückungen und Zeilenumbrüche im C-Programm dient lediglich der besseren
+                Vergleichbarkeit, könnte theoretisch aber auch entfallen und ist nicht unbedingt notwendig. Dies
+                bedeutet, dass
+                man das C-Programm auch in einer einzigen Zeile schreiben könnte.
+            </div>
         </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Hilfreiche Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://de.wikipedia.org/wiki/Blockstruktur" target="_blank"><span class="link_color">Wikipedia Blockstruktur</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.python-kurs.eu/python3_bloecke.php" target="_blank"><span
+                                class="link_color">Strukturierung durch Einrückung</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p></p>
     </div>
-    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

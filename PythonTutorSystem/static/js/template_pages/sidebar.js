@@ -42,3 +42,7 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+   document.getElementById('load_animation_div').style.visibility = 'visible';
+});
+

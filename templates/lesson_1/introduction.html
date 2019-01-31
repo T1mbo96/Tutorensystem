@@ -11,38 +11,45 @@
             <h1>Einführung</h1>
         </div>
     </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            Willkommen zur ersten Lektion von Learn_Python! In dieser Lektion werden Sie die grundlegenden Konstrukte
-            des Programmierens mithilfe eines visuellen Code-Editors, der durch die Bibliothek <a
-                href="https://de.wikipedia.org/wiki/Blockly" target="_blank"><span class="link_color">Blockly</span></a>
-            bereitgestellt wird, kennen lernen. Im folgenden Video können Sie sich einen Überblick darüber verschaffen,
-            was <a href="https://de.wikipedia.org/wiki/Blockly" target="_blank"><span class="link_color">Blockly</span></a>
-            ist.
-            <p></p>
-            <div class="embed-responsive embed-responsive-16by9">
-                <video class="embed-responsive-item" controls>
-                    <source src="{% static 'videos/lesson_1/blockly_overview.mp4' %}">
-                </video>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Willkommen zur ersten Lektion von Learn_Python! In dieser Lektion werden Sie die grundlegenden
+                Konstrukte
+                des Programmierens mithilfe eines visuellen Code-Editors, der durch die Bibliothek <a
+                    href="https://de.wikipedia.org/wiki/Blockly" target="_blank"><span class="link_color">Blockly</span></a>
+                bereitgestellt wird, kennen lernen. Im folgenden Video können Sie sich einen Überblick darüber
+                verschaffen,
+                was <a href="https://de.wikipedia.org/wiki/Blockly" target="_blank"><span
+                    class="link_color">Blockly</span></a>
+                ist.
+                <p></p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="{% static 'videos/lesson_1/blockly_overview.mp4' %}">
+                    </video>
+                </div>
+                <p></p>
+                Dieses Video ist ein Ausschnitt des auf Youtube bereitgestellten <a
+                    href="https://www.youtube.com/watch?v=wDJua9hgyZM" target="_blank"><span
+                    class="link_color">Videos</span></a> von Google Developers. Der hier gewählte Ausschnitt befasst
+                sich
+                mit einem Überblick über <a href="https://de.wikipedia.org/wiki/Blockly" target="_blank"><span
+                    class="link_color">Blockly</span></a>.
             </div>
-            <p></p>
-            Dieses Video ist ein Ausschnitt des auf Youtube bereitgestellten <a
-                href="https://www.youtube.com/watch?v=wDJua9hgyZM" target="_blank"><span
-                class="link_color">Videos</span></a> von Google Developers. Der hier gewählte Ausschnitt befasst sich
-            mit einem Überblick über <a href="https://de.wikipedia.org/wiki/Blockly" target="_blank"><span
-                class="link_color">Blockly</span></a>.
         </div>
-    </div>
-    <div class="card aniview" data-av-animation="fadeInLeftBig">
-        <div class="card-body">
-            Auf den folgenden Seiten werden abwechselnd Erklärungen zu einzelnen Blocks und Konstrukten bereitgestellt
-            sowie Spiele und Aufgaben, die Sie selbstständig lösen sollen. Die Spiele werden ebenfalls von Google
-            Developers erstellt und sind auf dieser <a href="https://github.com/google/blockly-games/wiki"
-                                                       target="_blank"><span class="link_color">Seite</span></a>
-            einsehbar.
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                Auf den folgenden Seiten werden abwechselnd Erklärungen zu einzelnen Blocks und Konstrukten
+                bereitgestellt
+                sowie Spiele und Aufgaben, die Sie selbstständig lösen sollen. Die Spiele werden ebenfalls von Google
+                Developers erstellt und sind auf dieser <a href="https://github.com/google/blockly-games/wiki"
+                                                           target="_blank"><span class="link_color">Seite</span></a>
+                einsehbar.
+            </div>
         </div>
+        <p></p>
     </div>
-    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons %}

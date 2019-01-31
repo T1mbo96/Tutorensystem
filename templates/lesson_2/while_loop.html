@@ -11,57 +11,61 @@
             <h1>while-Schleife</h1>
         </div>
     </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            Sie haben die while-Schleife ebenfalls in <a href="{% url 'lesson_1_loop' %}" class="link_color"
-                                                         target="_blank"><span class="link_color">Lektion 1</span></a>
-            kennengelernt. Neu hinzu kommt, dass diese Schleifenart einen <span
-                class="text_highlighted">else-Teil</span> haben kann (vgl. bedingte Anweisungen). Dieser <span
-                class="text_highlighted">else-Teil</span> wird ausgeführt, sobald die Schleifenbedingung <u>nicht</u> mehr
-            erfüllt ist.
-            <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_2/python_while_loop_else_example.PNG' %}" class="rounded"
-                     alt="Example of while loop else">
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Sie haben die while-Schleife ebenfalls in <a href="{% url 'lesson_1_loop' %}" class="link_color"
+                                                             target="_blank"><span
+                    class="link_color">Lektion 1</span></a>
+                kennengelernt. Neu hinzu kommt, dass diese Schleifenart einen <span
+                    class="text_highlighted">else-Teil</span> haben kann (vgl. bedingte Anweisungen). Dieser <span
+                    class="text_highlighted">else-Teil</span> wird ausgeführt, sobald die Schleifenbedingung
+                <u>nicht</u> mehr
+                erfüllt ist.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_while_loop_else_example.PNG' %}" class="rounded"
+                         alt="Example of while loop else">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="card aniview" data-av-animation="fadeInLeftBig">
-        <div class="card-body">
-            <h3>Break & Continue</h3>
-            Mit den Schlüsselwörtern <span class="text_highlighted">break</span> und <span class="text_highlighted">continue</span>
-            kann man eine Schleife vorzeitig bzw. lediglich einen Schleifendurchlauf beenden. Wenn die Schleife mit
-            <span class="text_highlighted">break</span> beendet wird, dann wird der <span class="text_highlighted">else-Teil</span>
-            der Schleife nicht mehr ausgeführt. Die Funktionsweise der beiden Schlüsselwörter wird in der folgenden
-            Grafik ersichtlich.
-            <p></p>
-            <div class="text-center">
-                <img src="{% static 'pictures/lesson_2/python_while_loop_break_continue_example.PNG' %}"
-                     class="rounded"
-                     alt="Example of while loop else">
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Break & Continue</h3>
+                Mit den Schlüsselwörtern <span class="text_highlighted">break</span> und <span class="text_highlighted">continue</span>
+                kann man eine Schleife vorzeitig bzw. lediglich einen Schleifendurchlauf beenden. Wenn die Schleife mit
+                <span class="text_highlighted">break</span> beendet wird, dann wird der <span class="text_highlighted">else-Teil</span>
+                der Schleife nicht mehr ausgeführt. Die Funktionsweise der beiden Schlüsselwörter wird in der folgenden
+                Grafik ersichtlich.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_while_loop_break_continue_example.PNG' %}"
+                         class="rounded"
+                         alt="Example of while loop else">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            <h3>Hilfreiche Links</h3>
-            <ul>
-                <li>
-                    <a href="https://www.python-kurs.eu/python3_schleifen.php" target="_blank"><span
-                            class="link_color">Python while-Schleife</span></a>
-                </li>
-                <li>
-                    <a href="https://www.tutorialspoint.com/python/python_loops.htm" target="_blank"><span
-                            class="link_color">Python Schleifen</span></a>
-                </li>
-                <li>
-                    <a href="https://de.wikipedia.org/wiki/Schleife_(Programmierung)" target="_blank"><span
-                            class="link_color">Wikipedia Schleifen</span></a>
-                </li>
-            </ul>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Hilfreiche Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.python-kurs.eu/python3_schleifen.php" target="_blank"><span
+                                class="link_color">Python while-Schleife</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.tutorialspoint.com/python/python_loops.htm" target="_blank"><span
+                                class="link_color">Python Schleifen</span></a>
+                    </li>
+                    <li>
+                        <a href="https://de.wikipedia.org/wiki/Schleife_(Programmierung)" target="_blank"><span
+                                class="link_color">Wikipedia Schleifen</span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <p></p>
     </div>
-    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

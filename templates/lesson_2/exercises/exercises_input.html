@@ -14,65 +14,71 @@
             <h1>Aufgabe: Input-Funktion</h1>
         </div>
     </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            Lesen Sie bitte mithilfe der Input-Funktion den Wert <span class="text_highlighted">532</span> von der
-            Konsole
-            ein und speichern Sie diesen in der Variable x. Sie müssen den Wert in der aufgehenden Alert-Box
-            eintragen, wenn
-            Sie ihren Code laufen lassen. Diese Alert-Box soll hier die Konsole darstellen. Der Test wird nur bei
-            Eingabe
-            des korrekten Werts von <span class="text_highlighted">532</span> erfolgreich sein, allerdings können
-            Sie gerne
-            auch andere Werte ausprobieren.
-            <p></p>
-            Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
-                class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
-            ist,
-            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
-            beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach mit
-            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Lesen Sie bitte mithilfe der Input-Funktion den Wert <span class="text_highlighted">532</span> von der
+                Konsole
+                ein und speichern Sie diesen in der Variable x. Sie müssen den Wert in der aufgehenden Alert-Box
+                eintragen, wenn
+                Sie ihren Code laufen lassen. Diese Alert-Box soll hier die Konsole darstellen. Der Test wird nur bei
+                Eingabe
+                des korrekten Werts von <span class="text_highlighted">532</span> erfolgreich sein, allerdings können
+                Sie gerne
+                auch andere Werte ausprobieren.
+                <p></p>
+                Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
+                    class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
+                ist,
+                benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
+                beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach
+                mit
+                einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
+            </div>
         </div>
-    </div>
-    <div class="card aniview" data-av-animation="fadeInLeftBig">
-        <div class="card-body">
-            <h5>Bitte Code hier eingeben:</h5>
-            <div class="skulpt_code_container">
-                <form>
-                    <div class="text_area_wrapper">
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h5>Bitte Code hier eingeben:</h5>
+                <div class="skulpt_code_container">
+                    <form>
+                        <div class="text_area_wrapper">
             <textarea id="custom_code" cols="40" rows="10">
 # In folgender Zeile bitte ihren Code eintragen
 
 # Hiermit wird der Wert der Variable 'x', also Ihrem Input, ausgegeben
 print(x)
 </textarea>
-                    </div>
-                    <br/>
-                    <div id="skulpt_run_btn">
-                        <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run</button>
-                        <button type="button" onclick="input_test_code()" class="form-btn btn btn-info my-2 my-sm-0">Test
-                        </button>
-                        <button type="button" onclick="reset_skulpt()" class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
-                        </button>
-                    </div>
-                </form>
+                        </div>
+                        <br/>
+                        <div id="skulpt_run_btn">
+                            <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run
+                            </button>
+                            <button type="button" onclick="input_test_code()"
+                                    class="form-btn btn btn-info my-2 my-sm-0">Test
+                            </button>
+                            <button type="button" onclick="reset_skulpt()"
+                                    class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <p></p>
+                <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
+                    Klasse! Sie haben der Variable 'x' den richtigen Wert zugewiesen!
+                </div>
+                <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
+                    Schade, die Variable 'x' ist leider nicht korrekt!
+                </div>
+                <p></p>
+                <h5>Output:</h5>
+                <div class="description_container">
+                    <pre id="output"></pre>
+                </div>
+                <p></p>
             </div>
-            <p></p>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
-                Klasse! Sie haben der Variable 'x' den richtigen Wert zugewiesen!
-            </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
-                Schade, die Variable 'x' ist leider nicht korrekt!
-            </div>
-            <p></p>
-            <h5>Output:</h5>
-            <div class="description_container">
-                <pre id="output"></pre>
-            </div>
-            <p></p>
         </div>
+        <p></p>
     </div>
-    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

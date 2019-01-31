@@ -14,42 +14,45 @@
             <h1>Aufgabe: Listen</h1>
         </div>
     </div>
-    <div class="card aniview" data-av-animation="fadeInRightBig">
-        <div class="card-body">
-            Nun sollen Sie die erste größere Aufgabe dieser Lektion bearbeiten. Dafür implementieren Sie bitte das
-            Sortierverfahren <a href="https://de.wikipedia.org/wiki/Bubblesort" target="_blank"><span
-                class="link_color">Bubblesort</span></a>, welches eine gegebene Liste in die richtige Reihenfolge
-            bringen soll (Zahlenwerte aufsteigend sortiert).
-            <p></p>
-            Bei Bubblesort wird jeweils in Runden für jedes benachbarte Paar von Elementen getestet, ob diese vertauscht
-            werden müssen. Sobald mindestens eine Vertauschung notwendig war, beginnt eine neue Runde. War keine
-            Vertauschung notwendig, dann ist die Liste korrekt sortiert.
-            <p></p>
-            <div class="text-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"
-                     alt="Bubble-sort-example-300px.gif" width="300" height="180"><br>Von <a
-                    href="//commons.wikimedia.org/w/index.php?title=User:Swfung8&amp;action=edit&amp;redlink=1"
-                    class="new" title="User:Swfung8 (page does not exist)" target="_blank"><span class="link_color">Swfung8</span></a>-<span
-                    class="int-own-work" lang="de">Eigenes Werk</span>,<a
-                    href="https://creativecommons.org/licenses/by-sa/3.0"
-                    title="Creative Commons Attribution-Share Alike 3.0" target="_blank"><span class="link_color">CC BY-SA 3.0</span></a>,<a
-                    href="https://commons.wikimedia.org/w/index.php?curid=14953478" target="_blank"><span
-                    class="link_color">Link</span></a>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Nun sollen Sie die erste größere Aufgabe dieser Lektion bearbeiten. Dafür implementieren Sie bitte das
+                Sortierverfahren <a href="https://de.wikipedia.org/wiki/Bubblesort" target="_blank"><span
+                    class="link_color">Bubblesort</span></a>, welches eine gegebene Liste in die richtige Reihenfolge
+                bringen soll (Zahlenwerte aufsteigend sortiert).
+                <p></p>
+                Bei Bubblesort wird jeweils in Runden für jedes benachbarte Paar von Elementen getestet, ob diese
+                vertauscht
+                werden müssen. Sobald mindestens eine Vertauschung notwendig war, beginnt eine neue Runde. War keine
+                Vertauschung notwendig, dann ist die Liste korrekt sortiert.
+                <p></p>
+                <div class="text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"
+                         alt="Bubble-sort-example-300px.gif" width="300" height="180"><br>Von <a
+                        href="//commons.wikimedia.org/w/index.php?title=User:Swfung8&amp;action=edit&amp;redlink=1"
+                        class="new" title="User:Swfung8 (page does not exist)" target="_blank"><span class="link_color">Swfung8</span></a>-<span
+                        class="int-own-work" lang="de">Eigenes Werk</span>,<a
+                        href="https://creativecommons.org/licenses/by-sa/3.0"
+                        title="Creative Commons Attribution-Share Alike 3.0" target="_blank"><span class="link_color">CC BY-SA 3.0</span></a>,<a
+                        href="https://commons.wikimedia.org/w/index.php?curid=14953478" target="_blank"><span
+                        class="link_color">Link</span></a>
+                </div>
+                <p></p>
+                Seinen Namen hat das Sortierverfahren der Bewegung der größeren Elemente nach und nach von links nach
+                rechts
+                zu verdanken. Sie steigen somit ähnlich wie Blasen im Waser nach oben.
+                <p></p>
+                Ordnen Sie nun also die gegebene Liste <span class="text_highlighted">unordered_list</span> mithilfe des
+                Sortierverfahrens und geben Sie alle Elemente der Liste anschließend durch Leerzeichen getrennt aus.
             </div>
-            <p></p>
-            Seinen Namen hat das Sortierverfahren der Bewegung der größeren Elemente nach und nach von links nach rechts
-            zu verdanken. Sie steigen somit ähnlich wie Blasen im Waser nach oben.
-            <p></p>
-            Ordnen Sie nun also die gegebene Liste <span class="text_highlighted">unordered_list</span> mithilfe des
-            Sortierverfahrens und geben Sie alle Elemente der Liste anschließend durch Leerzeichen getrennt aus.
         </div>
-    </div>
-    <div class="card aniview" data-av-animation="fadeInLeftBig">
-        <div class="card-body">
-            <h5>Bitte Code hier eingeben:</h5>
-            <div class="skulpt_code_container">
-                <form>
-                    <div class="text_area_wrapper">
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h5>Bitte Code hier eingeben:</h5>
+                <div class="skulpt_code_container">
+                    <form>
+                        <div class="text_area_wrapper">
             <textarea id="custom_code" cols="40" rows="10">unordered_list = [10, 8, 12, 2, 5, 3, 27, 102, 23, 14, 35, 100, 13, 120,
                 17, 6, 7, 9, 224, 125, 76, 89, 58, 43]
 # In den folgenden Zeile bitte ihren Code eintragen
@@ -58,32 +61,34 @@
 
 
 </textarea>
-                    </div>
-                    <br/>
-                    <div id="skulpt_run_btn">
-                        <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run</button>
-                        <button type="button" onclick="list_test_code()" class="form-btn btn btn-info my-2 my-sm-0">
-                            Test
-                        </button>
-                        <button type="button" onclick="reset_skulpt()"
-                                class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
-                        </button>
-                    </div>
-                </form>
+                        </div>
+                        <br/>
+                        <div id="skulpt_run_btn">
+                            <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run
+                            </button>
+                            <button type="button" onclick="list_test_code()" class="form-btn btn btn-info my-2 my-sm-0">
+                                Test
+                            </button>
+                            <button type="button" onclick="reset_skulpt()"
+                                    class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <p></p>
+                <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
+                    Klasse! Die Liste wurde korrekt sortiert!
+                </div>
+                <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
+                    Schade, die Liste ist leider nicht korrekt sortiert!
+                </div>
+                <p></p>
+                <h5>Output:</h5>
+                <div class="description_container">
+                    <pre id="output"></pre>
+                </div>
+                <p></p>
             </div>
-            <p></p>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
-                Klasse! Die Liste wurde korrekt sortiert!
-            </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
-                Schade, die Liste ist leider nicht korrekt sortiert!
-            </div>
-            <p></p>
-            <h5>Output:</h5>
-            <div class="description_container">
-                <pre id="output"></pre>
-            </div>
-            <p></p>
         </div>
     </div>
 {% endblock sidebar_page_content %}

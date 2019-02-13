@@ -1,0 +1,34 @@
+{% extends 'template_pages/blockly_games_base.html' %}
+{% load static %}
+
+{% block lesson_1_turtle_submenu_active %}
+    sidebar_active
+{% endblock lesson_1_turtle_submenu_active %}
+
+{% block lesson_1_blockly_games_turtle_active %}
+    sidebar_active
+{% endblock lesson_1_blockly_games_turtle_active %}
+
+{% block blockly_games_inject_frame %}
+    <!-- Identifier for submenu logic -->
+    <div id="submenu_identifier" style="display: none">turtle_submenu_link</div>
+
+    <div id="loading_screen">
+        <div class="loading_icon_center" id="loading_icon">
+            <img src="{% static 'pictures/lesson_1/loading_icon.gif' %}" alt="loading icon">
+        </div>
+        <div class="embed-responsive embed-responsive-16by9 blockly_games_frame">
+            <iframe class="embed-responsive-item" src="{% url 'turtle' %}" onload="show_iframe()"
+                    style="visibility: hidden" id="blockly_games_iframe"></iframe>
+        </div>
+    </div>
+    <p></p>
+{% endblock blockly_games_inject_frame %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_functions' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_movie_preparation' %}
+{% endblock lesson_nav_buttons_next_page %}

@@ -1,0 +1,191 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block lesson_1_turtle_submenu_active %}
+    sidebar_active
+{% endblock lesson_1_turtle_submenu_active %}
+
+{% block lesson_1_functions_active %}
+    sidebar_active
+{% endblock lesson_1_functions_active %}
+
+{% block sidebar_page_content %}
+    <!-- Identifier for submenu logic -->
+    <div id="submenu_identifier" style="display: none">turtle_submenu_link</div>
+
+    <div class="card">
+        <div class="card-body">
+            <h1>Funktionen</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Eine Funktion ist ein Konstrukt, welches es erlaubt, den Programmcode zu strukturieren und
+                wiederverwendbar
+                zu machen. Ohne die Nutzung von Funktionen müsste man den Code immer wieder kopieren und einfügen sowie
+                bei Änderungen jedes mal erneut anpassen. Eine Funktion kapselt also einen Task, den man immer wieder
+                braucht und macht ihn, ohne den Code erneut schreiben zu müssen, nutzbar.
+                <p></p>
+                Zusammengesetzt ist eine Funktion aus dem <span class="text_highlighted">Rückgabewert</span>, dem <span
+                    class="text_highlighted">Funktionsnamen</span> und den <span
+                    class="text_highlighted">Parametern</span>,
+                welche die Funktion erhält, um damit zu arbeiten. Allerdings muss eine Funktion nicht zwangsweise einen
+                Rückgabewert oder Parameter besitzen, wie sie in den kommenden Beispielen sehen werden.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Funktionen mit Rückgabewert</h3>
+                Eine Funktion mit Rückgabewert besitzt, wie der Name schon sagt, einen Wert, den Sie, nachdem die
+                Anweisungen innerhalb der Funktion abgearbeitet sind, zurückgibt. Diesen Wert kann man direkt benutzen,
+                sodass Funktionen auch in Ausdrücken verwendet werden können. In Blockly wird eine Funktion
+                folgendermaßen
+                erzeugt.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_with_return.PNG' %}"
+                         class="rounded" alt="function with return value creation">
+                </div>
+                <p></p>
+                Sie können beliebig viele Inputs angeben, mit denen die Funktion anschließend arbeiten kann. Diese
+                Inputs sind die Parameter einer Funktion, welche beim Aufruf einer Funktion auch angegeben werden
+                müssen.
+                Der Abschnitt <span class="text_highlighted">do something</span> ist der Funktionsname und sollte so
+                gewählt
+                werden, dass er die Aufgabe der Funktion beschreibt. Das Kästchen <span class="text_highlighted">allow statements</span>
+                lässt Sie auswählen, ob Sie innerhalb der Funktion Anweisungen angeben wollen oder nicht. Dies ist
+                hilfreich, wenn Sie nur eine einzelne Anweisung brauchen, die Sie direkt an das <span
+                    class="text_highlighted">return</span> hängen. Das <span class="text_highlighted">return</span> gibt
+                dann einen Wert, den Sie bestimmen können, zurück.
+                <p></p>
+                Um das ganze ein wenig anschaulicher zu gestalten, ist in folgendem Beispiel eine Funktion implementiert
+                worden, welche zwei Werte <span class="text_highlighted">x</span> und <span
+                    class="text_highlighted">y</span> als Parameter entgegennimmt, die Summe aus beiden bildet und das
+                Ergebnis der Variable <span class="text_highlighted">i</span> zuweist. Abschließend wird die Variable
+                <span
+                        class="text_highlighted">i</span> zurückgegeben.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_with_return_example.PNG' %}"
+                         class="rounded" alt="function with return value example">
+                </div>
+                <p></p>
+                Wenn Sie diese Funktion nun in Ihrem Programm benutzen möchten, dann können Sie das folgendermaßen
+                erreichen.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_with_return_use.PNG' %}"
+                         class="rounded" alt="function with return value use">
+                </div>
+                <p></p>
+                Das <span class="text_highlighted">print</span> bedeutet einfach nur, dass der Wert, der von der
+                Funktion
+                zurückgegeben wird, auf dem Spielfeld angezeigt wird. Wir benutzen hier die oben erstellte Funktion und
+                übergeben ihr die Werte <span class="text_highlighted">50</span> und <span
+                    class="text_highlighted">50</span>. Als Ausgabe erhalten wir dann folgerichtig den Wert <span
+                    class="text_highlighted">100</span>.
+                <p></p>
+                Wie Sie jetzt gut erkennen können, könnten wir beliebige Werte für <span
+                    class="text_highlighted">x</span>
+                und <span class="text_highlighted">y</span> einsetzen und würden immer die richtige Summe erhalten.
+                Somit
+                müssen wir den Code bzw. die Blocks, um diese Summe zu berechnen, nicht noch einmal erneut schreiben.
+                <p></p>
+                Vollständigkeitshalber sei an dieser Stelle noch erwähnt, dass bei unterschiedlichen Ausprägungen oder
+                Bedingungen innerhalb einer Funktion auch unterschiedliche Werte zurückgegeben werden können (vgl.
+                bedingte
+                Anweisungen). Dies geschieht mithilfe des folgenden Blocks.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_with_multiple_returns.PNG' %}"
+                         class="rounded" alt="function with multiple returns block">
+                </div>
+                <p></p>
+                <div class="alert alert-primary" role="alert">
+                    Aufpassen müssen Sie hierbei, dass sobald ein return-Statement erreicht ist, dieser Wert
+                    zurückgegeben
+                    wird und anschließend die Funktion direkt verlassen wird.
+                </div>
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Funktionen ohne Rückgabewert</h3>
+                Funktionen ohne Rückgabewert besitzen, entgegen den Funktionen mit Rückgabewert, keinen Rückgabewert,
+                weshalb Sie auch nicht in Ausdrücken verwendet werden und eigenständig aufgerufen werden können. Sie
+                werden
+                mit folgendem Block erstellt.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_without_return.PNG' %}"
+                         class="rounded" alt="function without return value">
+                </div>
+                <p></p>
+                In folgendem Beispiel wird eine Funktion erstellt, welche das Wort <span
+                    class="text_highlighted">Hello!</span> fünf mal auf dem Spielfeld angezeigt.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_without_return_example.PNG' %}"
+                         class="rounded" alt="function without return example">
+                </div>
+                <p></p>
+                Um diese Funktion nun benutzen zu können, wird einfach der entsprechende Block eigenständig verwendet.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_without_return_use.PNG' %}"
+                         class="rounded" alt="function without return use">
+                </div>
+                <p></p>
+                Dieser Block zeigt nun fünf mal das Wort <span class="text_highlighted">Hello!</span> auf dem Spielfeld,
+                an
+                derselben Position an.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Weiteres Beispiel</h3>
+                Nun möchten wir unsere beiden Funktionen zusammen dazu nutzen, um die Summe von zwei Werten auf dem
+                Spielfeld anzuzeigen. Dazu bedarf es nur einer kleinen Modifikation der Funktion ohne Rückgabewert.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_functions_another_example.PNG' %}"
+                         class="rounded" alt="function another example">
+                </div>
+                <p></p>
+                Wie Sie sehen können, besitzt die Funktion <span class="text_highlighted">print_sum</span> nun zwei
+                Parameter <span class="text_highlighted">x</span> und <span class="text_highlighted">y</span>. Außerdem
+                ruft
+                sie die Funktion <span class="text_highlighted">calculate_sum</span> auf, übergibt die zwei Parameter an
+                diese und zeigt den Rückgabewert auf dem Spielfeld an. In diesem Beispiel würde nun der Wert <span
+                    class="text_highlighted">5</span> auf dem Spielfeld erscheinen.
+                <p></p>
+                Wenn wir jetzt sehr oft eine Summe aus zwei Zahlen auf dem Spielfeld anzeigen lassen wollen würden, dann
+                müssten wir jedes Mal einfach nurnoch die Funktion <span class="text_highlighted">print_sum</span>
+                aufrufen
+                und ihr die entsprechenden Werte übergeben. Somit haben wir uns das ständige Kopieren des Codes bzw. der
+                Blöcke in den beiden Funktionen erspart und können diese Funktionen beliebig wiederverwenden.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h2>Hilfreiche Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://de.wikipedia.org/wiki/Funktion_(Programmierung)" target="_blank"><span
+                                class="link_color">Wikipedia Funktion</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p></p>
+    </div>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_variables_addition' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_blockly_games_turtle' %}
+{% endblock lesson_nav_buttons_next_page %}

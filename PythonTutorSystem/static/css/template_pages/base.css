@@ -31,3 +31,36 @@ body {
 .main_color {
     background-color: #316c9b;
 }
+
+a:focus {
+    outline: none;
+}
+
+@media (min-width: 992px) {
+    .nav_item_space {
+        margin-left: 50px;
+    }
+}
+
+.navbar .dropdown.show a:hover {
+    background-color: #316c9b;
+    color: #ebffff;
+}
+
+.navbar .dropdown-menu {
+    margin-top: -1px;
+    border-radius: unset;
+}
+
+.logo_color {
+    color: #fbe695;
+}
+
+.inverted {
+    display: inline-block;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}

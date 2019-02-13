@@ -11,10 +11,10 @@ urlpatterns = [
     path('Blockly_Games/', include('PythonTutorSystem.blockly_games_urls')),
 
     # lesson_1
-    path('Lektion_1/', include('PythonTutorSystem.lesson_1_urls')),
+    path('Blockly/Lektion/', include('PythonTutorSystem.blockly_lesson_urls')),
 
     # lesson_2
-    path('Lektion_2/', include('PythonTutorSystem.lesson_2_urls')),
+    path('Python/Lektion/', include('PythonTutorSystem.python_lesson_urls')),
 
     # lesson_3
     path('Lektion_3/', include('PythonTutorSystem.lesson_3_urls')),

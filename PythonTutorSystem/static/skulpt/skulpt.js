@@ -1,6 +1,7 @@
 var editor;
 Sk.python3 = true;
 
+// Print output of user implemented code
 function outf(text) {
     var mypre = document.getElementById("output");
     mypre.innerHTML = mypre.innerHTML + text;
@@ -12,6 +13,7 @@ function builtinRead(x) {
     return Sk.builtinFiles["files"][x];
 }
 
+// Run user implemented code
 function runit() {
     var prog = editor.getDoc().getValue();
     var mypre = document.getElementById("output");
@@ -32,6 +34,7 @@ function runit() {
     hide_alerts();
 }
 
+// Hide all alerts that indicate a wrong or right answer
 function hide_alerts() {
     let alert_array = document.getElementsByClassName('_alert');
 
@@ -40,11 +43,13 @@ function hide_alerts() {
     }
 }
 
+// Wrap Skulpt editor with CodeMirror
 $(document).ready(function () {
-    //code here...
-    var code = $("#custom_code")[0];
-    editor = CodeMirror.fromTextArea(code, {
-        lineNumbers: true,
-        mode: "python",
-    });
+    if (document.getElementById('custom_code')) {
+        var code = $("#custom_code")[0];
+        editor = CodeMirror.fromTextArea(code, {
+            lineNumbers: true,
+            mode: "python",
+        });
+    }
 });

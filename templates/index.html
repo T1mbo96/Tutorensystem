@@ -22,6 +22,8 @@
 {% block header %}{% endblock header %}
 
 {% block content_container %}
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'js/index.js' %}"></script>
 
     <div class="jumbotron jumbotron-fluid">
@@ -33,7 +35,7 @@
                     Programmiersprache Python. Zum Abschluss behandeln Sie größere Aufgaben lokal in Ihrer eigenen
                     IDE.</p>
                 <hr class="my-4">
-                <p>Legen Sie gleich mit einem Klick auf den folgenden Button los!</p>
+                <p>Klicken Sie folgenden Button, um mehr darüber zu erfahren!</p>
                 <a class="btn btn-primary btn-lg" onclick="smooth_scroll()" role="button">Los gehts! <i
                         class="fa fa-angle-down"></i></a>
             </div>
@@ -55,7 +57,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="float-left"><h5>Ausloggen:</h5></div>
-                            <div class="float-right"><a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+                            <div class="float-right"><a href="{% url 'logout' %}" class="btn btn-primary">Logout <i class="fas fa-sign-out-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +69,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="float-left"><h5>Einloggen:</h5></div>
-                            <div class="float-right"><a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                            <div class="float-right"><a href="{% url 'login' %}" class="btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></a>
                             </div>
                         </div>
                     </div>

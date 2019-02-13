@@ -10,81 +10,170 @@
 {% endblock lesson_2_active %}
 
 {% block sidebar_header %}
-    Lektion 2
+    <i class="fab fa-python"></i>  Lektion
 {% endblock sidebar_header %}
 
 {% block sidebar_items %}
-    <li class="{% block lesson_2_introduction_active %}{% endblock lesson_2_introduction_active %}"
-        id="lesson_2_introduction">
+    <li class="{% block lesson_2_introduction_active %}{% endblock lesson_2_introduction_active %}">
         <a href="{% url 'lesson_2_introduction' %}">Einführung</a>
     </li>
-    <li class="{% block lesson_2_structuring_active %}{% endblock lesson_2_structuring_active %}"
-        id="lesson_2_structuring">
+    <li class="{% block lesson_2_structuring_active %}{% endblock lesson_2_structuring_active %}">
         <a href="{% url 'lesson_2_structuring' %}">Strukturierung</a>
     </li>
-    <li class="{% block lesson_2_variables_active %}{% endblock lesson_2_variables_active %}" id="lesson_2_variables">
-        <a href="{% url 'lesson_2_variables' %}">Variablen</a>
+    <li class="{% block lesson_2_variables_submenu_active %}{% endblock lesson_2_variables_submenu_active %}">
+        <a href="#variables_submenu" data-toggle="collapse" aria-expanded="false"
+           id="variables_submenu_link">Variablen <i class="fas fa-angle-down float-right test"></i></a>
+        <ul class="collapse list-unstyled" id="variables_submenu">
+            <li>
+                <a href="{% url 'lesson_2_variables' %}"
+                   class="{% block lesson_2_variables_active %}{% endblock lesson_2_variables_active %}"><i
+                        class="fas fa-angle-right"></i> Variablen</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_exercises_variables' %}" class="
+
+
+
+
+
+
+
+                        {% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
-    <li class="{% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"
-        id="lesson_2_exercises_variables">
-        <a href="{% url 'lesson_2_exercises_variables' %}">Aufgabe: Variablen</a>
-    </li>
-    <li class="{% block lesson_2_datatypes_active %}{% endblock lesson_2_datatypes_active %}" id="lesson_2_datatypes">
+    <li class="{% block lesson_2_datatypes_active %}{% endblock lesson_2_datatypes_active %}">
         <a href="{% url 'lesson_2_datatypes' %}">Datentypen</a>
     </li>
-    <li class="{% block lesson_2_strings_active %}{% endblock lesson_2_strings_active %}" id="lesson_2_strings">
-        <a href="{% url 'lesson_2_strings' %}">Strings</a>
+    <li class="{% block lesson_2_strings_submenu_active %}{% endblock lesson_2_strings_submenu_active %}">
+        <a href="#strings_submenu" data-toggle="collapse" aria-expanded="false"
+           id="strings_submenu_link">Strings <i class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="strings_submenu">
+            <li>
+                <a href="{% url 'lesson_2_strings' %}"
+                   class="{% block lesson_2_strings_active %}{% endblock lesson_2_strings_active %}"><i
+                        class="fas fa-angle-right"></i> Strings</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_exercises_strings' %}" class="
+
+
+
+
+
+
+
+
+                        {% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
-    <li class="{% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"
-        id="lesson_2_exercises_strings">
-        <a href="{% url 'lesson_2_exercises_strings' %}">Aufgabe: Strings</a>
+    <li class="{% block lesson_2_operators_submenu_active %}{% endblock lesson_2_operators_submenu_active %}">
+        <a href="#operators_submenu" data-toggle="collapse" aria-expanded="false"
+           id="operators_submenu_link">Operatoren <i class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="operators_submenu">
+            <li>
+                <a href="{% url 'lesson_2_operators' %}"
+                   class="{% block lesson_2_operators_active %}{% endblock lesson_2_operators_active %}"><i
+                        class="fas fa-angle-right"></i> Operatoren</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_operators_precedence' %}" class="
+
+
+
+
+
+                        {% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"><i
+                        class="fas fa-angle-right"></i> Priorität</a>
+            </li>
+        </ul>
     </li>
-    <li class="{% block lesson_2_operators_active %}{% endblock lesson_2_operators_active %}" id="lesson_2_operators">
-        <a href="{% url 'lesson_2_operators' %}">Operatoren</a>
+    <li class="{% block lesson_2_print_submenu_active %}{% endblock lesson_2_print_submenu_active %}">
+        <a href="#print_submenu" data-toggle="collapse" aria-expanded="false"
+           id="print_submenu_link">Print-Funktion <i class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="print_submenu">
+            <li>
+                <a href="{% url 'lesson_2_print' %}"
+                   class="{% block lesson_2_print_active %}{% endblock lesson_2_print_active %}"><i
+                        class="fas fa-angle-right"></i> Print-Funktion</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_exercises_print' %}"
+                   class="{% block lesson_2_exercises_print_active %}{% endblock lesson_2_exercises_print_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
-    <li class="{% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"
-        id="lesson_2_operators_precedence">
-        <a href="{% url 'lesson_2_operators_precedence' %}">Operatoren: Priorität</a>
-    </li>
-    <li class="{% block lesson_2_print_active %}{% endblock lesson_2_print_active %}" id="lesson_2_print">
-        <a href="{% url 'lesson_2_print' %}">Print-Funktion</a>
-    </li>
-    <li class="{% block lesson_2_exercises_print_active %}{% endblock lesson_2_exercises_print_active %}"
-        id="lesson_2_exercises_print">
-        <a href="{% url 'lesson_2_exercises_print' %}">Aufgabe: Print-Funktion</a>
-    </li>
-    <li class="{% block lesson_2_input_active %}{% endblock lesson_2_input_active %}" id="lesson_2_input">
-        <a href="{% url 'lesson_2_input' %}">Input-Funktion</a>
-    </li>
-    <li class="{% block lesson_2_exercises_input_active %}{% endblock lesson_2_exercises_input_active %}"
-        id="lesson_2_exercises_input">
-        <a href="{% url 'lesson_2_exercises_input' %}">Aufgabe: Input-Funktion</a>
-    </li>
-    <li class="{% block lesson_2_conditional_statements_active %}{% endblock lesson_2_conditional_statements_active %}"
-        id="lesson_2_conditional_statements">
-        <a href="{% url 'lesson_2_conditional_statements' %}">Bedingte Anweisungen</a>
+    <li class="{% block lesson_2_input_submenu_active %}{% endblock lesson_2_input_submenu_active %}">
+        <a href="#input_submenu" data-toggle="collapse" aria-expanded="false"
+           id="input_submenu_link">Input-Funktion <i class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="input_submenu">
+            <li>
+                <a href="{% url 'lesson_2_input' %}"
+                   class="{% block lesson_2_input_active %}{% endblock lesson_2_input_active %}"><i
+                        class="fas fa-angle-right"></i> Input-Funktion</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_exercises_input' %}"
+                   class="{% block lesson_2_exercises_input_active %}{% endblock lesson_2_exercises_input_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
     <li class="
-            {% block lesson_2_exercises_conditional_statements_active %}{% endblock lesson_2_exercises_conditional_statements_active %}"
-        id="lesson_2_exercises_conditional_statements">
-        <a href="{% url 'lesson_2_exercises_conditional_statements' %}">Aufgabe: Bedingte Anweisungen</a>
+
+            {% block lesson_2_conditional_statements_submenu_active %}{% endblock lesson_2_conditional_statements_submenu_active %}">
+        <a href="#conditional_statements_submenu" data-toggle="collapse" aria-expanded="false"
+           id="conditional_statements_submenu_link">Bedingte Anweisungen <i
+                class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="conditional_statements_submenu">
+            <li>
+                <a href="{% url 'lesson_2_conditional_statements' %}" class="
+
+                        {% block lesson_2_conditional_statements_active %}{% endblock lesson_2_conditional_statements_active %}"><i
+                        class="fas fa-angle-right"></i> Bedingte Anweisungen</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_exercises_conditional_statements' %}" class="
+
+                        {% block lesson_2_exercises_conditional_statements_active %}{% endblock lesson_2_exercises_conditional_statements_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
-    <li class="{% block lesson_2_while_loop_active %}{% endblock lesson_2_while_loop_active %}"
-        id="lesson_2_while_loop">
-        <a href="{% url 'lesson_2_while_loop' %}">while-Schleife</a>
-    </li>
-    <li class="{% block lesson_2_exercises_while_loop_active %}{% endblock lesson_2_exercises_while_loop_active %}"
-        id="lesson_2_exercises_while_loop">
-        <a href="{% url 'lesson_2_exercises_while_loop' %}">Aufgabe: while-Schleife</a>
+    <li class="{% block lesson_2_while_loop_submenu_active %}{% endblock lesson_2_while_loop_submenu_active %}">
+        <a href="#while_loop_submenu" data-toggle="collapse" aria-expanded="false"
+           id="while_loop_submenu_link">while-Schleife <i class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="while_loop_submenu">
+            <li>
+                <a href="{% url 'lesson_2_while_loop' %}"
+                   class="{% block lesson_2_while_loop_active %}{% endblock lesson_2_while_loop_active %}"><i
+                        class="fas fa-angle-right"></i> while-Schleife</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_exercises_while_loop' %}" class="
+                        {% block lesson_2_exercises_while_loop_active %}{% endblock lesson_2_exercises_while_loop_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
     <li class="{% block lesson_2_for_loop_active %}{% endblock lesson_2_for_loop_active %}" id="lesson_2_for_loop">
         <a href="{% url 'lesson_2_for_loop' %}">for-Schleife</a>
     </li>
-    <li class="{% block lesson_2_list_active %}{% endblock lesson_2_list_active %}" id="lesson_2_list">
-        <a href="{% url 'lesson_2_list' %}">Listen</a>
-    </li>
-    <li class="{% block lesson_2_exercises_list_active %}{% endblock lesson_2_exercises_list_active %}" id="lesson_2_exercises_list">
-        <a href="{% url 'lesson_2_exercises_list' %}">Aufgabe: Listen</a>
+    <li class="{% block lesson_2_list_submenu_active %}{% endblock lesson_2_list_submenu_active %}">
+        <a href="#list_submenu" data-toggle="collapse" aria-expanded="false"
+           id="list_submenu_link">Listen <i class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="list_submenu">
+            <li>
+                <a href="{% url 'lesson_2_list' %}" class="{% block lesson_2_list_active %}{% endblock lesson_2_list_active %}"><i class="fas fa-angle-right"></i> Listen</a>
+            </li>
+            <li>
+                <a href="{% url 'lesson_2_exercises_list' %}" class="{% block lesson_2_exercises_list_active %}{% endblock lesson_2_exercises_list_active %}"><i class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
     <li class="{% block lesson_2_tuple_active %}{% endblock lesson_2_tuple_active %}" id="lesson_2_tuple">
         <a href="{% url 'lesson_2_tuple' %}">Tupel</a>
@@ -106,6 +195,17 @@
         <a href="{% url 'lesson_2_namespace' %}">Namensraum</a>
     </li>
     <li class="
+
+
+
+
+
+
+
+
+
+
+
 
             {% block lesson_2_object_oriented_programming_active %}{% endblock lesson_2_object_oriented_programming_active %}"
         id="lesson_2_oop">

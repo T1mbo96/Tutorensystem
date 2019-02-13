@@ -11,17 +11,6 @@
 {% endblock head_css_page %}
 
 {% block content_container %}
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-            crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-            crossorigin="anonymous"></script>
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     {% block scripts_for_python_browser_exercises %}{% endblock scripts_for_python_browser_exercises %}
     {% block scripts_for_blockly_games_iframes %}{% endblock scripts_for_blockly_games_iframes %}
 
@@ -72,7 +61,18 @@
             {% endblock full_screen_content %}
         </div>
     </div>
+{% endblock content_container %}
+
+{% block footer_javascript_page %}
+    <script src="{% static 'js/template_pages/sidebar.js' %}"></script>
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Aniview animations -->
     <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
     <script>
         var options = {
@@ -82,13 +82,7 @@
 
             // The frequency of which the user scrolling is 'tested'.
             scrollPollInterval: 20
-        }
+        };
         $('.aniview').AniView(options);
     </script>
-{% endblock content_container %}
-
-{% block footer_javascript_page %}
-    <!-- jQuery Custom Scroller CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="{% static 'js/template_pages/sidebar.js' %}"></script>
 {% endblock footer_javascript_page %}

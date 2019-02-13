@@ -1,0 +1,69 @@
+{% extends 'template_pages/lesson_1_base.html' %}
+{% load static %}
+
+{% block lesson_1_labyrinth_submenu_active %}
+    sidebar_active
+{% endblock lesson_1_labyrinth_submenu_active %}
+
+{% block lesson_1_loop_active %}
+    sidebar_active
+{% endblock lesson_1_loop_active %}
+
+{% block sidebar_page_content %}
+    <!-- Identifier for submenu logic -->
+    <div id="submenu_identifier" style="display: none">labyrinth_submenu_link</div>
+
+    <div class="card">
+        <div class="card-body">
+            <h1>Schleifen</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Eine Schleife ist ebenfalls eine Kontrollanweisung, welche es ermöglicht, dass ein bestimmter Teil des
+                Codes
+                wiederholt ausgeführt wird. Sie besteht aus zwei Teilen, der <span class="text_highlighted">Schleifenbedingung</span>
+                und dem <span class="text_highlighted">Schleifenrumpf</span>. Die Schleifenbedingung prüft, ob ein
+                bestimmter Zustand zutreffend ist oder nicht (z.B. ob die Spielfigur das Ziel noch nicht erreicht hat).
+                Der
+                Schleifenrumpf enthält die Anweisungen, die ausgeführt werden sollen, wenn die Schleifenbedingung
+                zutrifft. Anders als bei der bedingten Anweisung, wird der Code im Schleifenrumpf so lange ausgeführt,
+                solange die Schleifenbedingung zutrifft. Ein Beispiel des zugehörigen Blocks in Blockly ist im folgenden
+                Bild dargestellt.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_1/blockly_example_loop.PNG' %}" class="rounded"
+                         alt="Loop block">
+                </div>
+                <p></p>
+                Die erste Zeile <span class="text_highlighted">repeat until Marker</span> stellt die Schleifenbedingung
+                und die zweite Zeile <span class="text_highlighted">do</span> stellt den Schleifenrumpf dar. Dies
+                bedeutet, dass die Blöcke/Anweisungen, die im Schleifenrumpf <span class="text_highlighted">do</span>
+                stehen, so oft ausgeführt werden, bis die Spielfigur den Marker erreicht hat bzw. bis die
+                Schleifenbedingung
+                nicht mehr erfüllt ist (hier z.B. weil das Ziel erreicht wurde).
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h2>Hilfreiche Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://de.wikipedia.org/wiki/Schleife_(Programmierung)" target="_blank"><span
+                                class="link_color">Wikipedia Schleifen</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p></p>
+    </div>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_1_conditional_statements' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_1_blockly_games_labyrinth' %}
+{% endblock lesson_nav_buttons_next_page %}

@@ -45,14 +45,25 @@ a, a:hover, a:focus {
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+    color: #316c9b;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
 
 ul ul a {
-    font-size: 0.9em !important;
+    font-size: 1.0em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #fbe695;
 }
 
 #content {
@@ -96,7 +107,7 @@ ul ul a {
 }
 
 .sidebar_active {
-    background: #f9d853;
+    background-color: #f9d853;
 }
 
 .blockly_games_frame {

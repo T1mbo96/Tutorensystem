@@ -235,7 +235,7 @@
       var script = document.createElement('script');
       script.src = src;
       // Hier die jeweilige URL ausschneiden
-      script.src = script.src.replace('/Learn_Python/Blockly_Games/Movie', '');
+      script.src = script.src.replace('/LearnPython/BlocklyGames/Movie', '');
       script.type = 'text/javascript';
       script.onload = loadScript;
       document.head.appendChild(script);

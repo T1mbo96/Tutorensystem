@@ -66,23 +66,6 @@
 {% block footer_javascript_page %}
     <script src="{% static 'js/template_pages/sidebar.js' %}"></script>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-    <!-- Aniview animations -->
-    <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
-    <script>
-        var options = {
-
-            // delay the animation sequence until '100' pixels have come into view
-            animateThreshold: 100,
-
-            // The frequency of which the user scrolling is 'tested'.
-            scrollPollInterval: 20
-        };
-        $('.aniview').AniView(options);
-    </script>
 {% endblock footer_javascript_page %}

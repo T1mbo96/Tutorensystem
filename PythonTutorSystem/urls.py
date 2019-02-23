@@ -8,7 +8,7 @@ urlpatterns = [
     path('Home/', views.index, name='index'),
 
     # blockly_games
-    path('Blockly_Games/', include('PythonTutorSystem.blockly_games_urls')),
+    path('BlocklyGames/', include('PythonTutorSystem.blockly_games_urls')),
 
     # lesson_1
     path('Blockly/Lektion/', include('PythonTutorSystem.blockly_lesson_urls')),

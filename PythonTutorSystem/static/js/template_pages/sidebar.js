@@ -42,13 +42,6 @@ $(document).ready(function () {
     });
 });
 
-// Delay showing the content until everything loaded
-$(document).ready(function () {
-    if (document.getElementById('load_animation_div')) {
-        document.getElementById('load_animation_div').style.visibility = 'visible';
-    }
-});
-
 // Open the respective submenu on page load
 $(document).ready(function () {
     if (document.getElementById('submenu_identifier')) {

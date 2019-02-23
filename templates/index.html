@@ -9,8 +9,20 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .jumbotron {
-            background: url('{% static 'pictures/hero_image_1.jpg' %}');
+        .first_image {
+            background-image: url({% static 'pictures/first_image.jpeg' %});
+        }
+
+        .second_image {
+            background-image: url({% static 'pictures/second_image.jpeg' %});
+        }
+
+        .third_image {
+            background-image: url({% static 'pictures/third_image.jpeg' %});
+        }
+
+        .fourth_image {
+            background-image: url({% static 'pictures/fourth_image.jpeg' %});
         }
     </style>
 {% endblock head_css_page %}
@@ -22,114 +34,151 @@
 {% block header %}{% endblock header %}
 
 {% block content_container %}
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'js/index.js' %}"></script>
 
-    <div class="jumbotron jumbotron-fluid">
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="{% static 'videos/index_header_video.mp4' %}" type="video/mp4">
+        </video>
         <div class="container">
-            <div class="hero_image_wrapper">
-                <h1 class="display-4">Willkommen!</h1>
-                <p class="lead">Hier erlernen Sie grundlegende Konstrukte des Programmierens mithilfe des visuellen
-                    Code-Editors Blockly. Anschließend und währenddessen transferieren Sie das gelernte auf die
-                    Programmiersprache Python. Zum Abschluss behandeln Sie größere Aufgaben lokal in Ihrer eigenen
-                    IDE.</p>
-                <hr class="my-4">
-                <p>Klicken Sie folgenden Button, um mehr darüber zu erfahren!</p>
-                <a class="btn btn-primary btn-lg" onclick="smooth_scroll()" role="button">Los gehts! <i
-                        class="fa fa-angle-down"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="index_content">
-        {% if user.is_authenticated %}
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="float-left"><h5>Weiter lernen:</h5></div>
-                            <div class="float-right"><a href="#" class="btn btn-primary disabled">Weiter</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="float-left"><h5>Ausloggen:</h5></div>
-                            <div class="float-right"><a href="{% url 'logout' %}" class="btn btn-primary">Logout <i class="fas fa-sign-out-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% else %}
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="float-left"><h5>Einloggen:</h5></div>
-                            <div class="float-right"><a href="{% url 'login' %}" class="btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="float-left"><h5>Registrieren:</h5></div>
-                            <div class="float-right"><a href="{% url 'sign_up' %}"
-                                                        class="btn btn-primary">Registrieren</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'pictures/blockly_logo.png' %}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Lektion 1</h5>
-                    <p class="card-text">In dieser Lektion arbeiten Sie mit dem Blockly-Editor, mit dessen Hilfe Sie
-                        verschiedene Konstrukte erlernen, die Sie für das Programmieren in Python brauchen
-                        werden.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="{% url 'lesson_1_introduction' %}" class="card-link"><span
-                            class="link_color">Zur Lektion</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{% static 'pictures/python_logo.png' %}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Lektion 2</h5>
-                    <p class="card-text">In dieser Lektion werden die aus der vorherigen Lektion erlernten
-                        Konstrukte
-                        noch einmal in Python wiederholt und gleichzeitig einige wenige neue Konstrukte
-                        eingeführt.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="{% url 'lesson_2_introduction' %}" class="card-link"><span
-                            class="link_color">Zur Lektion</span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{% static 'pictures/pycharm_logo.png' %}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Lektion 3</h5>
-                    <p class="card-text">In dieser Lektion werden Sie Aufgaben lokal in ihrer eigenen IDE bearbeiten
-                        und
-                        testen. Wir werden für die gezeigten Beispiele die IDE PyCharm verwenden.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="{% url 'lesson_3_repl_test' %}" class="card-link"><span class="link_color">Zur Lektion</span></a>
+            <div class="d-flex text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3"><span class="logo_color">LearnPython</span></h1>
+                    <div class="lead mb-0">Das ultimative Tutorial zum Erlernen von Python</div>
                 </div>
             </div>
         </div>
-        <div id="scroll_anchor"></div>
-        <hr/>
-        {% include 'template_pages/footer.html' %}
-    </div>
+    </header>
+
+
+
+    <section class="split_container">
+        <div class="left-half split_screen first_image to_hide"></div>
+        <div class="right-half split_screen">
+            <article class="table_cell_margin">
+                Auf dieser Website erlernen Sie die kompletten Grundlagen des Programmierens
+                mit der
+                Programmiersprache Python. Von den einzelnen Konstrukten des Programmierens,
+                über die Syntax
+                und
+                Strukturierung von Python bis hin zur Entwicklung eigener Programme.
+                <p></p>
+                Das Tutorial ist in insgesamt drei Lektionen aufgeteilt. Zu den ersten beiden
+                Lektionen ist
+                jeweils noch eine Übersicht über die wichtigsten erlernten Inhalte
+                vorhanden, sodass Sie
+                jederzeit schnellen Zugriff auf ein Nachschlagewerk haben.
+                <p></p>
+                Nach Beendigung dieses Tutorials sollten Sie in der Lage sein eigene
+                Programme in einer
+                selbst
+                gewählten IDE entwickeln zu können.
+            </article>
+        </div>
+    </section>
+
+    <hr class="to_show">
+
+    <section class="split_container">
+        <div class="left-half split_screen">
+            <article class="table_cell_margin">
+                <p>In der ersten Lektion werden Sie die wichtigsten Konstrukte des
+                    Programmierens erlernen
+                    und
+                    auch
+                    anwenden. Sie werden hierzu Aufgaben in Form von Spielen bearbeiten können,
+                    um das
+                    gelernte
+                    Wissen zu prüfen und zu festigen.</p>
+                <p>Zum Erlernen der Konstrukte und lösen der Spiele werden Sie einen visuellen
+                    Code-Editor
+                    verwenden
+                    dürfen, welcher Programmcode mithilfe von Blöcken darstellt. Dieser
+                    Code-Editor wird
+                    durch
+                    die
+                    Bibliothek <a href="https://developers.google.com/blockly/" target="_blank"><span
+                            class="link_color">Blockly</span></a> zur Verfügung gestellt.</p>
+                <p>Die Spiele wurden ebenfalls von Google entworfen und sind <a
+                        href="https://github.com/google/blockly-games/wiki"
+                        target="_blank"><span
+                        class="link_color">hier</span></a> nochmals einzusehen. Sie wurden für
+                    dieses
+                    Tutorial
+                    so
+                    abgeändert, dass sie Python- anstatt JavaScript-Code erzeugen.</p>
+            </article>
+        </div>
+        <div class="right-half split_screen second_image to_hide">
+        </div>
+    </section>
+
+    <hr class="to_show">
+
+    <section class="split_container">
+        <div class="left-half split_screen third_image to_hide"></div>
+        <div class="right-half split_screen">
+            <article class="table_cell_margin">
+                Auf dieser Website erlernen Sie die kompletten Grundlagen des Programmierens
+                mit der
+                Programmiersprache Python. Von den einzelnen Konstrukten des Programmierens,
+                über die Syntax
+                und
+                Strukturierung von Python bis hin zur Entwicklung eigener Programme.
+                <p></p>
+                Das Tutorial ist in insgesamt drei Lektionen aufgeteilt. Zu den ersten beiden
+                Lektionen ist
+                jeweils noch eine Übersicht über die wichtigsten erlernten Inhalte
+                vorhanden, sodass Sie
+                jederzeit schnellen Zugriff auf ein Nachschlagewerk haben.
+                <p></p>
+                Nach Beendigung dieses Tutorials sollten Sie in der Lage sein eigene
+                Programme in einer
+                selbst
+                gewählten IDE entwickeln zu können.
+            </article>
+        </div>
+    </section>
+
+    <hr class="to_show">
+
+    <section class="split_container">
+        <div class="left-half split_screen">
+            <article class="table_cell_margin">
+                <p>In der ersten Lektion werden Sie die wichtigsten Konstrukte des
+                    Programmierens erlernen
+                    und
+                    auch
+                    anwenden. Sie werden hierzu Aufgaben in Form von Spielen bearbeiten können,
+                    um das
+                    gelernte
+                    Wissen zu prüfen und zu festigen.</p>
+                <p>Zum Erlernen der Konstrukte und lösen der Spiele werden Sie einen visuellen
+                    Code-Editor
+                    verwenden
+                    dürfen, welcher Programmcode mithilfe von Blöcken darstellt. Dieser
+                    Code-Editor wird
+                    durch
+                    die
+                    Bibliothek <a href="https://developers.google.com/blockly/" target="_blank"><span
+                            class="link_color">Blockly</span></a> zur Verfügung gestellt.</p>
+                <p>Die Spiele wurden ebenfalls von Google entworfen und sind <a
+                        href="https://github.com/google/blockly-games/wiki"
+                        target="_blank"><span
+                        class="link_color">hier</span></a> nochmals einzusehen. Sie wurden für
+                    dieses
+                    Tutorial
+                    so
+                    abgeändert, dass sie Python- anstatt JavaScript-Code erzeugen.</p>
+            </article>
+        </div>
+        <div class="right-half split_screen fourth_image to_hide">
+        </div>
+    </section>
+
+
+    <hr>
+    <p></p>
+    {% include 'template_pages/footer.html' %}
 {% endblock content_container %}

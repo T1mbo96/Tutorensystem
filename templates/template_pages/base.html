@@ -39,7 +39,7 @@
 {% block header %}
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark main_color">
-            <a class="navbar-brand" href="{% url 'index' %}"><span class="inverted"><span class="logo_color">Learn</span></span><span class="logo_color">Python</span></a>
+            <a class="navbar-brand" href="{% url 'index' %}">LearnPython</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,14 +50,15 @@
                         <li class="nav-item dropdown {% block lesson_1_active %}{% endblock lesson_1_active %}">
                             <a class="nav-link" href="#" id="blockly_dropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-puzzle-piece"></i>   Blockly  <i class="fas fa-angle-down"></i>
+                                <i class="fas fa-puzzle-piece"></i> Blockly <i class="fas fa-angle-down"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="blockly_dropdown">
                                 <a class="dropdown-item" href="{% url 'lesson_1_introduction' %}">Lektion</a>
                                 <a class="dropdown-item" href="#">Kompendium</a>
                             </div>
                         </li>
-                        <li class="nav-item nav_item_space dropdown {% block lesson_2_active %}{% endblock lesson_2_active %}">
+                        <li class="nav-item nav_item_space dropdown
+                                {% block lesson_2_active %}{% endblock lesson_2_active %}">
                             <a class="nav-link" href="#" id="python_dropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fab fa-python"></i> Python <i class="fas fa-angle-down"></i>
@@ -123,6 +124,23 @@
                     crossorigin="anonymous"></script>
 
             <script src="{% static 'js/template_pages/base.js' %}"></script>
+
+            <!-- jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+            <!-- Aniview animations -->
+            <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
+            <script>
+                var options = {
+
+                    // delay the animation sequence until '100' pixels have come into view
+                    animateThreshold: 100,
+
+                    // The frequency of which the user scrolling is 'tested'.
+                    scrollPollInterval: 20
+                };
+                $('.aniview').AniView(options);
+            </script>
         {% endblock footer_javascript_site %}
         {% block footer_javascript_page %}{% endblock footer_javascript_page %}
         {% block footer_javascript_section %}{% endblock footer_javascript_section %}

@@ -1,28 +1,99 @@
-.jumbotron {
-    color: white;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    min-width: 419px;
-    min-height: 720px;
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
 }
 
-.hero_image_wrapper {
-    padding: 30px;
-    background-color: rgba(79, 79, 79, 0.95);
-    border-radius: 10px;
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
-#index_content {
-    margin-top: -20px;
+header .container {
+    position: relative;
+    z-index: 2;
 }
 
-.card-deck {
-    margin-top: 12px;
+.w-100 {
+    margin-top: 200px;
 }
 
-.float-left {
-    margin-top: 5px;
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
 }
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}
+
+html, body, section {
+    height: 100%;
+}
+
+.split_container {
+    display: table;
+    height: 50%;
+    width: 100%;
+}
+
+.split_screen {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 1rem;
+}
+
+.table_cell_margin {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.to_show {
+    display: none;
+}
+
+@media (max-width: 942px) {
+    .split_screen {
+        width: 100%;
+    }
+
+    .to_hide {
+        display: none;
+    }
+
+    .to_show {
+        display: block;
+    }
+}
+
+hr {
+    margin-top: 0;
+}
+
 

@@ -7,9 +7,17 @@ function toggleDropdown(e) {
         _m.toggleClass('show', shouldOpen);
         _d.toggleClass('show', shouldOpen);
         $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+        // Time till dropdown closes
     }, e.type === 'mouseleave' ? 50 : 0);
 }
 
 $('body')
     .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
     .on('click', '.dropdown-menu a', toggleDropdown);
+
+// Delay showing the animated content until everything loaded
+$(document).ready(function () {
+    if (document.getElementById('load_animation_div')) {
+        document.getElementById('load_animation_div').style.visibility = 'visible';
+    }
+});

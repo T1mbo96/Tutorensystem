@@ -10,25 +10,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .first_image {
-            background-image: url({% static 'pictures/first_image.jpeg' %});
+            background-image: url({% static 'pictures/Python Logo_Zeichenfläche 1.png' %});
         }
 
         .second_image {
-            background-image: url({% static 'pictures/second_image.jpeg' %});
+            background-image: url({% static 'pictures/Python Logo_Zeichenfläche 1.png' %});
         }
 
         .third_image {
-            background-image: url({% static 'pictures/third_image.jpeg' %});
+            background-image: url({% static 'pictures/Block Logo_Zeichenfläche 1.png' %});
         }
 
         .fourth_image {
             background-image: url({% static 'pictures/fourth_image.jpeg' %});
         }
 
-        .text_section_background {
-            background-image: url({% static 'pictures/background_test.png' %});
+        .text_section {
             color: white;
             font-size: 1.1em;
+        }
+
+        .text_section_background_second {
+            background-image: url({% static 'pictures/Python farbverlauf.png' %});
+        }
+
+        .text_section_background_third {
+            background-image: url({% static 'pictures/Block Logo Farbverlauf.png' %});
         }
     </style>
 {% endblock head_css_page %}
@@ -71,7 +78,8 @@
                     Zugriff auf ein Nachschlagewerk haben.</p>
                 <p>Nach Beendigung dieses Tutorials sollten Sie in der Lage sein eigene Programme in einer selbst
                     gewählten IDE entwickeln zu können.</p>
-                <p><a class="form-btn btn btn-outline-light" href="{% url 'login' %}">Login <i class="fas fa-sign-in-alt"></i></a></p>
+                <p><a class="form-btn btn btn-outline-light" href="{% url 'login' %}">Login <i
+                        class="fas fa-sign-in-alt"></i></a></p>
             </article>
         </div>
     </section>
@@ -79,33 +87,19 @@
     <hr class="to_show">
 
     <section class="split_container">
-        <div class="left-half split_screen text_section_background">
+        <div class="left-half split_screen text_section text_section_background_second full_background_image">
             <article class="table_cell_margin">
-                <p>In der ersten Lektion werden Sie die wichtigsten Konstrukte des
-                    Programmierens erlernen
-                    und
-                    auch
-                    anwenden. Sie werden hierzu Aufgaben in Form von Spielen bearbeiten können,
-                    um das
-                    gelernte
-                    Wissen zu prüfen und zu festigen.</p>
-                <p>Zum Erlernen der Konstrukte und lösen der Spiele werden Sie einen visuellen
-                    Code-Editor
-                    verwenden
-                    dürfen, welcher Programmcode mithilfe von Blöcken darstellt. Dieser
-                    Code-Editor wird
-                    durch
-                    die
+                <p>In der ersten Lektion werden Sie die wichtigsten Konstrukte des Programmierens erlernen und auch
+                    anwenden. Sie werden hierzu Aufgaben in Form von Spielen bearbeiten können, um das gelernte Wissen
+                    zu prüfen und zu festigen.</p>
+                <p>Zum Erlernen der Konstrukte und lösen der Spiele werden Sie einen visuellen Code-Editor verwenden
+                    dürfen, welcher Programmcode mithilfe von Blöcken darstellt. Dieser Code-Editor wird durch die
                     Bibliothek <a href="https://developers.google.com/blockly/" target="_blank"><span
                             class="link_color">Blockly</span></a> zur Verfügung gestellt.</p>
                 <p>Die Spiele wurden ebenfalls von Google entworfen und sind <a
-                        href="https://github.com/google/blockly-games/wiki"
-                        target="_blank"><span
-                        class="link_color">hier</span></a> nochmals einzusehen. Sie wurden für
-                    dieses
-                    Tutorial
-                    so
-                    abgeändert, dass sie Python- anstatt JavaScript-Code erzeugen.</p>
+                        href="https://github.com/google/blockly-games/wiki" target="_blank"><span class="link_color">hier</span></a>
+                    nochmals einzusehen. Sie wurden für dieses Tutorial so abgeändert, dass sie Python- anstatt
+                    JavaScript-Code erzeugen.</p>
                 <p><a class="form-btn btn btn-outline-light" href="{% url 'lesson_1_introduction' %}">Zur Lektion <i
                         class="fas fa-puzzle-piece"></i></a></p>
             </article>
@@ -117,8 +111,8 @@
     <hr class="to_show">
 
     <section class="split_container">
-        <div class="left-half split_screen third_image to_hide"></div>
-        <div class="right-half split_screen">
+        <div class="left-half split_screen third_image full_background_image"></div>
+        <div class="right-half split_screen text_section text_section_background_third full_background_image">
             <article class="table_cell_margin">
                 Auf dieser Website erlernen Sie die kompletten Grundlagen des Programmierens
                 mit der

@@ -74,10 +74,6 @@ html, body, section {
     margin-left: 20px;
 }
 
-.to_show {
-    display: none;
-}
-
 @media (max-width: 942px) {
     .split_screen {
         width: 100%;
@@ -86,14 +82,30 @@ html, body, section {
     .to_hide {
         display: none;
     }
-
-    .to_show {
-        display: block;
-    }
 }
 
-hr {
-    margin-top: 0;
+#footer_wrapper {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #1e2933;
+}
+
+.link_color{
+    color: white;
+}
+
+.spacing {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.navbar-nav {
+    display: inline-block;
+}
+
+.nav-item {
+    display: inline;
 }
 
 

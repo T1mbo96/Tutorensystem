@@ -1,7 +1,7 @@
 // Highlights the chosen section from sidenav
 function highlight_active_section(identifier) {
     reset_highlighted_sections();
-    document.getElementById(identifier).style.backgroundColor = 'rgba(255, 133, 0, 0.08)';
+    document.getElementById(identifier).style.backgroundColor = 'rgba(17, 166, 17, 0.2)';
 }
 
 // Resets the highlighting of the sections
@@ -24,10 +24,12 @@ function doResize() {
     }
 }
 
-$(window).resize(function (e) {
+// Trigger resize function on window resize
+$(window).resize(function () {
     //use timeouts not to trigger event constantly
     if (resizing !== false) {
         clearTimeout(resizing);
     }
     resizing = setTimeout(doResize, 0);
 });
+

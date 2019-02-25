@@ -7,3 +7,11 @@
         width: 100%;
     }
 }
+
+.card {
+    top: 66px;
+}
+
+#load_animation_div {
+    margin-top: -66px;
+}

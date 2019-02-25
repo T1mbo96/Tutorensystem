@@ -33,3 +33,12 @@ $(window).resize(function () {
     resizing = setTimeout(doResize, 0);
 });
 
+// Trigger resize function on page load
+$(document).ready(function () {
+    //use timeouts not to trigger event constantly
+    if (resizing !== false) {
+        clearTimeout(resizing);
+    }
+    resizing = setTimeout(doResize, 0);
+});
+

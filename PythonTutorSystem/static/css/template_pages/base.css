@@ -16,7 +16,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #f2f2f2;
 }
 
 .link_color {
@@ -28,7 +28,7 @@ body {
 }
 
 .main_color {
-    background-color: #316c9b;
+    background-color: #1e2933;
 }
 
 a:focus {
@@ -42,8 +42,8 @@ a:focus {
 }
 
 .navbar .dropdown.show a:hover {
-    background-color: #316c9b;
-    color: #ebffff;
+    background-color: #1e2933;
+    color: white;
 }
 
 .navbar .dropdown-menu {
@@ -55,11 +55,12 @@ a:focus {
     color: #fbe695;
 }
 
-.inverted {
-    display: inline-block;
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
+.full_background_image {
+    background-size: cover; /* or contain depending on what you want */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.card {
+    border-radius: unset;
 }

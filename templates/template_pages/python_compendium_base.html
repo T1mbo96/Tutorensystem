@@ -1,0 +1,89 @@
+{% extends 'template_pages/sidebar.html' %}
+{% load static %}
+
+{% block title %}
+    Kompendium
+{% endblock title %}
+
+{% block lesson_2_active %}
+    active
+{% endblock lesson_2_active %}
+
+{% block sidebar_header %}
+    <i class="fab fa-python"></i>  Kompendium
+{% endblock sidebar_header %}
+
+{% block sidebar_items %}
+    <li>
+        <a href="#variables" onclick="highlight_active_section('variables_id')">Variablen</a>
+    </li>
+    <li>
+        <a href="#datatypes" onclick="highlight_active_section('datatypes_id')">Datentypen</a>
+    </li>
+    <li>
+        <a href="#strings" onclick="highlight_active_section('strings_id')">Strings</a>
+    </li>
+    <li>
+        <a href="#operators" onclick="highlight_active_section('operators_id')">Operatoren</a>
+    </li>
+    <li>
+        <a href="#print" onclick="highlight_active_section('print_id')">Print-Funktion</a>
+    </li>
+    <li>
+        <a href="#input" onclick="highlight_active_section('input_id')">Input-Funktion</a>
+    </li>
+    <li>
+        <a href="#conditional_statements" onclick="highlight_active_section('conditional_statements_id')">Bedingte Anweisungen</a>
+    </li>
+    <li>
+        <a href="#while_loop" onclick="highlight_active_section('while_loop_id')">while-Schleife</a>
+    </li>
+    <li>
+        <a href="#for_loop" onclick="highlight_active_section('for_loop_id')">for-Schleife</a>
+    </li>
+    <li>
+        <a href="#lists" onclick="highlight_active_section('lists_id')">Listen</a>
+    </li>
+    <li>
+        <a href="#tuple" onclick="highlight_active_section('tuple_id')">Tupel</a>
+    </li>
+    <li>
+        <a href="#set" onclick="highlight_active_section('set_id')">Set</a>
+    </li>
+    <li>
+        <a href="#dictionary" onclick="highlight_active_section('dictionary_id')">Dictionary</a>
+    </li>
+    <li>
+        <a href="#functions" onclick="highlight_active_section('functions_id')">Funktionen</a>
+    </li>
+    <li>
+        <a href="#recursion" onclick="highlight_active_section('recursion_id')">Rekursion</a>
+    </li>
+    <li>
+        <a href="#namespace" onclick="highlight_active_section('namespace_id')">Namensraum</a>
+    </li>
+    <li>
+        <a href="#oop" onclick="highlight_active_section('oop_id')">Objektorientiertes Programmieren (OOP)</a>
+    </li>
+    <li>
+        <a href="#classes" onclick="highlight_active_section('classes_id')">Klassen</a>
+    </li>
+    <li>
+        <a href="#heredity" onclick="highlight_active_section('heredity_id')">Vererbung</a>
+    </li>
+{% endblock sidebar_items %}
+
+{% block full_screen_content %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar_toggle_nav">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>
+
+        </div>
+    </nav>
+
+    {% block python_compendium_inject_frame %}{% endblock python_compendium_inject_frame %}
+{% endblock full_screen_content %}

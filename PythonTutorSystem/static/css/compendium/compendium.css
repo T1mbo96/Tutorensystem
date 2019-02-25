@@ -1,0 +1,9 @@
+.img_border {
+    border: 1px solid #f0f0f0;
+}
+
+@media (max-width: 1730px) {
+    .card {
+        width: 100%;
+    }
+}

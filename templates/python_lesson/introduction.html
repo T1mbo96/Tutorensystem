@@ -1,4 +1,4 @@
-{% extends 'template_pages/lesson_2_base.html' %}
+{% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
 {% block lesson_2_introduction_active %}
@@ -76,8 +76,8 @@
 
 {% block lesson_nav_buttons %}
     <div class="btn-group" role="group" aria-label="Basic example">
-        <a href="{% url 'lesson_2_structuring' %}" class="form-btn btn btn-success my-2 my-sm-0">
-            Next
+        <a href="{% url 'lesson_2_structuring' %}" class="form-btn btn btn-dark my-2 my-sm-0">
+            Next <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 {% endblock lesson_nav_buttons %}

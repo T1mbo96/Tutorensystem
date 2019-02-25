@@ -24,6 +24,12 @@
         .fourth_image {
             background-image: url({% static 'pictures/fourth_image.jpeg' %});
         }
+
+        .text_section_background {
+            background-image: url({% static 'pictures/background_test.png' %});
+            color: white;
+            font-size: 1.1em;
+        }
     </style>
 {% endblock head_css_page %}
 
@@ -54,8 +60,8 @@
 
 
     <section class="split_container">
-        <div class="left-half split_screen first_image to_hide"></div>
-        <div class="right-half split_screen">
+        <div class="left-half split_screen first_image to_hide full_background_image"></div>
+        <div class="right-half split_screen text_section_background full_background_image">
             <article class="table_cell_margin">
                 <p>Auf dieser Website erlernen Sie die kompletten Grundlagen des Programmierens mit der
                     Programmiersprache Python. Von den einzelnen Konstrukten des Programmierens, über die Syntax und
@@ -65,7 +71,7 @@
                     Zugriff auf ein Nachschlagewerk haben.</p>
                 <p>Nach Beendigung dieses Tutorials sollten Sie in der Lage sein eigene Programme in einer selbst
                     gewählten IDE entwickeln zu können.</p>
-                <p><a class="btn btn-primary" href="{% url 'login' %}">Login <i class="fas fa-sign-in-alt"></i></a></p>
+                <p><a class="form-btn btn btn-outline-light" href="{% url 'login' %}">Login <i class="fas fa-sign-in-alt"></i></a></p>
             </article>
         </div>
     </section>
@@ -73,7 +79,7 @@
     <hr class="to_show">
 
     <section class="split_container">
-        <div class="left-half split_screen">
+        <div class="left-half split_screen text_section_background">
             <article class="table_cell_margin">
                 <p>In der ersten Lektion werden Sie die wichtigsten Konstrukte des
                     Programmierens erlernen
@@ -100,10 +106,11 @@
                     Tutorial
                     so
                     abgeändert, dass sie Python- anstatt JavaScript-Code erzeugen.</p>
-                <p><a class="btn btn-primary" href="{% url 'lesson_1_introduction' %}">Zur Lektion <i class="fas fa-puzzle-piece"></i></a></p>
+                <p><a class="form-btn btn btn-outline-light" href="{% url 'lesson_1_introduction' %}">Zur Lektion <i
+                        class="fas fa-puzzle-piece"></i></a></p>
             </article>
         </div>
-        <div class="right-half split_screen second_image to_hide">
+        <div class="right-half split_screen second_image to_hide full_background_image">
         </div>
     </section>
 
@@ -126,12 +133,13 @@
                 vorhanden, sodass Sie
                 jederzeit schnellen Zugriff auf ein Nachschlagewerk haben.
                 <p>
-                Nach Beendigung dieses Tutorials sollten Sie in der Lage sein eigene
-                Programme in einer
-                selbst
-                gewählten IDE entwickeln zu können.
+                    Nach Beendigung dieses Tutorials sollten Sie in der Lage sein eigene
+                    Programme in einer
+                    selbst
+                    gewählten IDE entwickeln zu können.
                 </p>
-                <p><a class="btn btn-primary" href="{% url 'lesson_2_introduction' %}">Zur Lektion <i class="fab fa-python"></i></a></p>
+                <p><a class="form-btn btn btn-outline-light" href="{% url 'lesson_2_introduction' %}">Zur Lektion <i
+                        class="fab fa-python"></i></a></p>
             </article>
         </div>
     </section>
@@ -166,13 +174,12 @@
                     Tutorial
                     so
                     abgeändert, dass sie Python- anstatt JavaScript-Code erzeugen.</p>
-                <p><a class="btn btn-primary" href="#">Zur Lektion <i class="fas fa-desktop"></i></a></p>
+                <p><a class="form-btn btn btn-outline-light" href="#">Zur Lektion <i class="fas fa-desktop"></i></a></p>
             </article>
         </div>
         <div class="right-half split_screen fourth_image to_hide">
         </div>
     </section>
-
 
     <hr>
     <p></p>

@@ -1,4 +1,4 @@
-{% extends 'template_pages/lesson_1_base.html' %}
+{% extends 'template_pages/blockly_lesson_base.html' %}
 {% load static %}
 
 {% block lesson_1_introduction_active %}
@@ -55,8 +55,8 @@
 {% block lesson_nav_buttons %}
     <div class="btn-group" role="group" aria-label="Basic example">
         <a href="{% url 'lesson_1_blockly_games_explanation' %}"
-           class="form-btn btn btn-success my-2 my-sm-0">
-            Next
+           class="form-btn btn btn-dark my-2 my-sm-0">
+            Next <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 {% endblock lesson_nav_buttons %}

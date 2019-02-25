@@ -1,0 +1,633 @@
+{% extends 'template_pages/python_compendium_base.html' %}
+{% load static %}
+
+{% block python_compendium_inject_frame %}
+    <link rel="stylesheet" href="{% static 'css/compendium/compendium.css' %}">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/compendium/compendium.js' %}"></script>
+
+    <div id="load_animation_div" style="visibility: hidden">
+        <div id="section_wrapper" class="card-columns">
+            <div id="variables" class="anchor_border">
+                <div id="variables_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Variablen</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_variables_example.PNG' %}" class="img_border"
+                                 alt="Example of a python variable i with value 50">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_variables_redeclare_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of a python variable i with value 50">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="datatypes" class="anchor_border">
+                <div id="datatypes_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Datentypen</h1>
+                        <p></p>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Bezeichner</th>
+                                <th scope="col">Bedeutung</th>
+                                <th scope="col">Konvertierung</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Integer</th>
+                                <td>Ganzzahl</td>
+                                <td>Funktion int()</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Long Integer</th>
+                                <td>Ganzzahl mit beliebiger Länge</td>
+                                <td>Funktion long()</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Float</th>
+                                <td>Gleitkommazahl</td>
+                                <td>Funktion float()</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Komplexe Zahlen</th>
+                                <td>als zwei Fließkommazahlen dargestellt</td>
+                                <td>Funktion complex()</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Boolescher Typ</th>
+                                <td>Wahrheitswert</td>
+                                <td>Funktion bool()</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_datatypes_example.PNG' %}" class="img_border"
+                                 alt="Example of a python datatypes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="strings" class="anchor_border">
+                <div id="strings_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Strings</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/string_indices_example.PNG' %}"
+                                 alt="Example of the indices of a string">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_strings_example.PNG' %}" class="img_border"
+                                 alt="Example of a string in python">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="operators" class="anchor_border">
+                <div id="operators_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Operatoren</h1>
+                        <p></p>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Bezeichnung</th>
+                                <th scope="col">Zeichen</th>
+                                <th scope="col">Beispiel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Addition</th>
+                                <td>+</td>
+                                <td>x + y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Subtraktion</th>
+                                <td>-</td>
+                                <td>x - y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Multiplikation</th>
+                                <td>*</td>
+                                <td>x * y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Division</th>
+                                <td>/</td>
+                                <td>x / y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Modulo (Rest beim ganzzahligen Teilen)</th>
+                                <td>%</td>
+                                <td>x % y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ganzzahldivision (Ganzzahliger Anteil der Division)</th>
+                                <td>//</td>
+                                <td>x // y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Potenzieren</th>
+                                <td>**</td>
+                                <td>x ** y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Negatives Vorzeichen</th>
+                                <td>-</td>
+                                <td>-x</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_arithmetic_operators_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of arithmetic operators in python">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Bezeichnung</th>
+                                <th scope="col">Zeichen</th>
+                                <th scope="col">Beispiel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">größer als</th>
+                                <td>></td>
+                                <td>x > y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">kleiner als</th>
+                                <td><</td>
+                                <td>x < y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">größer oder gleich</th>
+                                <td>>=</td>
+                                <td>x >= y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">kleiner oder gleich</th>
+                                <td><=</td>
+                                <td>x <= y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">gleich</th>
+                                <td>==</td>
+                                <td>x == y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ungleich</th>
+                                <td>!=</td>
+                                <td>x != y</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_comparison_operators_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of comparison operators in python">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Bezeichnung</th>
+                                <th scope="col">Zeichen</th>
+                                <th scope="col">Beispiel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Boolesches Oder</th>
+                                <td>or</td>
+                                <td>x or y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Boolesches Und</th>
+                                <td>and</td>
+                                <td>x and y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Boolesches Nicht</th>
+                                <td>not</td>
+                                <td>x not y</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_logical_operators_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of boolean operators in python">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Bezeichnung</th>
+                                <th scope="col">Zeichen</th>
+                                <th scope="col">Beispiel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">"Element von..."</th>
+                                <td>in</td>
+                                <td>x in y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">"Nicht Element von..."</th>
+                                <td>and</td>
+                                <td>x not in y</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Bezeichnung</th>
+                                <th scope="col">Zeichen</th>
+                                <th scope="col">Beispiel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">"...zeigt auf dasselbe Objekt wie..."</th>
+                                <td>is</td>
+                                <td>x is y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">"...zeigt nicht auf dasselbe Objekt wie..."</th>
+                                <td>is not</td>
+                                <td>x is not y</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Priorität</th>
+                                <th scope="col">Operator</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>**</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>* / % //</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>+ -</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td><= < > >=</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>== !=</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>= (Zuweisungsoperator)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>is is not</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>in not in</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>not or an</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        Zu <a href="https://www.tutorialspoint.com/python/python_basic_operators.htm"
+                              target="_blank"><span
+                            class="link_color">Bitweise Operatoren</span></a>.
+                    </div>
+                </div>
+            </div>
+            <div id="print" class="anchor_border">
+                <div id="print_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Print-Funktion</h1>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_print_example.PNG' %}" class="img_border"
+                                 alt="Example of print function in python">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="input" class="anchor_border">
+                <div id="input_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Input-Funktion</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_input_example.PNG' %}" class="img_border"
+                                 alt="Example of input function in python 3">
+                        </div>
+                        <p></p>
+                        <div class="alert alert-primary" role="alert">
+                            Wenn Sie die Input-Funktion in Skulpt verwenden wollen,<br> dann benutzen sie bitte die
+                            Python 2
+                            Version.<br>
+                            <span class="text_highlighted">input() => raw_input()</span><br>
+                            <span class="text_highlighted">eval(input()) => input()</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="conditional_statements" class="anchor_border">
+                <div id="conditional_statements_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Bedingte Anweisungen</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="while_loop" class="anchor_border">
+                <div id="while_loop_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>while-Schleife</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_while_loop_else_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of while loop else">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_while_loop_break_continue_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of while loop else">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="for_loop" class="anchor_border">
+                <div id="for_loop_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>for-Schleife</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_for_loop_range_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of range function">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_for_loop_range_begin_end_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of range function with begin and end">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_for_loop_range_begin_end_increment_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of range function with begin, end and increment">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_for_loop_with_range.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of for loop with range">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_for_loop_examples.PNG' %}" class="img_border"
+                                 alt="Example of for loop">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="lists" class="anchor_border">
+                <div id="lists_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Listen</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_list_example.PNG' %}" class="img_border"
+                                 alt="Example of lists">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Bezeichnung</th>
+                                <th scope="col">Ausdruck</th>
+                                <th scope="col">Ergebnis</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Länge</th>
+                                <td>len([1, 2, 3, 4, 5])</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wiederholung</th>
+                                <td>["Ha"] * 2</td>
+                                <td>["Ha", "Ha"]</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Zugehörigkeit</th>
+                                <td>3 in [1, 2, 3, 4, 5]</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Verkettung</th>
+                                <td>[5, 10] + [15, 20]</td>
+                                <td>[5, 10, 15, 20]</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_list_iteration.PNG' %}" class="img_border"
+                                 alt="Example of list iteration">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_list_slicing.PNG' %}" class="img_border"
+                                 alt="Example of list slicing">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_list_slicing_updating.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of list updating with slicing">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_list_append.PNG' %}" class="img_border"
+                                 alt="Example of list append">
+                        </div>
+                        <p></p>
+                        <hr>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_list_delete.PNG' %}" class="img_border"
+                                 alt="Example of list delete">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tuple" class="anchor_border">
+                <div id="tuple_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Tupel</h1>
+                        In Lektion 2 wiederholen Sie die in Lektion 1 erlernten Konstrukte sowie deren Syntax in der
+                        Programmiersprache
+                        Python. Außerdem werden einige neue Konstrukte eingeführt, die Ihren Wissenstand und Ihr
+                        Konstrukt-Repertoire
+                        noch erweitern werden. Am Ende dieser Lektion sollen Sie in der Lage sein kleine bis mittelgroße
+                        Programme
+                        selbst entwickeln zu können, sodass Sie die Aufgaben in Lektion 3 selbstständig in Ihrer IDE
+                        bearbeiten
+                        können.
+                    </div>
+                </div>
+            </div>
+            <div id="set" class="anchor_border">
+                <div id="set_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Set</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="dictionary" class="anchor_border">
+                <div id="dictionary_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Dictionary</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="functions" class="anchor_border">
+                <div id="functions_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Funktionen</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="recursion" class="anchor_border">
+                <div id="recursion_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Rekursion</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="namespace" class="anchor_border">
+                <div id="namespace_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Namensraum</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="oop" class="anchor_border">
+                <div id="oop_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Objektorientiertes Programmieren</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="classes" class="anchor_border">
+                <div id="classes_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Klassen</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="heredity" class="anchor_border">
+                <div id="heredity_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Vererbung</h1>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                                 class="img_border"
+                                 alt="Example of conditional statements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock python_compendium_inject_frame %}

@@ -16,21 +16,16 @@ a, a:hover, a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #fbe695;
-    color: #316c9b;
+    background: #166f33;
+    color: #ffffff;
     transition: all 0.5s;
     padding-bottom: 56px;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #f9d853;
-    color: #3d86c2;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #c8aa14;
+    background: #11a611;
+    border-bottom: 1px solid #166f33;
 }
 
 #sidebar ul li a {
@@ -40,12 +35,10 @@ a, a:hover, a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #316c9b;
-    background: #f9d853;
+    background: #11a611;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #316c9b;
 }
 
 a[data-toggle="collapse"] {
@@ -63,7 +56,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 1.0em !important;
     padding-left: 30px !important;
-    background: #fbe695;
+    background: #166f33;
 }
 
 #content {
@@ -107,7 +100,7 @@ ul ul a {
 }
 
 .sidebar_active {
-    background-color: #f9d853;
+    background-color: #11a611;
 }
 
 .blockly_games_frame {

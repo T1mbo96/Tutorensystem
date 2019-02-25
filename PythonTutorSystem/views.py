@@ -173,7 +173,12 @@ def lesson_1_wrap_up(request):
     return render(request, 'blockly_lesson/wrap_up.html')
 
 
-# lesson_2_exercises
+# blockly_compendium
+def blockly_compendium(request):
+    return render(request, 'blockly_compendium/compendium.html')
+
+
+# python_lesson_exercises
 @login_required
 def lesson_2_exercises_variables(request):
     return render(request, 'python_lesson/exercises/exercises_variables.html')
@@ -209,7 +214,7 @@ def lesson_2_exercises_list(request):
     return render(request, 'python_lesson/exercises/exercises_list.html')
 
 
-# lesson_2
+# python_lesson
 @login_required
 def lesson_2_introduction(request):
     return render(request, 'python_lesson/introduction.html')
@@ -320,10 +325,15 @@ def lesson_2_heredity(request):
     return render(request, 'python_lesson/heredity.html')
 
 
-# lesson_3
+# python_compendium
+def python_compendium(request):
+    return render(request, 'python_compendium/compendium.html')
+
+
+# ide_lesson
 @login_required
 def lesson_3_repl_test(request):
-    return render(request, 'lesson_3/repl_test.html')
+    return render(request, 'ide_lesson/repl_test.html')
 
 
 # footer

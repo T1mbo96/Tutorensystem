@@ -1,7 +1,46 @@
 {% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
+{% block lesson_2_set_active %}
+    sidebar_active
+{% endblock lesson_2_set_active %}
+
 {% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Set</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Sets sind ebenfalls sequentielle Datentypen und, genau wie Tupel auch, im Endeffekt exakt wie Listen.
+                Der Unterschied zu Listen besteht darin, dass nie zwei gleiche Werte in einem Set vorkommen können und,
+                dass Sets ungeordnet sind. Ungeordnet bedeutet, dass die Werte in einem Set an unbestimmbaren Positionen
+                des Sets stehen.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_set_example.PNG' %}"
+                         class="rounded"
+                         alt="Example of set">
+                </div>
+                <p></p>
+                Wie im Beispiel zu sehen ist, werden Sets mithilfe von geschweiften Klammern <span
+                    class="text_highlighted">{}</span> erzeugt.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Hilfreiche Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://en.wikibooks.org/wiki/Python_Programming/Sequences#Sets" target="_blank"><span
+                                class="link_color">Wikibooks Set</span></a>
+                    </li>
+            </div>
+        </div>
+        <p></p>
+    </div>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

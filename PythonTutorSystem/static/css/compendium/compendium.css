@@ -2,9 +2,11 @@
     border: 1px solid #f0f0f0;
 }
 
-@media (max-width: 1730px) {
-    .card {
-        width: 100%;
+@media (max-width: 1222px) {
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
     }
 }
 
@@ -15,3 +17,21 @@
 #load_animation_div {
     margin-top: -61px;
 }
+
+
+@media (min-width: 1223px) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1730px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+

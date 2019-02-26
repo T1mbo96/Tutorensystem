@@ -11,34 +11,3 @@ function reset_highlighted_sections() {
         document.getElementById(entry).style.backgroundColor = '#ffffff';
     })
 }
-
-// Change layout when resizing window
-var resizing = false;
-
-function doResize() {
-    var w = $(window).innerWidth();
-    if (w > 1730) {
-        $('#section_wrapper').addClass('card-columns');
-    } else {
-        $('#section_wrapper').removeClass('card-columns');
-    }
-}
-
-// Trigger resize function on window resize
-$(window).resize(function () {
-    //use timeouts not to trigger event constantly
-    if (resizing !== false) {
-        clearTimeout(resizing);
-    }
-    resizing = setTimeout(doResize, 0);
-});
-
-// Trigger resize function on page load
-$(document).ready(function () {
-    //use timeouts not to trigger event constantly
-    if (resizing !== false) {
-        clearTimeout(resizing);
-    }
-    resizing = setTimeout(doResize, 0);
-});
-

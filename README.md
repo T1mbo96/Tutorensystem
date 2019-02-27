@@ -1,4 +1,4 @@
-Benötigte Module: Django, django-widget-tweaks
+Required modules: Django, django-widget-tweaks
 
 This tool is written in Python with the django framework. To start it, just install the modules and use the command 
 'python manage.py runserver'. The index page url is 'yourserver/LearnPython/Home/' (replace your server with your ip).

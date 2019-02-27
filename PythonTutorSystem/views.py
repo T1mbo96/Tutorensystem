@@ -336,6 +336,16 @@ def lesson_3_repl_test(request):
     return render(request, 'ide_lesson/repl_test.html')
 
 
+@login_required
+def ide_lesson_introduction(request):
+    return render(request, 'ide_lesson/introduction.html')
+
+
+@login_required
+def ide_lesson_python_installation(request):
+    return render(request, 'ide_lesson/python_installation.html')
+
+
 # footer
 def about(request):
     return render(request, 'footer/about.html')

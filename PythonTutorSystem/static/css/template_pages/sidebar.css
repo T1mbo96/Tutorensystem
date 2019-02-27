@@ -127,3 +127,7 @@ ul ul a {
     text-align: center;
     margin-top: 25%;
 }
+
+video {
+    width: 100%;
+}

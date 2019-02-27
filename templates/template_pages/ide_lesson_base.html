@@ -2,19 +2,40 @@
 {% load static %}
 
 {% block title %}
-    Lektion 3
+    Aufgaben
 {% endblock title %}
 
-{% block lesson_3_active %}
+{% block ide_lesson_active %}
     active
-{% endblock lesson_3_active %}
+{% endblock ide_lesson_active %}
 
 {% block sidebar_header %}
-    Lektion 3
+    <i class="fas fa-desktop"></i> Lektion
 {% endblock sidebar_header %}
 
 {% block sidebar_items %}
+    <li class="{% block ide_lesson_introduction_active %}{% endblock ide_lesson_introduction_active %}">
+        <a href="{% url 'ide_lesson_introduction' %}">Einführung</a>
+    </li>
+    <li class="{% block ide_lesson_python_installation_active %}{% endblock ide_lesson_python_installation_active %}">
+        <a href="{% url 'ide_lesson_python_installation' %}">Python Installation</a>
+    </li>
     <li>
-        <a href="{% url 'lesson_3_repl_test' %}">Repl.it Test</a>
+        <a href="#">JetBrains PyCharm</a>
+    </li>
+    <li>
+        <a href="#">IPython</a>
+    </li>
+    <li>
+        <a href="#">Module</a>
+    </li>
+    <li>
+        <a href="#">Aufgabe: Leicht</a>
+    </li>
+    <li>
+        <a href="#">Aufgabe: Mittel</a>
+    </li>
+    <li>
+        <a href="#">Aufgabe: Schwer</a>
     </li>
 {% endblock sidebar_items %}

@@ -68,8 +68,8 @@
                                 <a class="dropdown-item" href="{% url 'python_compendium' %}">Kompendium</a>
                             </div>
                         </li>
-                        <li class="nav-item nav_item_space">
-                            <a class="nav-link" href="#"><i class="fas fa-desktop"></i> Aufgaben</a>
+                        <li class="nav-item nav_item_space {% block ide_lesson_active %}{% endblock ide_lesson_active %}">
+                            <a class="nav-link" href="{% url 'ide_lesson_introduction' %}"><i class="fas fa-desktop"></i> Aufgaben</a>
                         </li>
                     {% endif %}
                 </ul>

@@ -91,21 +91,69 @@ html, body, section {
     background-color: #1e2933;
 }
 
-.link_color{
+.link_color {
     color: white;
 }
 
-.spacing {
-    margin-right: 20px;
-    margin-top: 20px;
+.spacing_left {
+    margin-right: 80px;
 }
 
-.navbar-nav {
+.spacing_right {
+    margin-left: 80px;
+}
+
+.align_horizontal_container {
     display: inline-block;
 }
 
-.nav-item {
+.align_horizontal {
     display: inline;
 }
+
+.header_bar {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a {
+    color: #a8a8a8;
+}
+
+a:hover {
+    color: white;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar_inverted_spacing {
+    margin-top: -32px;
+    margin-right: 20px;
+}
+
+.logged_out_buttons_spacing {
+    margin-right: 14px;
+    margin-top: -6px;
+}
+
+@media (max-width: 700px) {
+    .spacing_left {
+        margin-right: 5px;
+    }
+
+    .spacing_right {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 534px) {
+    .navbar_inverted_spacing {
+        margin-top: 10px;
+    }
+}
+
 
 

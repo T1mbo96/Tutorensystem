@@ -17,7 +17,7 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>{% block sidebar_header %}{% endblock sidebar_header %}</h3>
+                {% block compendium_header %}<h3>{% block sidebar_header %}{% endblock sidebar_header %}</h3>{% endblock compendium_header %}
             </div>
 
             <ul class="list-unstyled components">

@@ -52,27 +52,47 @@
     <header>
         <div class="overlay">
             {% if user.is_authenticated %}
-                <ul class="navbar-nav ml-auto float-right spacing">
-                    <li class="nav-item">
-                        <a href="{% url 'logout' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
-                            Logout <i class="fas fa-sign-out-alt"></i>
-                        </a>
-                    </li>
-                </ul>
+                <div class="header_bar">
+                    <ul class="navbar-nav ml-auto spacing align_horizontal_container">
+                        <li class="nav-item align_horizontal spacing_left">
+                            <a href="{% url 'lesson_1_introduction' %}" class="nav-link align_horizontal">
+                                <i class="fas fa-puzzle-piece"></i> Blockly
+                            </a>
+                        </li>
+                        <li class="nav-item align_horizontal">
+                            <a href="{% url 'lesson_2_introduction' %}" class="nav-link align_horizontal">
+                                <i class="fab fa-python"></i> Python
+                            </a>
+                        </li>
+                        <li class="nav-item align_horizontal spacing_right">
+                            <a href="#" class="nav-link align_horizontal">
+                                <i class="fas fa-desktop"></i> Aufgaben
+                            </a>
+                        </li>
+                        <li class="nav-item navbar_inverted_spacing">
+                            <a href="{% url 'logout' %}"
+                               class="form-btn btn btn-outline-light float-right my-2 my-sm-0">
+                                Logout <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             {% else %}
-                <ul class="navbar-nav ml-auto float-right spacing">
-                    <li class="nav-item">
-                        <a href="{% url 'login' %}" class="form-btn btn btn-outline-light my-2 my-sm-0"
-                           id="login_button">
-                            Login <i class="fas fa-sign-in-alt"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'sign_up' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
-                            Registrieren
-                        </a>
-                    </li>
-                </ul>
+                <div class="header_bar">
+                    <ul class="navbar-nav mr-auto float-right spacing align_horizontal_container">
+                        <li class="nav-item align_horizontal float-right logged_out_buttons_spacing">
+                            <a href="{% url 'sign_up' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
+                                Registrieren
+                            </a>
+                        </li>
+                        <li class="nav-item align_horizontal float-right logged_out_buttons_spacing">
+                            <a href="{% url 'login' %}" class="form-btn btn btn-outline-light my-2 my-sm-0"
+                               id="login_button">
+                                Login <i class="fas fa-sign-in-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             {% endif %}
         </div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">

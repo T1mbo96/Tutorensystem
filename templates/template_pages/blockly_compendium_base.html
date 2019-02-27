@@ -1,0 +1,53 @@
+{% extends 'template_pages/sidebar.html' %}
+{% load static %}
+
+{% block title %}
+    Kompendium
+{% endblock title %}
+
+{% block lesson_1_active %}
+    active
+{% endblock lesson_1_active %}
+
+{% block sidebar_header %}
+    <i class="fas fa-puzzle-piece"></i>  Kompendium
+{% endblock sidebar_header %}
+
+{% block sidebar_items %}
+    <li>
+        <a href="#instructions" onclick="highlight_active_section('instructions_id', 'blockly')">Anweisungen</a>
+    </li>
+    <li>
+        <a href="#conditional_statements" onclick="highlight_active_section('conditional_statements_id', 'blockly')">Bedingte Anweisungen</a>
+    </li>
+    <li>
+        <a href="#loop" onclick="highlight_active_section('loop_id', 'blockly')">Schleifen</a>
+    </li>
+    <li>
+        <a href="#variables" onclick="highlight_active_section('variables_id', 'blockly')">Variablen</a>
+    </li>
+    <li>
+        <a href="#logic_and" onclick="highlight_active_section('logic_and_id', 'blockly')">Logischer Operator: Und</a>
+    </li>
+    <li>
+        <a href="#counting_loop" onclick="highlight_active_section('counting_loop_id', 'blockly')">Zählschleife</a>
+    </li>
+    <li>
+        <a href="#functions" onclick="highlight_active_section('functions_id', 'blockly')">Funktionen</a>
+    </li>
+{% endblock sidebar_items %}
+
+{% block full_screen_content %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sidebar_toggle_nav">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>
+
+        </div>
+    </nav>
+
+    {% block blockly_compendium_inject_frame %}{% endblock blockly_compendium_inject_frame %}
+{% endblock full_screen_content %}

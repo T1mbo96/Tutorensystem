@@ -1,0 +1,199 @@
+{% extends 'template_pages/blockly_compendium_base.html' %}
+{% load static %}
+
+{% block blockly_compendium_inject_frame %}
+    <link rel="stylesheet" href="{% static 'css/compendium/compendium.css' %}">
+    <script src="{% static 'js/compendium/compendium.js' %}"></script>
+
+    <div id="load_animation_div" style="visibility: hidden">
+        <div id="section_wrapper" class="card-columns">
+            <div id="instructions" class="anchor_border">
+                <div id="instructions_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Anweisungen</h1>
+                        Eine Anweisung ist eine einzelne, in der Syntax der jeweiligen Programmiersprache formulierte,
+                        einzelne Vorschrift, welche bei der Abarbeitung des Programms ausgeführt wird.
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_instructions.PNG' %}" class="rounded"
+                                 alt="Instructions block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="conditional_statements" class="anchor_border">
+                <div id="conditional_statements_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Bedingte Anweisungen</h1>
+                        Eine bedingte Anweisung stellt einen Programmabschnitt dar, der nur unter bestimmten Bedingungen
+                        ausgeführt wird.
+                        <p></p>
+                        <h3>if</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_conditional_statement_if.PNG' %}"
+                                 class="rounded"
+                                 alt="if block">
+                        </div>
+                        <p></p>
+                        <h3>if - else</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_conditional_statement_if_else.PNG' %}"
+                                 class="rounded"
+                                 alt="If else block">
+                        </div>
+                        <p></p>
+                        <h3>if - elif/else if - else</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_conditional_statements_addition_example.PNG' %}"
+                                 class="rounded" alt="example if else if else">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="loop" class="anchor_border">
+                <div id="loop_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Schleifen</h1>
+                        Eine Schleife ist ebenfalls eine Kontrollanweisung, welche es ermöglicht, dass ein bestimmter
+                        Teil des Codes wiederholt ausgeführt wird.
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_loop.PNG' %}" class="rounded"
+                                 alt="Loop block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="variables" class="anchor_border">
+                <div id="variables_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Variablen</h1>
+                        Eine Variable im allgemeinsten Sinne ist ein einfacher Behälter zur Aufbewahrung von bestimmten
+                        Werten, also z.B. Buchstaben oder Zahlen.
+                        <p></p>
+                        <h3>Create</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_variable_create.PNG' %}"
+                                 class="rounded"
+                                 alt="variable create">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_variable_create_textfield.PNG' %}"
+                                 class="rounded"
+                                 alt="variable create textfield">
+                        </div>
+                        <p></p>
+                        <h3>Assign</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_variable_assign.PNG' %}"
+                                 class="rounded"
+                                 alt="variable assign">
+                        </div>
+                        <p></p>
+                        <h3>Update</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_variable_update.PNG' %}"
+                                 class="rounded"
+                                 alt="variable update">
+                        </div>
+                        <p></p>
+                        <h3>Use</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_variable_use.PNG' %}" class="rounded"
+                                 alt="variable use">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="logic_and" class="anchor_border">
+                <div id="logic_and_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Logischer Operator: Und</h1>
+                        Ein Operator ist ein Symbol zur Durchführung linguistischer, logischer oder mathematischer
+                        Operationen (z.B. '+' oder '-' oder 'und' oder 'oder').
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_logic_and.PNG' %}" class="rounded"
+                                 alt="logic and block">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_logic_and_with_values.PNG' %}"
+                                 class="rounded"
+                                 alt="logic and block with values">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="counting_loop" class="anchor_border">
+                <div id="counting_loop_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Zählschleife</h1>
+                        Mithilfe der Zählschleife können Sie Aktionen beliebig oft (z.B. 3-, 4- oder 5-Mal) ausführen
+                        lassen.
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_counting_loop.PNG' %}"
+                                 class="rounded"
+                                 alt="counting loop block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="functions" class="anchor_border">
+                <div id="functions_id" class="card aniview" data-av-animation="fadeInUp">
+                    <div class="card-body">
+                        <h1>Funktionen</h1>
+                        Zusammengesetzt ist eine Funktion aus dem Rückgabewert, dem Funktionsnamen und den Parametern,
+                        welche die Funktion erhält, um damit zu arbeiten. Allerdings muss eine Funktion nicht
+                        zwangsweise einen Rückgabewert oder Parameter besitzen.
+                        <p></p>
+                        <h3>Funktionen mit Rückgabewert</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_with_return.PNG' %}"
+                                 class="rounded" alt="function with return value creation">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_with_return_example.PNG' %}"
+                                 class="rounded" alt="function with return value example">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_with_return_use.PNG' %}"
+                                 class="rounded" alt="function with return value use">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_with_multiple_returns.PNG' %}"
+                                 class="rounded" alt="function with multiple returns block">
+                        </div>
+                        <p></p>
+                        <h3>Funktionen ohne Rückgabewert</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_without_return.PNG' %}"
+                                 class="rounded" alt="function without return value">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_without_return_example.PNG' %}"
+                                 class="rounded" alt="function without return example">
+                        </div>
+                        <p></p>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_function_without_return_use.PNG' %}"
+                                 class="rounded" alt="function without return use">
+                        </div>
+                        <p></p>
+                        <h3>Weiteres Beispiel</h3>
+                        <div class="text-center">
+                            <img src="{% static 'pictures/lesson_1/blockly_example_functions_another_example.PNG' %}"
+                                 class="rounded" alt="function another example">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock blockly_compendium_inject_frame %}

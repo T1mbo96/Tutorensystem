@@ -25,14 +25,14 @@
         Von dieser Webseite selbst ausgehend, werden nur zwei Cookies gespeichert. Außerdem wird Ihr Fortschritt der
         Aufgaben aus der Lektion für Python im Local Storage gespeichert.
         <p></p>
-        <h4>CSRF-Token</h4>
+        <h5>CSRF-Token</h5>
         Cookie, um sogenannte Cross-site request forgery (CSRF) holes zu verhindern. Mehr Informationen zu diesem Thema
         finden Sie unter folgendem Link.
         <p></p>
         <a href="https://www.squarefree.com/securitytips/web-developers.html#CSRF" target="_blank"><span
                 class="link_color">Cross-site request forgery</span></a>
         <p></p>
-        <h4>Session-Id</h4>
+        <h5>Session-Id</h5>
         Das Session-Id Cookie wird gespeichert, um Anfragen und Antworten, welche zusammengehörig sind, zu
         identifizieren. Diese Sessions werden in variierenden Abständen gelöscht. Folgender Link enthält weitere
         Informationen zu Session-Cookies.
@@ -40,12 +40,14 @@
         <a href="https://de.wikipedia.org/wiki/Sitzungsbezeichner" target="_blank"><span
                 class="link_color">Sitzungsbezeichner</span></a>
         <p></p>
-        <h4>Local Storage</h4>
+        <h5>Local Storage</h5>
         Mithilfe des Local Storage speichert diese Seite den von Ihnen eingegebenen Code bei Ihnen lokal in Ihrem
         Browser, sodass Ihr Fortschritt auch nach Schließen der Seite nicht verloren geht. Mehr zu Local Storage unter
         folgendem Link.
         <p></p>
         <a href="https://de.wikipedia.org/wiki/Web_Storage" target="_blank"><span
                 class="link_color">Local Storage</span></a>
+        <hr>
+        {% include 'template_pages/footer.html' %}
     </div>
 {% endblock content_container %}

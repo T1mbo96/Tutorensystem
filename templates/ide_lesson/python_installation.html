@@ -17,7 +17,7 @@
                 Zuallererst ist es wichtig, dass Sie Python auf ihrem Computer installieren. Dafür laden Sie sich bitte
                 die jeweilige Datei, passend zu Ihrem Betriebssystem, von folgendem Link herunter.
                 <p></p>
-                <a href="https://www.python.org/downloads/"><span class="link_color">Download-Link Python</span></a>
+                <a href="https://www.python.org/downloads/" target="_blank"><span class="link_color">Download-Link Python</span></a>
                 <p></p>
                 Nach erfolgreichem Download, starten Sie bitte die Installation mit einem Doppelklick auf die
                 entsprechende Datei und folgen Sie den Anweisungen.
@@ -33,7 +33,7 @@
                 natürlich mit neueren Releases abweichen).
                 <p></p>
                 Um zu testen, ob die Installation erfolgreich war, öffnen Sie ein Terminal und geben 'python' ein.
-                Anschließend sollten sie etwas ähnlich zu folgendem sehen.
+                Anschließend sollten sie etwas Ähnliches zu Folgendem sehen.
                 <p></p>
                 <div class="text-center">
                     <img src="{% static 'pictures/ide_lesson/python_installation_test.png' %}"
@@ -51,5 +51,5 @@
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    #
+    {% url 'ide_lesson_pycharm_installation' %}
 {% endblock lesson_nav_buttons_next_page %}

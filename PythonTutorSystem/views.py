@@ -346,6 +346,16 @@ def ide_lesson_python_installation(request):
     return render(request, 'ide_lesson/python_installation.html')
 
 
+@login_required
+def ide_lesson_pycharm_installation(request):
+    return render(request, 'ide_lesson/pycharm_installation.html')
+
+
+@login_required
+def ide_lesson_ipython_installation(request):
+    return render(request, 'ide_lesson/ipython_installation.html')
+
+
 # footer
 def about(request):
     return render(request, 'footer/about.html')

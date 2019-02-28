@@ -20,7 +20,7 @@ body {
 }
 
 .link_color {
-    color: #2979FF;
+    color: #2979FF !important;
 }
 
 .text_highlighted {

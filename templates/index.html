@@ -132,17 +132,14 @@
     <section class="split_container">
         <div class="left-half split_screen text_section text_section_background_second full_background_image">
             <article class="table_cell_margin">
-                <p>In der ersten Lektion werden Sie die wichtigsten Konstrukte des Programmierens erlernen und auch
-                    anwenden. Sie werden hierzu Aufgaben in Form von Spielen bearbeiten können, um das gelernte Wissen
-                    zu prüfen und zu festigen.</p>
-                <p>Zum Erlernen der Konstrukte und lösen der Spiele werden Sie einen visuellen Code-Editor verwenden
-                    dürfen, welcher Programmcode mithilfe von Blöcken darstellt. Dieser Code-Editor wird durch die
-                    Bibliothek <a href="https://developers.google.com/blockly/" target="_blank"><span
-                            class="link_color">Blockly</span></a> zur Verfügung gestellt.</p>
-                <p>Die Spiele wurden ebenfalls von Google entworfen und sind <a
-                        href="https://github.com/google/blockly-games/wiki" target="_blank"><span class="link_color">hier</span></a>
-                    nochmals einzusehen. Sie wurden für dieses Tutorial so abgeändert, dass sie Python- anstatt
-                    JavaScript-Code erzeugen.</p>
+                <p>Anschließend werden Sie das gelernte Wissen aus der ersten Lektion auf die Programmiersprache Python
+                    übertragen, indem Sie die Syntax erlernen und kleinere Aufgaben lösen sollen.</p>
+                <p>Es werden ebenfalls weiterführende Informationen zu bereits bekannten Konstrukten zur Verfügung
+                    gestellt und gänzlich neue Konstrukte eingeführt, zu welchen es eine detailliertere Erklärung und
+                    ebenfalls Aufgaben gibt.</p>
+                <p>Nach Abschluss dieser Lektion sollten Sie die grundlegenden Konzepte des Programmierens verstanden
+                    haben und in der Lage sein, diese durch eigens angefertigten Programmcode zum Lösen einer Aufgabe
+                    anzuwenden.</p>
                 <p><a class="form-btn btn btn-outline-light" href="{% url 'lesson_2_introduction' %}">Zur Lektion <i
                         class="fab fa-python"></i></a></p>
             </article>
@@ -155,36 +152,33 @@
         <div class="left-half split_screen third_image to_hide"></div>
         <div class="right-half split_screen text_section text_section_background_third full_background_image">
             <article class="table_cell_margin">
-                <p>In der ersten Lektion werden Sie die wichtigsten Konstrukte des
-                    Programmierens erlernen
-                    und
-                    auch
-                    anwenden. Sie werden hierzu Aufgaben in Form von Spielen bearbeiten können,
-                    um das
-                    gelernte
-                    Wissen zu prüfen und zu festigen.</p>
-                <p>Zum Erlernen der Konstrukte und lösen der Spiele werden Sie einen visuellen
-                    Code-Editor
-                    verwenden
-                    dürfen, welcher Programmcode mithilfe von Blöcken darstellt. Dieser
-                    Code-Editor wird
-                    durch
-                    die
-                    Bibliothek <a href="https://developers.google.com/blockly/" target="_blank"><span
-                            class="link_color">Blockly</span></a> zur Verfügung gestellt.</p>
-                <p>Die Spiele wurden ebenfalls von Google entworfen und sind <a
-                        href="https://github.com/google/blockly-games/wiki"
-                        target="_blank"><span
-                        class="link_color">hier</span></a> nochmals einzusehen. Sie wurden für
-                    dieses
-                    Tutorial
-                    so
-                    abgeändert, dass sie Python- anstatt JavaScript-Code erzeugen.</p>
+                <p>Die abschließende Lektion wird Ihr erlerntes Wissen aus den anderen beiden Lektionen testen, indem
+                    Sie Aufgaben in einer eigenen (lokalen oder In-Browser) IDE lösen sollen.</p>
+                <p>Hierfür laden Sie sich die zur Verfügung gestellten Dateien herunter und öffnen diese in einer IDE.
+                    Sie müssen anschließend nurnoch den Anweisungen der Webseite bzw. der Dateien folgen.</p>
+                <p>Um Ihren eigenen Code selbstständig überprüfen zu können, werden sogenannte Assertions in den Dateien
+                    mitgeliefert, mithilfe deren Sie ihren Code einfach laufen und testen lassen können und anschließend
+                    ein Feedback erhalten, welche Teile korrekt und welche Teile noch fehlerhaft sind.</p>
                 <p><a class="form-btn btn btn-outline-light" href="#">Zur Lektion <i class="fas fa-desktop"></i></a>
                 </p>
             </article>
         </div>
     </section>
 
-    {% include 'template_pages/footer.html' %}
+    <div id="footer_wrapper">
+        <ul class="nav justify-content-center sticky-bottom navbar-dark">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'impressum' %}">Impressum</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'data_protection' %}">Datenschutz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'sitemap' %}">Sitemap</a>
+            </li>
+        </ul>
+    </div>
 {% endblock content_container %}

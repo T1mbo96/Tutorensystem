@@ -356,6 +356,16 @@ def ide_lesson_ipython_installation(request):
     return render(request, 'ide_lesson/ipython_installation.html')
 
 
+@login_required
+def ide_lesson_modules(request):
+    return render(request, 'ide_lesson/modules.html')
+
+
+@login_required
+def ide_lesson_exercises(request):
+    return render(request, 'ide_lesson/exercises.html')
+
+
 # footer
 def about(request):
     return render(request, 'footer/about.html')

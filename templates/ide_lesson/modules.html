@@ -1,0 +1,99 @@
+{% extends 'template_pages/ide_lesson_base.html' %}
+{% load static %}
+
+{% block ide_lesson_modules_active %}
+    sidebar_active
+{% endblock ide_lesson_modules_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Module</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Module sind eine weitere Art Ihren Code logisch zu organisieren. Durch das Gruppieren von verwandtem
+                Code in einem Modul wird der Code verständlicher und benutzerfreundlicher. Außerdem gibt es für Python
+                eine riesige Auswahl an Modulen, die von anderen Entwicklern programmiert wurden und welche Sie für
+                Ihren Code benutzen können. Somit müssen Sie das Rad nicht jedes Mal neu erfinden und können einfach
+                bereits geschriebene Logik wiederverwenden.
+                <p></p>
+                Ein Modul ist also eine einfache Datei, welche Python-Code enthält. Es kann Funktionen, Klassen und
+                Variablen definieren und ebenfalls lauffähigen Code beinhalten.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>PyCharm</h3>
+                Um ein Modul in einer lokal IDE verwenden zu können, müssen Sie zuerst das entsprechende Modul
+                auswählen, welches Sie nutzen wollen und dieses anschließend installieren. In diesem Beispiel wird das
+                gesamte Vorgehen am Modul <span class="text_highlighted">fibonacci</span> vorgeführt. Dieses Modul
+                enthält
+                Code zur Berechnung der n-ten Fibonacci Zahl.
+                <p></p>
+                Damit Sie das Modul nun in ihrem Code nutzen können, müssen Sie es zuerst <span
+                    class="text_highlighted">importieren</span>. Hierfür verwendet man das Schlüsselwort <span
+                    class="text_highlighted">import</span>, gefolgt vom Namen des jeweiligen Moduls.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/ide_lesson/ide_modules_before_installation.PNG' %}"
+                         class="rounded img-fluid"
+                         alt="modules before installation">
+                </div>
+                <p></p>
+                Wie hier zu erkennen ist, wird das Modul von der IDE noch nicht erkannt, da das Modul noch nicht
+                installiert wurde. Im nächsten Schritt setzen Sie Ihren Cursor auf den rot markierten Modulnamen und
+                klicken auf die erscheinende rote Glühbirne (wahlweise können Sie auch <span class="text_highlighted">Alt + Enter</span>
+                drücken).
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/ide_lesson/ide_modules_installation_window.png' %}"
+                         class="rounded img-fluid"
+                         alt="modules installation window">
+                </div>
+                <p></p>
+                Nun wählen Sie <span class="text_highlighted">Install package fibonacci</span>, wodurch das
+                entsprechende Modul automatisch installiert wird. Anschließend sollte Ihnen das Modul als installiert
+                angezeigt werden und nicht mehr rot markiert sein. Nun können Sie den Code aus der Datei verwenden.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/ide_lesson/ide_modules_use.PNG' %}"
+                         class="rounded img-fluid"
+                         alt="modules use">
+                </div>
+                <p></p>
+                In diesem Beispiel haben wir jetzt aus dem Modul <span class="text_highlighted">fibonacci</span> die
+                Funktion <span class="text_highlighted">fibo()</span> verwendet und die 20. Fibonacci Zahl berechnen
+                lassen.
+                <p></p>
+                Der Code im Modul <span class="text_highlighted">fibonacci</span> sieht folgendermaßen aus. Dieses Modul
+                stellt ein einfaches Python-File mit Code einer einzigen Funktion dar.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/ide_lesson/ide_modules_installed_file.PNG' %}"
+                         class="rounded img-fluid"
+                         alt="modules installed file">
+                </div>
+                <p></p>
+                Somit haben Sie die Logik zum Berechnen der n-ten Fibonacci Zahl nicht selbst implementieren müssen,
+                sondern konnten sich eine Menge Zeit sparen und einfach bereits vorhandenes wiederverwenden.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>IPython</h3>
+            </div>
+        </div>
+        <p></p>
+    </div>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'ide_lesson_ipython_installation' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'ide_lesson_exercises' %}
+{% endblock lesson_nav_buttons_next_page %}

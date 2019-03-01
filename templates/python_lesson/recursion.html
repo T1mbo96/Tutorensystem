@@ -1,7 +1,63 @@
 {% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
+{% block lesson_2_recursion_active %}
+    sidebar_active
+{% endblock lesson_2_recursion_active %}
+
 {% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Rekursion</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Bei der sogenannten rekursiven Programmierung ruft sich eine Funktion im Programm selbst wieder auf.
+                Dies
+                stellt einen Gegensatz zur iterativen Programmierung dar, in der Sie, für die Lösung des selben
+                Problems,
+                Schleifen verwenden. Rekursion findet aber nur selten Anwendung in prozeduralen oder objektorientierten
+                Sprachen, kann allerdings die Lesbarkeit oder einfachere Implementierung bei ausgewählten Problemen
+                fördern.
+                <p></p>
+                Wichtig bei einer Rekursion ist es, eine Abbruchbedingung zu definieren, sonst würde ihr Programm endlos
+                laufen. Zur Veranschaulichung nehmen wir das Beispiel zur Berechnung der Fibonacci Zahlen noch einmal
+                herbei.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Iterativ</h3>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_recursion_iterative_example.PNG' %}" class="rounded"
+                         alt="Example of iterative fibo">
+                </div>
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Rekursiv</h3>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_recursion_recursive_example.PNG' %}" class="rounded"
+                         alt="Example of recursive fibo">
+                </div>
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Hilfreiche Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://de.wikipedia.org/wiki/Rekursive_Programmierung" target="_blank"><span
+                                class="link_color">Wikipedia Rekursion</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p></p>
+    </div>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

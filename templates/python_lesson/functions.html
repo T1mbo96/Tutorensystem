@@ -1,7 +1,146 @@
 {% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
+{% block lesson_2_functions_active %}
+    sidebar_active
+{% endblock lesson_2_functions_active %}
+
 {% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Funktionen</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Auch Funktionen haben Sie bereits in der <a href="{% url 'lesson_1_functions' %}" target="_blank"><span
+                    class="link_color">ersten Lektion</span></a> kennengelernt. Zusammengesetzt ist eine Funktion aus
+                einem optionalen <span class="text_highlighted">Rückgabewert</span>, dem <span class="text_highlighted">Funktionsnamen</span>
+                und den optionalen <span class="text_highlighted">Parametern</span>, welche die Funktion erhält, um
+                damit zu arbeiten.
+                <p></p>
+                Eine Funktion wird in der Programmiersprache Python mit dem Schlüsselwort <span
+                    class="text_highlighted">def</span> erzeugt.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_functions_example.PNG' %}" class="rounded"
+                         alt="Example of functions">
+                </div>
+                <p></p>
+                <div class="alert alert-primary" role="alert">
+                    <span class="text_highlighted">if __name__ == '__main__':</span> stellt eine besondere Funktion dar,
+                    nämlich die Main-Funktion. Diese Funktion dient als Eintrittspunkt in ein Programm. Mehr
+                    Informationen zu dieser können Sie folgendem Link entnehmen.<br/>
+                    <p></p>
+                    <a href="https://www.journaldev.com/17752/python-main-function" target="_blank"><span
+                            class="link_color">Main-Funktion</span></a>
+                </div>
+                <p></p>
+                In diesem Beispiel wurde ein kleines Spiel namens <span class="text_highlighted">Fizz buzz</span>
+                implementiert, welches eigentlich Kindern die Division näher bringen soll. In diesem Fall wurde die
+                Funktion mit dem Funktionsnamen <span class="text_highlighted">fizz_buzz</span> mithilfe des
+                Schlüsselworts <span class="text_highlighted">def</span> erzeugt. Die Funktion erhält einen Parameter
+                <span class="text_highlighted">number</span>, welcher hier eine Zahl darstellt. Zurückgegeben werden
+                <span class="text_highlighted">Strings</span> mithilfe des Schlüsselworts <span
+                    class="text_highlighted">return</span>.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Festlegen des Typs des Rückgabewerts</h3>
+                Sie können festlegen, welchen Typ Ihre Funktion zurückgeben soll (z.B. str oder int). Falls innerhalb
+                der Funktion anschließend versucht wird, einen anderen Typ zurückzugeben, wird eine Warnung angezeigt.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_functions_define_return_value.png' %}" class="rounded"
+                         alt="Example of functions define return value">
+                </div>
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Funktionen ohne Rückgabewert</h3>
+                Funktionen müssen, wie oben bereits erwähnt, nicht unbedingt einen Rückgabewert haben.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_functions_without_return_value.PNG' %}"
+                         class="rounded"
+                         alt="Example of functions without return value">
+                </div>
+                <p></p>
+                Beim Aufruf dieser Funktion würde kein Wert zurückgegeben, sondern einfach direkt der
+                entsprechende String auf der Konsole ausgegeben werden.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Standardparameter</h3>
+                Sie können Parametern einer Funktion einen Standardwert zuweisen, sodass dieser Wert benutzt wird, falls
+                beim Aufruf dieser Funktion für diesen Parameter kein Wert übergeben wird. Dafür müssen Sie hinter dem
+                jeweiligen Parameter diesem einen Wert mit einem <span class="text_highlighted">=</span> zuweisen.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_functions_default_parameter.PNG' %}"
+                         class="rounded"
+                         alt="Example of functions with default parameter">
+                </div>
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Pass by Reference</h3>
+                Alle Parameter in der Programmiersprache Python werden als Referenz übergeben. Das bedeutet, dass wenn
+                Sie eine Variable an eine Funktion übergeben nicht der Wert der Variable, sondern die Referenz auf diese
+                Variable übergeben wird. Am einfachsten kann man sich dieses Verhalten anhand eines Beispiels vor Augen
+                führen.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_functions_pass_by_reference.PNG' %}"
+                         class="rounded"
+                         alt="Example of functions with pass by reference">
+                </div>
+                <p></p>
+                Der Funktionsaufruf ändert somit die Variable <span class="text_highlighted">my_list</span>, sodass man
+                bei einem Aufruf der Variable danach Zugriff auf die aktualisierte Variante der Variable hat.
+                <p></p>
+                Andere Programmiersprachen (z.B. C) übergeben ihre Parameter als Kopie. Diese Vorgehensweise trägt den
+                Namen <span class="text_highlighted">Pass by Value</span>.
+                <p></p>
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_functions_pass_by_value_c.PNG' %}"
+                         class="rounded"
+                         alt="Example of functions with pass by value">
+                </div>
+                <p></p>
+                Wie Sie hier erkennen können, wird die Variable <span class="text_highlighted">my_list</span> zwar
+                scheinbar innerhalb der Funktion <span class="text_highlighted">change_value</span> geupdated,
+                allerdings wird in Wirklichkeit nur die Kopie der Variable aktualisiert, sodass die eigentliche Variable
+                unverändert bleibt.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Hilfreiche Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.tutorialspoint.com/python/python_functions.htm" target="_blank"><span
+                                class="link_color">Python Funktionen 1</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.python-kurs.eu/funktionen.php" target="_blank"><span
+                                class="link_color">Python Funktionen 2</span></a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikibooks.org/wiki/Python_Programming/Functions" target="_blank"><span
+                                class="link_color">Wikibooks Funktionen</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p></p>
+    </div>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

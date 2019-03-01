@@ -306,11 +306,6 @@ def lesson_2_recursion(request):
 
 
 @login_required
-def lesson_2_namespace(request):
-    return render(request, 'python_lesson/namespace.html')
-
-
-@login_required
 def lesson_2_object_oriented_programming(request):
     return render(request, 'python_lesson/object_oriented_programming.html')
 
@@ -359,6 +354,11 @@ def ide_lesson_ipython_installation(request):
 @login_required
 def ide_lesson_modules(request):
     return render(request, 'ide_lesson/modules.html')
+
+
+@login_required
+def ide_lesson_namespace(request):
+    return render(request, 'ide_lesson/namespace.html')
 
 
 @login_required

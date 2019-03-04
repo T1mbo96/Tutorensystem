@@ -35,8 +35,8 @@
     <li class="{% block ide_lesson_exercises_active %}{% endblock ide_lesson_exercises_active %}">
         <a href="{% url 'ide_lesson_exercises' %}">Aufgaben</a>
     </li>
-    <li>
-        <a href="#">Aufgabe: Leicht</a>
+    <li class="{% block ide_lesson_simple_exercise_active %}{% endblock ide_lesson_simple_exercise_active %}">
+        <a href="{% url 'ide_lesson_simple_exercise' %}">Aufgabe: Leicht</a>
     </li>
     <li>
         <a href="#">Aufgabe: Mittel</a>

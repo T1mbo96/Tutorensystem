@@ -366,6 +366,11 @@ def ide_lesson_exercises(request):
     return render(request, 'ide_lesson/exercises.html')
 
 
+@login_required
+def ide_lesson_simple_exercise(request):
+    return render(request, 'ide_lesson/simple_exercise.html')
+
+
 # footer
 def about(request):
     return render(request, 'footer/about.html')

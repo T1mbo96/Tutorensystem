@@ -9,7 +9,7 @@ function reset_highlighted_sections(lesson_id) {
     let sections;
 
     if (lesson_id === 'python') {
-        sections = ['variables_id', 'datatypes_id', 'strings_id', 'operators_id', 'print_id', 'input_id', 'conditional_statements_id', 'while_loop_id', 'for_loop_id', 'lists_id', 'tuple_id', 'set_id', 'dictionary_id', 'functions_id', 'recursion_id', 'oop_id', 'classes_id', 'heredity_id'];
+        sections = ['variables_id', 'datatypes_id', 'strings_id', 'operators_id', 'print_id', 'input_id', 'conditional_statements_id', 'while_loop_id', 'for_loop_id', 'lists_id', 'tuple_id', 'set_id', 'dictionary_id', 'functions_id', 'recursion_id', 'classes_id', 'heredity_id'];
     } else if (lesson_id === 'blockly') {
         sections = ['instructions_id', 'conditional_statements_id', 'loop_id', 'variables_id', 'logic_and_id', 'counting_loop_id', 'functions_id'];
     } else {

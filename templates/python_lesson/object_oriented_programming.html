@@ -1,8 +1,65 @@
 {% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
+{% block lesson_2_object_oriented_programming_active %}
+    sidebar_active
+{% endblock lesson_2_object_oriented_programming_active %}
+
 {% block sidebar_page_content %}
-    <h1>Still under construction</h1>
+    <div class="card">
+        <div class="card-body">
+            <h1>Objektorientierte Programmierung</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                OOP ist ein Programmierparadigma, dessen Grundidee darin besteht, ein Programm nach den Grundstrukturen
+                eines Bereichs der Wirklichkeit aufzubauen, welchen das Programm abbilden soll. Die Struktur enthält
+                Informationen über die Objekte, die auftreten, deren Abstraktionen sowie deren Typen. OOP ist also eine
+                weitere Möglichkeit ein Programm noch stärker zu modularisieren und damit wiederverwendbarer zu machen.
+                Charakteristisch für OOP ist außerdem die sogenannte Kapselung von Daten in Objekten. Das bedeutet, es
+                ist nur noch über Schnittstellen der Objekte möglich auf die Daten zuzugreifen.
+                <p></p>
+                Damit man diese Grundstrukur in einer Programmiersprache umsetzen kann, benötigt es verschiedene neue
+                Konzepte, von denen in nachfolgenden Abschnitten zwei grundlegend eingeführt werden. Es handelt sich
+                hierbei um <span class="text_highlighted">Klassen</span> und <span
+                    class="text_highlighted">Vererbung</span>.
+                <p></p>
+                Falls Sie sich weiter und vor allem tiefer mit der Materie beschäftigen möchten, wird nachfolgend eine
+                Sammlung an Links bereitgestellt.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Hilfreiche Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.dev-insider.de/was-ist-oop-a-677737/" target="_blank"><span
+                                class="link_color">Was ist OOP?</span></a>
+                    </li>
+                    <li>
+                        <a href="http://openbook.rheinwerk-verlag.de/oop/" target="_blank"><span
+                                class="link_color">Rheinwerk Objektorientierte Programmierung</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.itwissen.info/Objektorientierte-Programmierung-object-oriented-programming-OOP.html"
+                           target="_blank"><span
+                                class="link_color">ITWissen OOP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://realpython.com/python3-object-oriented-programming/" target="_blank"><span
+                                class="link_color">OOP in Python3</span></a>
+                    </li>
+                    <li>
+                        <a href="https://de.wikipedia.org/wiki/Objektorientierte_Programmierung" target="_blank"><span
+                                class="link_color">Wikipedia OOP</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p></p>
+    </div>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

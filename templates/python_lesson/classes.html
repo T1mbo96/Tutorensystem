@@ -1,8 +1,184 @@
 {% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
+{% block lesson_2_classes_active %}
+    sidebar_active
+{% endblock lesson_2_classes_active %}
+
 {% block sidebar_page_content %}
-    <h1>Still under construction</h1>
+    <div class="card">
+        <div class="card-body">
+            <h1>Klassen</h1>
+        </div>
+    </div>
+    <div id="load_animation_div" style="visibility: hidden">
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                Klassen stellen in der objektorientieren Programmierung die Baupläne für Objekte dar. Sie können
+                mithilfe dieses Konstrukts eigens definierte Datenstrukturen erstellen und sind somit nicht mehr nur an
+                die von Python standardmäßig bereitgestellten Datenstrukturen (z.B. Listen oder int) gebunden.
+                <p></p>
+                Zur Veranschaulichung können Sie sich vorstellen, dass Sie z.B. eine größere Menge an Tieren in Ihrem
+                Programm abbilden möchte, die jeweils mehrere Attribute wie Bezeichnung, Größe, Gewicht, etc. besitzen.
+                Sie könnten dafür jetzt möglicherweiße ein <span class="text_highlighted">Dictionary</span> heranziehen,
+                allerdings wird dies sehr schnell sehr unübersichtlich und sehr komplex. Hierfür bieten sich nun Klassen
+                an, sodass Sie einfach eine Klasse <span class="text_highlighted">Animal</span> erstellen, welche
+                mehrere gewünschte Attribute beinhaltet. Mithilfe dieses erstellten Bauplans können Sie nun für jedes
+                der Tiere eine Instanz erstellen, also ein Objekt. Mit diesem können Sie anschließend weiterarbeiten.
+                <p></p>
+                <div class="alert alert-primary" role="alert">
+                    Eine Klasse ist nur der Bauplan, während eine Instanz eine Kopie der Klasse ist, welche
+                    tatsächliche Werte wie z.B. 'Hund' oder '1.20' für die Größe enthält.
+                </div>
+                <p></p>
+                Zur Veranschaulichung wird im Folgenden sukzessive die Klasse <span
+                    class="text_highlighted">Animal</span> aufgebaut werden.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Definition</h3>
+                Eine Klasse können Sie mithilfe des Schlüsselworts <span class="text_highlighted">class</span> und dem
+                gewünschten Namen definieren.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_class_definition.PNG' %}"
+                         class="rounded"
+                         alt="Example of class definition">
+                </div>
+                <p></p>
+                Das Schlüsselwort <span class="text_highlighted">pass</span> dient in Python als Platzhalter. Dieser
+                Platzhalter macht es möglich den Code ohne Logik auch ohne Fehler laufen zu lassen.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Instanzattribute</h3>
+                Um nun die Logik für die Attribute, welche für jedes Tier unterschiedlich sind, zu implementieren,
+                verwenden wir sogenannte Instanzattribute.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_class_instance_attributes_and_initializer.PNG' %}"
+                         class="rounded"
+                         alt="Example of class instance attributes and initializer">
+                </div>
+                <p></p>
+                Diese werden in einer Funktion namens <span class="text_highlighted">__init__</span> definiert. Diese
+                Funktion wird aufgerufen, wenn eine neue Instanz der Klasse erstellt wird und weißt die übergebenen
+                Werte (oder die Standartwerte, falls kein Wert übergeben wurde) dem jeweiligen Instanzattribut zu.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Klassenattribute</h3>
+                Im Gegensatz zu Instanzattributen, sind Klassenattribute für jede Instanz der Klasse exakt gleich.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_class_class_attribute.PNG' %}"
+                         class="rounded"
+                         alt="Example of class attributes">
+                </div>
+                <p></p>
+                Diese werden einfach direkt nach der Definition der Klasse implementiert.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Instanziierung</h3>
+                Damit Sie nun viele verschiedene Objekte einer Klasse verwenden können, müssen Sie jedes Objekt zuerst
+                instanziieren.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_class_instantiating.PNG' %}"
+                         class="rounded"
+                         alt="Example of class instantiation">
+                </div>
+                <p></p>
+                Sie instanziieren ein Objekt einer Klasse, indem Sie einem selbst gewählten Namen <span
+                    class="text_highlighted">Klassennamme(Wert(e))</span> zuweisen. Hier zu erkennen ist, dass Sie
+                Attribute, welche Standardparameter haben, nicht übergeben müssen.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Instanzfunktionen</h3>
+                Sie können in einer Klasse nicht nur Variablen bzw. Attribute, sondern auch ganze Funktionen
+                implementieren.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_class_instance_methods.PNG' %}"
+                         class="rounded"
+                         alt="Example of class functions">
+                </div>
+                <p></p>
+                Diese werden genau so definiert, wie Sie es im Abschnitt <a href="{% url 'lesson_2_functions' %}"
+                                                                            target="_blank"><span class="link_color">Funktionen</span></a>
+                kennengelernt haben. Wichtig ist, dass Sie bei der Definition der Parametern immer zuerst das
+                Schlüsselwort <span class="text_highlighted">self</span> implementieren. Dieses müssen Sie beim Aufruf
+                der Funktion aber nicht übergeben, wie Sie aus dem vollständigen Beispiel entnehmen können.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Modifizierung der Attribute</h3>
+                Sie können die Attribute eines Objekts im Nachhinein modifizieren, dafür implementieren Sie eine
+                Funktion innerhalb der Klasse, um dem gewünschten Attribut einen neuen Wert zuzuweisen.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_class_modifying_attributes.PNG' %}"
+                         class="rounded"
+                         alt="Example of class attribute modify">
+                </div>
+                <p></p>
+                Diese Funktionen werden analog zu Instanzfunktionen implementiert.
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInLeftBig">
+            <div class="card-body">
+                <h3>Vollständiges Beispiel</h3>
+                Nachfolgend wird ein vollständiges Beispiel der eben implementierten Klasse <span
+                    class="text_highlighted">Animal</span> aufgeführt. In diesem Beispiel wird auch die Funktionsweise
+                der Instanzfunktionen und Instanzattribute sowie Klassenattribute dargestellt. Wichtig zu beachten ist,
+                dass man auf Funktionen oder Attribute einer Klasse immer mithilfe der <span class="text_highlighted">Punktnotation</span>
+                zugreifen kann.
+                <p></p>
+                <div class="text-center">
+                    <img src="{% static 'pictures/lesson_2/python_class_full_example.PNG' %}"
+                         class="rounded"
+                         alt="Example of class full">
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div class="card aniview" data-av-animation="fadeInRightBig">
+            <div class="card-body">
+                <h3>Hilfreiche Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://realpython.com/python3-object-oriented-programming/#classes-in-python" target="_blank"><span
+                                class="link_color">Python Klassen 1</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.python-kurs.eu/klassen.php" target="_blank"><span
+                                class="link_color">Python Klassen 2</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.tutorialspoint.com/python/python_classes_objects.htm" target="_blank"><span
+                                class="link_color">Python Klassen 3</span></a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikibooks.org/wiki/Python_Programming/Classes" target="_blank"><span
+                                class="link_color">Wikibooks Klassen</span></a>
+                    </li>
+                    <li>
+                        <a href="https://de.wikipedia.org/wiki/Klasse_(Objektorientierung)" target="_blank"><span
+                                class="link_color">Wikipedia Klassen</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p></p>
+    </div>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

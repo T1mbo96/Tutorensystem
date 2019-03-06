@@ -85,29 +85,6 @@
                         </li>
                     {% endif %}
                 </ul>
-                {% if user.is_authenticated %}
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="{% url 'logout' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
-                                Logout <i class="fas fa-sign-out-alt"></i>
-                            </a>
-                        </li>
-                    </ul>
-                {% else %}
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="{% url 'login' %}" class="form-btn btn btn-outline-light my-2 my-sm-0"
-                               id="login_button">
-                                Login <i class="fas fa-sign-in-alt"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'sign_up' %}" class="form-btn btn btn-outline-light my-2 my-sm-0">
-                                Registrieren
-                            </a>
-                        </li>
-                    </ul>
-                {% endif %}
             </div>
         </nav>
     </header>

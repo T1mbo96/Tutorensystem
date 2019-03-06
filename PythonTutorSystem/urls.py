@@ -5,7 +5,7 @@ urlpatterns = [
     path('Test/', views.test, name='test'),
 
     # index
-    path('Home/', views.index, name='index'),
+    path('', views.index, name='index'),
 
     # blockly_games
     path('BlocklyGames/', include('PythonTutorSystem.blockly_games_urls')),

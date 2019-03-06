@@ -51,25 +51,25 @@
 
     <header>
         <div class="overlay">
-            <div class="header_bar">
-                <ul class="navbar-nav ml-auto spacing align_horizontal_container">
-                    <li class="nav-item align_horizontal spacing_left">
-                        <a href="{% url 'lesson_1_introduction' %}" class="nav-link align_horizontal">
-                            <i class="fas fa-puzzle-piece"></i> Blockly
-                        </a>
-                    </li>
-                    <li class="nav-item align_horizontal">
-                        <a href="{% url 'lesson_2_introduction' %}" class="nav-link align_horizontal">
-                            <i class="fab fa-python"></i> Python
-                        </a>
-                    </li>
-                    <li class="nav-item align_horizontal spacing_right">
-                        <a href="{% url 'ide_lesson_introduction' %}" class="nav-link align_horizontal">
-                            <i class="fas fa-desktop"></i> Aufgaben
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <div class="header_bar">
+                    <ul class="navbar-nav ml-auto spacing">
+                        <li class="nav-item align_horizontal spacing_left">
+                            <a href="{% url 'lesson_1_introduction' %}" class="nav-link align_horizontal">
+                                <i class="fas fa-puzzle-piece"></i> Blockly
+                            </a>
+                        </li>
+                        <li class="nav-item align_horizontal">
+                            <a href="{% url 'lesson_2_introduction' %}" class="nav-link align_horizontal">
+                                <i class="fab fa-python"></i> Python
+                            </a>
+                        </li>
+                        <li class="nav-item align_horizontal spacing_right">
+                            <a href="{% url 'ide_lesson_introduction' %}" class="nav-link align_horizontal">
+                                <i class="fas fa-desktop"></i> Aufgaben
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="{% static 'videos/index_header_video.mp4' %}" type="video/mp4">

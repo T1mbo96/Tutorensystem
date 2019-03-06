@@ -219,7 +219,7 @@ Pond.Duck.changeTab = function(index) {
   document.getElementById('docsButton').disabled = false;
   document.getElementById('docsButton').onclick = function () {
     var frame = document.getElementById('frameDocs');
-    frame.src = '/LearnPython/BlocklyGames/Pond/Documentation/';
+    frame.src = '/BlocklyGames/Pond/Documentation/';
   };
   BlocklyGames.LEVEL = (index == BLOCKS) ? 11 : 12;
   //if (Pond.isDocsVisible_) {

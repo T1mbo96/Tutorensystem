@@ -250,7 +250,7 @@
       var script = document.createElement('script');
       script.src = src;
       // Hier die jeweilige URL ausschneiden
-      script.src = script.src.replace('/LearnPython/BlocklyGames/Pond', '');
+      script.src = script.src.replace('/BlocklyGames/Pond', '');
       script.type = 'text/javascript';
       script.onload = loadScript;
       document.head.appendChild(script);

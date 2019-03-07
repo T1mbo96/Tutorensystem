@@ -11,139 +11,138 @@
             <h1>Aufgabe: Leicht</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                In der ersten Aufgabe dürfen Sie die Logik für das Spiel <span
-                    class="text_highlighted">Lights Out</span> für das Gadget <span class="text_highlighted">LAMA (LED Advanced Matrix Arrangement)</span>
-                implementieren. Das LAMA ist ein 5x5 großes Schaltbrett, auf dem 25 mit je einer LED versehene Tasten in
-                einem Raster mit 5 Reihen und 5 Spalten angeordnet sind. Die LED einer Taste kann entweder an- (1) oder
-                ausgeschaltet (0) sein. Wenn eine Taste gedrückt wird, führt das LAMA eine mit der Taste verbundene
-                Aktion aus.
-                <p></p>
-                Bei diesem Spiel sind die LEDs einiger Tasten zu Beginn eingeschaltet, und es geht darum, alle LEDs
-                auszuschalten. Dazu darf man in jedem Spielzug eine Taste drücken. Solch ein Spielzug schaltet die LED
-                der gedrückten Taste und ihre (bis zu vier) Nachbar-LEDs um. Sind alle LEDs ausgeschaltet, ist das Spiel
-                beendet.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/ide_lesson/ide_lesson_simple_exercise_lama_example.PNG' %}"
-                         class="rounded img-fluid"
-                         alt="lama example">
-                </div>
-                <p></p>
-                Hier ist eine beispielhafte Darstellung eines (größeren) LAMA-Felds abgebildet. Gelb bedeutet, dass die
-                LED aktuell angeschalten ist und grau bedeutet, dass die LED aktuell ausgeschalten ist.
+    <div class="card">
+        <div class="card-body">
+            In der ersten Aufgabe dürfen Sie die Logik für das Spiel <span
+                class="text_highlighted">Lights Out</span> für das Gadget <span class="text_highlighted">LAMA (LED Advanced Matrix Arrangement)</span>
+            implementieren. Das LAMA ist ein 5x5 großes Schaltbrett, auf dem 25 mit je einer LED versehene Tasten in
+            einem Raster mit 5 Reihen und 5 Spalten angeordnet sind. Die LED einer Taste kann entweder an- (1) oder
+            ausgeschaltet (0) sein. Wenn eine Taste gedrückt wird, führt das LAMA eine mit der Taste verbundene
+            Aktion aus.
+            <p></p>
+            Bei diesem Spiel sind die LEDs einiger Tasten zu Beginn eingeschaltet, und es geht darum, alle LEDs
+            auszuschalten. Dazu darf man in jedem Spielzug eine Taste drücken. Solch ein Spielzug schaltet die LED
+            der gedrückten Taste und ihre (bis zu vier) Nachbar-LEDs um. Sind alle LEDs ausgeschaltet, ist das Spiel
+            beendet.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/ide_lesson_simple_exercise_lama_example.PNG' %}"
+                     class="rounded img-fluid"
+                     alt="lama example">
             </div>
+            <p></p>
+            Hier ist eine beispielhafte Darstellung eines (größeren) LAMA-Felds abgebildet. Gelb bedeutet, dass die
+            LED aktuell angeschalten ist und grau bedeutet, dass die LED aktuell ausgeschalten ist.
         </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Funktionen</h3>
-                Insgesamt werden Sie fünf Funktionen implementieren. Die Funktionen sollen alle im Python-File <span
-                    class="text_highlighted">exercise</span> implementiert werden. Außerdem werden 33 Tests für die
-                Funktionen mitgeliefert, welche sich im Python-File <span class="text_highlighted">tests</span>
-                befinden.
-                <p></p>
-                <h5>Hilfestellung</h5>
-                Da dies Ihre erste Aufgabe in einer IDE ist, wird Ihnen das Spielfeld vorgegeben. Das Spielfeld soll aus
-                einer Liste bestehen, welche aus insgesamt 5 weiteren Listen besteht. Jede dieser Listen soll aus
-                jeweils 5 Variablen (0 oder 1) enthalten.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/ide_lesson/ide_lesson_simple_exercise_hint_field.PNG' %}"
-                         class="rounded img-fluid"
-                         alt="field hint">
-                </div>
-                <p></p>
-                Hier können Sie erkennen, dass Sie beim Zugriff auf das Feld (zur Vereinfachung beim Vorstellen) zuerst
-                die Y-Koordinate bzw. die Reihe und dann die X-Koordinate bzw. die Spalte angeben sollen. Dies bedeutet,
-                dass die erste Reihe des Felds aus allen Y=0 Koordinaten und den X=0-4 Koordinaten besteht, usw.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/ide_lesson/ide_lesson_simple_exercise_field_coordinates.PNG' %}"
-                         class="rounded img-fluid"
-                         alt="field coordinates">
-                </div>
-                <p></p>
-                Hier sind die Zugriffspaare auf die jeweilige Position (z.B. Reihe 1 Spalte 2) auf dem Feld dargestellt.
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>user_input()</h3>
-                Mithilfe dieser Funktion lassen wir uns die Werte für die Reihe bzw. Spalte der nächsten Position,
-                welche gedrückt werden soll, einlesen.
-                <p></p>
-                Die Funktion <span class="text_highlighted">user_input()</span> soll zwei Werte (einen für die Reihe und
-                einen für die Spalte) vom Benutzer (von der Konsole) einlesen, diese in einer Liste speichern und die
-                Liste zurückgeben. Es sollen nur Werte zwischen 0 und 4 (inklusive) eingelesen werden können. Falls,
-                versucht wird Werte außerhalb dieses Bereichs einzulesen, soll ein <span
-                    class="text_highlighted">ValueError</span>
-                geworfen werden.
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>get_neighbour_positions(y, x)</h3>
-                Mithilfe dieser Funktion berechen wir die benachbarten Positionen der übergebenen Position, damit wir
-                wissen, welche Positionen wir neben der eigentlichen Position noch umschalten müssen.
-                <p></p>
-                Diese Funktion soll alle benchbarten Positionen der übergebenen Position berechnen und in eine Liste
-                speichern. Falls für <span class="text_highlighted">y</span> bzw. <span
-                    class="text_highlighted">x</span> Werte außerhalb des in der <span class="text_highlighted">user_input()</span>-Funktion
-                Bereichs übergeben werden, soll ebenfalls ein ValueError geworfen werden. Die korrekte Liste soll
-                anschließend zurückgegeben werden.
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>click_position(y, x, field)</h3>
-                Mithilfe dieser Funktion werden das übergebene Feld und die benachbarten Felder, der Spiellogik
-                entsprechend, umgeschalten.
-                <p></p>
-                Hierfür sollen Sie die entsprechenden Felder umschalten. Falls auf dem Feld eine <span
-                    class="text_highlighted">1</span> war, sollen Sie diesem eine <span
-                    class="text_highlighted">0</span> zuweisen und umgekehrt.
-                <p></p>
-                Diese Funktion besitzt keinen Rückgabewert, sondern bearbeitet direkt das übergebene Feld (Merke: Pass
-                by Reference).
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>check_if_solved(field)</h3>
-                Mithilfe dieser Funktion soll getestet werden, ob ein übergebenes Spielfeld bereits gelöst wurde, oder
-                noch Bedarf nach weiteren Spielzügen besteht.
-                <p></p>
-                Überprüfen Sie das übergebene Feld nach den oben angeführten Kriterien für ein gelöstes Spielfeld des
-                <span class="text_highlighted">Lights Out</span>-Spiels. Falls das übergebene Feld bereits gelöst ist,
-                soll <span class="text_highlighted">True</span> zurückgegeben werden, andernfalls soll <span
-                    class="text_highlighted">False</span> zurückgegeben werden.
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>convert_field(field)</h3>
-                Mithilfe dieser Funktion konvertieren wir das Spielfeld, welches als eine Liste von Listen implementiert
-                ist, in einen String, sodass wir diesen nach unseren Wünschen ausgeben lassen können.
-                <p></p>
-                Sie sollen die Werte aller Positionen in einen einzigen String speichern. In der ersten Zeile soll dabei
-                die erste Reihe des Felds (Liste 0) stehen, usw. Die Werte innerhalb der Reihen sollen durch Leerzeichen
-                getrennt sein. Am Ende der Reihe (also nach den jeweils 5 Werten jeder Reihe) soll kein Leerzeichen,
-                aber ein Zeilenumbruch vorhanden sein, außer nach der lezten Reihe. Zum Schluss sollen Sie den String
-                noch zurückgeben.
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Überprüfung</h3>
-                Sie können Ihren aktuellen Fortschritt durch Aufrufe der jeweiligen Funktion in der mitgelieferten <span
-                    class="text_highlighted">Main-Funktion</span> selbstständig überprüfen. Dazu können Sie z.B. ein
-                Beispielfeld erstellen und darauf die Funktionen anwenden, welche Sie testen möchten.
-            </div>
-        </div>
-        <p></p>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Funktionen</h3>
+            Insgesamt werden Sie fünf Funktionen implementieren. Die Funktionen sollen alle im Python-File <span
+                class="text_highlighted">exercise</span> implementiert werden. Außerdem werden 33 Tests für die
+            Funktionen mitgeliefert, welche sich im Python-File <span class="text_highlighted">tests</span>
+            befinden.
+            <p></p>
+            <h5>Hilfestellung</h5>
+            Da dies Ihre erste Aufgabe in einer IDE ist, wird Ihnen das Spielfeld vorgegeben. Das Spielfeld soll aus
+            einer Liste bestehen, welche aus insgesamt 5 weiteren Listen besteht. Jede dieser Listen soll aus
+            jeweils 5 Variablen (0 oder 1) enthalten.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/ide_lesson_simple_exercise_hint_field.PNG' %}"
+                     class="rounded img-fluid"
+                     alt="field hint">
+            </div>
+            <p></p>
+            Hier können Sie erkennen, dass Sie beim Zugriff auf das Feld (zur Vereinfachung beim Vorstellen) zuerst
+            die Y-Koordinate bzw. die Reihe und dann die X-Koordinate bzw. die Spalte angeben sollen. Dies bedeutet,
+            dass die erste Reihe des Felds aus allen Y=0 Koordinaten und den X=0-4 Koordinaten besteht, usw.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/ide_lesson_simple_exercise_field_coordinates.PNG' %}"
+                     class="rounded img-fluid"
+                     alt="field coordinates">
+            </div>
+            <p></p>
+            Hier sind die Zugriffspaare auf die jeweilige Position (z.B. Reihe 1 Spalte 2) auf dem Feld dargestellt.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>user_input()</h3>
+            Mithilfe dieser Funktion lassen wir uns die Werte für die Reihe bzw. Spalte der nächsten Position,
+            welche gedrückt werden soll, einlesen.
+            <p></p>
+            Die Funktion <span class="text_highlighted">user_input()</span> soll zwei Werte (einen für die Reihe und
+            einen für die Spalte) vom Benutzer (von der Konsole) einlesen, diese in einer Liste speichern und die
+            Liste zurückgeben. Es sollen nur Werte zwischen 0 und 4 (inklusive) eingelesen werden können. Falls,
+            versucht wird Werte außerhalb dieses Bereichs einzulesen, soll ein <span
+                class="text_highlighted">ValueError</span>
+            geworfen werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>get_neighbour_positions(y, x)</h3>
+            Mithilfe dieser Funktion berechen wir die benachbarten Positionen der übergebenen Position, damit wir
+            wissen, welche Positionen wir neben der eigentlichen Position noch umschalten müssen.
+            <p></p>
+            Diese Funktion soll alle benchbarten Positionen der übergebenen Position berechnen und in eine Liste
+            speichern. Falls für <span class="text_highlighted">y</span> bzw. <span
+                class="text_highlighted">x</span> Werte außerhalb des in der <span
+                class="text_highlighted">user_input()</span>-Funktion
+            Bereichs übergeben werden, soll ebenfalls ein ValueError geworfen werden. Die korrekte Liste soll
+            anschließend zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>click_position(y, x, field)</h3>
+            Mithilfe dieser Funktion werden das übergebene Feld und die benachbarten Felder, der Spiellogik
+            entsprechend, umgeschalten.
+            <p></p>
+            Hierfür sollen Sie die entsprechenden Felder umschalten. Falls auf dem Feld eine <span
+                class="text_highlighted">1</span> war, sollen Sie diesem eine <span
+                class="text_highlighted">0</span> zuweisen und umgekehrt.
+            <p></p>
+            Diese Funktion besitzt keinen Rückgabewert, sondern bearbeitet direkt das übergebene Feld (Merke: Pass
+            by Reference).
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>check_if_solved(field)</h3>
+            Mithilfe dieser Funktion soll getestet werden, ob ein übergebenes Spielfeld bereits gelöst wurde, oder
+            noch Bedarf nach weiteren Spielzügen besteht.
+            <p></p>
+            Überprüfen Sie das übergebene Feld nach den oben angeführten Kriterien für ein gelöstes Spielfeld des
+            <span class="text_highlighted">Lights Out</span>-Spiels. Falls das übergebene Feld bereits gelöst ist,
+            soll <span class="text_highlighted">True</span> zurückgegeben werden, andernfalls soll <span
+                class="text_highlighted">False</span> zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>convert_field(field)</h3>
+            Mithilfe dieser Funktion konvertieren wir das Spielfeld, welches als eine Liste von Listen implementiert
+            ist, in einen String, sodass wir diesen nach unseren Wünschen ausgeben lassen können.
+            <p></p>
+            Sie sollen die Werte aller Positionen in einen einzigen String speichern. In der ersten Zeile soll dabei
+            die erste Reihe des Felds (Liste 0) stehen, usw. Die Werte innerhalb der Reihen sollen durch Leerzeichen
+            getrennt sein. Am Ende der Reihe (also nach den jeweils 5 Werten jeder Reihe) soll kein Leerzeichen,
+            aber ein Zeilenumbruch vorhanden sein, außer nach der lezten Reihe. Zum Schluss sollen Sie den String
+            noch zurückgeben.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Überprüfung</h3>
+            Sie können Ihren aktuellen Fortschritt durch Aufrufe der jeweiligen Funktion in der mitgelieferten <span
+                class="text_highlighted">Main-Funktion</span> selbstständig überprüfen. Dazu können Sie z.B. ein
+            Beispielfeld erstellen und darauf die Funktionen anwenden, welche Sie testen möchten.
+        </div>
+    </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

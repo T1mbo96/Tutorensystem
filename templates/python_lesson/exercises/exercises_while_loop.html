@@ -21,103 +21,101 @@
             <h1>Aufgabe: while-Schleife</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                Erzeugen Sie bitte eine Variable <span class="text_highlighted">x</span>, deren Wert Sie auf <span
-                    class="text_highlighted">10</span> und eine Variable <span class="text_highlighted">y</span>, deren
-                Wert
-                Sie auf <span class="text_highlighted">2</span> setzen. Erstellen Sie anschließend eine Schleife, in der
-                Sie
-                <span class="text_highlighted">y</span> von <span class="text_highlighted">x</span> abziehen, bis <span
-                    class="text_highlighted">x</span> den Wert <span class="text_highlighted">0</span> enthält. Geben
-                Sie
-                zuerst den Anfangswert von <span class="text_highlighted">x</span> und anschließend den aktuellen Wert
-                von
-                <span class="text_highlighted">x</span> in jedem Schleifendurchlauf (inklusive des Endwerts <span
-                    class="text_highlighted">0</span>), jeweils in einer eigenen Zeile, aus.
-                <p></p>
-                Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
-                    class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
-                ist,
-                benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
-                beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach
-                mit
-                einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
-            </div>
+    <div class="card">
+        <div class="card-body">
+            Erzeugen Sie bitte eine Variable <span class="text_highlighted">x</span>, deren Wert Sie auf <span
+                class="text_highlighted">10</span> und eine Variable <span class="text_highlighted">y</span>, deren
+            Wert
+            Sie auf <span class="text_highlighted">2</span> setzen. Erstellen Sie anschließend eine Schleife, in der
+            Sie
+            <span class="text_highlighted">y</span> von <span class="text_highlighted">x</span> abziehen, bis <span
+                class="text_highlighted">x</span> den Wert <span class="text_highlighted">0</span> enthält. Geben
+            Sie
+            zuerst den Anfangswert von <span class="text_highlighted">x</span> und anschließend den aktuellen Wert
+            von
+            <span class="text_highlighted">x</span> in jedem Schleifendurchlauf (inklusive des Endwerts <span
+                class="text_highlighted">0</span>), jeweils in einer eigenen Zeile, aus.
+            <p></p>
+            Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
+                class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
+            ist,
+            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
+            beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach
+            mit
+            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
         </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h5>Bitte Code hier eingeben:</h5>
-                <div class="skulpt_code_container">
-                    <form>
-                        <div class="text_area_wrapper">
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5>Bitte Code hier eingeben:</h5>
+            <div class="skulpt_code_container">
+                <form>
+                    <div class="text_area_wrapper">
             <textarea id="custom_code" cols="40" rows="10">
 # In den folgenden Zeilen bitte ihren Code eintragen
 
 
 </textarea>
-                        </div>
-                        <br/>
-                        <div id="skulpt_run_btn">
-                            <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run
-                            </button>
-                            <button type="button" onclick="while_loop_test_code()"
-                                    class="form-btn btn btn-info my-2 my-sm-0">Test
-                            </button>
-                            <button type="button" onclick="reset_skulpt()"
-                                    class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <p></p>
-                <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
-                    Klasse! Der erste Wert ist korrekt!
-                </div>
-                <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
-                    Schade, der erste Wert ist leider nicht korrekt!
-                </div>
-                <div class="alert alert-success _alert shake" role="alert" id="correct_2" style="display: none">
-                    Klasse! Der zweite Wert ist korrekt!
-                </div>
-                <div class="alert alert-danger _alert shake" role="alert" id="wrong_2" style="display: none">
-                    Schade, der zweite Wert ist leider nicht korrekt!
-                </div>
-                <div class="alert alert-success _alert shake" role="alert" id="correct_3" style="display: none">
-                    Klasse! Der dritte Wert ist korrekt!
-                </div>
-                <div class="alert alert-danger _alert shake" role="alert" id="wrong_3" style="display: none">
-                    Schade, der dritte Wert ist leider nicht korrekt!
-                </div>
-                <div class="alert alert-success _alert shake" role="alert" id="correct_4" style="display: none">
-                    Klasse! Der vierte Wert ist korrekt!
-                </div>
-                <div class="alert alert-danger _alert shake" role="alert" id="wrong_4" style="display: none">
-                    Schade, der vierte Wert ist leider nicht korrekt!
-                </div>
-                <div class="alert alert-success _alert shake" role="alert" id="correct_5" style="display: none">
-                    Klasse! Der fünfte Wert ist korrekt!
-                </div>
-                <div class="alert alert-danger _alert shake" role="alert" id="wrong_5" style="display: none">
-                    Schade, der fünfte Wert ist leider nicht korrekt!
-                </div>
-                <div class="alert alert-success _alert shake" role="alert" id="correct_6" style="display: none">
-                    Klasse! Der sechste Wert ist korrekt!
-                </div>
-                <div class="alert alert-danger _alert shake" role="alert" id="wrong_6" style="display: none">
-                    Schade, der sechste Wert ist leider nicht korrekt!
-                </div>
-                <p></p>
-                <h5>Output:</h5>
-                <div class="description_container">
-                    <pre id="output"></pre>
-                </div>
-                <p></p>
+                    </div>
+                    <br/>
+                    <div id="skulpt_run_btn">
+                        <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run
+                        </button>
+                        <button type="button" onclick="while_loop_test_code()"
+                                class="form-btn btn btn-info my-2 my-sm-0">Test
+                        </button>
+                        <button type="button" onclick="reset_skulpt()"
+                                class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
+                        </button>
+                    </div>
+                </form>
             </div>
+            <p></p>
+            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
+                Klasse! Der erste Wert ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
+                Schade, der erste Wert ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert shake" role="alert" id="correct_2" style="display: none">
+                Klasse! Der zweite Wert ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_2" style="display: none">
+                Schade, der zweite Wert ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert shake" role="alert" id="correct_3" style="display: none">
+                Klasse! Der dritte Wert ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_3" style="display: none">
+                Schade, der dritte Wert ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert shake" role="alert" id="correct_4" style="display: none">
+                Klasse! Der vierte Wert ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_4" style="display: none">
+                Schade, der vierte Wert ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert shake" role="alert" id="correct_5" style="display: none">
+                Klasse! Der fünfte Wert ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_5" style="display: none">
+                Schade, der fünfte Wert ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert shake" role="alert" id="correct_6" style="display: none">
+                Klasse! Der sechste Wert ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert shake" role="alert" id="wrong_6" style="display: none">
+                Schade, der sechste Wert ist leider nicht korrekt!
+            </div>
+            <p></p>
+            <h5>Output:</h5>
+            <div class="description_container">
+                <pre id="output"></pre>
+            </div>
+            <p></p>
         </div>
-        <p></p>
     </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

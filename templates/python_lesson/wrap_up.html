@@ -1,14 +1,18 @@
 {% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
+{% block python_lesson_wrap_up %}
+    sidebar_active
+{% endblock python_lesson_wrap_up %}
+
 {% block sidebar_page_content %}
-    <h1>Still under construction</h1>
+    <h1>Zusammenfassung</h1>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}
-    {% url 'lesson_2_classes' %}
+    {% url 'lesson_2_heredity' %}
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'python_lesson_wrap_up' %}
+    {% url 'ide_lesson_introduction' %}
 {% endblock lesson_nav_buttons_next_page %}

@@ -18,161 +18,159 @@
             <h1>Listen</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                Eine Liste ist ein sogenannter sequentieller Datentyp. Das bedeutet, dass in Listen ebenfalls mehrere
-                Elemente gespeichert werden können, die über einen Index auswählbar sind (vgl. Strings). Der große
-                Unterschied zu Strings ist jedoch, dass die gespeicherten Elemente nicht vom selben Typ sein müssen.
-                Eine
-                Liste wird mit eckigen Klammern <span class="text_highlighted">[]</span> initialisiert.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_list_example.PNG' %}" class="rounded"
-                         alt="Example of lists">
-                </div>
-                <p></p>
-                Im Folgenden werden einige Operationen und Methoden von Listen in Python vorgestellt. Für einen
-                ausführlicheren Überblick benutzen Sie bitte die Referenz <a
-                    href="https://www.tutorialspoint.com/python/python_lists.htm" target="_blank"><span
-                    class="link_color">Python Listen 1</span></a>.
+    <div class="card">
+        <div class="card-body">
+            Eine Liste ist ein sogenannter sequentieller Datentyp. Das bedeutet, dass in Listen ebenfalls mehrere
+            Elemente gespeichert werden können, die über einen Index auswählbar sind (vgl. Strings). Der große
+            Unterschied zu Strings ist jedoch, dass die gespeicherten Elemente nicht vom selben Typ sein müssen.
+            Eine
+            Liste wird mit eckigen Klammern <span class="text_highlighted">[]</span> initialisiert.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_list_example.PNG' %}" class="rounded"
+                     alt="Example of lists">
             </div>
+            <p></p>
+            Im Folgenden werden einige Operationen und Methoden von Listen in Python vorgestellt. Für einen
+            ausführlicheren Überblick benutzen Sie bitte die Referenz <a
+                href="https://www.tutorialspoint.com/python/python_lists.htm" target="_blank"><span
+                class="link_color">Python Listen 1</span></a>.
         </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Grundlegende Operationen</h3>
-                <p></p>
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Bezeichnung</th>
-                        <th scope="col">Ausdruck</th>
-                        <th scope="col">Ergebnis</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">Länge</th>
-                        <td>len([1, 2, 3, 4, 5])</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Wiederholung</th>
-                        <td>["Ha"] * 2</td>
-                        <td>["Ha", "Ha"]</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Zugehörigkeit</th>
-                        <td>3 in [1, 2, 3, 4, 5]</td>
-                        <td>True</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Verkettung</th>
-                        <td>[5, 10] + [15, 20]</td>
-                        <td>[5, 10, 15, 20]</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>Iteration</h3>
-                Um alle Elemente eines sequentiellen Datentyps durchzugehen benutzt man die im vorherigen Abschnitt
-                erlernte
-                for-Schleife.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_list_iteration.PNG' %}" class="rounded"
-                         alt="Example of list iteration">
-                </div>
-                <p></p>
-                Die Bezeichnung <span class="text_highlighted">element</span> könnte man hierbei beliebig variieren.
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Schneiden</h3>
-                Es kann auch auf mehrere Elemente einer Liste auf einmal zugegriffen werden. Dafür verwendet man einen
-                Doppelpunkt <span class="text_highlighted">:</span> und die Schreibweise, um auf einen bestimmten Index
-                zuzugreifen. <span class="text_highlighted">!!!TODO!!! Zahlen gegen was anderes austauschen wegen Verwechslungsgefahr.</span>
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_list_slicing.PNG' %}" class="rounded"
-                         alt="Example of list slicing">
-                </div>
-                <p></p>
-                Hierbei ist zu erkennen, dass die Angabe <u>vor</u> dem Doppelpunkt immer inklusive und die Angabe
-                <u>nach</u> dem Doppelpunkt immer exklusive ist. Somit kann man ebenfalls mehrere Elemente einer Liste
-                auf
-                einmal verändern.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_list_slicing_updating.PNG' %}" class="rounded"
-                         alt="Example of list updating with slicing">
-                </div>
-                <p></p>
-                <div class="alert alert-primary" role="alert">
-                    Für Fortgeschrittene: Das Sternchen <span class="text_highlighted">*</span> vor dem Namen der
-                    Variable
-                    mit dem sequentiellen Datentyp (in diesem Beispiel eine Liste) liefert alle Elemente der Liste als
-                    <a
-                            href="https://stackoverflow.com/questions/9884132/what-exactly-are-iterator-iterable-and-iteration"
-                            target="_blank"><span class="link_color">iterable</span></a>.
-                </div>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>Append</h3>
-                Um einer Liste einen neues Element hinzuzufügen benutzt man die <span
-                    class="text_highlighted">append</span>-Methode.
-                Mithilfe dieser wird das gewünschte Element ans Ende der Liste angehängt.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_list_append.PNG' %}" class="rounded"
-                         alt="Example of list append">
-                </div>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Delete</h3>
-                Man kann Elemente aus einer Liste ebenfalls wieder löschen. Dies geschieht mithilfe des Schlüsselworts
-                <span
-                        class="text_highlighted">del</span> und der Auswahl des jeweiligen Index.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_list_delete.PNG' %}" class="rounded"
-                         alt="Example of list delete">
-                </div>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>Hilfreiche Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://www.tutorialspoint.com/python/python_lists.htm" target="_blank"><span
-                                class="link_color">Python Listen 1</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.python-kurs.eu/listen.php" target="_blank"><span
-                                class="link_color">Python Listen 2</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.tutorialspoint.com/python/python_lists.htm" target="_blank"><span
-                                class="link_color">Python sequentielle Datentypen</span></a>
-                    </li>
-                    <li>
-                        <a href="https://de.wikipedia.org/wiki/Liste_(Datenstruktur)" target="_blank"><span
-                                class="link_color">Wikipedia Liste</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <p></p>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Grundlegende Operationen</h3>
+            <p></p>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Ausdruck</th>
+                    <th scope="col">Ergebnis</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Länge</th>
+                    <td>len([1, 2, 3, 4, 5])</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th scope="row">Wiederholung</th>
+                    <td>["Ha"] * 2</td>
+                    <td>["Ha", "Ha"]</td>
+                </tr>
+                <tr>
+                    <th scope="row">Zugehörigkeit</th>
+                    <td>3 in [1, 2, 3, 4, 5]</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <th scope="row">Verkettung</th>
+                    <td>[5, 10] + [15, 20]</td>
+                    <td>[5, 10, 15, 20]</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Iteration</h3>
+            Um alle Elemente eines sequentiellen Datentyps durchzugehen benutzt man die im vorherigen Abschnitt
+            erlernte
+            for-Schleife.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_list_iteration.PNG' %}" class="rounded"
+                     alt="Example of list iteration">
+            </div>
+            <p></p>
+            Die Bezeichnung <span class="text_highlighted">element</span> könnte man hierbei beliebig variieren.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Schneiden</h3>
+            Es kann auch auf mehrere Elemente einer Liste auf einmal zugegriffen werden. Dafür verwendet man einen
+            Doppelpunkt <span class="text_highlighted">:</span> und die Schreibweise, um auf einen bestimmten Index
+            zuzugreifen. <span class="text_highlighted">!!!TODO!!! Zahlen gegen was anderes austauschen wegen Verwechslungsgefahr.</span>
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_list_slicing.PNG' %}" class="rounded"
+                     alt="Example of list slicing">
+            </div>
+            <p></p>
+            Hierbei ist zu erkennen, dass die Angabe <u>vor</u> dem Doppelpunkt immer inklusive und die Angabe
+            <u>nach</u> dem Doppelpunkt immer exklusive ist. Somit kann man ebenfalls mehrere Elemente einer Liste
+            auf
+            einmal verändern.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_list_slicing_updating.PNG' %}" class="rounded"
+                     alt="Example of list updating with slicing">
+            </div>
+            <p></p>
+            <div class="alert alert-primary" role="alert">
+                Für Fortgeschrittene: Das Sternchen <span class="text_highlighted">*</span> vor dem Namen der
+                Variable
+                mit dem sequentiellen Datentyp (in diesem Beispiel eine Liste) liefert alle Elemente der Liste als
+                <a
+                        href="https://stackoverflow.com/questions/9884132/what-exactly-are-iterator-iterable-and-iteration"
+                        target="_blank"><span class="link_color">iterable</span></a>.
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Append</h3>
+            Um einer Liste einen neues Element hinzuzufügen benutzt man die <span
+                class="text_highlighted">append</span>-Methode.
+            Mithilfe dieser wird das gewünschte Element ans Ende der Liste angehängt.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_list_append.PNG' %}" class="rounded"
+                     alt="Example of list append">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Delete</h3>
+            Man kann Elemente aus einer Liste ebenfalls wieder löschen. Dies geschieht mithilfe des Schlüsselworts
+            <span
+                    class="text_highlighted">del</span> und der Auswahl des jeweiligen Index.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_list_delete.PNG' %}" class="rounded"
+                     alt="Example of list delete">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_lists.htm" target="_blank"><span
+                            class="link_color">Python Listen 1</span></a>
+                </li>
+                <li>
+                    <a href="https://www.python-kurs.eu/listen.php" target="_blank"><span
+                            class="link_color">Python Listen 2</span></a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_lists.htm" target="_blank"><span
+                            class="link_color">Python sequentielle Datentypen</span></a>
+                </li>
+                <li>
+                    <a href="https://de.wikipedia.org/wiki/Liste_(Datenstruktur)" target="_blank"><span
+                            class="link_color">Wikipedia Liste</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

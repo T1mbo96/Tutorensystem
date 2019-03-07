@@ -11,46 +11,45 @@
             <h1>Dictionary</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                Ein Dictionary ist ein etwas anderer sequentieller Datentyp. Dieses speichert Werte als sogenannte <span
-                    class="text_highlighted">Schlüssel-Wert-Paare</span>. Das heißt, dass man auf einen Wert eines
-                Dictionarys nicht mithilfe eines Index, sondern mithilfe eines <span
-                    class="text_highlighted">Keys</span> zugreift.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_dictionary_example.PNG' %}" class="rounded"
-                         alt="Example of dictionary">
-                </div>
-                <p></p>
-                Wie zu erkennen ist, werden Dictionarys ebenfalls mit geschweiften Klammern <span
-                    class="text_highlighted">{ }</span> erzeugt. Allerdings wird immer jeweils ein <span
-                    class="text_highlighted">Key</span> und ein <span class="text_highlighted">Schlüssel</span>,
-                getrennt durch einen Doppelpunkt, angegeben.
+    <div class="card">
+        <div class="card-body">
+            Ein Dictionary ist ein etwas anderer sequentieller Datentyp. Dieses speichert Werte als sogenannte <span
+                class="text_highlighted">Schlüssel-Wert-Paare</span>. Das heißt, dass man auf einen Wert eines
+            Dictionarys nicht mithilfe eines Index, sondern mithilfe eines <span
+                class="text_highlighted">Keys</span> zugreift.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_dictionary_example.PNG' %}" class="rounded"
+                     alt="Example of dictionary">
             </div>
+            <p></p>
+            Wie zu erkennen ist, werden Dictionarys ebenfalls mit geschweiften Klammern <span
+                class="text_highlighted">{ }</span> erzeugt. Allerdings wird immer jeweils ein <span
+                class="text_highlighted">Key</span> und ein <span class="text_highlighted">Schlüssel</span>,
+            getrennt durch einen Doppelpunkt, angegeben.
         </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Hilfreiche Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://www.tutorialspoint.com/python/python_dictionary.htm" target="_blank"><span
-                                class="link_color">Python Dictionary 1</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.python-kurs.eu/dictionaries.php" target="_blank"><span
-                                class="link_color">Python Dictionary 2</span></a>
-                    </li>
-                    <li>
-                        <a href="https://en.wikibooks.org/wiki/Python_Programming/Sequences#Dictionaries" target="_blank"><span
-                                class="link_color">Wikibooks Dictionary</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <p></p>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_dictionary.htm" target="_blank"><span
+                            class="link_color">Python Dictionary 1</span></a>
+                </li>
+                <li>
+                    <a href="https://www.python-kurs.eu/dictionaries.php" target="_blank"><span
+                            class="link_color">Python Dictionary 2</span></a>
+                </li>
+                <li>
+                    <a href="https://en.wikibooks.org/wiki/Python_Programming/Sequences#Dictionaries"
+                       target="_blank"><span
+                            class="link_color">Wikibooks Dictionary</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

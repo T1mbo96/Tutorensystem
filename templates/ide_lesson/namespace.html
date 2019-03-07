@@ -11,46 +11,44 @@
             <h1>Namensräume</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                Namensräume stellen Räume oder Gebiete innerhalb eines Programms dar, in dem der Name einer Variable,
-                Funktion, etc. gültig ist. Um sich das ganze besser vorstellen zu können, denken Sie einfach an
-                Postleitzahlen. Es gibt in viele Städten z.B. eine Hauptstraße. Der Postbote weiß nur anhand der
-                Postleitzahl welche Hauptstraße in welcher Stadt gemeint ist.
-                <p></p>
-                Namensräume sind zur Konfliktvermeidung zwischen verschiedenen Modulen zuständig, sodass jeder genau
-                weiß, welche Variable oder Funktion gemeint ist. Man spricht eine spezifische Variable, etc. bei
-                Verwechslungsgefahr deshalb mit der sogenannten Punktnotation an. Jedes Modul hat in Python einen
-                eigenen Namensraum. Daraus ergibt sich die Schreibweise <span class="text_highlighted">Namensraum.Variable/etc</span>.
-                <p></p>
-                Zur Veranschaulichung ziehen wir wieder das Beispiel mit den Fibonacci Zahlen heran. Zur Erinnerung; die
-                importierte Funktion sah folgendermaßen aus.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/ide_lesson/ide_modules_installed_file.PNG' %}" class="rounded"
-                         alt="Example of fibonacci module">
-                </div>
-                <p></p>
-                Nun implementieren wir in unserem eigenen File eine <span class="text_highlighted">fibo-Funktion</span>
-                (mit abgewandelter Funktionalität, um den Unterschied deutlich zu machen) und benutzen beide, um die
-                Funktionsweise von Namensräumen zu verstehen.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/ide_lesson/python_namespaces_example.PNG' %}" class="rounded"
-                         alt="Example of namespaces">
-                </div>
-                <p></p>
-                Beide Funktionen heißen genau gleich <span class="text_highlighted">fibo(n)</span> (vlg. Hauptstraße),
-                allerdings weiß das Programm durch die Punktnotation <span
-                    class="text_highlighted">fibonacci.fibo</span> (vgl. Postleitzahl), dass es im zweiten Aufruf der
-                print-Funktion die Funktion aus dem Modul <span class="text_highlighted">fibonacci</span> verwenden
-                soll und nicht unsere eigens implementierte wie im ersten Aufruf (Hier benötigen wir keine
-                Punktnotation, da wir uns im selben Modul/File befinden, in welchem die Funktion implementiert ist).
+    <div class="card">
+        <div class="card-body">
+            Namensräume stellen Räume oder Gebiete innerhalb eines Programms dar, in dem der Name einer Variable,
+            Funktion, etc. gültig ist. Um sich das ganze besser vorstellen zu können, denken Sie einfach an
+            Postleitzahlen. Es gibt in viele Städten z.B. eine Hauptstraße. Der Postbote weiß nur anhand der
+            Postleitzahl welche Hauptstraße in welcher Stadt gemeint ist.
+            <p></p>
+            Namensräume sind zur Konfliktvermeidung zwischen verschiedenen Modulen zuständig, sodass jeder genau
+            weiß, welche Variable oder Funktion gemeint ist. Man spricht eine spezifische Variable, etc. bei
+            Verwechslungsgefahr deshalb mit der sogenannten Punktnotation an. Jedes Modul hat in Python einen
+            eigenen Namensraum. Daraus ergibt sich die Schreibweise <span class="text_highlighted">Namensraum.Variable/etc</span>.
+            <p></p>
+            Zur Veranschaulichung ziehen wir wieder das Beispiel mit den Fibonacci Zahlen heran. Zur Erinnerung; die
+            importierte Funktion sah folgendermaßen aus.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/ide_modules_installed_file.PNG' %}" class="rounded"
+                     alt="Example of fibonacci module">
             </div>
+            <p></p>
+            Nun implementieren wir in unserem eigenen File eine <span class="text_highlighted">fibo-Funktion</span>
+            (mit abgewandelter Funktionalität, um den Unterschied deutlich zu machen) und benutzen beide, um die
+            Funktionsweise von Namensräumen zu verstehen.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/python_namespaces_example.PNG' %}" class="rounded"
+                     alt="Example of namespaces">
+            </div>
+            <p></p>
+            Beide Funktionen heißen genau gleich <span class="text_highlighted">fibo(n)</span> (vlg. Hauptstraße),
+            allerdings weiß das Programm durch die Punktnotation <span
+                class="text_highlighted">fibonacci.fibo</span> (vgl. Postleitzahl), dass es im zweiten Aufruf der
+            print-Funktion die Funktion aus dem Modul <span class="text_highlighted">fibonacci</span> verwenden
+            soll und nicht unsere eigens implementierte wie im ersten Aufruf (Hier benötigen wir keine
+            Punktnotation, da wir uns im selben Modul/File befinden, in welchem die Funktion implementiert ist).
         </div>
-        <p></p>
     </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

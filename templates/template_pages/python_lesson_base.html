@@ -30,15 +30,7 @@
                         class="fas fa-angle-right"></i> Variablen</a>
             </li>
             <li>
-                <a href="{% url 'lesson_2_exercises_variables' %}" class="
-
-
-
-
-
-
-
-                        {% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"><i
+                <a href="{% url 'lesson_2_exercises_variables' %}" class="{% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
         </ul>
@@ -56,16 +48,7 @@
                         class="fas fa-angle-right"></i> Strings</a>
             </li>
             <li>
-                <a href="{% url 'lesson_2_exercises_strings' %}" class="
-
-
-
-
-
-
-
-
-                        {% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"><i
+                <a href="{% url 'lesson_2_exercises_strings' %}" class="{% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
         </ul>
@@ -80,13 +63,7 @@
                         class="fas fa-angle-right"></i> Operatoren</a>
             </li>
             <li>
-                <a href="{% url 'lesson_2_operators_precedence' %}" class="
-
-
-
-
-
-                        {% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"><i
+                <a href="{% url 'lesson_2_operators_precedence' %}" class="{% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"><i
                         class="fas fa-angle-right"></i> Priorität</a>
             </li>
         </ul>
@@ -123,9 +100,7 @@
             </li>
         </ul>
     </li>
-    <li class="
-
-            {% block lesson_2_conditional_statements_submenu_active %}{% endblock lesson_2_conditional_statements_submenu_active %}">
+    <li class="{% block lesson_2_conditional_statements_submenu_active %}{% endblock lesson_2_conditional_statements_submenu_active %}">
         <a href="#conditional_statements_submenu" data-toggle="collapse" aria-expanded="false"
            id="conditional_statements_submenu_link">Bedingte Anweisungen <i
                 class="fas fa-angle-down float-right"></i></a>
@@ -200,6 +175,9 @@
     </li>
     <li class="{% block lesson_2_heredity_active %}{% endblock lesson_2_heredity_active %}" id="lesson_2_heredity">
         <a href="{% url 'lesson_2_heredity' %}">Vererbung</a>
+    </li>
+    <li class="{% block python_lesson_wrap_up %}{% endblock python_lesson_wrap_up %}">
+        <a href="{% url 'python_lesson_wrap_up' %}">Zusammenfassung</a>
     </li>
 {% endblock sidebar_items %}
 

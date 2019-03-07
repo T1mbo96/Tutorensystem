@@ -18,262 +18,260 @@
             <h1>Operatoren</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                Ein Operator ist ein Mittel, Verfahren o.Ä. zur Durchführung linguistischer, logischer oder
-                mathematischer
-                Operationen. Er verknüpft zwei oder mehrere Operanden (Werte, z.B. Variablen oder Konstanten) zu einem
-                neuen
-                Wert.
-            </div>
+    <div class="card">
+        <div class="card-body">
+            Ein Operator ist ein Mittel, Verfahren o.Ä. zur Durchführung linguistischer, logischer oder
+            mathematischer
+            Operationen. Er verknüpft zwei oder mehrere Operanden (Werte, z.B. Variablen oder Konstanten) zu einem
+            neuen
+            Wert.
         </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Arithmetische Operatoren</h3>
-                <p></p>
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Bezeichnung</th>
-                        <th scope="col">Zeichen</th>
-                        <th scope="col">Beispiel</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">Addition</th>
-                        <td>+</td>
-                        <td>x + y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Subtraktion</th>
-                        <td>-</td>
-                        <td>x - y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Multiplikation</th>
-                        <td>*</td>
-                        <td>x * y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Division</th>
-                        <td>/</td>
-                        <td>x / y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Modulo (Rest beim ganzzahligen Teilen)</th>
-                        <td>%</td>
-                        <td>x % y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Ganzzahldivision (Ganzzahliger Anteil der Division)</th>
-                        <td>//</td>
-                        <td>x // y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Potenzieren</th>
-                        <td>**</td>
-                        <td>x ** y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Negatives Vorzeichen</th>
-                        <td>-</td>
-                        <td>-x</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_arithmetic_operators_example.PNG' %}" class="rounded"
-                         alt="Example of arithmetic operators in python">
-                </div>
-                <p></p>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>Vergleichsoperatoren</h3>
-                <p></p>
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Bezeichnung</th>
-                        <th scope="col">Zeichen</th>
-                        <th scope="col">Beispiel</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">größer als</th>
-                        <td>></td>
-                        <td>x > y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">kleiner als</th>
-                        <td><</td>
-                        <td>x < y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">größer oder gleich</th>
-                        <td>>=</td>
-                        <td>x >= y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">kleiner oder gleich</th>
-                        <td><=</td>
-                        <td>x <= y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">gleich</th>
-                        <td>==</td>
-                        <td>x == y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ungleich</th>
-                        <td>!=</td>
-                        <td>x != y</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="alert alert-primary" role="alert">
-                    Wir weisen einer Variable einen Wert mit <u>einem</u> <span class="text_highlighted">=</span> zu,
-                    prüfen
-                    zwei
-                    Variablen aber mit <u>zwei</u> <span class="text_highlighted">==</span> auf Gleichheit.
-                </div>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_comparison_operators_example.PNG' %}" class="rounded"
-                         alt="Example of comparison operators in python">
-                </div>
-                <p></p>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Logische Operatoren</h3>
-                <p></p>
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Bezeichnung</th>
-                        <th scope="col">Zeichen</th>
-                        <th scope="col">Beispiel</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">Boolesches Oder</th>
-                        <td>or</td>
-                        <td>x or y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Boolesches Und</th>
-                        <td>and</td>
-                        <td>x and y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Boolesches Nicht</th>
-                        <td>not</td>
-                        <td>x not y</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_logical_operators_example.PNG' %}" class="rounded"
-                         alt="Example of boolean operators in python">
-                </div>
-                <p></p>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>Membership Operatoren</h3>
-                <p></p>
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Bezeichnung</th>
-                        <th scope="col">Zeichen</th>
-                        <th scope="col">Beispiel</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">"Element von..."</th>
-                        <td>in</td>
-                        <td>x in y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">"Nicht Element von..."</th>
-                        <td>and</td>
-                        <td>x not in y</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Identity Operatoren</h3>
-                <p></p>
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Bezeichnung</th>
-                        <th scope="col">Zeichen</th>
-                        <th scope="col">Beispiel</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">"...zeigt auf dasselbe Objekt wie..."</th>
-                        <td>is</td>
-                        <td>x is y</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">"...zeigt nicht auf dasselbe Objekt wie..."</th>
-                        <td>is not</td>
-                        <td>x is not y</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="alert alert-primary" role="alert">
-                    Die Nutzung der Membership und Identity Operatoren wird in späteren Abschnitten ersichtlich, wenn
-                    Sie
-                    Container
-                    wie z.B. Listen und objektorientiertes Programmieren kennen lernen.
-                </div>
-                Außerdem gibt es noch sogenannte <span class="text_highlighted">Bitweise Operatoren</span>. Diese werden
-                in
-                unseren Aufgaben allerdings nicht benötigt. Falls sie diese gerne in Erfahrung bringen würden, dann
-                können Sie
-                dies mithilfe des dritten Links <a
-                    href="https://www.tutorialspoint.com/python/python_basic_operators.htm"
-                    target="_blank"><span class="link_color">Python Operatoren 3</span></a>.
-            </div>
-        </div>
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                <h3>Hilfreiche Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://www.hdm-stuttgart.de/~maucher/Python/html/Datentypen.html"
-                           target="_blank"><span
-                                class="link_color">Python Operatoren 1</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.python-kurs.eu/python3_operatoren.php" target="_blank"><span
-                                class="link_color">Python Operatoren 2</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.tutorialspoint.com/python/python_basic_operators.htm" target="_blank"><span
-                                class="link_color">Python Operatoren 3</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <p></p>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Arithmetische Operatoren</h3>
+            <p></p>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Zeichen</th>
+                    <th scope="col">Beispiel</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Addition</th>
+                    <td>+</td>
+                    <td>x + y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Subtraktion</th>
+                    <td>-</td>
+                    <td>x - y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Multiplikation</th>
+                    <td>*</td>
+                    <td>x * y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Division</th>
+                    <td>/</td>
+                    <td>x / y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Modulo (Rest beim ganzzahligen Teilen)</th>
+                    <td>%</td>
+                    <td>x % y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Ganzzahldivision (Ganzzahliger Anteil der Division)</th>
+                    <td>//</td>
+                    <td>x // y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Potenzieren</th>
+                    <td>**</td>
+                    <td>x ** y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Negatives Vorzeichen</th>
+                    <td>-</td>
+                    <td>-x</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_arithmetic_operators_example.PNG' %}" class="rounded"
+                     alt="Example of arithmetic operators in python">
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Vergleichsoperatoren</h3>
+            <p></p>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Zeichen</th>
+                    <th scope="col">Beispiel</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">größer als</th>
+                    <td>></td>
+                    <td>x > y</td>
+                </tr>
+                <tr>
+                    <th scope="row">kleiner als</th>
+                    <td><</td>
+                    <td>x < y</td>
+                </tr>
+                <tr>
+                    <th scope="row">größer oder gleich</th>
+                    <td>>=</td>
+                    <td>x >= y</td>
+                </tr>
+                <tr>
+                    <th scope="row">kleiner oder gleich</th>
+                    <td><=</td>
+                    <td>x <= y</td>
+                </tr>
+                <tr>
+                    <th scope="row">gleich</th>
+                    <td>==</td>
+                    <td>x == y</td>
+                </tr>
+                <tr>
+                    <th scope="row">ungleich</th>
+                    <td>!=</td>
+                    <td>x != y</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="alert alert-primary" role="alert">
+                Wir weisen einer Variable einen Wert mit <u>einem</u> <span class="text_highlighted">=</span> zu,
+                prüfen
+                zwei
+                Variablen aber mit <u>zwei</u> <span class="text_highlighted">==</span> auf Gleichheit.
+            </div>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_comparison_operators_example.PNG' %}" class="rounded"
+                     alt="Example of comparison operators in python">
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Logische Operatoren</h3>
+            <p></p>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Zeichen</th>
+                    <th scope="col">Beispiel</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Boolesches Oder</th>
+                    <td>or</td>
+                    <td>x or y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Boolesches Und</th>
+                    <td>and</td>
+                    <td>x and y</td>
+                </tr>
+                <tr>
+                    <th scope="row">Boolesches Nicht</th>
+                    <td>not</td>
+                    <td>x not y</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_logical_operators_example.PNG' %}" class="rounded"
+                     alt="Example of boolean operators in python">
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Membership Operatoren</h3>
+            <p></p>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Zeichen</th>
+                    <th scope="col">Beispiel</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">"Element von..."</th>
+                    <td>in</td>
+                    <td>x in y</td>
+                </tr>
+                <tr>
+                    <th scope="row">"Nicht Element von..."</th>
+                    <td>and</td>
+                    <td>x not in y</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Identity Operatoren</h3>
+            <p></p>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Zeichen</th>
+                    <th scope="col">Beispiel</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">"...zeigt auf dasselbe Objekt wie..."</th>
+                    <td>is</td>
+                    <td>x is y</td>
+                </tr>
+                <tr>
+                    <th scope="row">"...zeigt nicht auf dasselbe Objekt wie..."</th>
+                    <td>is not</td>
+                    <td>x is not y</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="alert alert-primary" role="alert">
+                Die Nutzung der Membership und Identity Operatoren wird in späteren Abschnitten ersichtlich, wenn
+                Sie
+                Container
+                wie z.B. Listen und objektorientiertes Programmieren kennen lernen.
+            </div>
+            Außerdem gibt es noch sogenannte <span class="text_highlighted">Bitweise Operatoren</span>. Diese werden
+            in
+            unseren Aufgaben allerdings nicht benötigt. Falls sie diese gerne in Erfahrung bringen würden, dann
+            können Sie
+            dies mithilfe des dritten Links <a
+                href="https://www.tutorialspoint.com/python/python_basic_operators.htm"
+                target="_blank"><span class="link_color">Python Operatoren 3</span></a>.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.hdm-stuttgart.de/~maucher/Python/html/Datentypen.html"
+                       target="_blank"><span
+                            class="link_color">Python Operatoren 1</span></a>
+                </li>
+                <li>
+                    <a href="https://www.python-kurs.eu/python3_operatoren.php" target="_blank"><span
+                            class="link_color">Python Operatoren 2</span></a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_basic_operators.htm" target="_blank"><span
+                            class="link_color">Python Operatoren 3</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

@@ -259,6 +259,10 @@ def lesson_2_heredity(request):
     return render(request, 'python_lesson/heredity.html')
 
 
+def python_lesson_wrap_up(request):
+    return render(request, 'python_lesson/wrap_up.html')
+
+
 # python_compendium
 def python_compendium(request):
     return render(request, 'python_compendium/compendium.html')

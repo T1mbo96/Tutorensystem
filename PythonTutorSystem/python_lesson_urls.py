@@ -31,4 +31,5 @@ urlpatterns = [
     path('OOP/', views.lesson_2_object_oriented_programming, name='lesson_2_object_oriented_programming'),
     path('Klassen/', views.lesson_2_classes, name='lesson_2_classes'),
     path('Vererbung/', views.lesson_2_heredity, name='lesson_2_heredity'),
+    path('Zusammenfassung/', views.python_lesson_wrap_up, name='python_lesson_wrap_up'),
 ]

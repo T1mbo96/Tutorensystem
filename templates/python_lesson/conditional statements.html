@@ -18,42 +18,40 @@
             <h1>Bedingte Anweisungen</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                Die bedingten Anweisungen haben Sie in <a href="{% url 'lesson_1_conditional_statements' %}"
-                                                          class="link_color" target="_blank"><span class="link_color">Lektion 1</span></a>
-                bereits
-                kennengelernt, weshalb die Funktionsweise keiner ausführlichen Erläuterung mehr bedarf.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
-                         class="rounded"
-                         alt="Example of conditional statements">
-                </div>
+    <div class="card">
+        <div class="card-body">
+            Die bedingten Anweisungen haben Sie in <a href="{% url 'lesson_1_conditional_statements' %}"
+                                                      class="link_color" target="_blank"><span class="link_color">Lektion 1</span></a>
+            bereits
+            kennengelernt, weshalb die Funktionsweise keiner ausführlichen Erläuterung mehr bedarf.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_2/python_conditional_statements_example.PNG' %}"
+                     class="rounded"
+                     alt="Example of conditional statements">
             </div>
         </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                <h3>Hilfreiche Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://www.python-kurs.eu/python3_bedingte_anweisungen.php" target="_blank"><span
-                                class="link_color">Python Bedingte Anweisungen 1</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.tutorialspoint.com/python/python_decision_making.htm" target="_blank"><span
-                                class="link_color">Python Bedingte Anweisungen 2</span></a>
-                    </li>
-                    <li>
-                        <a href="https://de.wikipedia.org/wiki/Bedingte_Anweisung_und_Verzweigung" target="_blank"><span
-                                class="link_color">Wikipedia Bedingte Anweisungen</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <p></p>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.python-kurs.eu/python3_bedingte_anweisungen.php" target="_blank"><span
+                            class="link_color">Python Bedingte Anweisungen 1</span></a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_decision_making.htm" target="_blank"><span
+                            class="link_color">Python Bedingte Anweisungen 2</span></a>
+                </li>
+                <li>
+                    <a href="https://de.wikipedia.org/wiki/Bedingte_Anweisung_und_Verzweigung" target="_blank"><span
+                            class="link_color">Wikipedia Bedingte Anweisungen</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

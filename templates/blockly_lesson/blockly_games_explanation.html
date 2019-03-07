@@ -11,50 +11,49 @@
             <h1>Blockly_Games Spiele</h1>
         </div>
     </div>
-    <div id="load_animation_div" style="visibility: hidden">
-        <div class="card aniview" data-av-animation="fadeInRightBig">
-            <div class="card-body">
-                Alle nachfolgenden Aufgaben, die Sie in dieser ersten Lektion bearbeiten dürfen, liegen in Form von
-                unterschiedlichen Spielen vor, die Sie lösen sollen. Alle diese Spiele sind von den Google Developern
-                entwickelt und unter dem Namen <a href="https://github.com/google/blockly-games/wiki"
-                                                  target="_blank"><span
-                    class="link_color">blockly-games</span></a> zusammengefasst. Die Spiele wurden allerdings für die
-                Zwecke
-                dieses Tutorensystems angepasst, sodass Sie mit dem Web-Framework <span
-                    class="text_highlighted">Django</span> nutzbar sind und Python Code generieren.
-            </div>
+    <div class="card">
+        <div class="card-body">
+            Alle nachfolgenden Aufgaben, die Sie in dieser ersten Lektion bearbeiten dürfen, liegen in Form von
+            unterschiedlichen Spielen vor, die Sie lösen sollen. Alle diese Spiele sind von den Google Developern
+            entwickelt und unter dem Namen <a href="https://github.com/google/blockly-games/wiki"
+                                              target="_blank"><span
+                class="link_color">blockly-games</span></a> zusammengefasst. Die Spiele wurden allerdings für die
+            Zwecke
+            dieses Tutorensystems angepasst, sodass Sie mit dem Web-Framework <span
+                class="text_highlighted">Django</span> nutzbar sind und Python Code generieren.
         </div>
-        <div class="card aniview" data-av-animation="fadeInLeftBig">
-            <div class="card-body">
-                Mithilfe des ersten Spiels sollen Sie mit der Funktionsweise des Code-Editors und Blockly
-                vertraut gemacht werden. Alle weiteren Spiele lösen Sie, um wichtige Konstrukte der Programmierung zu
-                erlernen.
-                <p></p>
-                Um Ihre Antworten zu prüfen, können Sie meist auf einen roten <span class="text-danger">Button</span>
-                innerhalb der Spielumgebung klicken. Wenn Sie ein Spiel komplett gelöst haben oder nicht mehr weiter
-                kommen und erst einmal die Lektion fortführen möchten, dann können Sie das ebenfalls mit einem Klick auf
-                den Button <span class="btn btn-dark">Next <i class="fas fa-arrow-right"></i></span> am unteren Ende der Seite.
-                <p></p>
-                Wenn Sie nach einer Unterbrechung zu einem Spiel zurückkehren möchten, dann können Sie in der oberen
-                Leiste
-                das jeweilige Level auswählen, in dem Sie zuvor aufgehört hatten.
-                <p></p>
-                <div class="text-center">
-                    <img src="{% static 'pictures/lesson_1/blockly_example_level.PNG' %}"
-                         class="rounded" alt="blockly games level">
-                </div>
-                <p></p>
-                <div class="alert alert-primary" role="alert">
-                    Wenn Sie Mozilla Firefox nutzen und die Beine der Tiere im ersten Spiel angeben wollen, dann müssen
-                    Sie,
-                    nach einem Klick auf das entsprechende Feld, einfach nach unten scrollen, um die Anzahl auszuwählen.
-                    Das
-                    Auswahlfeld stellt in diesem Browser leider nur eine Zeile dar.
-                </div>
-            </div>
-        </div>
-        <p></p>
     </div>
+    <div class="card">
+        <div class="card-body">
+            Mithilfe des ersten Spiels sollen Sie mit der Funktionsweise des Code-Editors und Blockly
+            vertraut gemacht werden. Alle weiteren Spiele lösen Sie, um wichtige Konstrukte der Programmierung zu
+            erlernen.
+            <p></p>
+            Um Ihre Antworten zu prüfen, können Sie meist auf einen roten <span class="text-danger">Button</span>
+            innerhalb der Spielumgebung klicken. Wenn Sie ein Spiel komplett gelöst haben oder nicht mehr weiter
+            kommen und erst einmal die Lektion fortführen möchten, dann können Sie das ebenfalls mit einem Klick auf
+            den Button <span class="btn btn-dark disabled">Next <i class="fas fa-arrow-right"></i></span> am unteren Ende der
+            Seite.
+            <p></p>
+            Wenn Sie nach einer Unterbrechung zu einem Spiel zurückkehren möchten, dann können Sie in der oberen
+            Leiste
+            das jeweilige Level auswählen, in dem Sie zuvor aufgehört hatten.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/lesson_1/blockly_example_level.PNG' %}"
+                     class="rounded" alt="blockly games level">
+            </div>
+            <p></p>
+            <div class="alert alert-primary" role="alert">
+                Wenn Sie Mozilla Firefox nutzen und die Beine der Tiere im ersten Spiel angeben wollen, dann müssen
+                Sie,
+                nach einem Klick auf das entsprechende Feld, einfach nach unten scrollen, um die Anzahl auszuwählen.
+                Das
+                Auswahlfeld stellt in diesem Browser leider nur eine Zeile dar.
+            </div>
+        </div>
+    </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

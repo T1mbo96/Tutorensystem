@@ -6,7 +6,32 @@
 {% endblock python_lesson_wrap_up %}
 
 {% block sidebar_page_content %}
-    <h1>Zusammenfassung</h1>
+    <div class="card">
+        <div class="card-body">
+            <h1>Zusammenfassung</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center">
+                <img src="{% static 'pictures/yeah!!!.jpg' %}" class="zoomer scaled_img" alt="congrats picture">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Herzlichen Glückwunsch!</h3>
+            Sie haben auch die zweite Lektion erfolgreich gemeistert. Nun steht Ihnen nichts mehr im Weg Ihre eigenen
+            Programme zu entwickeln. Sie dürfen in der folgenden Lektion ausgewählte Aufgaben aus der Sammlung des BWINF
+            (<a href="https://bwinf.de/" target="_blank"><span class="link_color"><u>B</u>undes<u>W</u>eit <u>I</u>nformatik <u>N</u>achwuchs <u>F</u>ördern</span></a>)
+            bearbeiten und lösen.
+            <p></p>
+            Sie können entweder unten auf den Button <span class="btn btn-dark disabled">Next <i
+                class="fas fa-arrow-right"></i></span> klicken oder oben im Menü
+            Python -> Lektion auswählen, um zur nächsten Lektion zu gelangen.
+        </div>
+    </div>
+    <p></p>
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}

@@ -289,6 +289,10 @@ def ide_lesson_ipython_installation(request):
     return render(request, 'ide_lesson/ipython_installation.html')
 
 
+def ide_lesson_exercises(request):
+    return render(request, 'ide_lesson/exercises.html')
+
+
 def ide_lesson_modules(request):
     return render(request, 'ide_lesson/modules.html')
 
@@ -297,8 +301,8 @@ def ide_lesson_namespace(request):
     return render(request, 'ide_lesson/namespace.html')
 
 
-def ide_lesson_exercises(request):
-    return render(request, 'ide_lesson/exercises.html')
+def ide_lesson_exceptions(request):
+    return render(request, 'ide_lesson/exceptions.html')
 
 
 def ide_lesson_simple_exercise(request):

@@ -7,8 +7,9 @@ urlpatterns = [
     path('Python/Installation/', views.ide_lesson_python_installation, name='ide_lesson_python_installation'),
     path('PyCharm/Installation/', views.ide_lesson_pycharm_installation, name='ide_lesson_pycharm_installation'),
     path('IPython/Installation/', views.ide_lesson_ipython_installation, name='ide_lesson_ipython_installation'),
+    path('Aufgaben/', views.ide_lesson_exercises, name='ide_lesson_exercises'),
     path('Module/', views.ide_lesson_modules, name='ide_lesson_modules'),
     path('Namensraum/', views.ide_lesson_namespace, name='ide_lesson_namespace'),
-    path('Aufgaben/', views.ide_lesson_exercises, name='ide_lesson_exercises'),
+    path('Ausnahmebehandlung/', views.ide_lesson_exceptions, name='ide_lesson_exceptions'),
     path('Aufgaben/Leicht/', views.ide_lesson_simple_exercise, name='ide_lesson_simple_exercise'),
 ]

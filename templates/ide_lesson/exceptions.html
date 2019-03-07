@@ -1,0 +1,123 @@
+{% extends 'template_pages/ide_lesson_base.html' %}
+{% load static %}
+
+{% block ide_lesson_exceptions_active %}
+    sidebar_active
+{% endblock ide_lesson_exceptions_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Ausnahmebehandlung</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Eine Ausnahme (engl. Exception) ist, wie der Name schon vermuten lässt, ein Ereignis, welches den normalen
+            Ablauf eines Programms während der Ausführung stört. Dies bedeutet, wenn ein Python-Programm auf eine
+            Situation stößt, mit der es nicht umgehen kann, dann wird eine Ausnahme ausgelöst (z.B. das Programm
+            versucht auf einen Index einer Liste zuzugreifen, welcher überhaupt nicht existiert). Eine Ausnahme ist ein
+            Python-Objekt, welches einen Fehler abbildet.
+            <p></p>
+            Falls eine Ausnahme in der Ausführung eines Programms nicht behandelt wird, wird das Programm beendet. Um
+            eine Ausnahme zu behandeln, wird der Code, welcher eine Ausnahme hervorrufen könnte, in einem sogenannten
+            <span class="text_highlighted">try-Block</span> platziert, gefolgt von einem <span class="text_highlighted">except-Statement</span>.
+            Das <span class="text_highlighted">except-Statement</span> soll hierbei den Fehler so spezifisch wie möglich
+            abfangen. Es wird generell als Bad Practice angesehen einfach <span class="text_highlighted">except Exception:</span>
+            oder nur <span class="text_highlighted">except:</span> zu verwenden.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/python_exceptions_index_error.PNG' %}" class="rounded"
+                     alt="Example of code raising index error">
+            </div>
+            <p></p>
+            Dieser Code versucht den 4. Index der Liste auszugeben, allerdings existieren innerhalb der Liste nur drei
+            Werte, weshalb ein IndexError geworfen wird, welcher folgenden Output in der Konsole produziert.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/python_exceptions_index_error_console_output.png' %}"
+                     class="rounded img-fluid"
+                     alt="Example of code raising index error console output">
+            </div>
+            <p></p>
+            Um diesen Fehler zu behandeln, sodass unser Programm nicht jedes Mal abbricht, wenn versucht wird auf einen
+            Index zuzugreifen, der nicht existiert, platzieren wir den Code in einem <span class="text_highlighted">try-Block</span>.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/python_exceptions_handling_index_error.PNG' %}"
+                     class="rounded img-fluid"
+                     alt="Example of code handling index error">
+            </div>
+            <p></p>
+            Diesmal wird die Ausnahme behandelt und <span class="text_highlighted">Code raised error!</span> in der
+            Konsole ausgegeben, ohne dass das Programm beendet wird.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Multiple except-Statements</h3>
+            Sie können auch mehrere Ausnahmen abfangen und diese unterschiedlich behandeln.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/python_exceptions_multiple_except_statements.PNG' %}"
+                     class="rounded img-fluid"
+                     alt="Example of multiple except statements">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>else-Block</h3>
+            Außerdem gibt es einen <span class="text_highlighted">else-Block</span> für den <span
+                class="text_highlighted">try-Block</span>. Dieser wird ausgeführt, falls keine Ausnahme aufgetreten ist.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/python_exceptions_else.PNG' %}"
+                     class="rounded img-fluid"
+                     alt="Example of else block">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Ausnahme werfen</h3>
+            Sie können auch selbst bestimmen, wann eine spezifische Exception in ihrem Code geworfen werden soll. Dafür
+            verwenden Sie an entsprechender Stelle das Schlüsselwort <span class="text_highlighted">raise</span>,
+            gefolgt von der Bezeichnung der Ausnahme, die geworfen werden soll.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/python_exceptions_raise_error.PNG' %}"
+                     class="rounded img-fluid"
+                     alt="Example of raise exception">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hilfreiche Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/python_exceptions.htm" target="_blank"><span
+                            class="link_color">Python Exceptions 1</span></a>
+                </li>
+                <li>
+                    <a href="https://www.python-kurs.eu/python3_ausnahmebehandlung.php" target="_blank"><span
+                            class="link_color">Python Exceptions 2</span></a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/python/standard_exceptions.htm" target="_blank"><span
+                            class="link_color">List of Standard Exceptions</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'ide_lesson_namespace' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'ide_lesson_simple_exercise' %}
+{% endblock lesson_nav_buttons_next_page %}

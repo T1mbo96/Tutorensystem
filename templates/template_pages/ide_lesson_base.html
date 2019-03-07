@@ -23,14 +23,17 @@
     <li class="{% block ide_lesson_pycharm_installation_active %}{% endblock ide_lesson_pycharm_installation_active %}">
         <a href="{% url 'ide_lesson_pycharm_installation' %}">PyCharm Installation</a>
     </li>
+    <li class="{% block ide_lesson_exercises_active %}{% endblock ide_lesson_exercises_active %}">
+        <a href="{% url 'ide_lesson_exercises' %}">Aufgaben</a>
+    </li>
     <li class="{% block ide_lesson_modules_active %}{% endblock ide_lesson_modules_active %}">
         <a href="{% url 'ide_lesson_modules' %}">Module</a>
     </li>
     <li class="{% block ide_lesson_namespace_active %}{% endblock ide_lesson_namespace_active %}">
         <a href="{% url 'ide_lesson_namespace' %}">Namensräume</a>
     </li>
-    <li class="{% block ide_lesson_exercises_active %}{% endblock ide_lesson_exercises_active %}">
-        <a href="{% url 'ide_lesson_exercises' %}">Aufgaben</a>
+    <li class="{% block ide_lesson_exceptions_active %}{% endblock ide_lesson_exceptions_active %}">
+        <a href="{% url 'ide_lesson_exceptions' %}">Ausnahmebehandlung</a>
     </li>
     <li class="{% block ide_lesson_simple_exercise_active %}{% endblock ide_lesson_simple_exercise_active %}">
         <a href="{% url 'ide_lesson_simple_exercise' %}">Aufgabe: Leicht</a>

@@ -24,8 +24,14 @@
     </div>
 
     <div id="mobile_blockly_games" style="display: none">
-        Mobile devices follow the provided link below to play the games:<br>
-        <a href="{% url 'bird' %}" target="_blank"><span class="link_color">Bird Link</span></a>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    Mobile devices follow the provided link below to play the games:<br>
+                    <a href="{% url 'bird' %}" target="_blank" class="btn btn-primary"><span class="link_color">Bird Link</span></a>
+                </div>
+            </div>
+        </div>
     </div>
     <p></p>
 {% endblock blockly_games_inject_frame %}

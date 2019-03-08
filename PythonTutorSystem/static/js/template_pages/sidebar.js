@@ -50,10 +50,3 @@ $(document).ready(function () {
     }
 });
 
-
-window.onload = function () {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Mobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.getElementById('mobile').style.marginLeft = '0';
-    }
-};
-

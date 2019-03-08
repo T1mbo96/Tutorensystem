@@ -305,8 +305,8 @@ def ide_lesson_exceptions(request):
     return render(request, 'ide_lesson/exceptions.html')
 
 
-def ide_lesson_simple_exercise(request):
-    return render(request, 'ide_lesson/simple_exercise.html')
+def ide_lesson_maumau(request):
+    return render(request, 'ide_lesson/exercises/maumau.html')
 
 
 # footer

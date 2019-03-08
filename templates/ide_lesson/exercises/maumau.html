@@ -1,0 +1,35 @@
+{% extends 'template_pages/ide_lesson_base.html' %}
+{% load static %}
+
+{% block ide_lesson_maumau_active %}
+    sidebar_active
+{% endblock ide_lesson_maumau_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>MauMau</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Download-Link</h3>
+            <span class="link_color">https://github.com/PythonTut/exercise_maumau.git</span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Die erste Aufgabe der dritten Lektion besteht darin, zwei Methoden in der vorgefertigten Klasse <span
+                class="text_highlighted">Card</span> für das Spiel MauMau zu implementieren.
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'ide_lesson_exceptions' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    #
+{% endblock lesson_nav_buttons_next_page %}

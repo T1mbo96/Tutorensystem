@@ -11,5 +11,5 @@ urlpatterns = [
     path('Module/', views.ide_lesson_modules, name='ide_lesson_modules'),
     path('Namensraum/', views.ide_lesson_namespace, name='ide_lesson_namespace'),
     path('Ausnahmebehandlung/', views.ide_lesson_exceptions, name='ide_lesson_exceptions'),
-    path('Aufgaben/Leicht/', views.ide_lesson_simple_exercise, name='ide_lesson_simple_exercise'),
+    path('Aufgaben/MauMau/', views.ide_lesson_maumau, name='ide_lesson_maumau'),
 ]

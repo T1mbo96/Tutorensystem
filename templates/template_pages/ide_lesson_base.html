@@ -9,6 +9,10 @@
     active
 {% endblock ide_lesson_active %}
 
+{% block head_css_section %}
+    <link rel="stylesheet" href="{% static 'css/template_pages/ide_lesson_base.css' %}">
+{% endblock head_css_section %}
+
 {% block sidebar_header %}
     <i class="fas fa-desktop"></i> Lektion
 {% endblock sidebar_header %}
@@ -45,3 +49,7 @@
         <a href="#">Aufgabe: Schwer</a>
     </li>
 {% endblock sidebar_items %}
+
+{% block footer_javascript_section %}
+    <script src="{% static 'js/ide_lesson/copy_links.js' %}"></script>
+{% endblock footer_javascript_section %}

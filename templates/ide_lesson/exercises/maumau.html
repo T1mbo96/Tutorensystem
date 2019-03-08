@@ -6,6 +6,8 @@
 {% endblock ide_lesson_maumau_active %}
 
 {% block sidebar_page_content %}
+    <link rel="stylesheet" href="{% static 'css/ide_lesson/maumau.css' %}">
+
     <div class="card">
         <div class="card-body">
             <h1>MauMau</h1>
@@ -14,13 +16,57 @@
     <div class="card">
         <div class="card-body">
             <h3>Download-Link</h3>
-            <span class="link_color">https://github.com/PythonTut/exercise_maumau.git</span>
+            <input type="text" class="form-control" value="https://github.com/PythonTut/exercise_maumau.git"
+                   id="repos_link" readonly>
+            <p></p>
+            <button class="btn btn-dark move_button_above_input" onclick="myFunction()">Copy Link</button>
         </div>
     </div>
     <div class="card">
         <div class="card-body">
-            Die erste Aufgabe der dritten Lektion besteht darin, zwei Methoden in der vorgefertigten Klasse <span
-                class="text_highlighted">Card</span> für das Spiel MauMau zu implementieren.
+            Die erste Aufgabe der dritten Lektion besteht darin, zwei Funktionen in der vorgefertigten Klasse <span
+                class="text_highlighted">Card</span> für das Spiel MauMau zu implementieren. Die erste Funktion
+            überprüft, ob eine Karte, auf Grundlage einer vorher gespielten Karte, gespielt werden darf. Die zweite
+            Funktion soll überprüfen, welche Karten von der Hand, auf Grundlage der vorher gespielten Karte, gespielt
+            werden dürfen.
+            <p></p>
+            Gespielt wird mit einem Kartensatz, in welchem eine Karte jeweils durch eine Farbe (<span
+                class="red">Hearts</span>, Spades, <span class="red">Diamonds</span>, Clubs) und einem Rang (<span
+                class="text_highlighted">7</span>, <span class="text_highlighted">8</span>, <span
+                class="text_highlighted">9</span>, <span class="text_highlighted">10</span>, <span
+                class="text_highlighted">Jack</span>, <span class="text_highlighted">Queen</span>, <span
+                class="text_highlighted">King</span>, <span class="text_highlighted">Ace</span>) definiert ist.
+            <p></p>
+            Sie müssen sich für diese Aufgabe nicht mit dem gesamten Regelwerk von MauMau auskennen. Es reicht, wenn Sie
+            wissen, dass eine Karte nur gespielt werden darf, falls Sie entweder dieselbe Farbe oder denselben Rang wie
+            die vorher gespielte Karte besitzt (oder beides).
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def can_be_played_on(self, other: 'Card') -> bool:</code></h5>
+            <p></p>
+            Diese Funktion soll überprüfen, ob die aktuelle Karte auf eine übergebene Karte <code>other</code> gespielt
+            werden darf.
+            <p></p>
+            Eine Karte darf genau dann gespielt werden, falls die Farbe, der Rang oder beides mit der anderen
+            Karte übereinstimmt.
+            <p></p>
+            Falls die Karte gespielt werden darf, soll <code>True</code> zurückgegeben werden. Falls die Karte nicht
+            gespielt werden darf, soll <code>False</code> zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def playable_cards(card: Card, hand: List[Card]) -> List[Card]:</code></h5>
+            <p></p>
+            Diese Funktion überprüft, welche Karten aus einer gegebenen Liste <code>hand</code> auf die übergebene Karte
+            <code>card</code> gespielt werden dürfen.
+            <p></p>
+            Gespielt werden dürfen Karten analog zur Logik der ersten Funktion.
+            <p></p>
+            Zurückgegeben werden soll eine Liste, welche alle Karten enthält, die gespielt werden dürfen. Falls keine
+            Karten gespielt werden dürfen, soll eine leere Liste zurückgegeben werden.
         </div>
     </div>
     <p></p>

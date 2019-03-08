@@ -131,3 +131,8 @@ ul ul a {
 video {
     width: 100%;
 }
+
+.container {
+    max-width: 50%;
+    margin-top: 0;
+}

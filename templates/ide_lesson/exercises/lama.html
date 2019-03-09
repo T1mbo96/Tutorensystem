@@ -24,15 +24,10 @@
         <div class="card-body">
             In dieser Aufgabe sollen Sie die Logik für das Spiel <span
                 class="text_highlighted">Lights Out</span> für das Gadget <span class="text_highlighted">LAMA (LED Advanced Matrix Arrangement)</span>
-            implementieren. Das LAMA ist ein 5x5 großes Schaltbrett, auf dem 25 mit je einer LED versehene Tasten in
-            einem Raster mit 5 Reihen und 5 Spalten angeordnet sind. Die LED einer Taste kann entweder an- (1) oder
-            ausgeschaltet (0) sein. Wenn eine Taste gedrückt wird, führt das LAMA eine mit der Taste verbundene
-            Aktion aus.
-            <p></p>
-            Bei diesem Spiel sind die LEDs einiger Tasten zu Beginn eingeschaltet, und es geht darum, alle LEDs
-            auszuschalten. Dazu darf man in jedem Spielzug eine Taste drücken. Solch ein Spielzug schaltet die LED
-            der gedrückten Taste und ihre (bis zu vier) Nachbar-LEDs um (keine Diagonalen). Sind alle LEDs
-            ausgeschaltet, ist das Spiel beendet.
+            implementieren. Das LAMA ist ein z.B. 6x6 großes Schaltbrett, auf dem 36 mit je einer LED versehene Tasten
+            in
+            einem Raster mit 6 Reihen und 6 Spalten angeordnet sind. Die LED einer Taste kann entweder an- (1) oder
+            ausgeschaltet (0) sein.
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/ide_lesson/lama_field.PNG' %}"
@@ -42,14 +37,54 @@
                     target="_blank"><span class="link_color">BWINF 35</span></a>
             </div>
             <p></p>
-            Zur Veranschaulichung ist hiere eine beispielhafte Darstellung eines (größeren 6x6) LAMA-Felds abgebildet.
+            Zur Veranschaulichung ist hiere eine beispielhafte Darstellung eines 6x6 LAMA-Felds abgebildet.
             Gelb bedeutet, dass die LED aktuell angeschalten ist und grau bedeutet, dass die LED aktuell ausgeschalten
             ist.
         </div>
     </div>
     <div class="card">
         <div class="card-body">
-            Das Feld soll durch eine Liste von Listen implementiert werden; somit werden die Reihen und Spalten des
+            <h3>Aufgabentext</h3>
+            Ein neues „Gadget“ ist auf dem Markt: das LAMA (LED Advanced Matrix Arrangement). Es handelt sich um ein
+            Schaltbrett, auf dem 25 mit je einer LED versehene Tasten in einem Raster mit 5 Reihen und 5 Spalten
+            angeordnet sind. Die LED einer Taste kann entweder an- oder ausgeschaltet sein. Wenn eine Taste gedrückt
+            wird, führt das LAMA eine mit der Taste verbundene Aktion aus. Die Aktionen sind programmierbar, so dass man
+            mit dem LAMA verschiedene Spiele umsetzen kann.
+            <p></p>
+            Xaver wünscht sich so ein LAMA, um „Lights Out“ darauf programmieren und spielen zu können. Bei diesem Spiel
+            sind die LEDs einiger Tasten zu Beginn eingeschaltet, und es geht darum, alle LEDs auszuschalten. Dazu darf
+            man in jedem Spielzug eine Taste drücken. Solch ein Spielzug schaltet die LED der gedrückten Taste und ihre
+            (bis zu vier) Nachbar-LEDs um. Sind alle LEDs ausgeschaltet, ist das Spiel beendet.
+            <p></p>
+            Leider ist es noch eine Weile bis Weihnachten. In der Zwischenzeit programmiert Xavers Schwester Yanelle mit
+            ihm Lights Out „ganz normal“ am Computer.
+            <p></p>
+            <ul>
+                <li>
+                    Schreibe ein Programm, mit dem man Lights Out wie auf dem LAMA spielen kann. Beim Start des Spiels
+                    muss zuerst festgelegt werden, welche LEDs zu Beginn eingeschaltet sind. Dann soll gespielt werden
+                    können; der Spieler soll also seine Züge eingeben können. Zu Beginn und nach jedem Spielzug soll der
+                    Zustand der LEDs angezeigt werden.
+                </li>
+                <br>
+                <li>
+                    Die Hersteller denken darüber nach, LAMAs auch in anderen Größen zu produzieren. Erweitere dein
+                    Programm so, dass man auch Tasten-Raster mit anderen Anzahlen von Reihen und Spalten (bis zu einer
+                    von dir bestimmten Maximalzahl) bespielen kann.
+                </li>
+                <br>
+                <li>
+                    Erweitere dein Programm so, dass auch die folgende Variante von Lights Out gespielt werden kann:
+                    Hier schaltet ein Spielzug die LED der gedrückten Taste und alle LEDs in dem links und oberhalb der
+                    Taste gelegenen Tasten-Rechteck um. Die Bilder zeigen ein Beispiel für ein LAMA mit 6 Reihen und 6
+                    Spalten. Auch bei dieser Variante ist das Spiel beendet, wenn alle LEDs ausgeschaltet sind.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Das Spielfeld soll durch eine Liste von Listen implementiert werden; somit werden die Reihen und Spalten des
             Spielfelds dargestellt. Jede der Listen innerhalb der Liste enthält wiederum mehrere Werte <span
                 class="text_highlighted">0</span> oder <span class="text_highlighted">1</span>, welche eine
             ausgeschaltene bzw. angeschaltene Taste simulieren.
@@ -146,7 +181,7 @@
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}
-    {% url 'ide_lesson_maumau' %}
+    {% url 'ide_lesson_up_and_down' %}
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}

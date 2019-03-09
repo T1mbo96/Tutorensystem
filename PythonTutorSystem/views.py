@@ -309,6 +309,10 @@ def ide_lesson_maumau(request):
     return render(request, 'ide_lesson/exercises/maumau.html')
 
 
+def ide_lesson_up_and_down(request):
+    return render(request, 'ide_lesson/exercises/up_and_down.html')
+
+
 def ide_lesson_lama(request):
     return render(request, 'ide_lesson/exercises/lama.html')
 

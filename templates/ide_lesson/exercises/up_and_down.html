@@ -1,0 +1,144 @@
+{% extends 'template_pages/ide_lesson_base.html' %}
+{% load static %}
+
+{% block ide_lesson_up_and_down_active %}
+    sidebar_active
+{% endblock ide_lesson_up_and_down_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Stein Papier Schere</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Download-Link</h3>
+            <input type="text" class="form-control"
+                   value="https://github.com/PythonTut/exercise_up_and_down.git"
+                   id="repos_link" readonly>
+            <p></p>
+            <button class="btn btn-dark move_button_above_input" onclick="myFunction()">Copy Link</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            In dieser Aufgabe sollen Sie einige Funktionen für das <span class="text_highlighted">Leiterspiel</span>
+            programmieren. Als Vorlage, für welche Sie das Programm implementieren sollen, dient folgendes Feld.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/up_and_down_field.png' %}" class="img-fluid"
+                     alt="laddergame field"><br>Quelle: <a href="https://bwinf.de/jugendwettbewerb/"
+                                                           target="_blank"><span class="link_color">BWINF</span></a>
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Aufgabentext</h3>
+            Frederick hat auf dem Speicher das Leiterspiel und einige alte Würfel gefunden. Die Spielregeln sind
+            einfach. Wer an der Reihe ist, würfelt einmal und bewegt dann seine Spielfigur entsprechend der gewürfelten
+            Augenzahl weiter. Kommt die Figur dabei an einem Leiterende zu stehen, wird sie direkt zum anderen Ende der
+            Leiter bewegt. Das gilt sowohl aufwärts als auch abwärts: Endet der Zug z. B. auf Feld 6, geht es direkt zu
+            Feld 27. Endet der Zug hingegen auf der 27, geht es leider zurück zur 6.
+            <p></p>
+            Gewonnen hat, wer mit seiner Figur zuerst das Zielfeld 100 exakt erreicht. Das bedeutet: Wird kurz vor dem
+            Zielfeld eine zu große Zahl gewürfelt, muss die Spielfigur den überschüssigen Rest zurücklaufen. Steht die
+            Figur zum Beispiel auf der 99 und ihr Spieler würfelt eine Vier, muss die Figur zur 97 bewegt werden.
+            <p></p>
+            Frederick überlegt sich: Wenn man nur Einsen würfelt, erreicht man auf jeden Fall das Ziel - aber bei
+            mehreren Mitspielern wohl nicht als Erster. Daher möchte er wissen, welche "Strategie" (an Hand der
+            gewürfelten Augenzahlen) von einem beliebigen Startfeld jeweils die beste ist. Für das Startfeld wäre dies
+            6, 4, 4, 3, 6, 1, 2.
+            <p></p>
+            Nach einigen Spielen merkt Frederick, dass einige der gefundenen Würfel anscheinend gezinkt sind. Mit einem
+            der Würfel würfelt er sehr häufig eine sechs, mit einem anderen würfelt er nur Zahlen zwischen 1 und 3. Er
+            beschließt also, seine Hypothese auszutesten und würfelt mit jedem der Würfel insgesamt 36 mal und notiert
+            sich jeweils die Augen. Und er hatte anscheinend Recht: Der erste der scheinbar gezinkten Würfel hat in 26
+            der 36 Würfel sechs Augen gezeigt und alle anderen Augenzahl nur zwei mal, der andere jeweils in zwölf der
+            Fälle eine 1, 2 oder 3 und keine 4, 5, oder 6. Er geht davon aus, dass bei einem solchen Würfel die
+            Wahrscheinlichkeiten der einzelnen Zahlen den relativen Häufigkeiten im Test entsprechen.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Hinweise</h3>
+            <ul>
+                <li>
+                    Die Teilaufgaben bauen (teilweise) aufeinander auf. Daher sollten die Funktionen nach der hier
+                    gegebenen Reihenfolge implementiert werden.
+                </li>
+                <br>
+                <li>
+                    Die einzelnen Leitern sind jeweils als Tuple von zwei Ganzzahlen gegeben, die jeweils das Start- und
+                    Zielfeld der Leiter darstellen.
+                </li>
+                <br>
+                <li>
+                    Die Testergebnisse der einzelnen Würfel werden als Liste von Ganzzahlen angegeben. Im
+                    <code>i.</code> Eintrag der Liste steht dabei die Häufigkeit der Augenzahl <code>i + 1</code>.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def landing_spot(start: int, eyes: int) -> int:</code></h5>
+            Diese Funktion bildet einen einzelnen Spielzug ab. Sie berechnet das Feld, auf welchem eine Spielfigur
+            landet, wenn sie auf dem Feld <code>start</code> beginnt und die Augenzahl <code>eyes</code> gewürfelt hat.
+            <p></p>
+            Beachten Sie ebenfalls das Zurückbewegen, falls die Spielfigur das Feld <span
+                class="text_highlighted">100</span> überschreitet und die Funktionsweise der Leitern.
+            <p></p>
+            Abschließend wird die Nummer des Felds zurückgegeben, auf welchem die Spielfigur gelandet ist.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def best_dice_roll(start: int) -> Tuple[int, int]:</code></h5>
+            Diese Funktion berechnet den bestmöglichen Wurf für den aktuellen Zug, ausgehend vom Feld <code>start</code>.
+            <p></p>
+            Berechnet wird der bestmögliche Zug, indem derjenige Wurf gewählt wird, der die Spielfigur am weitesten nach
+            vorne ziehen lässt.
+            <p></p>
+            Zurückgegeben wird ein Tupel, welches aus den Augen des bestmöglichen Wurfes und des Felds, auf welchem die
+            Spielfigur landet, besteht.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def best_strategy(start: int) -> List[int]:</code></h5>
+            Diese Funktion berechnet die schnellstmögliche Route vom Ausgansgpunkt <code>start</code> bis zum Ziel.
+            <p></p>
+            Bei mehreren äquivalenten Möglichkeiten (z.B. [6, 1], [5, 2], [4, 3], etc.) ist diejenige Route zu
+            bevorzugen, bei welcher der erste Schritt am größten ist.
+            <p></p>
+            Zurückgegeben werden soll eine Liste, welche die Reihenfolge aller Augenzahlen enthält, die für die
+            schnellstmögliche Route geworfen werden müssen.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def probability_landing_spot(start: int, dice_probabilities: List[int]) -> Dict[int,
+                float]:</code></h5>
+            Diese Funktion berechnet die Wahrscheinlichkeit für jedes mögliche erreichbare Feld, um auf diesem zu
+            landen. <code>start</code> stellt wieder die Ausgangsposition dar und <code>dice_probabilities</code> ist
+            die Liste mit den Wahrscheinlichkeiten für die Augenzahl des Würfels.
+            <p></p>
+            Die Wahrscheinlichkeiten für die jeweiligen Würfel sind in der Datei der Aufgabe gegeben.
+            <p></p>
+            Abschließend soll ein Dictionary zurückgegeben werden, welches für jedes mögliche erreichbare Feld die
+            entsprechende Wahrscheinlichkeit enthält.
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'ide_lesson_maumau' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'ide_lesson_lama' %}
+{% endblock lesson_nav_buttons_next_page %}

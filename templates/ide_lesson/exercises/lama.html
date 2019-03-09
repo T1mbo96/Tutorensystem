@@ -1,0 +1,154 @@
+{% extends 'template_pages/ide_lesson_base.html' %}
+{% load static %}
+
+{% block ide_lesson_lama_active %}
+    sidebar_active
+{% endblock ide_lesson_lama_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Lama</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Download-Link</h3>
+            <input type="text" class="form-control" value="https://github.com/PythonTut/exercise_lama.git"
+                   id="repos_link" readonly>
+            <p></p>
+            <button class="btn btn-dark move_button_above_input" onclick="myFunction()">Copy Link</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            In dieser Aufgabe sollen Sie die Logik für das Spiel <span
+                class="text_highlighted">Lights Out</span> für das Gadget <span class="text_highlighted">LAMA (LED Advanced Matrix Arrangement)</span>
+            implementieren. Das LAMA ist ein 5x5 großes Schaltbrett, auf dem 25 mit je einer LED versehene Tasten in
+            einem Raster mit 5 Reihen und 5 Spalten angeordnet sind. Die LED einer Taste kann entweder an- (1) oder
+            ausgeschaltet (0) sein. Wenn eine Taste gedrückt wird, führt das LAMA eine mit der Taste verbundene
+            Aktion aus.
+            <p></p>
+            Bei diesem Spiel sind die LEDs einiger Tasten zu Beginn eingeschaltet, und es geht darum, alle LEDs
+            auszuschalten. Dazu darf man in jedem Spielzug eine Taste drücken. Solch ein Spielzug schaltet die LED
+            der gedrückten Taste und ihre (bis zu vier) Nachbar-LEDs um (keine Diagonalen). Sind alle LEDs
+            ausgeschaltet, ist das Spiel beendet.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/lama_field.PNG' %}"
+                     class="img-fluid"
+                     alt="lama example"><br>Quelle: <a
+                    href="https://bwinf.de/fileadmin/user_upload/BwInf/0_2016/35/1._Runde/Aufgaben/aufgabenblatt351_simple.pdf"
+                    target="_blank"><span class="link_color">BWINF 35</span></a>
+            </div>
+            <p></p>
+            Zur Veranschaulichung ist hiere eine beispielhafte Darstellung eines (größeren 6x6) LAMA-Felds abgebildet.
+            Gelb bedeutet, dass die LED aktuell angeschalten ist und grau bedeutet, dass die LED aktuell ausgeschalten
+            ist.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Das Feld soll durch eine Liste von Listen implementiert werden; somit werden die Reihen und Spalten des
+            Spielfelds dargestellt. Jede der Listen innerhalb der Liste enthält wiederum mehrere Werte <span
+                class="text_highlighted">0</span> oder <span class="text_highlighted">1</span>, welche eine
+            ausgeschaltene bzw. angeschaltene Taste simulieren.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def change(field: List[List[int]], tile: Tuple[int, int]) -> List[List[int]]:</code></h5>
+            <p></p>
+            Diese Funktion ändert den Wert der übergebenen Position <code>tile</code> im Spielfeld
+            <code>field</code>.
+            <p></p>
+            Falls an der übergebenen Position der Wert <span class="text_highlighted">1</span> gespeichert war, soll
+            dieser durch den Wert <span class="text_highlighted">0</span> ersetzt werden, und umgekehrt.
+            <p></p>
+            Abschließend soll das aktualisierte Feld zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def change_tiles_normal(field: List[List[int]], tile: Tuple[int, int]) ->
+                List[List[int]]:</code>
+            </h5>
+            <p></p>
+            Diese Funktion ändert die Werte aller möglichen Positionen, ausgehend von der übergebenen Position <code>tile</code>,
+            gemäß der Logik des Spiels.
+            <p></p>
+            Somit werden die Werte an den Nachbarpositionen sowie an der Postionen selbst aktualisiert.
+            <p></p>
+            Abschließend soll das aktualisierte Feld zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def change_tiles_special(field: List[List[int]], tile: Tuple[int, int]) ->
+                List[List[int]]:</code></h5>
+            <p></p>
+            Diese Funktion ändert die Werte aller möglichen Positionen, ausgehend von der übergebenen Position <code>tile</code>,
+            gemäß einer speziellen, geänderten Logik.
+            <p></p>
+            Nun sollen nicht mehr alle benachbarten Positionen umgeschaltet werden, sondern alle Positionen in dem links
+            und oberhalb der übergebenen Position gelegenen Rechteck (einschließlich der übergebenen Position). Zur
+            Veranschaulichung wird hier noch einmal das Beispielfeld von oben herangezogen.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/lama_field_special_rules.png' %}"
+                     class="img-fluid"
+                     alt="lama example special rule"><br>Quelle: <a
+                    href="https://bwinf.de/fileadmin/user_upload/BwInf/0_2016/35/1._Runde/Aufgaben/aufgabenblatt351_simple.pdf"
+                    target="_blank"><span class="link_color">BWINF 35 (abgeändert)</span></a>
+            </div>
+            <p></p>
+            Abschließend soll das aktualisierte Feld zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def construct_str(field: List[List[int]]) -> str:</code></h5>
+            <p></p>
+            Diese Funktioniert erstellt eine String-Representation eines übergeben Felds <code>field</code>.
+            <p></p>
+            Die Werte des Felds sollen in Reihen und Spalte und durch Leerzeichen getrennt dargestellt werden. Folgendes
+            Feld soll die Ausgabe beispielhaft veranschaulichen.<br><br>
+            &emsp;&emsp;0 0 0 0 0<br>
+            &emsp;&emsp;0 0 0 0 0<br>
+            &emsp;&emsp;0 0 0 0 0<br>
+            &emsp;&emsp;0 0 0 0 0<br>
+            &emsp;&emsp;0 0 0 0 0<br><br>
+            Der konstruierte String soll abschließend zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5><code>def check_solved(field: List[List[int]]) -> bool:</code></h5>
+            <p></p>
+            Diese Funktion überprüft, ob das übergeben Feld <code>field</code> gelöst wurde.
+            <p></p>
+            Ein Feld wird dann als gelöst angesehen, wenn die Werte aller Positionen des Felds <span
+                class="text_highlighted">0</span> sind.
+            <p></p>
+            Falls das Feld gelöst ist, soll <code>True</code> zurückgegeben werden, andernfalls soll <code>False</code>
+            zurückgegeben werden.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Zum Schluss können Sie in den drei Funktionen <code>lights_out</code>, <code>custom_lights_out</code> und
+            <code>lights_out_variant</code> jeweils die Logik implementieren, um die unterschiedlichen Varianten des
+            Spiels innerhalb der Konsole zu spielen. Diese Methoden werden nicht getestet, allerdings wird Ihnen in der
+            Lösung ein Vorschlag zur Implementierung zur Verfügung gestellt.
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'ide_lesson_maumau' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    #
+{% endblock lesson_nav_buttons_next_page %}

@@ -309,6 +309,10 @@ def ide_lesson_maumau(request):
     return render(request, 'ide_lesson/exercises/maumau.html')
 
 
+def ide_lesson_lama(request):
+    return render(request, 'ide_lesson/exercises/lama.html')
+
+
 # footer
 def about(request):
     return render(request, 'footer/about.html')

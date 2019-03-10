@@ -37,12 +37,14 @@
                 class="text_highlighted">0</span>), jeweils in einer eigenen Zeile, aus.
             <p></p>
             Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
-                class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
+                class="text_highlighted">Run</span> ausführen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
             ist,
             benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
             beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach
             mit
-            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
+            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen (Löscht auch Ihren
+            Code!). Außerdem wird eine Musterlösung für die Aufgabe durch einen Klick auf den Button <span
+                class="text_highlighted">Solution</span> bereitgestellt.
         </div>
     </div>
     <div class="card">
@@ -67,44 +69,59 @@
                         <button type="button" onclick="reset_skulpt()"
                                 class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
                         </button>
+                        <div class="btn-group dropdown float-right">
+                            <button type="button"
+                                    class="form-btn btn btn-info my-2 my-sm-0 solution_button_spacing"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solution
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right solution_dropdown">
+                                <span class="comments_color"># In den folgenden Zeilen bitte ihren Code eintragen</span><br><br>
+                                <span class="code_color">x =</span> <span class="number_color">10</span><br>
+                                <span class="code_color">y =</span> <span class="number_color">2</span><br><br>
+                                <span class="method_color">print</span><span class="code_color">(x)</span><br><br>
+                                <span class="code_color"><span class="keyword_color">while</span> x > <span class="number_color">0</span></span><br>
+                                &emsp;<span class="code_color">x -= y</span><br>
+                                &emsp;<span class="method_color">print</span><span class="code_color">(x)</span>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
             <p></p>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_1" style="display: none">
                 Klasse! Der erste Wert ist korrekt!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_1" style="display: none">
                 Schade, der erste Wert ist leider nicht korrekt!
             </div>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_2" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_2" style="display: none">
                 Klasse! Der zweite Wert ist korrekt!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_2" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_2" style="display: none">
                 Schade, der zweite Wert ist leider nicht korrekt!
             </div>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_3" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_3" style="display: none">
                 Klasse! Der dritte Wert ist korrekt!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_3" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_3" style="display: none">
                 Schade, der dritte Wert ist leider nicht korrekt!
             </div>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_4" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_4" style="display: none">
                 Klasse! Der vierte Wert ist korrekt!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_4" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_4" style="display: none">
                 Schade, der vierte Wert ist leider nicht korrekt!
             </div>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_5" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_5" style="display: none">
                 Klasse! Der fünfte Wert ist korrekt!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_5" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_5" style="display: none">
                 Schade, der fünfte Wert ist leider nicht korrekt!
             </div>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_6" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_6" style="display: none">
                 Klasse! Der sechste Wert ist korrekt!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_6" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_6" style="display: none">
                 Schade, der sechste Wert ist leider nicht korrekt!
             </div>
             <p></p>

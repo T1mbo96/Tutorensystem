@@ -1,0 +1,35 @@
+.solution_button_spacing {
+    margin-right: 4px;
+    border-radius: 4px !important;
+}
+
+.solution_dropdown {
+    width: 550px !important;
+    padding-left: 10px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.comments_color {
+    color: #aa5500;
+}
+
+.method_color {
+    color: #3300aa;
+}
+
+.keyword_color {
+    color: #770088;
+}
+
+.code_color {
+    color: black;
+}
+
+.number_color {
+    color: #116644;
+}
+
+.string_color {
+    color: #b81111;
+}

@@ -76,12 +76,14 @@
             stehen.
             <p></p>
             Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
-                class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
+                class="text_highlighted">Run</span> ausführen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
             ist,
             benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
             beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach
             mit
-            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
+            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen (Löscht auch Ihren
+            Code!). Außerdem wird eine Musterlösung für die Aufgabe durch einen Klick auf den Button <span
+                class="text_highlighted">Solution</span> bereitgestellt.
             <p></p>
             <div class="alert alert-primary" role="alert">
                 Sie dürfen ihren eigenen Code gerne mit anderen Eingaben testen. Um den Test bestehen zu können,
@@ -120,14 +122,45 @@ print(result)</textarea>
                         <button type="button" onclick="reset_skulpt()"
                                 class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
                         </button>
+                        <div class="btn-group dropdown float-right">
+                            <button type="button"
+                                    class="form-btn btn btn-info my-2 my-sm-0 solution_button_spacing"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solution
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right solution_dropdown">
+                                <span class="code_color">points = <span class="number_color">174</span></span> <span
+                                    class="comments_color"># Variable, in der die erreichte Punktzahl gespeichert wird</span><br>
+                                <span class="code_color">result = <span class="string_color">""</span></span> <span
+                                    class="comments_color"># Variable, der Sie die jeweilige Ausgabe zuweisen</span><br>
+                                <span class="comments_color"># Schreiben Sie Ihre bedingte Anweisung bitte hier</span><br><br>
+                                <span class="code_color"><span class="keyword_color">if</span> points > <span
+                                        class="number_color">0</span> <span
+                                        class="keyword_color">and</span> points < <span class="number_color">81</span>:</span><br>
+                                &emsp;<span class="code_color">result += <span class="string_color">"Sehr gut! Sie haben ein Kuscheltier gewonnen!"</span></span><br>
+                                <span class="code_color"><span class="keyword_color">elif</span> points > <span
+                                        class="number_color">80</span> <span
+                                        class="keyword_color">and</span> points < <span class="number_color">131</span>:</span><br>
+                                &emsp;<span class="code_color">result += <span class="string_color">"Sehr gut! Sie haben ein Ferngesteuertes Auto gewonnen!"</span></span><br>
+                                <span class="code_color"><span class="keyword_color">elif</span> points > <span
+                                        class="number_color">130</span> <span
+                                        class="keyword_color">and</span> points < <span class="number_color">171</span>:</span><br>
+                                &emsp;<span class="code_color">result += <span class="string_color">"Oh schade, diesmal gibt es keinen Preis."</span></span><br>
+                                <span class="code_color"><span class="keyword_color">elif</span> points > <span
+                                        class="number_color">170</span> <span
+                                        class="keyword_color">and</span> points < <span class="number_color">201</span>:</span><br>
+                                &emsp;<span class="code_color">result += <span class="string_color">"Sehr gut! Sie haben ein Puzzle gewonnen!"</span></span><br><br>
+                                <span class="comments_color"># Hiermit wird der Wert der Variable 'result' ausgegeben</span><br><br>
+                                <span class="method_color">print</span><span class="code_color">(result)</span>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
             <p></p>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_1" style="display: none">
                 Klasse! Sie haben den richtigen Preis korrekt ausgegeben!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_1" style="display: none">
                 Schade, der Preis oder die Nachricht ist leider nicht korrekt!
             </div>
             <p></p>

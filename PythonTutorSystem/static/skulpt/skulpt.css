@@ -1,5 +1,5 @@
 #output {
-    min-width: 448px;
+    min-width: 400px;
     width: 100%;
     height: 391px;
     background-color: white;
@@ -12,7 +12,7 @@
 }
 
 .skulpt_code_container {
-    min-width: 448px;
+    min-width: 400px;
     width: 100%;
 }
 

@@ -34,12 +34,14 @@
             auch andere Werte ausprobieren.
             <p></p>
             Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
-                class="text_highlighted">Run</span> testen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
+                class="text_highlighted">Run</span> ausführen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
             ist,
             benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
             beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach
             mit
-            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen.
+            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen (Löscht auch Ihren
+            Code!). Außerdem wird eine Musterlösung für die Aufgabe durch einen Klick auf den Button <span
+                class="text_highlighted">Solution</span> bereitgestellt.
         </div>
     </div>
     <div class="card">
@@ -65,14 +67,26 @@ print(x)
                         <button type="button" onclick="reset_skulpt()"
                                 class="form-btn btn btn-info my-2 my-sm-0 float-right">Reset
                         </button>
+                        <div class="btn-group dropdown float-right">
+                            <button type="button"
+                                    class="form-btn btn btn-info my-2 my-sm-0 solution_button_spacing"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solution
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right solution_dropdown">
+                                <span class="comments_color"># In folgender Zeile bitte ihren Code eintragen</span><br><br>
+                                <span class="code_color">x = <span class="method_color">input</span>()</span><br><br>
+                                <span class="comments_color"># Hiermit wird der Wert der Variable 'x', also Ihrem Input, ausgegeben</span><br><br>
+                                <span class="method_color">print</span><span class="code_color">(x)</span>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
             <p></p>
-            <div class="alert alert-success _alert shake" role="alert" id="correct_1" style="display: none">
+            <div class="alert alert-success _alert " role="alert" id="correct_1" style="display: none">
                 Klasse! Sie haben der Variable 'x' den richtigen Wert zugewiesen!
             </div>
-            <div class="alert alert-danger _alert shake" role="alert" id="wrong_1" style="display: none">
+            <div class="alert alert-danger _alert " role="alert" id="wrong_1" style="display: none">
                 Schade, die Variable 'x' ist leider nicht korrekt!
             </div>
             <p></p>

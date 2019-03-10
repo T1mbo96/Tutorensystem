@@ -9,6 +9,16 @@
     active
 {% endblock lesson_2_active %}
 
+{% block head_css_section %}
+    <!-- Skulpt -->
+    <link rel="stylesheet" href="{% static 'skulpt/skulpt.css' %}">
+
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="{% static 'code_mirror/lib/codemirror.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/template_pages/python_lesson_base.css' %}">
+{% endblock head_css_section %}
+
 {% block sidebar_header %}
     <i class="fab fa-python"></i>  Lektion
 {% endblock sidebar_header %}
@@ -30,7 +40,8 @@
                         class="fas fa-angle-right"></i> Variablen</a>
             </li>
             <li>
-                <a href="{% url 'lesson_2_exercises_variables' %}" class="{% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"><i
+                <a href="{% url 'lesson_2_exercises_variables' %}" class="
+                        {% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
         </ul>
@@ -48,7 +59,8 @@
                         class="fas fa-angle-right"></i> Strings</a>
             </li>
             <li>
-                <a href="{% url 'lesson_2_exercises_strings' %}" class="{% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"><i
+                <a href="{% url 'lesson_2_exercises_strings' %}" class="
+                        {% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
         </ul>
@@ -63,7 +75,8 @@
                         class="fas fa-angle-right"></i> Operatoren</a>
             </li>
             <li>
-                <a href="{% url 'lesson_2_operators_precedence' %}" class="{% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"><i
+                <a href="{% url 'lesson_2_operators_precedence' %}" class="
+                        {% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"><i
                         class="fas fa-angle-right"></i> Priorität</a>
             </li>
         </ul>
@@ -100,7 +113,8 @@
             </li>
         </ul>
     </li>
-    <li class="{% block lesson_2_conditional_statements_submenu_active %}{% endblock lesson_2_conditional_statements_submenu_active %}">
+    <li class="
+            {% block lesson_2_conditional_statements_submenu_active %}{% endblock lesson_2_conditional_statements_submenu_active %}">
         <a href="#conditional_statements_submenu" data-toggle="collapse" aria-expanded="false"
            id="conditional_statements_submenu_link">Bedingte Anweisungen <i
                 class="fas fa-angle-down float-right"></i></a>
@@ -108,11 +122,13 @@
             <li>
                 <a href="{% url 'lesson_2_conditional_statements' %}" class="
 
+
                         {% block lesson_2_conditional_statements_active %}{% endblock lesson_2_conditional_statements_active %}"><i
                         class="fas fa-angle-right"></i> Bedingte Anweisungen</a>
             </li>
             <li>
                 <a href="{% url 'lesson_2_exercises_conditional_statements' %}" class="
+
 
                         {% block lesson_2_exercises_conditional_statements_active %}{% endblock lesson_2_exercises_conditional_statements_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
@@ -130,6 +146,7 @@
             </li>
             <li>
                 <a href="{% url 'lesson_2_exercises_while_loop' %}" class="
+
                         {% block lesson_2_exercises_while_loop_active %}{% endblock lesson_2_exercises_while_loop_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
@@ -143,10 +160,14 @@
            id="list_submenu_link">Listen <i class="fas fa-angle-down float-right"></i></a>
         <ul class="collapse list-unstyled" id="list_submenu">
             <li>
-                <a href="{% url 'lesson_2_list' %}" class="{% block lesson_2_list_active %}{% endblock lesson_2_list_active %}"><i class="fas fa-angle-right"></i> Listen</a>
+                <a href="{% url 'lesson_2_list' %}"
+                   class="{% block lesson_2_list_active %}{% endblock lesson_2_list_active %}"><i
+                        class="fas fa-angle-right"></i> Listen</a>
             </li>
             <li>
-                <a href="{% url 'lesson_2_exercises_list' %}" class="{% block lesson_2_exercises_list_active %}{% endblock lesson_2_exercises_list_active %}"><i class="fas fa-angle-right"></i> Aufgabe</a>
+                <a href="{% url 'lesson_2_exercises_list' %}"
+                   class="{% block lesson_2_exercises_list_active %}{% endblock lesson_2_exercises_list_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
         </ul>
     </li>
@@ -166,15 +187,13 @@
     <li class="{% block lesson_2_recursion_active %}{% endblock lesson_2_recursion_active %}" id="lesson_2_recursion">
         <a href="{% url 'lesson_2_recursion' %}">Rekursion</a>
     </li>
-    <li class="{% block lesson_2_object_oriented_programming_active %}{% endblock lesson_2_object_oriented_programming_active %}"
+    <li class="
+            {% block lesson_2_object_oriented_programming_active %}{% endblock lesson_2_object_oriented_programming_active %}"
         id="lesson_2_oop">
         <a href="{% url 'lesson_2_object_oriented_programming' %}">Objektorientierte Programmierung (OOP)</a>
     </li>
     <li class="{% block lesson_2_classes_active %}{% endblock lesson_2_classes_active %}" id="lesson_2_classes">
         <a href="{% url 'lesson_2_classes' %}">Klassen</a>
-    </li>
-    <li class="{% block lesson_2_heredity_active %}{% endblock lesson_2_heredity_active %}" id="lesson_2_heredity">
-        <a href="{% url 'lesson_2_heredity' %}">Vererbung</a>
     </li>
     <li class="{% block python_lesson_wrap_up %}{% endblock python_lesson_wrap_up %}">
         <a href="{% url 'python_lesson_wrap_up' %}">Zusammenfassung</a>
@@ -193,6 +212,7 @@
     <script src="{% static 'code_mirror/mode/python/python.js' %}"></script>
 
     <!-- Exercise Tests -->
+    <script src="{% static 'js/lesson_2/exercise_solutions.js' %}"></script>
     <script src="{% static 'js/lesson_2/exercise_tests.js' %}"></script>
     <script src="{% static 'js/lesson_2/exercises_local_storage.js' %}"></script>
 {% endblock scripts_for_python_browser_exercises %}

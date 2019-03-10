@@ -180,10 +180,10 @@
     <p></p>
 {% endblock sidebar_page_content %}
 
-{% block lesson_nav_buttons_prev_page %}
-    {% url 'ide_lesson_up_and_down' %}
-{% endblock lesson_nav_buttons_prev_page %}
-
-{% block lesson_nav_buttons_next_page %}
-    #
-{% endblock lesson_nav_buttons_next_page %}
+{% block lesson_nav_buttons %}
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="{% url 'ide_lesson_up_and_down' %}" class="form-btn btn btn-dark my-2 my-sm-0">
+            <i class="fas fa-arrow-left"></i> Prev
+        </a>
+    </div>
+{% endblock lesson_nav_buttons %}

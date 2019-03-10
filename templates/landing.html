@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>
+        LearnPython
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" lang="de"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <style>
+        header {
+            background-image: url({% static 'pictures/landing_background.jpg' %});
+            background-size: cover; /* or contain depending on what you want */
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270">
+        <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="#1e2933" stroke-width="120"
+              stroke-linecap="round"/>
+    </svg>
+</header>
+
+<section>
+    <h1>LearnPython</h1>
+    <p></p>
+    <div class="section_div">
+        Diese Webseite wurde zum Erlernen der Programmiersprache Python entwickelt. In insgesamt drei Lektionen werden
+        Ihnen alle Kenntnisse von den absoluten Grundlagen bis hin zur Entwicklung eigener Programme beigebracht. Sie
+        können dabei frei wählen, mit welcher Lektion Sie beginnen wollen. Die erste Lektion wendet sich an absolute
+        Programmier-Neulinge und stellt Informationen und Aufgaben in Form von Spielen (Blockly) über die wichtigsten
+        Konstrukte der Programmierung bereit. In der zweiten Lektion können Sie die wichtigsten Konstrukte und die
+        Syntax der Programmiersprache Python erlenen und anwenden. Zum abschließenden Testen und Festigen Ihres
+        erlernten Wissens, werden in der dritten Lektion verschiedene Aufgaben zum Lösen in einer eigenen IDE zur
+        Verfügung gestellt.
+        <p></p>
+        <a class="button" href="{% url 'index' %}">Los Geht's!</a>
+    </div>
+</section>
+</body>
+</html>

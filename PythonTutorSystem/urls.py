@@ -4,8 +4,11 @@ from PythonTutorSystem import views
 urlpatterns = [
     path('Test/', views.test, name='test'),
 
+    # landing
+    path('', views.landing, name='landing'),
+
     # index
-    path('', views.index, name='index'),
+    path('Home/', views.index, name='index'),
 
     # blockly_games
     path('BlocklyGames/', include('PythonTutorSystem.blockly_games_urls')),

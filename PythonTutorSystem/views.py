@@ -5,6 +5,11 @@ def test(request):
     return render(request, 'test.html')
 
 
+# landing
+def landing(request):
+    return render(request, 'landing.html')
+
+
 # index
 def index(request):
     return render(request, 'index.html')

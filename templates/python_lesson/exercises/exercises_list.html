@@ -65,6 +65,22 @@
     </div>
     <div class="card">
         <div class="card-body">
+            <h3>Pseudocode</h3>
+            unordered := True<br>
+            WHILE unordered:<br>
+            &emsp;unordered := False<br>
+            &emsp;FOR counter := TO LENGTH(list) - 1 DO<br>
+            &emsp;&emsp;IF counter < LENGTH(list) - 1<br>
+            &emsp;&emsp;THEN IF list[counter] > list[counter + 1]<br>
+            &emsp;&emsp;&emsp;&emsp;&ensp;THEN temp := list[counter]<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;list[counter] := list[counter + 1]<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;list[counter + 1] := temp<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;unordered := True
+
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
             <h5>Bitte Code hier eingeben:</h5>
             <div class="skulpt_code_container">
                 <form>
@@ -113,8 +129,10 @@ print(*unordered_list)
                                     class="code_color">temp = unordered_list[counter]</span><br>
                                 &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter] = unordered_list[counter + <span
                                     class="number_color">1</span>]</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter + <span class="number_color">1</span>] = temp</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered = <span class="keyword_color">True</span></span><br><br>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter + <span
+                                    class="number_color">1</span>] = temp</span><br>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered = <span
+                                    class="keyword_color">True</span></span><br><br>
                                 <span class="comments_color"># Hiermit wird die Liste ausgegeben</span><br><br>
                                 <span class="method_color">print</span><span class="code_color">(*unordered_list)</span>
                             </div>

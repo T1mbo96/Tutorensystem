@@ -159,6 +159,10 @@ def lesson_2_exercises_strings(request):
     return render(request, 'python_lesson/exercises/exercises_strings.html')
 
 
+def python_lesson_exercises_operators(request):
+    return render(request, 'python_lesson/exercises/exercises_operators.html')
+
+
 def lesson_2_exercises_print(request):
     return render(request, 'python_lesson/exercises/exercises_print.html')
 

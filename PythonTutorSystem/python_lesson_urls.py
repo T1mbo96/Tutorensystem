@@ -11,6 +11,7 @@ urlpatterns = [
     path('Strings/Aufgabe/', views.lesson_2_exercises_strings, name='lesson_2_exercises_strings'),
     path('Operatoren/', views.lesson_2_operators, name='lesson_2_operators'),
     path('Operatoren/Priorität/', views.lesson_2_operators_precedence, name='lesson_2_operators_precedence'),
+    path('Operatoren/Aufgabe/', views.python_lesson_exercises_operators, name='python_lesson_exercises_operators'),
     path('Print/', views.lesson_2_print, name='lesson_2_print'),
     path('Print/Aufgabe/', views.lesson_2_exercises_print, name='lesson_2_exercises_print'),
     path('Input/', views.lesson_2_input, name='lesson_2_input'),

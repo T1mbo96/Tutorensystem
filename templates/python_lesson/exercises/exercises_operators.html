@@ -1,0 +1,260 @@
+{% extends 'template_pages/python_lesson_base.html' %}
+{% load static %}
+
+{% block lesson_2_operators_submenu_active %}
+    sidebar_active
+{% endblock lesson_2_operators_submenu_active %}
+
+{% block python_lesson_exercises_operators_active %}
+    sidebar_active
+{% endblock python_lesson_exercises_operators_active %}
+
+{% block sidebar_page_content %}
+    <!-- Identifier for submenu logic -->
+    <div id="submenu_identifier" style="display: none">operators_submenu_link</div>
+
+    <div class="card">
+        <div class="card-body">
+            <h1>Aufgabe: Operatoren</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Hier werden verschiedene Aufgaben zu Ausdrücken mit Operatoren zur Verfügung gestellt. Sie bekommen jeweils
+            einen Ausdruck gestellt und sollen das richtige Ergebnis aus insgesamt vier gegebenen Möglichkeiten
+            auswählen.
+            <p></p>
+            Mit einem Klick auf den Button <span class="text_highlighted">Check</span> können Sie Ihre Antwort testen.
+            Bei einer richtigen Antwort färbt sich der jeweilige Abschnitt grün, bei einer falschen Antwort färbt sich
+            der jeweilige Abschnitt rot.
+        </div>
+    </div>
+    <div class="card-columns">
+        <div class="card" id="firstTest">
+            <div class="card-body">
+                <h5><code>5 + 3 * 7 // 3</code></h5>
+                <p></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="firstRadios" id="firstRadios1" value="24"
+                           checked>
+                    <label class="form-check-label" for="firstRadios1">
+                        24
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="firstRadios" id="firstRadios2" value="True">
+                    <label class="form-check-label" for="firstRadios2">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="firstRadios" id="firstRadios3" value="12">
+                    <label class="form-check-label" for="firstRadios3">
+                        12
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="firstRadios" id="firstRadios4" value="378">
+                    <label class="form-check-label" for="firstRadios4">
+                        378
+                    </label>
+                </div>
+                <br>
+                <button type="button" onclick="test_first()"
+                        class="form-btn btn btn-info my-2 my-sm-0">Check
+                </button>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="secondTest">
+            <div class="card-body">
+                <h5><code>5 + 3 > 7 // 3</code></h5>
+                <p></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="secondRadios" id="secondRadios1" value="True"
+                           checked>
+                    <label class="form-check-label" for="secondRadios1">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="secondRadios" id="secondRadios2" value="False">
+                    <label class="form-check-label" for="secondRadios2">
+                        False
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="secondRadios" id="secondRadios3" value="8">
+                    <label class="form-check-label" for="secondRadios3">
+                        8
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="secondRadios" id="secondRadios4" value="3.462">
+                    <label class="form-check-label" for="secondRadios4">
+                        3.462
+                    </label>
+                </div>
+                <br>
+                <button type="button" onclick="test_second()"
+                        class="form-btn btn btn-info my-2 my-sm-0">Check
+                </button>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="thirdTest">
+            <div class="card-body">
+                <h5><code>21 == 34 is 5 // 2</code></h5>
+                <p></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="thirdRadios" id="thirdRadios1" value="2.14"
+                           checked>
+                    <label class="form-check-label" for="thirdRadios1">
+                        2.14
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="thirdRadios" id="thirdRadios2" value="True">
+                    <label class="form-check-label" for="thirdRadios2">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="thirdRadios" id="thirdRadios3" value="False">
+                    <label class="form-check-label" for="thirdRadios3">
+                        False
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="thirdRadios" id="thirdRadios4" value="31">
+                    <label class="form-check-label" for="thirdRadios4">
+                        31
+                    </label>
+                </div>
+                <br>
+                <button type="button" onclick="test_third()"
+                        class="form-btn btn btn-info my-2 my-sm-0">Check
+                </button>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="fourthTest">
+            <div class="card-body">
+                <h5><code>7 % 112 <= 89</code></h5>
+                <p></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fourthRadios" id="fourthRadios1" value="False"
+                           checked>
+                    <label class="form-check-label" for="fourthRadios1">
+                        False
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fourthRadios" id="fourthRadios2" value="14">
+                    <label class="form-check-label" for="fourthRadios2">
+                        14
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fourthRadios" id="fourthRadios3" value="0.014">
+                    <label class="form-check-label" for="fourthRadios3">
+                        0.014
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fourthRadios" id="fourthRadios4" value="True">
+                    <label class="form-check-label" for="fourthRadios4">
+                        True
+                    </label>
+                </div>
+                <br>
+                <button type="button" onclick="test_fourth()"
+                        class="form-btn btn btn-info my-2 my-sm-0">Check
+                </button>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="fifthTest">
+            <div class="card-body">
+                <h5><code>87 % 25 // + 56 % 23</code></h5>
+                <p></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fifthRadios" id="fifthRadios1" value="1.73"
+                           checked>
+                    <label class="form-check-label" for="fifthRadios1">
+                        1.73
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fifthRadios" id="fifthRadios2" value="0.12">
+                    <label class="form-check-label" for="fifthRadios2">
+                        0.12
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fifthRadios" id="fifthRadios3" value="True">
+                    <label class="form-check-label" for="fifthRadios3">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fifthRadios" id="fifthRadios4" value="0">
+                    <label class="form-check-label" for="fifthRadios4">
+                        0
+                    </label>
+                </div>
+                <br>
+                <button type="button" onclick="test_fifth()"
+                        class="form-btn btn btn-info my-2 my-sm-0">Check
+                </button>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="sixthTest">
+            <div class="card-body">
+                <h5><code>27 in [27, 23, 25]</code></h5>
+                <p></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sixthRadios" id="sixthRadios1" value="24.33"
+                           checked>
+                    <label class="form-check-label" for="sixthRadios1">
+                        24.33
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sixthRadios" id="sixthRadios2" value="True">
+                    <label class="form-check-label" for="sixthRadios2">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sixthRadios" id="sixthRadios3" value="436">
+                    <label class="form-check-label" for="sixthRadios3">
+                        436
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sixthRadios" id="sixthRadios4" value="False">
+                    <label class="form-check-label" for="sixthRadios4">
+                        False
+                    </label>
+                </div>
+                <br>
+                <button type="button" onclick="test_sixth()"
+                        class="form-btn btn btn-info my-2 my-sm-0">Check
+                </button>
+                <br>
+            </div>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'lesson_2_operators_precedence' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'lesson_2_print' %}
+{% endblock lesson_nav_buttons_next_page %}
+

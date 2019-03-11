@@ -4,10 +4,11 @@
 }
 
 .solution_dropdown {
-    width: 550px !important;
+    width: 520px !important;
     padding-left: 10px;
     margin-top: 10px !important;
     margin-bottom: 10px !important;
+    border-radius: unset;
 }
 
 .comments_color {
@@ -32,4 +33,10 @@
 
 .string_color {
     color: #b81111;
+}
+
+@media (min-width: 559px) {
+    .card-columns {
+        margin-right: 10px;
+    }
 }

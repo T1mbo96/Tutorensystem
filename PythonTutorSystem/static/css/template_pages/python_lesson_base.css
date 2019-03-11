@@ -41,7 +41,15 @@
     }
 }
 
-@media (min-width: 1223px) {
+@media (max-width: 1359px) {
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media (min-width: 1360px) {
     .card-columns {
         -webkit-column-count: 2;
         -moz-column-count: 2;
@@ -49,7 +57,7 @@
     }
 }
 
-@media (min-width: 1730px) {
+@media (min-width: 1860px) {
     .card-columns {
         -webkit-column-count: 3;
         -moz-column-count: 3;

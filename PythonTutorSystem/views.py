@@ -277,6 +277,11 @@ def python_compendium(request):
     return render(request, 'python_compendium/compendium.html')
 
 
+# java_python_comparison
+def java_python_comparison(request):
+    return render(request, 'java_comparison/java_python_comparison.html')
+
+
 # ide_lesson
 def lesson_3_repl_test(request):
     return render(request, 'ide_lesson/repl_test.html')

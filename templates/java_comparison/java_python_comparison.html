@@ -1,0 +1,103 @@
+{% extends 'template_pages/base.html' %}
+{% load static %}
+
+{% block title %}
+    Python
+{% endblock title %}
+
+{% block head_css_page %}
+    <link rel="stylesheet" href="{% static 'css/java_comparison/java_python_comparison.css' %}">
+{% endblock head_css_page %}
+
+{% block content_container %}
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <h1>Gegenüberstellung Python - Java</h1>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Konstrukt</th>
+                        <th scope="col">Python</th>
+                        <th scope="col">Java</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Variablen</th>
+                        <td><a href="{% url 'lesson_2_variables' %}" target="_blank" class="constructs_links"><code>Variablenname = Wert</code></a></td>
+                        <td><code>Datentyp Variablenname = Wert;</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Konsolenausgabe</th>
+                        <td><code>print()</code></td>
+                        <td><code>System.out.println();</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Konsoleneingabe</th>
+                        <td><code>Variablenname = input() / eval(input())</code></td>
+                        <td><code>Scanner Scannername = new Scanner(System.in);<br>Variablenname =
+                            Scannername.nextLine();</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bedingte Anweisungen</th>
+                        <td><code>if &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>elif &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>else:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code>
+                        </td>
+                        <td><code>if (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>else if (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>else<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">while-Schleife</th>
+                        <td><code>while &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>else:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
+                        <td><h5>while - do</h5><code>while (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code><br><br><h5>do - while</h5><code>do<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>while (&lt;code&gt;);</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zählschleife</th>
+                        <td><code>for &lt;code&gt; in range(&lt;code&gt;):<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
+                        <td><code>for (&lt;code&gt;; &lt;code&gt;; &lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">forEach-Schleife</th>
+                        <td><code>for &lt;code&gt; in &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
+                        <td><code>for (&lt;code&gt;: &lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Listen</th>
+                        <td><code>Listenname = []</code></td>
+                        <td><code>List&lt;Datentyp&gt; Listenname = new Listentyp&lt;Datentyp&gt;();</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tupel</th>
+                        <td><code>Tupelname = ()</code></td>
+                        <td><code>List&lt;Datentyp&gt; Listenname = Collections.unmodifiableList(&lt;code&gt;);</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Set</th>
+                        <td><code>Setname = {}</code></td>
+                        <td><code>Set&lt;Datentyp&gt; Setname = new Settyp&lt;Datentyp&gt;();</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Assoziatives Datenfeld</th>
+                        <td><code>Dictionaryname = {&lt;code&gt;: &lt;code&gt;}</code></td>
+                        <td><code>Map&lt;Datentyp, Datentyp&gt; Mapname = new Maptyp&lt;Datentyp, Datentyp&gt;();</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Funktionen</th>
+                        <td><code>def Funktionsname():<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
+                        <td><code>(Zugriffstyp) (static) Rückgabetyp Funktionsname()<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Klassen</th>
+                        <td><code>class Klassenname:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
+                        <td><code>class Klassenname<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content_container %}

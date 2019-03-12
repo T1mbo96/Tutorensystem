@@ -25,6 +25,9 @@ urlpatterns = [
     # python_compendium
     path('Python/', include('PythonTutorSystem.python_compendium_urls')),
 
+    # java_python_comparison
+    path('Java-Python-Vergleich/', views.java_python_comparison, name='java_python_comparison'),
+
     # ide_lesson
     path('IDE/Lektion/', include('PythonTutorSystem.ide_lesson_urls')),
 

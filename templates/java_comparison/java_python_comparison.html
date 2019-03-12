@@ -29,71 +29,107 @@
                     <tbody>
                     <tr>
                         <th scope="row">Variablen</th>
-                        <td><a href="{% url 'lesson_2_variables' %}" target="_blank" class="constructs_links"><code>Variablenname = Wert</code></a></td>
-                        <td><code>Datentyp Variablenname = Wert;</code></td>
+                        <td><a href="{% url 'lesson_2_variables' %}" target="_blank" class="constructs_links"><code>Variablenname
+                            = Wert</code></a></td>
+                        <td><a href="https://de.wikibooks.org/wiki/Java_Standard:_Variablen_und_Bezeichner"
+                               target="_blank" class="constructs_links"><code>Datentyp Variablenname = Wert;</code></a>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Konsolenausgabe</th>
-                        <td><code>print()</code></td>
-                        <td><code>System.out.println();</code></td>
+                        <td><a href="{% url 'lesson_2_print' %}" target="_blank"
+                               class="constructs_links"><code>print()</code></a></td>
+                        <td><a href="https://wiki.zum.de/wiki/Java/Konsolenausgabe" target="_blank"
+                               class="constructs_links"><code>System.out.println();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Konsoleneingabe</th>
-                        <td><code>Variablenname = input() / eval(input())</code></td>
-                        <td><code>Scanner Scannername = new Scanner(System.in);<br>Variablenname =
-                            Scannername.nextLine();</code></td>
+                        <td><a href="{% url 'lesson_2_input' %}" target="_blank" class="constructs_links"><code>Variablenname
+                            = input() / eval(input())</code></a></td>
+                        <td><a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank"
+                               class="constructs_links"><code>Scanner Scannername = new Scanner(System.in);<br>Variablenname
+                            =
+                            Scannername.nextLine();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Bedingte Anweisungen</th>
-                        <td><code>if &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>elif &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>else:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code>
+                        <td><a href="{% url 'lesson_2_conditional_statements' %}" target="_blank"
+                               class="constructs_links"><code>if &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>elif
+                            &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>else:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a>
                         </td>
-                        <td><code>if (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>else if (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>else<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code>
+                        <td><a href="https://de.wikibooks.org/wiki/Java_Standard:_Kontrollstrukturen#Verzweigung_(if)"
+                               target="_blank" class="constructs_links"><code>if (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>else
+                            if (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>else<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">while-Schleife</th>
-                        <td><code>while &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>else:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
-                        <td><h5>while - do</h5><code>while (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code><br><br><h5>do - while</h5><code>do<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>while (&lt;code&gt;);</code></td>
+                        <td><a href="{% url 'lesson_2_while_loop' %}" target="_blank" class="constructs_links"><code>while
+                            &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;<br>else:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a>
+                        </td>
+                        <td><h5>while - do</h5><a
+                                href="https://de.wikibooks.org/wiki/Java_Standard:_Kontrollstrukturen#Schleife_mit_Vorabpr%C3%BCfung_(while)"
+                                target="_blank" class="constructs_links"><code>while (&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a><br><br>
+                            <h5>do - while</h5><a
+                                    href="https://de.wikibooks.org/wiki/Java_Standard:_Kontrollstrukturen#Schleife_mit_Nachpr%C3%BCfung_(do)"
+                                    target="_blank" class="constructs_links"><code>do<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}<br>while
+                                (&lt;code&gt;);</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Zählschleife</th>
-                        <td><code>for &lt;code&gt; in range(&lt;code&gt;):<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
-                        <td><code>for (&lt;code&gt;; &lt;code&gt;; &lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                        <td><a href="{% url 'lesson_2_for_loop' %}" target="_blank" class="constructs_links"><code>for
+                            &lt;code&gt; in range(&lt;code&gt;):<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a></td>
+                        <td><a href="http://schabby.de/java-for/" target="_blank" class="constructs_links"><code>for (&lt;code&gt;; &lt;code&gt;;
+                            &lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">forEach-Schleife</th>
-                        <td><code>for &lt;code&gt; in &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
-                        <td><code>for (&lt;code&gt;: &lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                        <td><a href="{% url 'lesson_2_for_loop' %}" target="_blank" class="constructs_links"><code>for
+                            &lt;code&gt; in &lt;code&gt;:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a></td>
+                        <td><a href="http://schabby.de/java-for/" target="_blank" class="constructs_links"><code>for (&lt;code&gt;:
+                            &lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Listen</th>
-                        <td><code>Listenname = []</code></td>
-                        <td><code>List&lt;Datentyp&gt; Listenname = new Listentyp&lt;Datentyp&gt;();</code></td>
+                        <td><a href="{% url 'lesson_2_list' %}" target="_blank" class="constructs_links"><code>Listenname
+                            = []</code></a></td>
+                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_003.htm" target="_blank" class="constructs_links"><code>List&lt;Datentyp&gt; Listenname =
+                            new Listentyp&lt;Datentyp&gt;();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Tupel</th>
-                        <td><code>Tupelname = ()</code></td>
-                        <td><code>List&lt;Datentyp&gt; Listenname = Collections.unmodifiableList(&lt;code&gt;);</code></td>
+                        <td><a href="{% url 'lesson_2_tuple' %}" target="_blank" class="constructs_links"><code>Tupelname
+                            = ()</code></a></td>
+                        <td><a href="https://www.tutorialspoint.com/java/util/collections_unmodifiablelist.htm" target="_blank" class="constructs_links"><code>List&lt;Datentyp&gt; Listenname =
+                            Collections.unmodifiableList(&lt;code&gt;);</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Set</th>
-                        <td><code>Setname = {}</code></td>
-                        <td><code>Set&lt;Datentyp&gt; Setname = new Settyp&lt;Datentyp&gt;();</code></td>
+                        <td><a href="{% url 'lesson_2_set' %}" target="_blank" class="constructs_links"><code>Setname =
+                            {}</code></a></td>
+                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_005.htm" target="_blank" class="constructs_links"><code>Set&lt;Datentyp&gt; Setname = new
+                            Settyp&lt;Datentyp&gt;();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Assoziatives Datenfeld</th>
-                        <td><code>Dictionaryname = {&lt;code&gt;: &lt;code&gt;}</code></td>
-                        <td><code>Map&lt;Datentyp, Datentyp&gt; Mapname = new Maptyp&lt;Datentyp, Datentyp&gt;();</code></td>
+                        <td><a href="{% url 'lesson_2_dictionary' %}" target="_blank" class="constructs_links"><code>Dictionaryname
+                            = {&lt;code&gt;: &lt;code&gt;}</code></a></td>
+                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_008.htm" target="_blank" class="constructs_links"><code>Map&lt;Datentyp, Datentyp&gt;
+                            Mapname = new Maptyp&lt;Datentyp, Datentyp&gt;();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Funktionen</th>
-                        <td><code>def Funktionsname():<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
-                        <td><code>(Zugriffstyp) (static) Rückgabetyp Funktionsname()<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                        <td><a href="{% url 'lesson_2_functions' %}" target="_blank" class="constructs_links"><code>def
+                            Funktionsname():<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a></td>
+                        <td><a href="https://panjutorials.de/tutorials/java-tutorial-programmieren-lernen-fuer-anfaenger/lektionen/methoden-und-parameter/" target="_blank" class="constructs_links"><code>(Zugriffstyp) (static) Rückgabetyp
+                            Funktionsname()<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Klassen</th>
-                        <td><code>class Klassenname:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></td>
-                        <td><code>class Klassenname<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></td>
+                        <td><a href="{% url 'lesson_2_classes' %}" target="_blank" class="constructs_links"><code>class
+                            Klassenname:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a></td>
+                        <td><a href="https://de.wikibooks.org/wiki/Java_Standard:_Klassen" target="_blank" class="constructs_links"><code>class Klassenname<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a>
+                        </td>
                     </tr>
                     </tbody>
                 </table>

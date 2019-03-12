@@ -4,6 +4,7 @@
 
 .card {
     margin-top: 20px;
+    min-width: 771px;
 }
 
 .constructs_links {

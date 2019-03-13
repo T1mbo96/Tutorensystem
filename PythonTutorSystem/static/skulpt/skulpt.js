@@ -1,4 +1,5 @@
 var editor;
+var lists_editor;
 Sk.python3 = true;
 
 // Print output of user implemented code
@@ -13,9 +14,29 @@ function builtinRead(x) {
     return Sk.builtinFiles["files"][x];
 }
 
+function getEditorCode() {
+    let prog;
+
+    // Functions exercise -> add the lists to the code
+    if (document.getElementById('functions_lists_code')) {
+        prog = document.getElementById('functions_lists_code').innerHTML;
+    }
+
+    // List exercise -> add generated numbers of hidden div to mixed_numbers
+    if (document.getElementById('mixed_numbers')) {
+        let temp = editor.getDoc().getValue();
+        let insert_index = temp.indexOf('[');
+        prog = temp.slice(0, insert_index + 1) + document.getElementById('mixed_numbers').innerHTML + temp.slice(insert_index + 1);
+    }
+
+    prog += editor.getDoc().getValue();
+
+    return prog;
+}
+
 // Run user implemented code
 function runit() {
-    var prog = editor.getDoc().getValue();
+    var prog = getEditorCode();
     var mypre = document.getElementById("output");
     mypre.innerHTML = '';
     Sk.pre = "output";
@@ -51,5 +72,15 @@ $(document).ready(function () {
             lineNumbers: true,
             mode: "python",
         });
+    }
+
+    if (document.getElementById('functions_lists_code')) {
+        var lists_code = $("#functions_lists_code")[0];
+        lists_editor = CodeMirror.fromTextArea(lists_code, {
+            lineNumbers: true,
+            mode: "python",
+        });
+
+        lists_editor.setOption('readOnly', 'true');
     }
 });

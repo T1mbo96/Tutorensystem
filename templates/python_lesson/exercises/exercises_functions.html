@@ -50,7 +50,7 @@
             zu verdanken. Sie steigen somit ähnlich wie Blasen im Waser nach oben.
             <p></p>
             Erstellen Sie nun also eine Funktion <code>def bubblesort(unordered_list):</code> und implementieren Sie das
-            Sortierverfahren in dieser.
+            Sortierverfahren in dieser. Die Funktion soll die sortierte Liste abschließend zurückgeben.
             <p></p>
             Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
                 class="text_highlighted">Run</span> ausführen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
@@ -81,24 +81,41 @@
     </div>
     <div class="card">
         <div class="card-body">
+            <div class="text_area_wrapper">
+            <textarea id="functions_lists_code" cols="40" rows="8">
+# Diese Listen werden zum Testen verwendet
+unordered_list1 = [10, 8, 12, 2, 5, 3, 27, 102, 23, 14, 35, 100]
+unordered_list2 = [13, 120, 17, 6, 7, 9, 224, 125, 76, 89, 58, 43]
+unordered_list3 = [323, 25, 4, 5, 7, 6, 122, 23, 22, 17, 58, 33]
+unordered_list4 = [5, 6, 45, 67, 78, 122, 164, 899, 1003, 2456, 14609, 203789]
+
+</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
             <h5>Bitte Code hier eingeben:</h5>
             <div class="skulpt_code_container">
                 <form>
                     <div class="text_area_wrapper">
-            <textarea id="custom_code" cols="40" rows="10">unordered_list = [10, 8, 12, 2, 5, 3, 27, 102, 23, 14, 35, 100, 13, 120,
-                17, 6, 7, 9, 224, 125, 76, 89, 58, 43]
+            <textarea id="custom_code" cols="40" rows="10">
 # In den folgenden Zeile bitte ihren Code eintragen
 
 
-# Hiermit wird die Liste ausgegeben
-print(*unordered_list)
+
+# Hiermit werden die Listen ausgegeben
+print(*bubblesort(unordered_list1))
+print(*bubblesort(unordered_list2))
+print(*bubblesort(unordered_list3))
+print(*bubblesort(unordered_list4))
 </textarea>
                     </div>
                     <br/>
                     <div id="skulpt_run_btn">
                         <button type="button" onclick="runit()" class="form-btn btn btn-info my-2 my-sm-0">Run
                         </button>
-                        <button type="button" onclick="list_test_code()" class="form-btn btn btn-info my-2 my-sm-0">
+                        <button type="button" onclick="functions_test_code()" class="form-btn btn btn-info my-2 my-sm-0">
                             Test
                         </button>
                         <button type="button" onclick="reset_skulpt()"
@@ -111,30 +128,35 @@ print(*unordered_list)
                             </button>
                             <div class="dropdown-menu dropdown-menu-right solution_dropdown">
                                 <span class="comments_color"># In den folgenden Zeile bitte ihren Code eintragen</span><br><br>
-                                <span class="code_color">unordered =</span> <span
+                                <span class="code_color"><span class="keyword_color">def</span> <span class="method_color">bubblesort</span>(unordered_list):</span><br>
+                                &emsp;&emsp;<span class="code_color">unordered =</span> <span
                                     class="keyword_color">True</span><br><br>
-                                <span class="keyword_color">while </span><span class="code_color">unordered:</span><br>
-                                &emsp;<span class="code_color">unordered = </span><span
+                                &emsp;&emsp;<span class="keyword_color">while </span><span class="code_color">unordered:</span><br>
+                                &emsp;&emsp;&emsp;<span class="code_color">unordered = </span><span
                                     class="keyword_color">False</span><br><br>
-                                &emsp;<span class="code_color"><span class="keyword_color">for</span> counter <span
+                                &emsp;&emsp;&emsp;<span class="code_color"><span class="keyword_color">for</span> counter <span
                                     class="keyword_color">in</span> <span class="method_color">range</span>(<span
                                     class="method_color">len</span>(unordered_list) - <span
                                     class="number_color">1</span>):</span><br>
-                                &emsp;&emsp;<span class="container"><span
+                                &emsp;&emsp;&emsp;&emsp;<span class="container"><span
                                     class="keyword_color">if</span> counter < <span class="method_color">len</span>(unordered_list) - <span
                                     class="number_color">1</span>:</span><br>
-                                &emsp;&emsp;&emsp;&emsp;<span class="code_color"><span class="keyword_color">if</span> unordered_list[counter] > unordered_list[counter + <span
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color"><span class="keyword_color">if</span> unordered_list[counter] > unordered_list[counter + <span
                                     class="number_color">1</span>]:</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span
                                     class="code_color">temp = unordered_list[counter]</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter] = unordered_list[counter + <span
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter] = unordered_list[counter + <span
                                     class="number_color">1</span>]</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter + <span
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter + <span
                                     class="number_color">1</span>] = temp</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered = <span
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered = <span
                                     class="keyword_color">True</span></span><br><br>
-                                <span class="comments_color"># Hiermit wird die Liste ausgegeben</span><br><br>
-                                <span class="method_color">print</span><span class="code_color">(*unordered_list)</span>
+                                &emsp;&emsp;<span class="code_color"><span class="keyword_color">return</span> unordered_list</span><br><br>
+                                <span class="comments_color"># Hiermit werden die Listen ausgegeben</span><br><br>
+                                <span class="method_color">print</span><span class="code_color">(*bubblesort(unordered_list1))</span><br>
+                                <span class="method_color">print</span><span class="code_color">(*bubblesort(unordered_list2))</span><br>
+                                <span class="method_color">print</span><span class="code_color">(*bubblesort(unordered_list3))</span><br>
+                                <span class="method_color">print</span><span class="code_color">(*bubblesort(unordered_list4))</span>
                             </div>
                         </div>
                     </div>
@@ -142,10 +164,28 @@ print(*unordered_list)
             </div>
             <p></p>
             <div class="alert alert-success _alert " role="alert" id="correct_1" style="display: none">
-                Klasse! Die Liste wurde korrekt sortiert!
+                Klasse! Die Liste unordered_list1 wurde korrekt sortiert!
             </div>
             <div class="alert alert-danger _alert " role="alert" id="wrong_1" style="display: none">
-                Schade, die Sortierung oder Ausgabe der Liste ist leider nicht korrekt!
+                Schade, unordered_list1 ist leider nicht korrekt sortiert!
+            </div>
+            <div class="alert alert-success _alert " role="alert" id="correct_2" style="display: none">
+                Klasse! Die Liste unordered_list2 wurde korrekt sortiert!
+            </div>
+            <div class="alert alert-danger _alert " role="alert" id="wrong_2" style="display: none">
+                Schade, unordered_list2 ist leider nicht korrekt sortiert!
+            </div>
+            <div class="alert alert-success _alert " role="alert" id="correct_3" style="display: none">
+                Klasse! Die Liste unordered_list3 wurde korrekt sortiert!
+            </div>
+            <div class="alert alert-danger _alert " role="alert" id="wrong_3" style="display: none">
+                Schade, unordered_list3 ist leider nicht korrekt sortiert!
+            </div>
+            <div class="alert alert-success _alert " role="alert" id="correct_4" style="display: none">
+                Klasse! Die Liste unordered_list4 wurde korrekt sortiert!
+            </div>
+            <div class="alert alert-danger _alert " role="alert" id="wrong_4" style="display: none">
+                Schade, unordered_list4 ist leider nicht korrekt sortiert!
             </div>
             <p></p>
             <h5>Output:</h5>

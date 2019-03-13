@@ -16,6 +16,9 @@
     <!-- Key for localStorage -->
     <div id="local_storage_key" style="display: none">exercises_list</div>
 
+    <!-- Div to fill with random numbers for mixed_numbers -->
+    <div id="mixed_numbers" style="display: none"></div>
+
     <div class="card">
         <div class="card-body">
             <h1>Aufgabe: Listen</h1>
@@ -23,60 +26,11 @@
     </div>
     <div class="card">
         <div class="card-body">
-            Nun sollen Sie die erste größere Aufgabe dieser Lektion bearbeiten. Dafür implementieren Sie bitte das
-            Sortierverfahren <a href="https://de.wikipedia.org/wiki/Bubblesort" target="_blank"><span
-                class="link_color">Bubblesort</span></a>, welches eine gegebene Liste in die richtige Reihenfolge
-            bringen soll (Zahlenwerte aufsteigend sortiert).
-            <p></p>
-            Bei Bubblesort wird jeweils in Runden für jedes benachbarte Paar von Elementen getestet, ob diese
-            vertauscht
-            werden müssen. Sobald mindestens eine Vertauschung notwendig war, beginnt eine neue Runde. War keine
-            Vertauschung notwendig, dann ist die Liste korrekt sortiert.
-            <p></p>
-            <div class="text-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"
-                     alt="Bubble-sort-example-300px.gif" width="300" height="180"><br>Von <a
-                    href="//commons.wikimedia.org/w/index.php?title=User:Swfung8&amp;action=edit&amp;redlink=1"
-                    class="new" title="User:Swfung8 (page does not exist)" target="_blank"><span class="link_color">Swfung8</span></a>-<span
-                    class="int-own-work" lang="de">Eigenes Werk</span>,<a
-                    href="https://creativecommons.org/licenses/by-sa/3.0"
-                    title="Creative Commons Attribution-Share Alike 3.0" target="_blank"><span class="link_color">CC BY-SA 3.0</span></a>,<a
-                    href="https://commons.wikimedia.org/w/index.php?curid=14953478" target="_blank"><span
-                    class="link_color">Link</span></a>
-            </div>
-            <p></p>
-            Seinen Namen hat das Sortierverfahren der Bewegung der größeren Elemente nach und nach von links nach
-            rechts
-            zu verdanken. Sie steigen somit ähnlich wie Blasen im Waser nach oben.
-            <p></p>
-            Ordnen Sie nun also die gegebene Liste <span class="text_highlighted">unordered_list</span> mithilfe des
-            Sortierverfahrens.
-            <p></p>
-            Wenn Sie ihren Code eingegeben haben können Sie ihn mit einem Klick auf den Button <span
-                class="text_highlighted">Run</span> ausführen. Um eine Rückmeldung zu erhalten, ob ihr Code richtig
-            ist,
-            benutzen Sie bitte den Button <span class="text_highlighted">Test</span>. Falls Sie noch einmal von vorn
-            beginnen wollen, oder ausversehen Code der Aufgabe gelöscht haben, dann können Sie die Aufgaben einfach
-            mit
-            einem Klick auf den Button <span class="text_highlighted">Reset</span> zurücksetzen (Löscht auch Ihren
-            Code!). Außerdem wird eine Musterlösung für die Aufgabe durch einen Klick auf den Button <span
-                class="text_highlighted">Solution</span> bereitgestellt.
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            <h3>Pseudocode</h3>
-            unordered := True<br>
-            WHILE unordered:<br>
-            &emsp;unordered := False<br>
-            &emsp;FOR counter := TO LENGTH(list) - 1 DO<br>
-            &emsp;&emsp;IF counter < LENGTH(list) - 1<br>
-            &emsp;&emsp;THEN IF list[counter] > list[counter + 1]<br>
-            &emsp;&emsp;&emsp;&emsp;&ensp;THEN temp := list[counter]<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;list[counter] := list[counter + 1]<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;list[counter + 1] := temp<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;unordered := True
-
+            In dieser Aufgabe sollen Sie die Logik implementieren, um alle geraden bzw. ungeraden aus einer Liste <code>mixed_numbers</code>
+            herauszusuchen. Alle gefundenen geraden Zahlenwerte sollen zu einer Liste <code>even_numbers</code>
+            hinzugefügt werden. Alle ungeraden Zahlen sollen zu einer anderen Liste <code>odd_numbers</code> hinzugefügt
+            werden. Die Liste <code>mixed_numbers</code> wird bei der Ausführung automatisch mit Zahlenwerten gefüllt
+            werden.
         </div>
     </div>
     <div class="card">
@@ -85,13 +39,16 @@
             <div class="skulpt_code_container">
                 <form>
                     <div class="text_area_wrapper">
-            <textarea id="custom_code" cols="40" rows="10">unordered_list = [10, 8, 12, 2, 5, 3, 27, 102, 23, 14, 35, 100, 13, 120,
-                17, 6, 7, 9, 224, 125, 76, 89, 58, 43]
+            <textarea id="custom_code" cols="40" rows="10">mixed_numbers = []
+even_numbers = []
+odd_numbers = []
 # In den folgenden Zeile bitte ihren Code eintragen
 
 
-# Hiermit wird die Liste ausgegeben
-print(*unordered_list)
+
+# Hiermit werden die Listen ausgegeben
+print(*even_numbers)
+print(*odd_numbers)
 </textarea>
                     </div>
                     <br/>
@@ -110,31 +67,18 @@ print(*unordered_list)
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solution
                             </button>
                             <div class="dropdown-menu dropdown-menu-right solution_dropdown">
+                                <span class="code_color">mixed_numbers = []</span><br>
+                                <span class="code_color">even_numbers = []</span><br>
+                                <span class="code_color">odd_numbers = []</span><br>
                                 <span class="comments_color"># In den folgenden Zeile bitte ihren Code eintragen</span><br><br>
-                                <span class="code_color">unordered =</span> <span
-                                    class="keyword_color">True</span><br><br>
-                                <span class="keyword_color">while </span><span class="code_color">unordered:</span><br>
-                                &emsp;<span class="code_color">unordered = </span><span
-                                    class="keyword_color">False</span><br><br>
-                                &emsp;<span class="code_color"><span class="keyword_color">for</span> counter <span
-                                    class="keyword_color">in</span> <span class="method_color">range</span>(<span
-                                    class="method_color">len</span>(unordered_list) - <span
-                                    class="number_color">1</span>):</span><br>
-                                &emsp;&emsp;<span class="container"><span
-                                    class="keyword_color">if</span> counter < <span class="method_color">len</span>(unordered_list) - <span
-                                    class="number_color">1</span>:</span><br>
-                                &emsp;&emsp;&emsp;&emsp;<span class="code_color"><span class="keyword_color">if</span> unordered_list[counter] > unordered_list[counter + <span
-                                    class="number_color">1</span>]:</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span
-                                    class="code_color">temp = unordered_list[counter]</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter] = unordered_list[counter + <span
-                                    class="number_color">1</span>]</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered_list[counter + <span
-                                    class="number_color">1</span>] = temp</span><br>
-                                &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code_color">unordered = <span
-                                    class="keyword_color">True</span></span><br><br>
-                                <span class="comments_color"># Hiermit wird die Liste ausgegeben</span><br><br>
-                                <span class="method_color">print</span><span class="code_color">(*unordered_list)</span>
+                                <span class="code_color"><span class="keyword_color">for</span> number <span class="keyword_color">in</span> mixed_numbers:</span><br>
+                                &emsp;<span class="code_color"><span class="keyword_color">if</span> number % <span class="number_color">2</span> == <span class="number_color">0</span>:</span><br>
+                                &emsp;&emsp;<span class="code_color">even_numbers.append(number)</span><br>
+                                &emsp;<span class="keyword_color">else</span><span class="code_color">:</span><br>
+                                &emsp;&emsp;<span class="code_color">odd_numbers.append(number)</span><br><br>
+                                <span class="comments_color"># Hiermit werden die Listen ausgegeben</span><br><br>
+                                <span class="method_color">print</span><span class="code_color">(*even_numbers)</span><br>
+                                <span class="method_color">print</span><span class="code_color">(*odd_numbers)</span>
                             </div>
                         </div>
                     </div>
@@ -142,10 +86,16 @@ print(*unordered_list)
             </div>
             <p></p>
             <div class="alert alert-success _alert " role="alert" id="correct_1" style="display: none">
-                Klasse! Die Liste wurde korrekt sortiert!
+                Klasse! Die Liste mit geraden Zahlen ist korrekt!
             </div>
             <div class="alert alert-danger _alert " role="alert" id="wrong_1" style="display: none">
-                Schade, die Sortierung oder Ausgabe der Liste ist leider nicht korrekt!
+                Schade, die Liste mit gerade Zahlen ist leider nicht korrekt!
+            </div>
+            <div class="alert alert-success _alert " role="alert" id="correct_2" style="display: none">
+                Klasse! Die Liste mit ungerade Zahlen ist korrekt!
+            </div>
+            <div class="alert alert-danger _alert " role="alert" id="wrong_2" style="display: none">
+                Schade, die Liste mit ungeraden Zahlen ist leider nicht korrekt!
             </div>
             <p></p>
             <h5>Output:</h5>

@@ -44,6 +44,9 @@
 
 
 
+
+
+
                         {% block lesson_2_exercises_variables_active %}{% endblock lesson_2_exercises_variables_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
@@ -66,6 +69,9 @@
 
 
 
+
+
+
                         {% block lesson_2_exercises_strings_active %}{% endblock lesson_2_exercises_strings_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
@@ -82,11 +88,17 @@
             </li>
             <li>
                 <a href="{% url 'lesson_2_operators_precedence' %}" class="
+
+
+
                         {% block lesson_2_operators_precedence_active %}{% endblock lesson_2_operators_precedence_active %}"><i
                         class="fas fa-angle-right"></i> Priorität</a>
             </li>
             <li>
                 <a href="{% url 'python_lesson_exercises_operators' %}" class="
+
+
+
                         {% block python_lesson_exercises_operators_active %}{% endblock python_lesson_exercises_operators_active %}"><i
                         class="fas fa-angle-right"></i> Aufgabe</a>
             </li>
@@ -128,6 +140,9 @@
 
 
 
+
+
+
             {% block lesson_2_conditional_statements_submenu_active %}{% endblock lesson_2_conditional_statements_submenu_active %}">
         <a href="#conditional_statements_submenu" data-toggle="collapse" aria-expanded="false"
            id="conditional_statements_submenu_link">Bedingte Anweisungen <i
@@ -140,11 +155,17 @@
 
 
 
+
+
+
                         {% block lesson_2_conditional_statements_active %}{% endblock lesson_2_conditional_statements_active %}"><i
                         class="fas fa-angle-right"></i> Bedingte Anweisungen</a>
             </li>
             <li>
                 <a href="{% url 'lesson_2_exercises_conditional_statements' %}" class="
+
+
+
 
 
 
@@ -166,6 +187,9 @@
             </li>
             <li>
                 <a href="{% url 'lesson_2_exercises_while_loop' %}" class="
+
+
+
 
 
 
@@ -204,16 +228,26 @@
         id="lesson_2_dictionary">
         <a href="{% url 'lesson_2_dictionary' %}">Dictionary</a>
     </li>
-    <li class="{% block lesson_2_functions_active %}{% endblock lesson_2_functions_active %}" id="lesson_2_functions">
-        <a href="{% url 'lesson_2_functions' %}">Funktionen</a>
+    <li class="{% block python_lesson_functions_submenu_active %}{% endblock python_lesson_functions_submenu_active %}">
+        <a href="#functions_submenu" data-toggle="collapse" aria-expanded="false"
+           id="functions_submenu_link">Funktionen <i class="fas fa-angle-down float-right"></i></a>
+        <ul class="collapse list-unstyled" id="functions_submenu">
+            <li id="lesson_2_functions">
+                <a href="{% url 'lesson_2_functions' %}"
+                   class="{% block lesson_2_functions_active %}{% endblock lesson_2_functions_active %}"><i
+                        class="fas fa-angle-right"></i> Funktionen</a>
+            </li>
+            <li>
+                <a href="{% url 'python_lesson_exercises_functions' %}"
+                   class="{% block python_lesson_exercises_functions_active %}{% endblock python_lesson_exercises_functions_active %}"><i
+                        class="fas fa-angle-right"></i> Aufgabe</a>
+            </li>
+        </ul>
     </li>
     <li class="{% block lesson_2_recursion_active %}{% endblock lesson_2_recursion_active %}" id="lesson_2_recursion">
         <a href="{% url 'lesson_2_recursion' %}">Rekursion</a>
     </li>
     <li class="
-
-
-
             {% block lesson_2_object_oriented_programming_active %}{% endblock lesson_2_object_oriented_programming_active %}"
         id="lesson_2_oop">
         <a href="{% url 'lesson_2_object_oriented_programming' %}">Objektorientierte Programmierung (OOP)</a>

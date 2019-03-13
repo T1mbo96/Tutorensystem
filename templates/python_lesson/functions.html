@@ -1,11 +1,18 @@
 {% extends 'template_pages/python_lesson_base.html' %}
 {% load static %}
 
+{% block python_lesson_functions_submenu_active %}
+    sidebar_active
+{% endblock python_lesson_functions_submenu_active %}
+
 {% block lesson_2_functions_active %}
     sidebar_active
 {% endblock lesson_2_functions_active %}
 
 {% block sidebar_page_content %}
+    <!-- Identifier for submenu logic -->
+    <div id="submenu_identifier" style="display: none">functions_submenu_link</div>
+
     <div class="card">
         <div class="card-body">
             <h1>Funktionen</h1>
@@ -19,8 +26,7 @@
             und den optionalen <span class="text_highlighted">Parametern</span>, welche die Funktion erhält, um
             damit zu arbeiten.
             <p></p>
-            Eine Funktion wird in der Programmiersprache Python mit dem Schlüsselwort <span
-                class="text_highlighted">def</span> erzeugt.
+            Eine Funktion wird in der Programmiersprache Python mit dem Schlüsselwort <code>def</code> erzeugt.
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/lesson_2/python_functions_example.PNG' %}" class="rounded"
@@ -28,7 +34,7 @@
             </div>
             <p></p>
             <div class="alert alert-primary" role="alert">
-                <span class="text_highlighted">if __name__ == '__main__':</span> stellt eine besondere Funktion dar,
+                <code>if __name__ == '__main__':</code> stellt eine besondere Funktion dar,
                 nämlich die Main-Funktion. Diese Funktion dient als Eintrittspunkt in ein Programm. Mehr
                 Informationen zu dieser können Sie folgendem Link entnehmen.<br/>
                 <p></p>
@@ -38,11 +44,10 @@
             <p></p>
             In diesem Beispiel wurde ein kleines Spiel namens <span class="text_highlighted">Fizz buzz</span>
             implementiert, welches eigentlich Kindern die Division näher bringen soll. In diesem Fall wurde die
-            Funktion mit dem Funktionsnamen <span class="text_highlighted">fizz_buzz</span> mithilfe des
-            Schlüsselworts <span class="text_highlighted">def</span> erzeugt. Die Funktion erhält einen Parameter
-            <span class="text_highlighted">number</span>, welcher hier eine Zahl darstellt. Zurückgegeben werden
-            <span class="text_highlighted">Strings</span> mithilfe des Schlüsselworts <span
-                class="text_highlighted">return</span>.
+            Funktion mit dem Funktionsnamen <code>fizz_buzz</code> mithilfe des
+            Schlüsselworts <code>def</code> erzeugt. Die Funktion erhält einen Parameter
+            <code>number</code>, welcher hier eine Zahl darstellt. Zurückgegeben werden die
+            <span class="text_highlighted">Strings</span> mithilfe des Schlüsselworts <code>return</code>.
         </div>
     </div>
     <div class="card">
@@ -77,7 +82,7 @@
             <h3>Standardparameter</h3>
             Sie können Parametern einer Funktion einen Standardwert zuweisen, sodass dieser Wert benutzt wird, falls
             beim Aufruf dieser Funktion für diesen Parameter kein Wert übergeben wird. Dafür müssen Sie hinter dem
-            jeweiligen Parameter diesem einen Wert mit einem <span class="text_highlighted">=</span> zuweisen.
+            jeweiligen Parameter diesem einen Wert mit einem <code>=</code> zuweisen.
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/lesson_2/python_functions_default_parameter.PNG' %}"
@@ -100,7 +105,7 @@
                      alt="Example of functions with pass by reference">
             </div>
             <p></p>
-            Der Funktionsaufruf ändert somit die Variable <span class="text_highlighted">my_list</span>, sodass man
+            Der Funktionsaufruf ändert somit die Variable <code>my_list</code>, sodass man
             bei einem Aufruf der Variable danach Zugriff auf die aktualisierte Variante der Variable hat.
             <p></p>
             Andere Programmiersprachen (z.B. C) übergeben ihre Parameter als Kopie. Diese Vorgehensweise trägt den
@@ -113,8 +118,8 @@
                      alt="Example of functions with pass by value">
             </div>
             <p></p>
-            Wie Sie hier erkennen können, wird die Variable <span class="text_highlighted">my_list</span> zwar
-            scheinbar innerhalb der Funktion <span class="text_highlighted">change_value</span> geupdated,
+            Wie Sie hier erkennen können, wird die Variable <code>my_list</code> zwar
+            scheinbar innerhalb der Funktion <code>change_value</code> geupdated,
             allerdings wird in Wirklichkeit nur die Kopie der Variable aktualisiert, sodass die eigentliche Variable
             unverändert bleibt.
         </div>
@@ -146,5 +151,5 @@
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'lesson_2_recursion' %}
+    {% url 'python_lesson_exercises_functions' %}
 {% endblock lesson_nav_buttons_next_page %}

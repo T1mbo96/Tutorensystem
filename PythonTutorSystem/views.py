@@ -183,6 +183,10 @@ def lesson_2_exercises_list(request):
     return render(request, 'python_lesson/exercises/exercises_list.html')
 
 
+def python_lesson_exercises_functions(request):
+    return render(request, 'python_lesson/exercises/exercises_functions.html')
+
+
 # python_lesson
 def lesson_2_introduction(request):
     return render(request, 'python_lesson/introduction.html')

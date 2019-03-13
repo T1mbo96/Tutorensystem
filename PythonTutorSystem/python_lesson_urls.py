@@ -28,6 +28,7 @@ urlpatterns = [
     path('Set/', views.lesson_2_set, name='lesson_2_set'),
     path('Dictionary/', views.lesson_2_dictionary, name='lesson_2_dictionary'),
     path('Funktionen/', views.lesson_2_functions, name='lesson_2_functions'),
+    path('Funktionen/Aufgabe/', views.python_lesson_exercises_functions, name='python_lesson_exercises_functions'),
     path('Rekursion/', views.lesson_2_recursion, name='lesson_2_recursion'),
     path('OOP/', views.lesson_2_object_oriented_programming, name='lesson_2_object_oriented_programming'),
     path('Klassen/', views.lesson_2_classes, name='lesson_2_classes'),

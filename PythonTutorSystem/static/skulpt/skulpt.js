@@ -36,7 +36,16 @@ function getEditorCode() {
 
 // Run user implemented code
 function runit() {
-    var prog = getEditorCode();
+    let prog;
+
+    if (document.getElementById('functions_lists_code') || document.getElementById('mixed_numbers')) {
+        // Add additional necessary code for lists and functions exercise
+        prog = getEditorCode();
+    } else {
+        // Get code of user
+        prog = editor.getDoc().getValue();
+    }
+
     var mypre = document.getElementById("output");
     mypre.innerHTML = '';
     Sk.pre = "output";

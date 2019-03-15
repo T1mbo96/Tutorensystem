@@ -32,12 +32,14 @@
             Sie anschließend <span class="text_highlighted">Install Now</span> aus (Die Versionsnummer 3.7 kann
             natürlich mit neueren Releases abweichen).
             <p></p>
-            Um zu testen, ob die Installation erfolgreich war, öffnen Sie ein Terminal und geben 'python' ein.
-            Anschließend sollten sie etwas Ähnliches zu Folgendem sehen.
+            Um zu testen, ob die Installation erfolgreich war, öffnen Sie ein <a
+                href="https://www.ionos.de/hilfe/e-mail-office/problemloesungen-company-name-mail-basicbusiness-mail/eingabeaufforderung-bzw-terminal-oeffnen/"
+                target="_blank"><span class="link_color">Terminal</span></a> und geben <span class="text_highlighted">python</span>
+            ein. Anschließend sollten sie etwas Ähnliches zu Folgendem sehen.
             <p></p>
             <div class="text-center">
                 <img src="{% static 'pictures/ide_lesson/python_installation_test.png' %}"
-                     class="rounded img-fluid"
+                     class=" img-fluid"
                      alt="python installation test">
             </div>
         </div>
@@ -50,5 +52,5 @@
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'ide_lesson_pycharm_installation' %}
+    {% url 'ide_lesson_git_installation' %}
 {% endblock lesson_nav_buttons_next_page %}

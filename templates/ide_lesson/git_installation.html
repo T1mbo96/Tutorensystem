@@ -1,0 +1,52 @@
+{% extends 'template_pages/ide_lesson_base.html' %}
+{% load static %}
+
+{% block ide_lesson_git_installation_active %}
+    sidebar_active
+{% endblock ide_lesson_git_installation_active %}
+
+{% block sidebar_page_content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Git Installation</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Git ist eine Software zur verteilten Versionsverwaltung von Dateien. Sie müssen diese installieren, damit
+            Sie die Projekte von GitHub klonen können. Die Software ist kostenfrei und für Sie nach der Installation in
+            diesem Tutorial nicht mehr direkt von Belang. Allerdings schadet es nicht, sich ein wenig mit der Software
+            auseinanderzusetzen, da Sie eine der am häufigsten verwendeten Versionsverwaltungen ist.
+            <p></p>
+            <a href="https://git-scm.com/downloads" target="_blank"><span
+                    class="link_color">Download-Link Git</span></a>
+            <p></p>
+            Wählen Sie aus den Optionen erneut die passende für Ihr Betriebssystem.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Nachdem Sie die Installation gestartet haben, folgen Sie einfach den Anweisungen des Setups. Sie können bei
+            allen Auswahlmöglichkeiten die standardmäßig angewählten Optionen belassen. Wenn Sie die Installation
+            abgeschlossen haben, können Sie sie auf Erfolg überprüfen, indem Sie erneut ein <a
+                href="https://www.ionos.de/hilfe/e-mail-office/problemloesungen-company-name-mail-basicbusiness-mail/eingabeaufforderung-bzw-terminal-oeffnen/"
+                target="_blank"><span class="link_color">Terminal</span></a> öffnen und <span class="text_highlighted">git</span>
+            eingeben. Sie sollten nun etwas Ähnliches zu Folgendem sehen.
+            <p></p>
+            <div class="text-center">
+                <img src="{% static 'pictures/ide_lesson/git_installation_terminal.png' %}"
+                     class="img-fluid"
+                     alt="git installation test">
+            </div>
+        </div>
+    </div>
+    <p></p>
+{% endblock sidebar_page_content %}
+
+{% block lesson_nav_buttons_prev_page %}
+    {% url 'ide_lesson_python_installation' %}
+{% endblock lesson_nav_buttons_prev_page %}
+
+{% block lesson_nav_buttons_next_page %}
+    {% url 'ide_lesson_pycharm_installation' %}
+{% endblock lesson_nav_buttons_next_page %}

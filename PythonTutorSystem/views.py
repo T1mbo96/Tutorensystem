@@ -299,6 +299,10 @@ def ide_lesson_python_installation(request):
     return render(request, 'ide_lesson/python_installation.html')
 
 
+def ide_lesson_git_installation(request):
+    return render(request, 'ide_lesson/git_installation.html')
+
+
 def ide_lesson_pycharm_installation(request):
     return render(request, 'ide_lesson/pycharm_installation.html')
 

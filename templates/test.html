@@ -1,19 +1,21 @@
+{% extends 'template_pages/ide_lesson_base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-</head>
-<body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="{% static 'js/test.js' %}"></script>
+{% block sidebar_page_content %}
+    <link rel="stylesheet" href="{% static 'css/ide_lesson/maumau.css' %}">
 
-{% for links in links_list %}
-
-  {% empty %}
-   <p>some content</p>
-{% endfor %}
+    <div class="card">
+        <div class="card-body">
+            <h1>Hello World</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Download-Link</h3>
+            <input type="text" class="form-control" value="https://github.com/PythonTut/dummy_hello_world.git"
+                   id="repos_link" readonly>
+            <p></p>
+            <button class="btn btn-dark move_button_above_input" onclick="myFunction()">Copy Link</button>
+        </div>
+    </div>
+{% endblock sidebar_page_content %}

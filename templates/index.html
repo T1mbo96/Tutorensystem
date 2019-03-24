@@ -18,7 +18,7 @@
         }
 
         .third_image {
-            background: #11a611;
+            background-image: url({% static 'pictures/ide_lesson_logo.jpg' %});
         }
 
         .text_section {
@@ -125,7 +125,7 @@
     </section>
 
     <section class="split_container">
-        <div class="left-half split_screen third_image to_hide"></div>
+        <div class="left-half split_screen third_image to_hide full_background_image"></div>
         <div class="right-half split_screen text_section text_section_background_third full_background_image">
             <article class="table_cell_margin">
                 <p>Die abschließende Lektion wird Ihr erlerntes Wissen aus den anderen beiden Lektionen testen, indem
@@ -135,7 +135,7 @@
                 <p>Um Ihren eigenen Code selbstständig überprüfen zu können, werden sogenannte Assertions in den Dateien
                     mitgeliefert, mithilfe deren Sie ihren Code einfach laufen und testen lassen können und anschließend
                     ein Feedback erhalten, welche Teile korrekt und welche Teile noch fehlerhaft sind.</p>
-                <p><a class="form-btn btn btn-outline-light" href="#">Zur Lektion <i class="fas fa-desktop"></i></a>
+                <p><a class="form-btn btn btn-outline-light" href="{% url 'ide_lesson_introduction' %}">Zur Lektion <i class="fas fa-desktop"></i></a>
                 </p>
             </article>
         </div>
@@ -153,7 +153,7 @@
                 <a class="nav-link" href="{% url 'data_protection' %}">Datenschutz</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'sitemap' %}">Sitemap</a>
+                <a class="nav-link disabled" href="{% url 'sitemap' %}">Sitemap</a>
             </li>
         </ul>
     </div>

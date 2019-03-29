@@ -142,6 +142,9 @@
     <li class="{% block lesson_1_wrap_up_active %}{% endblock lesson_1_wrap_up_active %}">
         <a href="{% url 'lesson_1_wrap_up' %}">Zusammenfassung</a>
     </li>
+    <li class="{% block blockly_lesson_solutions_games_active %}{% endblock blockly_lesson_solutions_games_active %}">
+        <a href="{% url 'blockly_lesson_solutions_games' %}">Musterlösung</a>
+    </li>
 {% endblock sidebar_items %}
 
 {% block scripts_for_blockly_games_iframes %}

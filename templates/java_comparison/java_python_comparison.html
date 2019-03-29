@@ -28,6 +28,22 @@
                     </thead>
                     <tbody>
                     <tr>
+                        <th scope="row">Strukturierung</th>
+                        <td>
+                            In Python wird ein Programm anhand von Einrückungen <br>strukturiert. Außerdem wir vor
+                            Beginn
+                            eines Anweisungsblock<br> ein Doppelpunkt <code>:</code> vorangestellt.
+                            <br><br>
+                            <a href="{% url 'lesson_2_structuring' %}" target="_blank" class="constructs_links">Strukturierung</a>
+                        </td>
+                        <td>
+                            In Java wird die Strukturierung mithilfe von Klammern <code>{ }</code><br> vorgenommen. Außerdem
+                            wird nach jeder Anweisung<br> ein Semikolon <code>;</code> angestellt.
+                            <br><br>
+                            <a href="https://www.a-coding-project.de/ratgeber/java/struktur-des-programmcodes" target="_blank" class="constructs_links">Strukturierung</a>
+                        </td>
+                    </tr>
+                    <tr>
                         <th scope="row">Variablen</th>
                         <td><a href="{% url 'lesson_2_variables' %}" target="_blank" class="constructs_links"><code>Variablenname
                             = Wert</code></a></td>
@@ -79,7 +95,8 @@
                         <th scope="row">Zählschleife</th>
                         <td><a href="{% url 'lesson_2_for_loop' %}" target="_blank" class="constructs_links"><code>for
                             &lt;code&gt; in range(&lt;code&gt;):<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a></td>
-                        <td><a href="http://schabby.de/java-for/" target="_blank" class="constructs_links"><code>for (&lt;code&gt;; &lt;code&gt;;
+                        <td><a href="http://schabby.de/java-for/" target="_blank" class="constructs_links"><code>for (&lt;code&gt;;
+                            &lt;code&gt;;
                             &lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a></td>
                     </tr>
                     <tr>
@@ -93,42 +110,77 @@
                         <th scope="row">Listen</th>
                         <td><a href="{% url 'lesson_2_list' %}" target="_blank" class="constructs_links"><code>Listenname
                             = []</code></a></td>
-                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_003.htm" target="_blank" class="constructs_links"><code>List&lt;Datentyp&gt; Listenname =
+                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_003.htm"
+                               target="_blank" class="constructs_links"><code>List&lt;Datentyp&gt; Listenname =
                             new Listentyp&lt;Datentyp&gt;();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Tupel</th>
                         <td><a href="{% url 'lesson_2_tuple' %}" target="_blank" class="constructs_links"><code>Tupelname
                             = ()</code></a></td>
-                        <td><a href="https://www.tutorialspoint.com/java/util/collections_unmodifiablelist.htm" target="_blank" class="constructs_links"><code>List&lt;Datentyp&gt; Listenname =
+                        <td><a href="https://www.tutorialspoint.com/java/util/collections_unmodifiablelist.htm"
+                               target="_blank" class="constructs_links"><code>List&lt;Datentyp&gt; Listenname =
                             Collections.unmodifiableList(&lt;code&gt;);</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Set</th>
                         <td><a href="{% url 'lesson_2_set' %}" target="_blank" class="constructs_links"><code>Setname =
                             {}</code></a></td>
-                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_005.htm" target="_blank" class="constructs_links"><code>Set&lt;Datentyp&gt; Setname = new
+                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_005.htm"
+                               target="_blank" class="constructs_links"><code>Set&lt;Datentyp&gt; Setname = new
                             Settyp&lt;Datentyp&gt;();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Assoziatives Datenfeld</th>
                         <td><a href="{% url 'lesson_2_dictionary' %}" target="_blank" class="constructs_links"><code>Dictionaryname
                             = {&lt;code&gt;: &lt;code&gt;}</code></a></td>
-                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_008.htm" target="_blank" class="constructs_links"><code>Map&lt;Datentyp, Datentyp&gt;
+                        <td><a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_13_008.htm"
+                               target="_blank" class="constructs_links"><code>Map&lt;Datentyp, Datentyp&gt;
                             Mapname = new Maptyp&lt;Datentyp, Datentyp&gt;();</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Funktionen</th>
                         <td><a href="{% url 'lesson_2_functions' %}" target="_blank" class="constructs_links"><code>def
                             Funktionsname():<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a></td>
-                        <td><a href="https://panjutorials.de/tutorials/java-tutorial-programmieren-lernen-fuer-anfaenger/lektionen/methoden-und-parameter/" target="_blank" class="constructs_links"><code>(Zugriffstyp) (static) Rückgabetyp
-                            Funktionsname()<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a></td>
+                        <td>
+                            <a href="https://panjutorials.de/tutorials/java-tutorial-programmieren-lernen-fuer-anfaenger/lektionen/methoden-und-parameter/"
+                               target="_blank" class="constructs_links"><code>(Zugriffskontrolle) (static) Rückgabetyp
+                                Funktionsname(&lt;code&gt;)<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a></td>
                     </tr>
                     <tr>
                         <th scope="row">Klassen</th>
                         <td><a href="{% url 'lesson_2_classes' %}" target="_blank" class="constructs_links"><code>class
-                            Klassenname:<br>&emsp;&emsp;&emsp;&lt;code&gt;</code></a></td>
-                        <td><a href="https://de.wikibooks.org/wiki/Java_Standard:_Klassen" target="_blank" class="constructs_links"><code>class Klassenname<br>{<br>&emsp;&emsp;&emsp;&lt;code&gt;;<br>}</code></a>
+                            Klassenname:<br><br>&emsp;&emsp;&emsp;<span class="comments_color"># Klassenattribute</span><br>&emsp;&emsp;&emsp;Attributname
+                            = &lt;code&gt;<br><br>&emsp;&emsp;&emsp;<span
+                                    class="comments_color"># Klassenfunktionen</span><br>&emsp;&emsp;&emsp;<span
+                                    class="black_color">@</span><span class="python_decorator">staticmethod</span><br>&emsp;&emsp;&emsp;def
+                            Funktionsname(&lt;code&gt;):<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return
+                            &lt;code&gt;<br><br>&emsp;&emsp;&emsp;<span class="comments_color"># Initializer / Instanzattribute</span><br>&emsp;&emsp;&emsp;def
+                            __init__(self, &lt;code&gt;):<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;self.Attributname =
+                            &lt;code&gt;<br><br>&emsp;&emsp;&emsp;<span
+                                    class="comments_color"># Instanzfunktionen</span><br>&emsp;&emsp;&emsp;def
+                            Funktionsname(self, &lt;code&gt;):<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return &lt;code&gt;<br><br></code></a>
+                            <br>
+                            In Python gibt es keine Zugriffskontrolle, was bedeutet,<br> dass jeder auf alle Attribute
+                            einer
+                            Klasse zugreifen darf.<br> Per Konvention sollen Attribute mit einem Unterstrich<br>
+                            <code>_foo</code> als private behandelt werden.
+                        </td>
+                        <td><a href="https://de.wikibooks.org/wiki/Java_Standard:_Klassen" target="_blank"
+                               class="constructs_links"><code>(Zugriffskontrolle) class
+                            Klassenname<br>{<br>&emsp;&emsp;&emsp;<span
+                                    class="comments_color">// Klassenattribute</span><br>&emsp;&emsp;&emsp;(Zugriffskontrolle)
+                            static (Modifikator) Datentyp Attributname = &lt;code&gt;;<br><br>&emsp;&emsp;&emsp;<span
+                                    class="comments_color">// Klassenmethoden</span><br>&emsp;&emsp;&emsp;(Zugriffskontrolle)
+                            static Rückgabetyp Methodenname(&lt;code&gt;)<br>&emsp;&emsp;&emsp;{<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return
+                            &lt;code&gt;;<br>&emsp;&emsp;&emsp;}<br><br>&emsp;&emsp;&emsp;<span
+                                    class="comments_color">// Instanzattribute</span><br>&emsp;&emsp;&emsp;(Zugriffskontrolle)
+                            (Modifikator) Datentyp Attributname = &lt;code&gt;;<br><br>&emsp;&emsp;&emsp;<span
+                                    class="comments_color">// Instanzmethoden</span><br>&emsp;&emsp;&emsp;(Zugriffskontrolle)
+                            Rückgabetyp Methodenname(&lt;code&gt;)<br>&emsp;&emsp;&emsp;{<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return
+                            &lt;code&gt;;<br>&emsp;&emsp;&emsp;}<br><br>&emsp;&emsp;&emsp;<span class="comments_color">// Konstruktor</span><br>&emsp;&emsp;&emsp;(Zugriffskontrolle)
+                            Klassenname(&lt;code&gt;)<br>&emsp;&emsp;&emsp;{<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;this.Attributename
+                            = &lt;code&gt;;<br>&emsp;&emsp;&emsp;}<br>}</code></a>
                         </td>
                     </tr>
                     </tbody>

@@ -145,6 +145,10 @@ def lesson_1_wrap_up(request):
     return render(request, 'blockly_lesson/wrap_up.html')
 
 
+def blockly_lesson_solutions_games(request):
+    return render(request, 'blockly_lesson/solutions_games.html')
+
+
 # blockly_compendium
 def blockly_compendium(request):
     return render(request, 'blockly_compendium/compendium.html')

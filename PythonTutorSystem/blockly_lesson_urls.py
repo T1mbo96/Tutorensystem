@@ -29,4 +29,5 @@ urlpatterns = [
     path('BlocklyGames/Teich/', views.lesson_1_blockly_games_pond, name='lesson_1_blockly_games_pond'),
     path('BlocklyGames/Teich/Lösung/', views.lesson_1_pond_solution, name='lesson_1_pond_solution'),
     path('Zusammenfassung/', views.lesson_1_wrap_up, name='lesson_1_wrap_up'),
+    path('Spiele/Musterlösung/', views.blockly_lesson_solutions_games, name='blockly_lesson_solutions_games'),
 ]

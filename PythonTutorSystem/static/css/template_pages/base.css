@@ -77,3 +77,15 @@ a:focus {
     background-size: cover;
     overflow: hidden;
 }
+
+.comments_color {
+    color: #aa5500;
+}
+
+.python_decorator {
+    color: #669900;
+}
+
+.black_color {
+    color: black;
+}

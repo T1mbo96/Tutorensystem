@@ -19,3 +19,10 @@ function reset_highlighted_sections(lesson_id) {
         document.getElementById(entry).style.backgroundColor = '#ffffff';
     })
 }
+
+// Delay and scroll 1px down so that every animation is loaded correctly
+window.onload = function () {
+    setTimeout(function () {
+        window.scrollBy(0, 1)
+    }, 500);
+};

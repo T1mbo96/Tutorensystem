@@ -154,6 +154,7 @@ def blockly_compendium(request):
     return render(request, 'blockly_compendium/compendium.html')
 
 
+# TODO Die Entwickler haben aktuell bei Skulpt anscheinend etwas zerschossen -> * funktioniert nicht mehr für Listenausgabe und console warnings in den Aufgaben bei run()
 # python_lesson_exercises
 def lesson_2_exercises_variables(request):
     return render(request, 'python_lesson/exercises/exercises_variables.html')

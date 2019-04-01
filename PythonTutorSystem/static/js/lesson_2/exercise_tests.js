@@ -58,7 +58,15 @@ function list_test_code() {
     // Add the generated numbers to this hidden div, so that the function getEditorCode() (skulpt.js) can use the list
     document.getElementById('mixed_numbers').innerHTML = mixed_numbers.toString();
 
-    let solution_array = [even_numbers.toString().split(',').join(' '), odd_numbers.toString().split(',').join(' ')];
+    let even_numbers_str = "[";
+    even_numbers_str += even_numbers.toString().split(',').join(', ');
+    even_numbers_str += "]";
+
+    let odd_numbers_str = "[";
+    odd_numbers_str += odd_numbers.toString().split(',').join(', ');
+    odd_numbers_str += "]";
+
+    let solution_array = [even_numbers_str, odd_numbers_str];
     test_code(solution_array);
 }
 
@@ -70,7 +78,7 @@ function prime_test_code() {
 
 // Functions
 function functions_test_code() {
-    let solution_array = ["2 3 5 8 10 12 14 23 27 35 100 102", "6 7 9 13 17 43 58 76 89 120 125 224", "4 5 6 7 17 22 23 25 33 58 122 323", "5 6 45 67 78 122 164 899 1003 2456 14609 203789"]
+    let solution_array = ["[2, 3, 5, 8, 10, 12, 14, 23, 27, 35, 100, 102]", "[6, 7, 9, 13, 17, 43, 58, 76, 89, 120, 125, 224]", "[4, 5, 6, 7, 17, 22, 23, 25, 33, 58, 122, 323]", "[5, 6, 45, 67, 78, 122, 164, 899, 1003, 2456, 14609, 203789]"]
     test_code(solution_array);
 }
 

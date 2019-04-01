@@ -20,6 +20,7 @@ function getEditorCode() {
     // Functions exercise -> add the lists to the code
     if (document.getElementById('functions_lists_code')) {
         prog = document.getElementById('functions_lists_code').innerHTML;
+        prog += editor.getDoc().getValue();
     }
 
     // List exercise -> add generated numbers of hidden div to mixed_numbers
@@ -28,8 +29,6 @@ function getEditorCode() {
         let insert_index = temp.indexOf('[');
         prog = temp.slice(0, insert_index + 1) + document.getElementById('mixed_numbers').innerHTML + temp.slice(insert_index + 1);
     }
-
-    prog += editor.getDoc().getValue();
 
     return prog;
 }

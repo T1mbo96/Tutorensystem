@@ -7,7 +7,7 @@ function test_second() {
 }
 
 function test_third() {
-    test_solution('False', 'third')
+    test_solution('7', 'third')
 }
 
 function test_fourth() {
@@ -15,7 +15,7 @@ function test_fourth() {
 }
 
 function test_fifth() {
-    test_solution('0', 'fifth')
+    test_solution('22', 'fifth')
 }
 
 function test_sixth() {

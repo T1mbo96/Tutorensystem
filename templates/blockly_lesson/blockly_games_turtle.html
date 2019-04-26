@@ -13,6 +13,17 @@
     <!-- Identifier for submenu logic -->
     <div id="submenu_identifier" style="display: none">turtle_submenu_link</div>
 
+    <div class="card">
+        <div class="card-body">
+            <div class="alert alert-danger" role="alert">
+                Die Ladezeite könnte bei erstmaligem Laden unter Umständen 10-20+ Sekunden benötigen!
+            </div>
+            <a href="{% url 'turtle' %}" target="_blank"><span class="link_color"><h1>Link für mobile Geräte!</h1></span></a>
+        </div>
+    </div>
+
+    <br>
+
     <div id="loading_screen">
         <div class="loading_icon_center" id="loading_icon">
             <img src="{% static 'pictures/lesson_1/loading_icon.gif' %}" alt="loading icon">

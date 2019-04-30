@@ -1,6 +1,5 @@
 var editor;
 var lists_editor;
-Sk.python3 = true;
 
 // Print output of user implemented code
 function outf(text) {
@@ -48,7 +47,7 @@ function runit() {
     var mypre = document.getElementById("output");
     mypre.innerHTML = '';
     Sk.pre = "output";
-    Sk.configure({output: outf, read: builtinRead});
+    Sk.configure({__future__: Sk.python3, output: outf, read: builtinRead});
     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
     var myPromise = Sk.misceval.asyncToPromise(function () {
         return Sk.importMainWithBody("<stdin>", false, prog, true);

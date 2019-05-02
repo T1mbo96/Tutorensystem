@@ -11,7 +11,7 @@
 
 {% block sidebar_page_content %}
     <!-- Identifier for submenu logic -->
-    <div id="submenu_identifier" style="display: none">turtle_submenu_link</div>
+    <div id="submenu_identifier" style="display: none">pond_submenu_link</div>
 
     <div class="card">
         <div class="card-body">
@@ -181,9 +181,9 @@
 {% endblock sidebar_page_content %}
 
 {% block lesson_nav_buttons_prev_page %}
-    {% url 'lesson_1_variables_addition' %}
+    {% url 'lesson_1_pond_preparation' %}
 {% endblock lesson_nav_buttons_prev_page %}
 
 {% block lesson_nav_buttons_next_page %}
-    {% url 'lesson_1_blockly_games_turtle' %}
+    {% url 'lesson_1_blockly_games_pond' %}
 {% endblock lesson_nav_buttons_next_page %}
